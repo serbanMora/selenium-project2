@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-01-13T12:07:03 EET" name="Suite" finished-at="2025-01-13T12:07:07 EET" duration-ms="4198">
+    <groups>
+    </groups>
+    <test started-at="2025-01-13T12:07:03 EET" name="Test 1" finished-at="2025-01-13T12:07:07 EET" duration-ms="4198">
+      <class name="greenkart.testCases.TestExecution">
+        <test-method is-config="true" signature="setUP()[pri:0, instance:greenkart.testCases.TestExecution@5f058f00]" started-at="2025-01-13T12:07:03 EET" name="setUP" finished-at="2025-01-13T12:07:06 EET" duration-ms="3679" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="TC1()[pri:0, instance:greenkart.testCases.TestExecution@5f058f00]" started-at="2025-01-13T12:07:06 EET" name="TC1" finished-at="2025-01-13T12:07:07 EET" duration-ms="493" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC1 -->
+      </class> <!-- greenkart.testCases.TestExecution -->
+    </test> <!-- Test 1 -->
+  </suite> <!-- Suite -->
+</testng-results>
