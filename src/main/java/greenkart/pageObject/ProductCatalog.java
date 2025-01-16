@@ -74,7 +74,7 @@ public class ProductCatalog {
 			}
 		}
 	}
-	
+
 	public void addProductToCart() {
 		List<String> productList = Arrays.asList(products());
 		List<WebElement> addToCartButton = addToCart();

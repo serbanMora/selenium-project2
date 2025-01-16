@@ -16,7 +16,25 @@ public class CheckoutPage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy (css = "p[class='product-name']")
+	@FindBy(css = "p[class='product-name']")
 	private List<WebElement> checkoutNames;
+
+	public void getName() {
+		int total = 0;
+		for (int i = 0; i < checkoutNames.size(); i++) {
+			String[] names = checkoutNames.get(5).getText().split("-");
+			String formattedName = names[0].trim();
+			total = checkoutNames.size();
+			System.out.println(formattedName);
+		}
+		System.out.println(total);
+
+	}
+	
+	
+	
+	
+	
+	
 	
 }

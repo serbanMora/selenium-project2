@@ -14,8 +14,9 @@ public class TestExecution extends BaseTest {
 	@Test
 	public void TC1() {
 		productCatalog = new ProductCatalog(driver);
-		productCatalog.addQuantity("Walnuts", 10);
-		productCatalog.addQuantity("Pears", 10);
+		productCatalog.addQuantity("Walnuts", 15);
+		productCatalog.addQuantity("Pears", 6);
+		productCatalog.addQuantity("Banana", 9);
 		productCatalog.scrollTo(0, 0);
 		productCatalog.addProductToCart();
 		productCatalog.validateItemsTotal();
@@ -24,7 +25,7 @@ public class TestExecution extends BaseTest {
 		productCatalog.clickCheckout();
 		
 		checkoutPage = new CheckoutPage(driver);
-		
+		checkoutPage.getName();
 		
 	}
 }

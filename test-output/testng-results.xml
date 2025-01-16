@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-16T14:23:07 EET" name="Default suite" finished-at="2025-01-16T14:23:17 EET" duration-ms="10660">
+  <suite started-at="2025-01-16T15:46:07 EET" name="Default suite" finished-at="2025-01-16T15:46:24 EET" duration-ms="16813">
     <groups>
     </groups>
-    <test started-at="2025-01-16T14:23:07 EET" name="Default test" finished-at="2025-01-16T14:23:17 EET" duration-ms="10660">
+    <test started-at="2025-01-16T15:46:07 EET" name="Default test" finished-at="2025-01-16T15:46:24 EET" duration-ms="16813">
       <class name="greenkart.testCases.TestExecution">
-        <test-method is-config="true" signature="setUP()[pri:0, instance:greenkart.testCases.TestExecution@2e005c4b]" started-at="2025-01-16T14:23:07 EET" name="setUP" finished-at="2025-01-16T14:23:11 EET" duration-ms="3981" status="PASS">
+        <test-method is-config="true" signature="setUP()[pri:0, instance:greenkart.testCases.TestExecution@2e005c4b]" started-at="2025-01-16T15:46:07 EET" name="setUP" finished-at="2025-01-16T15:46:13 EET" duration-ms="6077" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUP -->
-        <test-method signature="TC1()[pri:0, instance:greenkart.testCases.TestExecution@2e005c4b]" started-at="2025-01-16T14:23:11 EET" name="TC1" finished-at="2025-01-16T14:23:17 EET" duration-ms="6646" status="PASS">
+        <test-method signature="TC1()[pri:0, instance:greenkart.testCases.TestExecution@2e005c4b]" started-at="2025-01-16T15:46:13 EET" name="TC1" finished-at="2025-01-16T15:46:24 EET" duration-ms="10715" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC1 -->
