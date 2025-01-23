@@ -44,8 +44,8 @@ public class ProductCatalog {
 	@FindBy (css = "button[type='button']")
 	private List<WebElement> addToCart;
 	
-	public String[] products() {
-		return new String[] {"Brocolli", "Cauliflower", "Cucumber", "Beetroot", "Carrot", "Tomato", "Beans",
+	public static String[] products() {
+		return new String[] {"Brocolli", "Cauliflower", "Beetroot", "Cucumber", "Carrot", "Tomato", "Beans",
 				"Brinjal", "Capsicum", "Mushroom", "Potato", "Pumpkin", "Corn", "Onion", "Apple", "Banana", "Grapes", "Mango", "Musk Melon",
 				"Orange", "Pears", "Pomegranate", "Raspberry", "Strawberry", "Water Melon", "Almonds", "Pista", "Nuts Mixture", "Cashews", "Walnuts"};
 	}
@@ -60,14 +60,14 @@ public class ProductCatalog {
 		return cartIcon;
 	}
 
-	public void addQuantity(String productName, int value) {
+	public void addQuantity(String productName, int quantity) {
 		scrollTo(0, 0);
 		List<WebElement> name = new ArrayList<>(productNames);
 
 		for (int i = 0; i < name.size(); i++) {
 			String names = name.get(i).getText();
 			if (names.contains(productName)) {
-				for (int j = 0; j < value - 1; j++) {
+				for (int j = 0; j < quantity - 1; j++) {
 					addToCart().get(i).click();
 				}
 				break;
@@ -78,7 +78,7 @@ public class ProductCatalog {
 	public void addProductToCart() {
 		List<String> productList = Arrays.asList(products());
 		List<WebElement> addToCartButton = addToCart();
-
+		
 		int j = 0;
 
 		for (int i = 0; i < productNames.size(); i++) {

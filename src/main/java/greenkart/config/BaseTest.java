@@ -3,13 +3,18 @@ package greenkart.config;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.List;
 import java.util.Properties;
 
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
@@ -59,4 +64,30 @@ public class BaseTest {
 //			driver.quit();
 //		}
 //	}
+//	
+	public void explicitWaitList(List<WebElement> list, int duration) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
+		wait.until(ExpectedConditions.visibilityOfAllElements(list));
+	}
+	
+	public void explicitWait(WebElement element, String conditionType, int duration) {
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
+			switch (conditionType) {
+			case "visibility":
+				wait.until(ExpectedConditions.visibilityOf(element));
+				break;
+			case "invisibility":
+				wait.until(ExpectedConditions.invisibilityOf(element));
+				break;
+			case "clickable":
+				wait.until(ExpectedConditions.elementToBeClickable(element));
+				break;
+			default:
+				throw new IllegalArgumentException("Unsupported condition type: " + conditionType);
+			}
+		} catch (TimeoutException e) {
+			System.err.println("Element not visible after " + duration + " seconds: " + element);
+		}
+	}
 }
