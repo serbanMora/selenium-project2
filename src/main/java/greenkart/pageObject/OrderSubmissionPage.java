@@ -49,18 +49,4 @@ public class OrderSubmissionPage {
 		String text = (String) js.executeScript("return arguments[0].value;", element);
 		return text;
 	}
-	
-	public void selCou() {
-		Select s = new Select(selectCountry);
-
-		selectCountry.click();
-		int i = 0;
-		while (!jsExecutorGetText(selectCountry).equals("Austria")) {
-			i++;
-			selectCountry.sendKeys(Keys.ARROW_DOWN);
-			if (i > s.getOptions().size()) {
-				break;
-			}
-		}
-	}
 }
