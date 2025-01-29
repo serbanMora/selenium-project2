@@ -13,31 +13,70 @@ public class TestExecution extends BaseTest {
 	CheckoutPage checkoutPage;
 	OrderSubmissionPage submissionPage;
 	
-	@Test (alwaysRun = true, enabled = true)
+	@Test
 	public void TC1() {
 		productCatalog = new ProductCatalog(driver);
-		productCatalog.addQuantity("Walnuts", 15);
+		productCatalog.searchValidation("banana");
+		productCatalog.searchValidation("wrong-word");
+	}
+	
+	@Test (dependsOnMethods = "TC1")
+	public void TC2() {
+		productCatalog.addQuantity("walnuts", 15);
 		productCatalog.scrollTo(0, 0);
 		productCatalog.addProductToCart();
 		productCatalog.validateItemsTotal();
+	}
+	
+	@Test (dependsOnMethods = "TC2")
+	public void TC3() {
 		productCatalog.cartIcon().click();
 		productCatalog.validatePriceInCart();
 		productCatalog.clickCheckout();
 	}
 	
-	@Test (alwaysRun = true, dependsOnMethods = "TC1", enabled = true)
-	public void TC2() {
+	@Test (dependsOnMethods = "TC3")
+	public void TC4() {
 		checkoutPage = new CheckoutPage(driver);
 		explicitWaitList(checkoutPage.checkoutNames(), 5);
 		checkoutPage.validateProductsAtCheckout();
+	}
+	
+	@Test (dependsOnMethods = "TC4")
+	public void TC5() {
 		checkoutPage.validateTotalAmount();
+	}
+	
+	@Test (dependsOnMethods = "TC5")
+	public void TC6() {
+		checkoutPage.validateEmptyInvalidCode("invalid");
+		checkoutPage.validateEmptyInvalidCode("empty");
+	}
+	
+	@Test (dependsOnMethods = "TC6")
+	public void TC7() {
 		checkoutPage.validateAfterDiscount("rahulshettyacademy");
 		checkoutPage.placeOrders();
 	}
 	
-	@Test (alwaysRun = true, dependsOnMethods = "TC2", enabled = true)
-	public void TC3() {
+	@Test (dependsOnMethods = "TC7")
+	public void TC8() {
 		submissionPage = new OrderSubmissionPage(driver);
 		submissionPage.validateSelectedCountry("Romania", "byValue");
+	}
+	
+	@Test (dependsOnMethods = "TC8")
+	public void TC9() {
+		submissionPage.validateErrorAlert();
+	}
+	
+	@Test (dependsOnMethods = "TC9")
+	public void TC10() {
+		submissionPage.validateTerms();
+	}
+	
+	@Test (dependsOnMethods = "TC10")
+	public void TC11() {
+		submissionPage.validateSubmitOrder();
 	}
 }

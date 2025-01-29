@@ -1,5 +1,6 @@
 package greenkart.pageObject;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -9,6 +10,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 public class ProductCatalog {
@@ -44,6 +47,12 @@ public class ProductCatalog {
 	@FindBy (css = "button[type='button']")
 	private List<WebElement> addToCart;
 	
+	@FindBy (className = "search-keyword")
+	private WebElement searchField;
+	
+	@FindBy (className = "no-results")
+	private WebElement noSearchResults;
+	
 	public static String[] products() {
 		return new String[] {"Brocolli", "Cauliflower", "Beetroot", "Cucumber", "Carrot", "Tomato", "Beans",
 				"Brinjal", "Capsicum", "Mushroom", "Potato", "Pumpkin", "Corn", "Onion", "Apple", "Banana", "Grapes", "Mango", "Musk Melon",
@@ -63,9 +72,9 @@ public class ProductCatalog {
 	public void addQuantity(String productName, int quantity) {
 		scrollTo(0, 0);
 		List<WebElement> name = new ArrayList<>(productNames);
-
+		productName = productName.toLowerCase();
 		for (int i = 0; i < name.size(); i++) {
-			String names = name.get(i).getText();
+			String names = name.get(i).getText().toLowerCase();
 			if (names.contains(productName)) {
 				for (int j = 0; j < quantity - 1; j++) {
 					addToCart().get(i).click();
@@ -114,6 +123,23 @@ public class ProductCatalog {
 		}
 		int totalValue = Integer.parseInt(totalPrice.getText());
 		Assert.assertEquals(sum, totalValue);
+	}
+	
+	public void searchValidation(String keyword) {
+		searchField.sendKeys(keyword);
+		if (productNames.isEmpty()) {
+			Assert.assertEquals(noSearchResults.getText(), "Sorry, no products matched your search!\n" + "Enter a different keyword and try.");
+		} else {
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+			wait.until(ExpectedConditions.visibilityOfAllElements(productNames));
+			for (int i = 0; i < productNames.size(); i++) {
+				String[] name = productNames.get(i).getText().split("-");
+				String formattedName = name[0].trim().toLowerCase();
+				Assert.assertTrue(formattedName.contains(keyword));
+			}
+		}
+		searchField.clear();
+		driver.navigate().refresh();
 	}
 	
 	public void scrollTo(int index1, int index2) {

@@ -6,7 +6,6 @@ import java.time.Duration;
 import java.util.List;
 import java.util.Properties;
 
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -26,11 +25,9 @@ public class BaseTest {
 	public void setUP() throws IOException {
 
 		Properties prop = new Properties();
-		FileInputStream fis = new FileInputStream(
-				System.getProperty("user.dir") + "/src/main/java/greenkart/config/data.properties");
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/java/greenkart/config/data.properties");
 		prop.load(fis);
 		String browserName = prop.getProperty("browser");
-
 		String chromeDriverPath = prop.getProperty("chromeDriverPath");
 		String firefoxDriverPath = prop.getProperty("firefoxDriverPath");
 		String edgeDriverPath = prop.getProperty("edgeDriverPath");
@@ -58,36 +55,15 @@ public class BaseTest {
 		driver.get(url);
 	}
 
-//	@AfterClass
-//	public void tearDown() {
-//		if (driver != null) {
-//			driver.quit();
-//		}
-//	}
-//	
+	@AfterClass
+	public void tearDown() {
+		if (driver != null) {
+			driver.quit();
+		}
+	}
+	
 	public void explicitWaitList(List<WebElement> list, int duration) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
 		wait.until(ExpectedConditions.visibilityOfAllElements(list));
-	}
-	
-	public void explicitWait(WebElement element, String conditionType, int duration) {
-		try {
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
-			switch (conditionType) {
-			case "visibility":
-				wait.until(ExpectedConditions.visibilityOf(element));
-				break;
-			case "invisibility":
-				wait.until(ExpectedConditions.invisibilityOf(element));
-				break;
-			case "clickable":
-				wait.until(ExpectedConditions.elementToBeClickable(element));
-				break;
-			default:
-				throw new IllegalArgumentException("Unsupported condition type: " + conditionType);
-			}
-		} catch (TimeoutException e) {
-			System.err.println("Element not visible after " + duration + " seconds: " + element);
-		}
 	}
 }

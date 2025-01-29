@@ -87,9 +87,30 @@ public class CheckoutPage {
 		Assert.assertEquals(expectedTotal, sum);
 	}
 	
+	public void validateEmptyInvalidCode(String type) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+		switch (type) {
+		case "invalid":
+			promoField.sendKeys("invalid");
+			applyPromo.click();
+			wait.until(ExpectedConditions.visibilityOf(promoInfo));
+			Assert.assertEquals(promoInfo.getText(), "Invalid code ..!");
+			break;
+		
+		case "empty":
+			promoField.clear();
+			applyPromo.click();
+			wait.until(ExpectedConditions.visibilityOf(promoInfo));
+			Assert.assertEquals(promoInfo.getText(), "Empty code ..!");
+			break;
+		}
+	}
+	
 	public void validateAfterDiscount(String discountCode) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
+		
+		driver.navigate().refresh();
 		promoField.sendKeys(discountCode);
 		applyPromo.click();
 		wait.until(ExpectedConditions.visibilityOf(promoInfo));
