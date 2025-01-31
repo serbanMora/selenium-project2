@@ -3,27 +3,22 @@ package greenkart.config;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
-import java.util.List;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 public class BaseTest {
 
 	public WebDriver driver;
-
+	
 	@BeforeClass
 	public void setUP() throws IOException {
-
 		Properties prop = new Properties();
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/java/greenkart/config/data.properties");
 		prop.load(fis);
@@ -60,10 +55,5 @@ public class BaseTest {
 		if (driver != null) {
 			driver.quit();
 		}
-	}
-	
-	public void explicitWaitList(List<WebElement> list, int duration) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
-		wait.until(ExpectedConditions.visibilityOfAllElements(list));
 	}
 }

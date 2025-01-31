@@ -13,10 +13,12 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 public class ProductCatalog {
 
 	WebDriver driver;
+	SoftAssert softAssert;
 	
 	public ProductCatalog(WebDriver driver) {
 		this.driver = driver;
@@ -53,6 +55,18 @@ public class ProductCatalog {
 	@FindBy (className = "no-results")
 	private WebElement noSearchResults;
 	
+	@FindBy (className = "product-price")
+	private List<WebElement> productPrice;
+	
+	@FindBy (className = "quantity")
+	private WebElement quantityInCart;
+	
+	@FindBy (className = "product-remove")
+	private WebElement removeProduct;
+	
+	@FindBy (className = "empty-cart")
+	private WebElement emptyCart;
+	
 	public static String[] products() {
 		return new String[] {"Brocolli", "Cauliflower", "Beetroot", "Cucumber", "Carrot", "Tomato", "Beans",
 				"Brinjal", "Capsicum", "Mushroom", "Potato", "Pumpkin", "Corn", "Onion", "Apple", "Banana", "Grapes", "Mango", "Musk Melon",
@@ -76,12 +90,38 @@ public class ProductCatalog {
 		for (int i = 0; i < name.size(); i++) {
 			String names = name.get(i).getText().toLowerCase();
 			if (names.contains(productName)) {
-				for (int j = 0; j < quantity - 1; j++) {
+				for (int j = 0; j < quantity; j++) {
 					addToCart().get(i).click();
 				}
 				break;
 			}
 		}
+	}
+	
+	public void validateCartContents() {
+		softAssert = new SoftAssert();
+		scrollTo(0, 0);
+		cartIcon.click();
+
+		int actualProductPrice = Integer.parseInt(productPrice.get(0).getText());
+
+		String[] name = quantityInCart.getText().split(" ");
+		String formattedName = name[0].trim();
+		int actualQuantity = Integer.parseInt(formattedName);
+
+		int actualAmount = 0;
+		for (int i = 0; i < pricesFromCart.size(); i++) {
+			String amount = pricesFromCart.get(i).getText();
+			if (!amount.isEmpty()) {
+				actualAmount = Integer.parseInt(amount);
+			}
+			softAssert.assertTrue(actualProductPrice * actualQuantity == actualAmount);
+		}
+		removeProduct.click();
+		softAssert.assertEquals(emptyCart.getText(), "You cart is empty!");
+		softAssert.assertTrue(checkout.getDomAttribute("class").equals("disabled"));
+		softAssert.assertAll();
+		cartIcon.click();
 	}
 
 	public void addProductToCart() {

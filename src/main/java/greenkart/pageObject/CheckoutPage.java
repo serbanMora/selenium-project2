@@ -15,10 +15,12 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 public class CheckoutPage {
 	
 	WebDriver driver;
+	SoftAssert softAssert;
 	
 	public CheckoutPage(WebDriver driver) {
 		this.driver = driver;
@@ -57,6 +59,9 @@ public class CheckoutPage {
 	}
 	
 	public void validateProductsAtCheckout() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.visibilityOfAllElements(checkoutNames));
+		
 		Set<String> expectedProducts = new TreeSet<>(Arrays.asList(ProductCatalog.products()));
 		List<WebElement> productList = new ArrayList<>(checkoutNames);
 		
@@ -108,22 +113,25 @@ public class CheckoutPage {
 	}
 	
 	public void validateAfterDiscount(String discountCode) {
+		softAssert = new SoftAssert();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		
 		driver.navigate().refresh();
 		promoField.sendKeys(discountCode);
 		applyPromo.click();
+		
 		wait.until(ExpectedConditions.visibilityOf(promoInfo));
-		Assert.assertEquals(promoInfo.getText(), "Code applied ..!");
+		softAssert.assertEquals(promoInfo.getText(), "Code applied ..!");
 
 		int total = Integer.parseInt(totalAmount.getText());
 		int discountPerc = Integer.parseInt(discountPercentage.getText().replace("%", ""));
 		double totalAfterDisc = Double.parseDouble(discountAmount.getText());
-
+		
 		double percentage = (total * (discountPerc / 100d));
 		double actualAfterDisc = total - percentage;
 
-		Assert.assertEquals(totalAfterDisc, actualAfterDisc);
+		softAssert.assertEquals(totalAfterDisc, actualAfterDisc);
+		softAssert.assertAll();
 	}
 	
 	public OrderSubmissionPage placeOrders() {
