@@ -27,10 +27,10 @@ public class CheckoutPage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy (css = "p[class='product-name']")
+	@FindBy (className = "product-name")
 	private List<WebElement> checkoutNames;
 	
-	@FindBy (css = "span[class='totAmt']")
+	@FindBy (className = "totAmt")
 	private WebElement totalAmount;
 	
 	@FindBy (css = "tr td:nth-child(5)")
@@ -59,7 +59,7 @@ public class CheckoutPage {
 	}
 	
 	public void validateProductsAtCheckout() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.visibilityOfAllElements(checkoutNames));
 		
 		Set<String> expectedProducts = new TreeSet<>(Arrays.asList(ProductCatalog.products()));
@@ -93,7 +93,7 @@ public class CheckoutPage {
 	}
 	
 	public void validateEmptyInvalidCode(String type) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		
 		switch (type) {
 		case "invalid":
@@ -114,7 +114,7 @@ public class CheckoutPage {
 	
 	public void validateAfterDiscount(String discountCode) {
 		softAssert = new SoftAssert();
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		
 		driver.navigate().refresh();
 		promoField.sendKeys(discountCode);

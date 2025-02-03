@@ -6,6 +6,7 @@ import greenkart.config.BaseTest;
 import greenkart.pageObject.CheckoutPage;
 import greenkart.pageObject.OrderSubmissionPage;
 import greenkart.pageObject.ProductCatalog;
+import greenkart.pageObject.TopDeals;
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
@@ -16,14 +17,15 @@ public class TestExecution extends BaseTest {
 	ProductCatalog productCatalog;
 	CheckoutPage checkoutPage;
 	OrderSubmissionPage submissionPage;
+	TopDeals topDeals;
 	
 	@Test
 	@Step("")
 	@Description("")
 	@Severity(SeverityLevel.MINOR)
-	public void TC1() {
+	public void TC1() throws InterruptedException {
 		productCatalog = new ProductCatalog(driver);
-		productCatalog.searchValidation("banana");
+		productCatalog.searchValidation("apple");
 		productCatalog.searchValidation("wrong-word");
 	}
 	
@@ -92,5 +94,21 @@ public class TestExecution extends BaseTest {
 	@Test (dependsOnMethods = "TC11")
 	public void TC12() {
 		submissionPage.validateSubmitOrder();
+		productCatalog.clickTopDeals();
+	}
+	
+	@Test (dependsOnMethods = "TC12")
+	public void TC13() {
+		topDeals = new TopDeals(driver);
+		topDeals.switchTab("child");
+		topDeals.searchValidation("wrong-word");
+		topDeals.searchValidation("tomato");
+	}
+	
+	@Test (dependsOnMethods = "TC13")
+	public void TC14() {
+		topDeals.validatePageSizeOption("5");
+		topDeals.validatePageSizeOption("10");
+		topDeals.validatePageSizeOption("20");
 	}
 }

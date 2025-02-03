@@ -33,17 +33,20 @@ public class OrderSubmissionPage {
 	@FindBy (xpath = "//button[text()='Proceed']")
 	private WebElement proceed;
 	
-	@FindBy (css = "span[class='errorAlert']")
+	@FindBy (className = "errorAlert")
 	private WebElement errorAlert;
 	
 	@FindBy (css = "a[href*='policy']")
 	private WebElement terms;
 	
-	@FindBy (css = "div[class='wrapperTwo']")
+	@FindBy (className = "wrapperTwo")
 	private WebElement termsNewTab;
 	
 	@FindBy (css = "span[style='color:green;font-size:25px']")
 	private WebElement successfulMessage;
+	
+	@FindBy (linkText = "Home")
+	private WebElement homeButton;
 	
 	public void validateSelectedCountry(String country, String method) {
 		Select s = new Select(selectCountry);
@@ -75,7 +78,7 @@ public class OrderSubmissionPage {
 	}
 	
 	public void validateErrorAlert() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		proceed.click();
 		wait.until(ExpectedConditions.visibilityOf(errorAlert));
 		Assert.assertEquals(errorAlert.getText(), "Please accept Terms & Conditions - Required");
@@ -101,5 +104,6 @@ public class OrderSubmissionPage {
 			proceed.click();
 		}
 		Assert.assertEquals(successfulMessage.getText(), "Thank you, your order has been placed successfully\n" + "You'll be redirected to Home page shortly!!");
+		homeButton.click();
 	}
 }

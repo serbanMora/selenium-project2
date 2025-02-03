@@ -67,6 +67,9 @@ public class ProductCatalog {
 	@FindBy (className = "empty-cart")
 	private WebElement emptyCart;
 	
+	@FindBy (linkText = "Top Deals")
+	private WebElement topDealsButton;
+	
 	public static String[] products() {
 		return new String[] {"Brocolli", "Cauliflower", "Beetroot", "Cucumber", "Carrot", "Tomato", "Beans",
 				"Brinjal", "Capsicum", "Mushroom", "Potato", "Pumpkin", "Corn", "Onion", "Apple", "Banana", "Grapes", "Mango", "Musk Melon",
@@ -165,17 +168,21 @@ public class ProductCatalog {
 		Assert.assertEquals(sum, totalValue);
 	}
 	
-	public void searchValidation(String keyword) {
+	public void searchValidation(String keyword) throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+
 		searchField.sendKeys(keyword);
+		Thread.sleep(4000);
+
 		if (productNames.isEmpty()) {
 			Assert.assertEquals(noSearchResults.getText(), "Sorry, no products matched your search!\n" + "Enter a different keyword and try.");
 		} else {
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 			wait.until(ExpectedConditions.visibilityOfAllElements(productNames));
-			for (int i = 0; i < productNames.size(); i++) {
-				String[] name = productNames.get(i).getText().split("-");
+			List<WebElement> products = productNames;
+			for (int i = 0; i < products.size(); i++) {
+				String[] name = products.get(i).getText().split("-");
 				String formattedName = name[0].trim().toLowerCase();
-				Assert.assertTrue(formattedName.contains(keyword));
+				Assert.assertEquals(formattedName, keyword);
 			}
 		}
 		searchField.clear();
@@ -190,5 +197,10 @@ public class ProductCatalog {
 	public CheckoutPage clickCheckout() {
 		checkout.click();
 		return new CheckoutPage(driver);
+	}
+	
+	public TopDeals clickTopDeals() {
+		topDealsButton.click();
+		return new TopDeals(driver);
 	}
 }
