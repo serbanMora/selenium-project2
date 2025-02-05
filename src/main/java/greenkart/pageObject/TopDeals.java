@@ -1,5 +1,7 @@
 package greenkart.pageObject;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -34,6 +36,44 @@ public class TopDeals {
 	
 	@FindBy (id = "search-field")
 	private WebElement searchField;
+	
+	@FindBy (css = "tr span")
+	private WebElement nameColumnHeader;
+	
+	@FindBy (css = "tr th:nth-child(2)")
+	private WebElement priceColumnHeader;
+	
+	@FindBy (css = "tr th:nth-child(3)")
+	private WebElement discountColumnHeader;
+	
+	public List<WebElement> tableContentList(String type) {
+		if (type.equals("name")) {
+			return namesList;
+		}
+		if (type.equals("price")) {
+			return pricesList;
+		}
+		if (type.equals("discount")) {
+			return discountList;
+		}
+		return null;
+	}
+	
+	public void clickColumnHeader(String type, int index) {
+		for (int i = 0; i < index; i++) {
+			switch (type) {
+			case "name":
+				nameColumnHeader.click();
+				break;
+			case "price":
+				priceColumnHeader.click();
+				break;
+			case "discount":
+				discountColumnHeader.click();
+				break;
+			}
+		}
+	}
 	
 	public void switchTab(String window) {
 		Set<String> handles = driver.getWindowHandles();
@@ -76,13 +116,21 @@ public class TopDeals {
 		driver.navigate().refresh();
 	}
 	
-	public void nameOrderValidation() {
-		
-		
-		
-		
+	public void orderValidation(List<WebElement> list, String ordering) {
+		List<WebElement> names = new ArrayList<>(list);
+		List<String> originalList = new ArrayList<>();
+		for (int i = 0; i < names.size(); i++) {
+			originalList.add(names.get(i).getText());
+		}
+		List<String> copiedList = new ArrayList<>();
+		for (int i = 0; i < originalList.size(); i++) {
+			copiedList.add(originalList.get(i));
+		}
+		if (ordering.equals("sort")) {
+			Collections.sort(copiedList);
+		} else if (ordering.equals("reverse")) {
+			Collections.reverse(copiedList);
+		}
+		Assert.assertEquals(originalList, copiedList);
 	}
-	
-	
-	
 }

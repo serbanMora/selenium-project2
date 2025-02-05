@@ -111,4 +111,24 @@ public class TestExecution extends BaseTest {
 		topDeals.validatePageSizeOption("10");
 		topDeals.validatePageSizeOption("20");
 	}
+	
+	@Test (dependsOnMethods = "TC14")
+	public void TC15() {
+		topDeals.clickColumnHeader("name", 1);
+		topDeals.orderValidation(topDeals.tableContentList("name"), "sort");
+		topDeals.clickColumnHeader("price", 1);
+		topDeals.orderValidation(topDeals.tableContentList("price"), "sort");
+		topDeals.clickColumnHeader("discount", 1);
+		topDeals.orderValidation(topDeals.tableContentList("discount"), "sort");
+	}
+	
+	@Test (dependsOnMethods = "TC15")
+	public void TC16() {
+		topDeals.clickColumnHeader("name", 2);
+		topDeals.orderValidation(topDeals.tableContentList("name"), "reverse");
+		topDeals.clickColumnHeader("price", 2);
+		topDeals.orderValidation(topDeals.tableContentList("price"), "reverse");
+		topDeals.clickColumnHeader("discount", 2);
+		topDeals.orderValidation(topDeals.tableContentList("discount"), "reverse");
+	}
 }

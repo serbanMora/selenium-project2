@@ -8,7 +8,9 @@
           <include name="setUP"/>
           <include name="TC5"/>
           <include name="TC12"/>
+          <include name="TC15"/>
           <include name="TC13"/>
+          <include name="TC16"/>
           <include name="TC14"/>
           <include name="TC9"/>
           <include name="TC8"/>
