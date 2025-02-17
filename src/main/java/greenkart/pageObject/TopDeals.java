@@ -46,6 +46,9 @@ public class TopDeals {
 	@FindBy (css = "tr th:nth-child(3)")
 	private WebElement discountColumnHeader;
 	
+	@FindBy (css = "svg[class='react-date-picker__calendar-button__icon react-date-picker__button__icon']")
+	private WebElement calendar;
+	
 	public List<WebElement> tableContentList(String type) {
 		if (type.equals("name")) {
 			return namesList;
@@ -129,8 +132,16 @@ public class TopDeals {
 		if (ordering.equals("sort")) {
 			Collections.sort(copiedList);
 		} else if (ordering.equals("reverse")) {
-			Collections.reverse(copiedList);
+			Collections.sort(copiedList, Collections.reverseOrder());
 		}
 		Assert.assertEquals(originalList, copiedList);
+	}
+	
+	public void setValidateDeliveryDate() {
+		calendar.click();
+		
+		
+		
+		
 	}
 }
