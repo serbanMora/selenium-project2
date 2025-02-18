@@ -131,4 +131,9 @@ public class TestExecution extends BaseTest {
 		topDeals.clickColumnHeader("discount", 2);
 		topDeals.orderValidation(topDeals.tableContentList("discount"), "reverse");
 	}
+	
+	@Test (dependsOnMethods = "TC16")
+	public void TC17() {
+		topDeals.validateDate("August 2030", "1");
+	}
 }

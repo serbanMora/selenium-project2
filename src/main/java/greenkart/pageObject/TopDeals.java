@@ -1,5 +1,8 @@
 package greenkart.pageObject;
 
+import java.time.LocalDate;
+import java.time.YearMonth;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
@@ -12,10 +15,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 public class TopDeals {
 
 	WebDriver driver;
+	SoftAssert softAssert;
 	
 	public TopDeals(WebDriver driver) {
 		this.driver = driver;
@@ -48,6 +53,18 @@ public class TopDeals {
 	
 	@FindBy (css = "svg[class='react-date-picker__calendar-button__icon react-date-picker__button__icon']")
 	private WebElement calendar;
+	
+	@FindBy (css = "input[name='date']")
+	private WebElement calendarDate;
+	
+	@FindBy (css = "span[class='react-calendar__navigation__label__labelText react-calendar__navigation__label__labelText--from']")
+	private WebElement calendarLabel;
+	
+	@FindBy (css = "button[class='react-calendar__navigation__arrow react-calendar__navigation__next-button']")
+	private WebElement calendarNavigation;
+	
+	@FindBy (css = "div[class='react-calendar__month-view__days'] button[type='button']")
+	private List<WebElement> calendarDays;
 	
 	public List<WebElement> tableContentList(String type) {
 		if (type.equals("name")) {
@@ -137,11 +154,37 @@ public class TopDeals {
 		Assert.assertEquals(originalList, copiedList);
 	}
 	
-	public void setValidateDeliveryDate() {
+	public void validateDate(String monthYEAR, String day) {
+		softAssert = new SoftAssert();
+		String displayedDate = calendarDate.getDomAttribute("value");
+		softAssert.assertEquals(displayedDate, getCurrentDate());
+		
 		calendar.click();
-		
-		
-		
-		
+		while (!calendarLabel.getText().equals(monthYEAR)){
+			calendarNavigation.click();
+		} 
+
+		for (int i = 0; i < calendarDays.size(); i++) {
+			String days = calendarDays.get(i).getText();
+			if (days.equals(day)) {
+				calendarDays.get(i).click();
+			}
+		}
+		String formattedDay = day.length() == 1 ? "0" + day : day;
+		softAssert.assertEquals(calendarDate.getDomAttribute("value"), dateFormatConversion(monthYEAR) + "-" + formattedDay);
+		softAssert.assertAll();
+	}
+	
+	public String getCurrentDate() {
+		LocalDate ld = LocalDate.now();
+		String date = ld.toString();
+		return date;	
+	}
+	
+	public String dateFormatConversion(String monthYear) {
+		DateTimeFormatter monthYearFormatter = DateTimeFormatter.ofPattern("MMMM yyyy");
+        YearMonth yearMonth = YearMonth.parse(monthYear, monthYearFormatter);
+        String formattedDate = yearMonth.format(DateTimeFormatter.ofPattern("yyyy-MM"));
+        return formattedDate;
 	}
 }

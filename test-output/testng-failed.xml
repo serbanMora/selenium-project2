@@ -12,11 +12,13 @@
           <include name="TC13"/>
           <include name="TC16"/>
           <include name="TC14"/>
+          <include name="TC17"/>
           <include name="TC9"/>
           <include name="TC8"/>
           <include name="TC11"/>
           <include name="TC7"/>
           <include name="TC1"/>
+          <include name="tearDown"/>
           <include name="TC4"/>
           <include name="TC3"/>
           <include name="TC10"/>
