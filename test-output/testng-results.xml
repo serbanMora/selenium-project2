@@ -2,88 +2,88 @@
 <testng-results ignored="0" total="17" passed="17" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-18T17:10:48 EET" name="Default suite" finished-at="2025-02-18T17:11:31 EET" duration-ms="43043">
+  <suite started-at="2025-02-28T10:34:59 EET" name="Suite" finished-at="2025-02-28T10:35:46 EET" duration-ms="46791">
     <groups>
     </groups>
-    <test started-at="2025-02-18T17:10:48 EET" name="Default test" finished-at="2025-02-18T17:11:31 EET" duration-ms="43043">
+    <test started-at="2025-02-28T10:34:59 EET" name="Test 1" finished-at="2025-02-28T10:35:46 EET" duration-ms="46791">
       <class name="greenkart.testCases.TestExecution">
-        <test-method is-config="true" signature="setUP()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-18T17:10:48 EET" name="setUP" finished-at="2025-02-18T17:10:52 EET" duration-ms="3698" status="PASS">
+        <test-method is-config="true" signature="setUP()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-28T10:34:59 EET" name="setUP" finished-at="2025-02-28T10:35:04 EET" duration-ms="4528" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUP -->
-        <test-method signature="TC1()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-18T17:10:52 EET" name="TC1" finished-at="2025-02-18T17:11:04 EET" duration-ms="12343" status="PASS">
+        <test-method signature="TC1()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-28T10:35:04 EET" name="TC1" finished-at="2025-02-28T10:35:16 EET" duration-ms="12086" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC1 -->
-        <test-method signature="TC2()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-18T17:11:05 EET" name="TC2" finished-at="2025-02-18T17:11:06 EET" depends-on-methods="greenkart.testCases.TestExecution.TC1" duration-ms="1879" status="PASS">
+        <test-method signature="TC2()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-28T10:35:16 EET" name="TC2" finished-at="2025-02-28T10:35:18 EET" depends-on-methods="greenkart.testCases.TestExecution.TC1" duration-ms="1735" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC2 -->
-        <test-method signature="TC3()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-18T17:11:06 EET" name="TC3" finished-at="2025-02-18T17:11:09 EET" depends-on-methods="greenkart.testCases.TestExecution.TC2" duration-ms="3016" status="PASS">
+        <test-method signature="TC3()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-28T10:35:18 EET" name="TC3" finished-at="2025-02-28T10:35:21 EET" depends-on-methods="greenkart.testCases.TestExecution.TC2" duration-ms="3082" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC3 -->
-        <test-method signature="TC4()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-18T17:11:09 EET" name="TC4" finished-at="2025-02-18T17:11:12 EET" depends-on-methods="greenkart.testCases.TestExecution.TC3" duration-ms="2276" status="PASS">
+        <test-method signature="TC4()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-28T10:35:21 EET" name="TC4" finished-at="2025-02-28T10:35:24 EET" depends-on-methods="greenkart.testCases.TestExecution.TC3" duration-ms="3250" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC4 -->
-        <test-method signature="TC5()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-18T17:11:12 EET" name="TC5" finished-at="2025-02-18T17:11:13 EET" depends-on-methods="greenkart.testCases.TestExecution.TC4" duration-ms="1082" status="PASS">
+        <test-method signature="TC5()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-28T10:35:24 EET" name="TC5" finished-at="2025-02-28T10:35:26 EET" depends-on-methods="greenkart.testCases.TestExecution.TC4" duration-ms="1660" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC5 -->
-        <test-method signature="TC6()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-18T17:11:13 EET" name="TC6" finished-at="2025-02-18T17:11:13 EET" depends-on-methods="greenkart.testCases.TestExecution.TC5" duration-ms="302" status="PASS">
+        <test-method signature="TC6()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-28T10:35:26 EET" name="TC6" finished-at="2025-02-28T10:35:26 EET" depends-on-methods="greenkart.testCases.TestExecution.TC5" duration-ms="416" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC6 -->
-        <test-method signature="TC7()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-18T17:11:13 EET" name="TC7" finished-at="2025-02-18T17:11:18 EET" depends-on-methods="greenkart.testCases.TestExecution.TC6" duration-ms="5250" status="PASS">
+        <test-method signature="TC7()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-28T10:35:26 EET" name="TC7" finished-at="2025-02-28T10:35:33 EET" depends-on-methods="greenkart.testCases.TestExecution.TC6" duration-ms="6307" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC7 -->
-        <test-method signature="TC8()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-18T17:11:18 EET" name="TC8" finished-at="2025-02-18T17:11:24 EET" depends-on-methods="greenkart.testCases.TestExecution.TC7" duration-ms="5504" status="PASS">
+        <test-method signature="TC8()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-28T10:35:33 EET" name="TC8" finished-at="2025-02-28T10:35:39 EET" depends-on-methods="greenkart.testCases.TestExecution.TC7" duration-ms="6176" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC8 -->
-        <test-method signature="TC9()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-18T17:11:24 EET" name="TC9" finished-at="2025-02-18T17:11:24 EET" depends-on-methods="greenkart.testCases.TestExecution.TC8" duration-ms="110" status="PASS">
+        <test-method signature="TC9()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-28T10:35:39 EET" name="TC9" finished-at="2025-02-28T10:35:39 EET" depends-on-methods="greenkart.testCases.TestExecution.TC8" duration-ms="275" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC9 -->
-        <test-method signature="TC10()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-18T17:11:24 EET" name="TC10" finished-at="2025-02-18T17:11:24 EET" depends-on-methods="greenkart.testCases.TestExecution.TC9" duration-ms="96" status="PASS">
+        <test-method signature="TC10()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-28T10:35:39 EET" name="TC10" finished-at="2025-02-28T10:35:39 EET" depends-on-methods="greenkart.testCases.TestExecution.TC9" duration-ms="164" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC10 -->
-        <test-method signature="TC11()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-18T17:11:24 EET" name="TC11" finished-at="2025-02-18T17:11:24 EET" depends-on-methods="greenkart.testCases.TestExecution.TC10" duration-ms="259" status="PASS">
+        <test-method signature="TC11()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-28T10:35:39 EET" name="TC11" finished-at="2025-02-28T10:35:39 EET" depends-on-methods="greenkart.testCases.TestExecution.TC10" duration-ms="264" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC11 -->
-        <test-method signature="TC12()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-18T17:11:24 EET" name="TC12" finished-at="2025-02-18T17:11:25 EET" depends-on-methods="greenkart.testCases.TestExecution.TC11" duration-ms="433" status="PASS">
+        <test-method signature="TC12()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-28T10:35:39 EET" name="TC12" finished-at="2025-02-28T10:35:40 EET" depends-on-methods="greenkart.testCases.TestExecution.TC11" duration-ms="340" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC12 -->
-        <test-method signature="TC13()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-18T17:11:25 EET" name="TC13" finished-at="2025-02-18T17:11:26 EET" depends-on-methods="greenkart.testCases.TestExecution.TC12" duration-ms="769" status="PASS">
+        <test-method signature="TC13()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-28T10:35:40 EET" name="TC13" finished-at="2025-02-28T10:35:41 EET" depends-on-methods="greenkart.testCases.TestExecution.TC12" duration-ms="774" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC13 -->
-        <test-method signature="TC14()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-18T17:11:26 EET" name="TC14" finished-at="2025-02-18T17:11:26 EET" depends-on-methods="greenkart.testCases.TestExecution.TC13" duration-ms="316" status="PASS">
+        <test-method signature="TC14()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-28T10:35:41 EET" name="TC14" finished-at="2025-02-28T10:35:41 EET" depends-on-methods="greenkart.testCases.TestExecution.TC13" duration-ms="265" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC14 -->
-        <test-method signature="TC15()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-18T17:11:26 EET" name="TC15" finished-at="2025-02-18T17:11:26 EET" depends-on-methods="greenkart.testCases.TestExecution.TC14" duration-ms="528" status="PASS">
+        <test-method signature="TC15()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-28T10:35:41 EET" name="TC15" finished-at="2025-02-28T10:35:41 EET" depends-on-methods="greenkart.testCases.TestExecution.TC14" duration-ms="454" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC15 -->
-        <test-method signature="TC16()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-18T17:11:26 EET" name="TC16" finished-at="2025-02-18T17:11:27 EET" depends-on-methods="greenkart.testCases.TestExecution.TC15" duration-ms="495" status="PASS">
+        <test-method signature="TC16()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-28T10:35:41 EET" name="TC16" finished-at="2025-02-28T10:35:42 EET" depends-on-methods="greenkart.testCases.TestExecution.TC15" duration-ms="477" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC16 -->
-        <test-method signature="TC17()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-18T17:11:27 EET" name="TC17" finished-at="2025-02-18T17:11:31 EET" depends-on-methods="greenkart.testCases.TestExecution.TC16" duration-ms="4222" status="PASS">
+        <test-method signature="TC17()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-28T10:35:42 EET" name="TC17" finished-at="2025-02-28T10:35:46 EET" depends-on-methods="greenkart.testCases.TestExecution.TC16" duration-ms="4089" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC17 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-18T17:11:31 EET" name="tearDown" finished-at="2025-02-18T17:11:31 EET" duration-ms="238" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:greenkart.testCases.TestExecution@3e78b6a5]" started-at="2025-02-28T10:35:46 EET" name="tearDown" finished-at="2025-02-28T10:35:46 EET" duration-ms="253" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- greenkart.testCases.TestExecution -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test 1 -->
+  </suite> <!-- Suite -->
 </testng-results>

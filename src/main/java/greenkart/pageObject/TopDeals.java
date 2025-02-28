@@ -178,7 +178,7 @@ public class TopDeals {
 	public String getCurrentDate() {
 		LocalDate ld = LocalDate.now();
 		String date = ld.toString();
-		return date;	
+		return date;
 	}
 	
 	public String dateFormatConversion(String monthYear) {
