@@ -7,10 +7,11 @@ import greenkart.pageObject.CheckoutPage;
 import greenkart.pageObject.OrderSubmissionPage;
 import greenkart.pageObject.ProductCatalog;
 import greenkart.pageObject.TopDeals;
-import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
-import io.qameta.allure.Step;
+import io.qameta.allure.Story;
 
 public class TestExecution extends BaseTest {
 
@@ -20,9 +21,10 @@ public class TestExecution extends BaseTest {
 	TopDeals topDeals;
 	
 	@Test
-	@Step("")
-	@Description("")
-	@Severity(SeverityLevel.MINOR)
+	@Epic("Search Functionality")
+	@Feature("Product Catalog")
+	@Story("TC 1 - Search with valid and invalid product names")
+	@Severity(SeverityLevel.NORMAL)
 	public void TC1() throws InterruptedException {
 		productCatalog = new ProductCatalog(driver);
 		productCatalog.searchValidation("apple");
@@ -30,7 +32,9 @@ public class TestExecution extends BaseTest {
 	}
 	
 	@Test (dependsOnMethods = "TC1")
-	@Description("")
+	@Epic("Add Quantity Functionality")
+	@Feature("Product Catalog")
+	@Story("TC 2 - Add quantity to product and validate cart contents")
 	@Severity(SeverityLevel.NORMAL)
 	public void TC2() {
 		productCatalog.addQuantity("walnuts", 15);
@@ -38,7 +42,9 @@ public class TestExecution extends BaseTest {
 	}
 	
 	@Test (dependsOnMethods = "TC2")
-	@Description("")
+	@Epic("Add Product Functionality")
+	@Feature("Product Catalog")
+	@Story("TC 3 - Add products and validate items total")
 	@Severity(SeverityLevel.NORMAL)
 	public void TC3() {
 		productCatalog.addProductToCart();
@@ -46,6 +52,10 @@ public class TestExecution extends BaseTest {
 	}
 	
 	@Test (dependsOnMethods = "TC3")
+	@Epic("Add Product Functionality")
+	@Feature("Product Catalog")
+	@Story("TC 4 - Add products and validate total price")
+	@Severity(SeverityLevel.NORMAL)
 	public void TC4() {
 		productCatalog.cartIcon().click();
 		productCatalog.validatePriceInCart();
@@ -53,29 +63,49 @@ public class TestExecution extends BaseTest {
 	}
 	
 	@Test (dependsOnMethods = "TC4")
+	@Epic("Checkout Functionality")
+	@Feature("Checkout Page")
+	@Story("TC 5 - Validate products at checkout")
+	@Severity(SeverityLevel.NORMAL)
 	public void TC5() {
 		checkoutPage = new CheckoutPage(driver);
 		checkoutPage.validateProductsAtCheckout();
 	}
 	
 	@Test (dependsOnMethods = "TC5")
+	@Epic("Total Amount Functionality")
+	@Feature("Checkout Page")
+	@Story("TC 6 - Validate Total Amount")
+	@Severity(SeverityLevel.CRITICAL)
 	public void TC6() {
 		checkoutPage.validateTotalAmount();
 	}
 	
 	@Test (dependsOnMethods = "TC6")
+	@Epic("Promo Code Functionality")
+	@Feature("Checkout Page")
+	@Story("TC 7 - Validate empty and invalid promo code")
+	@Severity(SeverityLevel.MINOR)
 	public void TC7() {
 		checkoutPage.validateEmptyInvalidCode("invalid");
 		checkoutPage.validateEmptyInvalidCode("empty");
 	}
 	
 	@Test (dependsOnMethods = "TC7")
+	@Epic("Promo Code Functionality")
+	@Feature("Checkout Page")
+	@Story("TC 8 - Validate discount code")
+	@Severity(SeverityLevel.NORMAL)
 	public void TC8() {
 		checkoutPage.validateAfterDiscount("rahulshettyacademy");
 		checkoutPage.placeOrders();
 	}
 	
 	@Test (dependsOnMethods = "TC8")
+	@Epic("Select Country Functionality")
+	@Feature("Submission Page")
+	@Story("TC 9 - Select country and validate selection")
+	@Severity(SeverityLevel.MINOR)
 	public void TC9() {
 		submissionPage = new OrderSubmissionPage(driver);
 		submissionPage.validateSelectedCountry("Romania", "byValue");
