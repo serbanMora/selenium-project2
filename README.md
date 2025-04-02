@@ -5,10 +5,11 @@ This project automates 17 key test cases for the GreenKart demo e-commerce websi
 Test execution is organized sequentially, with each test depending on the successful completion of the previous one, ensuring the integrity of the e-commerce workflows. The tests cover critical functionalities like searching for products, adding quantities, validating cart contents, and checking the total item count, offering a complete automated validation of the user experience.
 
 All test cases utilize Allure annotations to improve integration with the Allure report:
-```@Epic```: Categorizes the test under a high-level feature or functionality.
-```@Feature```: Specifies the test object class.
-```@Story```: Describes a specific test case.
-```@Severity```: Indicates the severity of the test, which helps prioritize the issues in the report.
+
+* ```@Epic```: Categorizes the test under a high-level feature or functionality.
+* ```@Feature```: Specifies the test object class.
+* ```@Story```: Describes a specific test case.
+* ```@Severity```: Indicates the severity of the test, which helps prioritize the issues in the report.
 
 To run the tests, navigate to project directory and execute the following command:
 	```mvn test```, this will trigger Maven to compile the project and run the test cases defined in the project.
