@@ -14,10 +14,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 public class OrderSubmissionPage {
 
 	WebDriver driver;
+	SoftAssert softAssert;
 	
 	public OrderSubmissionPage(WebDriver driver) {
 		this.driver = driver;
@@ -78,10 +80,13 @@ public class OrderSubmissionPage {
 	}
 	
 	public void validateErrorAlert() {
+		softAssert = new SoftAssert();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		proceed.click();
 		wait.until(ExpectedConditions.visibilityOf(errorAlert));
-		Assert.assertEquals(errorAlert.getText(), "Please accept Terms & Conditions - Required");
+		softAssert.assertEquals(errorAlert.getText(), "Please accept Terms & Conditions - Required");
+		softAssert.assertTrue(errorAlert.getDomAttribute("style").contains("red"));
+		softAssert.assertAll();
 	}
 	
 	public void validateTerms() {

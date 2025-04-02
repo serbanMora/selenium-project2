@@ -93,6 +93,7 @@ public class CheckoutPage {
 	}
 	
 	public void validateEmptyInvalidCode(String type) {
+		softAssert = new SoftAssert();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		
 		switch (type) {
@@ -100,14 +101,16 @@ public class CheckoutPage {
 			promoField.sendKeys("invalid");
 			applyPromo.click();
 			wait.until(ExpectedConditions.visibilityOf(promoInfo));
-			Assert.assertEquals(promoInfo.getText(), "Invalid code ..!");
+			softAssert.assertEquals(promoInfo.getText(), "Invalid code ..!");
+			softAssert.assertTrue(promoInfo.getDomAttribute("style").contains("red"));
 			break;
 		
 		case "empty":
 			promoField.clear();
 			applyPromo.click();
 			wait.until(ExpectedConditions.visibilityOf(promoInfo));
-			Assert.assertEquals(promoInfo.getText(), "Empty code ..!");
+			softAssert.assertEquals(promoInfo.getText(), "Empty code ..!");
+			softAssert.assertTrue(promoInfo.getDomAttribute("style").contains("red"));
 			break;
 		}
 	}
@@ -122,7 +125,8 @@ public class CheckoutPage {
 		
 		wait.until(ExpectedConditions.visibilityOf(promoInfo));
 		softAssert.assertEquals(promoInfo.getText(), "Code applied ..!");
-
+		softAssert.assertTrue(promoInfo.getDomAttribute("style").contains("green"));
+		
 		int total = Integer.parseInt(totalAmount.getText());
 		int discountPerc = Integer.parseInt(discountPercentage.getText().replace("%", ""));
 		double totalAfterDisc = Double.parseDouble(discountAmount.getText());

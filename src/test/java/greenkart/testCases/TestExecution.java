@@ -85,7 +85,7 @@ public class TestExecution extends BaseTest {
 	@Epic("Promo Code Functionality")
 	@Feature("Checkout Page")
 	@Story("TC 7 - Validate empty and invalid promo code")
-	@Severity(SeverityLevel.MINOR)
+	@Severity(SeverityLevel.NORMAL)
 	public void TC7() {
 		checkoutPage.validateEmptyInvalidCode("invalid");
 		checkoutPage.validateEmptyInvalidCode("empty");
@@ -95,7 +95,7 @@ public class TestExecution extends BaseTest {
 	@Epic("Promo Code Functionality")
 	@Feature("Checkout Page")
 	@Story("TC 8 - Validate discount code")
-	@Severity(SeverityLevel.NORMAL)
+	@Severity(SeverityLevel.BLOCKER)
 	public void TC8() {
 		checkoutPage.validateAfterDiscount("rahulshettyacademy");
 		checkoutPage.placeOrders();
@@ -112,22 +112,38 @@ public class TestExecution extends BaseTest {
 	}
 	
 	@Test (dependsOnMethods = "TC9")
+	@Epic("Error Alert")
+	@Feature("Submission Page")
+	@Story("TC 10 - Validate T&C Required error alert")
+	@Severity(SeverityLevel.MINOR)
 	public void TC10() {
 		submissionPage.validateErrorAlert();
 	}
 	
 	@Test (dependsOnMethods = "TC10")
+	@Epic("Terms & Conditions")
+	@Feature("Submission Page")
+	@Story("TC 11 - Validate Terms & Conditions in new tab")
+	@Severity(SeverityLevel.NORMAL)
 	public void TC11() {
 		submissionPage.validateTerms();
 	}
 	
 	@Test (dependsOnMethods = "TC11")
+	@Epic("Submit Order")
+	@Feature("Submission Page")
+	@Story("TC 12 - Validate submission text")
+	@Severity(SeverityLevel.CRITICAL)
 	public void TC12() {
 		submissionPage.validateSubmitOrder();
 		productCatalog.clickTopDeals();
 	}
 	
 	@Test (dependsOnMethods = "TC12")
+	@Epic("Search Functionality")
+	@Feature("Top Deals")
+	@Story("TC 13 - Search with valid and invalid product names")
+	@Severity(SeverityLevel.NORMAL)
 	public void TC13() {
 		topDeals = new TopDeals(driver);
 		topDeals.switchTab("child");
@@ -136,6 +152,10 @@ public class TestExecution extends BaseTest {
 	}
 	
 	@Test (dependsOnMethods = "TC13")
+	@Epic("Page Size")
+	@Feature("Top Deals")
+	@Story("TC 14 - Validate Page Size Option")
+	@Severity(SeverityLevel.NORMAL)
 	public void TC14() {
 		topDeals.validatePageSizeOption("5");
 		topDeals.validatePageSizeOption("10");
@@ -143,6 +163,10 @@ public class TestExecution extends BaseTest {
 	}
 	
 	@Test (dependsOnMethods = "TC14")
+	@Epic("Items Order")
+	@Feature("Top Deals")
+	@Story("TC 15 - Validate Ascending Order for column items")
+	@Severity(SeverityLevel.MINOR)
 	public void TC15() {
 		topDeals.clickColumnHeader("name", 1);
 		topDeals.orderValidation(topDeals.tableContentList("name"), "sort");
@@ -153,6 +177,10 @@ public class TestExecution extends BaseTest {
 	}
 	
 	@Test (dependsOnMethods = "TC15")
+	@Epic("Items Order")
+	@Feature("Top Deals")
+	@Story("TC 16 - Validate Descending Order for column items")
+	@Severity(SeverityLevel.MINOR)
 	public void TC16() {
 		topDeals.clickColumnHeader("name", 2);
 		topDeals.orderValidation(topDeals.tableContentList("name"), "reverse");
@@ -163,6 +191,10 @@ public class TestExecution extends BaseTest {
 	}
 	
 	@Test (dependsOnMethods = "TC16")
+	@Epic("Delivery Date Calendar")
+	@Feature("Top Deals")
+	@Story("TC 17 - Validate Delivery Date Calendar functionality")
+	@Severity(SeverityLevel.TRIVIAL)
 	public void TC17() {
 		topDeals.validateDate("August 2030", "1");
 	}
