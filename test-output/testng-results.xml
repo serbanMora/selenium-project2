@@ -1,85 +1,671 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="17" passed="17" failed="0" skipped="0">
+<testng-results ignored="0" total="17" passed="0" failed="1" skipped="16">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-02T14:53:39 EEST" name="Suite" finished-at="2025-04-02T14:54:30 EEST" duration-ms="50808">
+  <suite started-at="2025-04-07T17:12:38 EEST" name="Suite" finished-at="2025-04-07T17:12:54 EEST" duration-ms="16014">
     <groups>
     </groups>
-    <test started-at="2025-04-02T14:53:39 EEST" name="Test 1" finished-at="2025-04-02T14:54:30 EEST" duration-ms="50808">
+    <test started-at="2025-04-07T17:12:38 EEST" name="Test 1" finished-at="2025-04-07T17:12:54 EEST" duration-ms="16014">
       <class name="greenkart.testCases.TestExecution">
-        <test-method is-config="true" signature="setUP()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-02T14:53:40 EEST" name="setUP" finished-at="2025-04-02T14:53:43 EEST" duration-ms="3957" status="PASS">
+        <test-method is-config="true" signature="setUP()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-07T17:12:38 EEST" name="setUP" finished-at="2025-04-07T17:12:42 EEST" duration-ms="4092" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUP -->
-        <test-method signature="TC1()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-02T14:53:43 EEST" name="TC1" finished-at="2025-04-02T14:53:56 EEST" duration-ms="12650" status="PASS">
+        <test-method signature="TC1()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-07T17:12:42 EEST" name="TC1" finished-at="2025-04-07T17:12:53 EEST" duration-ms="11605" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[Failed to decode response from marionette
+Build info: version: '4.30.0', revision: '509c7f17cc*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [62d1bfc6-3c1c-4426-abca-4fa45093d2d4, findElements {value=h4[class='product-name'], using=css selector}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 137.0, moz:accessibilityChecks: false, moz:buildID: 20250327043313, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 13292, moz:profile: C:\Users\lynxt\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 62d1bfc6-3c1c-4426-abca-4fa45093d2d4]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: Failed to decode response from marionette
+Build info: version: '4.30.0', revision: '509c7f17cc*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [62d1bfc6-3c1c-4426-abca-4fa45093d2d4, findElements {value=h4[class='product-name'], using=css selector}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 137.0, moz:accessibilityChecks: false, moz:buildID: 20250327043313, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 13292, moz:profile: C:\Users\lynxt\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 62d1bfc6-3c1c-4426-abca-4fa45093d2d4
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:182)
+at org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:103)
+at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:381)
+at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:375)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:83)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:36)
+at jdk.proxy2/jdk.proxy2.$Proxy20.isEmpty(Unknown Source)
+at greenkart.pageObject.ProductCatalog.searchValidation(ProductCatalog.java:177)
+at greenkart.testCases.TestExecution.TC1(TestExecution.java:31)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC1 -->
-        <test-method signature="TC2()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-02T14:53:56 EEST" name="TC2" finished-at="2025-04-02T14:53:59 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC1" duration-ms="2607" status="PASS">
+        <test-method signature="TC2()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-07T17:12:53 EEST" name="TC2" finished-at="2025-04-07T17:12:53 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC1" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method greenkart.testCases.TestExecution.TC2() on instance greenkart.testCases.TestExecution@5e3f861 depends on not successfully finished methods 
+[greenkart.testCases.TestExecution.TC1() on instance greenkart.testCases.TestExecution@5e3f861]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method greenkart.testCases.TestExecution.TC2() on instance greenkart.testCases.TestExecution@5e3f861 depends on not successfully finished methods 
+[greenkart.testCases.TestExecution.TC1() on instance greenkart.testCases.TestExecution@5e3f861]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC2 -->
-        <test-method signature="TC3()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-02T14:53:59 EEST" name="TC3" finished-at="2025-04-02T14:54:04 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC2" duration-ms="4841" status="PASS">
+        <test-method signature="TC3()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-07T17:12:53 EEST" name="TC3" finished-at="2025-04-07T17:12:53 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC2" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method greenkart.testCases.TestExecution.TC3() on instance greenkart.testCases.TestExecution@5e3f861 depends on not successfully finished methods 
+[greenkart.testCases.TestExecution.TC2() on instance greenkart.testCases.TestExecution@5e3f861]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method greenkart.testCases.TestExecution.TC3() on instance greenkart.testCases.TestExecution@5e3f861 depends on not successfully finished methods 
+[greenkart.testCases.TestExecution.TC2() on instance greenkart.testCases.TestExecution@5e3f861]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC3 -->
-        <test-method signature="TC4()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-02T14:54:04 EEST" name="TC4" finished-at="2025-04-02T14:54:07 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC3" duration-ms="3294" status="PASS">
+        <test-method signature="TC4()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-07T17:12:53 EEST" name="TC4" finished-at="2025-04-07T17:12:53 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC3" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method greenkart.testCases.TestExecution.TC4() on instance greenkart.testCases.TestExecution@5e3f861 depends on not successfully finished methods 
+[greenkart.testCases.TestExecution.TC3() on instance greenkart.testCases.TestExecution@5e3f861]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method greenkart.testCases.TestExecution.TC4() on instance greenkart.testCases.TestExecution@5e3f861 depends on not successfully finished methods 
+[greenkart.testCases.TestExecution.TC3() on instance greenkart.testCases.TestExecution@5e3f861]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC4 -->
-        <test-method signature="TC5()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-02T14:54:07 EEST" name="TC5" finished-at="2025-04-02T14:54:09 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC4" duration-ms="1460" status="PASS">
+        <test-method signature="TC5()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-07T17:12:54 EEST" name="TC5" finished-at="2025-04-07T17:12:54 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC4" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method greenkart.testCases.TestExecution.TC5() on instance greenkart.testCases.TestExecution@5e3f861 depends on not successfully finished methods 
+[greenkart.testCases.TestExecution.TC4() on instance greenkart.testCases.TestExecution@5e3f861]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method greenkart.testCases.TestExecution.TC5() on instance greenkart.testCases.TestExecution@5e3f861 depends on not successfully finished methods 
+[greenkart.testCases.TestExecution.TC4() on instance greenkart.testCases.TestExecution@5e3f861]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC5 -->
-        <test-method signature="TC6()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-02T14:54:09 EEST" name="TC6" finished-at="2025-04-02T14:54:09 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC5" duration-ms="405" status="PASS">
+        <test-method signature="TC6()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-07T17:12:54 EEST" name="TC6" finished-at="2025-04-07T17:12:54 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC5" duration-ms="1" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method greenkart.testCases.TestExecution.TC6() on instance greenkart.testCases.TestExecution@5e3f861 depends on not successfully finished methods 
+[greenkart.testCases.TestExecution.TC5() on instance greenkart.testCases.TestExecution@5e3f861]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method greenkart.testCases.TestExecution.TC6() on instance greenkart.testCases.TestExecution@5e3f861 depends on not successfully finished methods 
+[greenkart.testCases.TestExecution.TC5() on instance greenkart.testCases.TestExecution@5e3f861]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC6 -->
-        <test-method signature="TC7()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-02T14:54:09 EEST" name="TC7" finished-at="2025-04-02T14:54:14 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC6" duration-ms="5470" status="PASS">
+        <test-method signature="TC7()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-07T17:12:54 EEST" name="TC7" finished-at="2025-04-07T17:12:54 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC6" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method greenkart.testCases.TestExecution.TC7() on instance greenkart.testCases.TestExecution@5e3f861 depends on not successfully finished methods 
+[greenkart.testCases.TestExecution.TC6() on instance greenkart.testCases.TestExecution@5e3f861]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method greenkart.testCases.TestExecution.TC7() on instance greenkart.testCases.TestExecution@5e3f861 depends on not successfully finished methods 
+[greenkart.testCases.TestExecution.TC6() on instance greenkart.testCases.TestExecution@5e3f861]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC7 -->
-        <test-method signature="TC8()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-02T14:54:14 EEST" name="TC8" finished-at="2025-04-02T14:54:20 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC7" duration-ms="5550" status="PASS">
+        <test-method signature="TC8()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-07T17:12:54 EEST" name="TC8" finished-at="2025-04-07T17:12:54 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC7" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method greenkart.testCases.TestExecution.TC8() on instance greenkart.testCases.TestExecution@5e3f861 depends on not successfully finished methods 
+[greenkart.testCases.TestExecution.TC7() on instance greenkart.testCases.TestExecution@5e3f861]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method greenkart.testCases.TestExecution.TC8() on instance greenkart.testCases.TestExecution@5e3f861 depends on not successfully finished methods 
+[greenkart.testCases.TestExecution.TC7() on instance greenkart.testCases.TestExecution@5e3f861]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC8 -->
-        <test-method signature="TC9()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-02T14:54:20 EEST" name="TC9" finished-at="2025-04-02T14:54:20 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC8" duration-ms="208" status="PASS">
+        <test-method signature="TC9()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-07T17:12:54 EEST" name="TC9" finished-at="2025-04-07T17:12:54 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC8" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method greenkart.testCases.TestExecution.TC9() on instance greenkart.testCases.TestExecution@5e3f861 depends on not successfully finished methods 
+[greenkart.testCases.TestExecution.TC8() on instance greenkart.testCases.TestExecution@5e3f861]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method greenkart.testCases.TestExecution.TC9() on instance greenkart.testCases.TestExecution@5e3f861 depends on not successfully finished methods 
+[greenkart.testCases.TestExecution.TC8() on instance greenkart.testCases.TestExecution@5e3f861]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC9 -->
-        <test-method signature="TC10()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-02T14:54:20 EEST" name="TC10" finished-at="2025-04-02T14:54:20 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC9" duration-ms="169" status="PASS">
+        <test-method signature="TC10()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-07T17:12:54 EEST" name="TC10" finished-at="2025-04-07T17:12:54 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC9" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method greenkart.testCases.TestExecution.TC10() on instance greenkart.testCases.TestExecution@5e3f861 depends on not successfully finished methods 
+[greenkart.testCases.TestExecution.TC9() on instance greenkart.testCases.TestExecution@5e3f861]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method greenkart.testCases.TestExecution.TC10() on instance greenkart.testCases.TestExecution@5e3f861 depends on not successfully finished methods 
+[greenkart.testCases.TestExecution.TC9() on instance greenkart.testCases.TestExecution@5e3f861]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC10 -->
-        <test-method signature="TC11()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-02T14:54:20 EEST" name="TC11" finished-at="2025-04-02T14:54:21 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC10" duration-ms="264" status="PASS">
+        <test-method signature="TC11()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-07T17:12:54 EEST" name="TC11" finished-at="2025-04-07T17:12:54 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC10" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method greenkart.testCases.TestExecution.TC11() on instance greenkart.testCases.TestExecution@5e3f861 depends on not successfully finished methods 
+[greenkart.testCases.TestExecution.TC10() on instance greenkart.testCases.TestExecution@5e3f861]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method greenkart.testCases.TestExecution.TC11() on instance greenkart.testCases.TestExecution@5e3f861 depends on not successfully finished methods 
+[greenkart.testCases.TestExecution.TC10() on instance greenkart.testCases.TestExecution@5e3f861]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC11 -->
-        <test-method signature="TC12()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-02T14:54:21 EEST" name="TC12" finished-at="2025-04-02T14:54:21 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC11" duration-ms="545" status="PASS">
+        <test-method signature="TC12()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-07T17:12:54 EEST" name="TC12" finished-at="2025-04-07T17:12:54 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC11" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method greenkart.testCases.TestExecution.TC12() on instance greenkart.testCases.TestExecution@5e3f861 depends on not successfully finished methods 
+[greenkart.testCases.TestExecution.TC11() on instance greenkart.testCases.TestExecution@5e3f861]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method greenkart.testCases.TestExecution.TC12() on instance greenkart.testCases.TestExecution@5e3f861 depends on not successfully finished methods 
+[greenkart.testCases.TestExecution.TC11() on instance greenkart.testCases.TestExecution@5e3f861]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC12 -->
-        <test-method signature="TC13()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-02T14:54:21 EEST" name="TC13" finished-at="2025-04-02T14:54:22 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC12" duration-ms="918" status="PASS">
+        <test-method signature="TC13()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-07T17:12:54 EEST" name="TC13" finished-at="2025-04-07T17:12:54 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC12" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method greenkart.testCases.TestExecution.TC13() on instance greenkart.testCases.TestExecution@5e3f861 depends on not successfully finished methods 
+[greenkart.testCases.TestExecution.TC12() on instance greenkart.testCases.TestExecution@5e3f861]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method greenkart.testCases.TestExecution.TC13() on instance greenkart.testCases.TestExecution@5e3f861 depends on not successfully finished methods 
+[greenkart.testCases.TestExecution.TC12() on instance greenkart.testCases.TestExecution@5e3f861]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC13 -->
-        <test-method signature="TC14()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-02T14:54:22 EEST" name="TC14" finished-at="2025-04-02T14:54:23 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC13" duration-ms="500" status="PASS">
+        <test-method signature="TC14()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-07T17:12:54 EEST" name="TC14" finished-at="2025-04-07T17:12:54 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC13" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method greenkart.testCases.TestExecution.TC14() on instance greenkart.testCases.TestExecution@5e3f861 depends on not successfully finished methods 
+[greenkart.testCases.TestExecution.TC13() on instance greenkart.testCases.TestExecution@5e3f861]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method greenkart.testCases.TestExecution.TC14() on instance greenkart.testCases.TestExecution@5e3f861 depends on not successfully finished methods 
+[greenkart.testCases.TestExecution.TC13() on instance greenkart.testCases.TestExecution@5e3f861]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC14 -->
-        <test-method signature="TC15()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-02T14:54:23 EEST" name="TC15" finished-at="2025-04-02T14:54:23 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC14" duration-ms="727" status="PASS">
+        <test-method signature="TC15()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-07T17:12:54 EEST" name="TC15" finished-at="2025-04-07T17:12:54 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC14" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method greenkart.testCases.TestExecution.TC15() on instance greenkart.testCases.TestExecution@5e3f861 depends on not successfully finished methods 
+[greenkart.testCases.TestExecution.TC14() on instance greenkart.testCases.TestExecution@5e3f861]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method greenkart.testCases.TestExecution.TC15() on instance greenkart.testCases.TestExecution@5e3f861 depends on not successfully finished methods 
+[greenkart.testCases.TestExecution.TC14() on instance greenkart.testCases.TestExecution@5e3f861]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC15 -->
-        <test-method signature="TC16()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-02T14:54:23 EEST" name="TC16" finished-at="2025-04-02T14:54:24 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC15" duration-ms="860" status="PASS">
+        <test-method signature="TC16()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-07T17:12:54 EEST" name="TC16" finished-at="2025-04-07T17:12:54 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC15" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method greenkart.testCases.TestExecution.TC16() on instance greenkart.testCases.TestExecution@5e3f861 depends on not successfully finished methods 
+[greenkart.testCases.TestExecution.TC15() on instance greenkart.testCases.TestExecution@5e3f861]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method greenkart.testCases.TestExecution.TC16() on instance greenkart.testCases.TestExecution@5e3f861 depends on not successfully finished methods 
+[greenkart.testCases.TestExecution.TC15() on instance greenkart.testCases.TestExecution@5e3f861]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC16 -->
-        <test-method signature="TC17()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-02T14:54:24 EEST" name="TC17" finished-at="2025-04-02T14:54:30 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC16" duration-ms="5730" status="PASS">
+        <test-method signature="TC17()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-07T17:12:54 EEST" name="TC17" finished-at="2025-04-07T17:12:54 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC16" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method greenkart.testCases.TestExecution.TC17() on instance greenkart.testCases.TestExecution@5e3f861 depends on not successfully finished methods 
+[greenkart.testCases.TestExecution.TC16() on instance greenkart.testCases.TestExecution@5e3f861]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method greenkart.testCases.TestExecution.TC17() on instance greenkart.testCases.TestExecution@5e3f861 depends on not successfully finished methods 
+[greenkart.testCases.TestExecution.TC16() on instance greenkart.testCases.TestExecution@5e3f861]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC17 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-02T14:54:30 EEST" name="tearDown" finished-at="2025-04-02T14:54:30 EEST" duration-ms="324" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:greenkart.testCases.TestExecution@5e3f861]" started-at="2025-04-07T17:12:54 EEST" name="tearDown" finished-at="2025-04-07T17:12:54 EEST" duration-ms="27" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchSessionException">
+            <message>
+              <![CDATA[Tried to run command without establishing a connection
+Build info: version: '4.30.0', revision: '509c7f17cc*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [62d1bfc6-3c1c-4426-abca-4fa45093d2d4, quit {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 137.0, moz:accessibilityChecks: false, moz:buildID: 20250327043313, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 13292, moz:profile: C:\Users\lynxt\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 62d1bfc6-3c1c-4426-abca-4fa45093d2d4]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: '4.30.0', revision: '509c7f17cc*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [62d1bfc6-3c1c-4426-abca-4fa45093d2d4, quit {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 137.0, moz:accessibilityChecks: false, moz:buildID: 20250327043313, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 13292, moz:profile: C:\Users\lynxt\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 62d1bfc6-3c1c-4426-abca-4fa45093d2d4
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$1(DriverCommandExecutor.java:126)
+at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
