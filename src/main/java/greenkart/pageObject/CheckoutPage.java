@@ -8,6 +8,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -19,7 +21,10 @@ import org.testng.asserts.SoftAssert;
 
 public class CheckoutPage {
 	
+	private static Logger log = LogManager.getLogger(CheckoutPage.class.getName());
+	
 	WebDriver driver;
+	WebDriverWait wait;
 	SoftAssert softAssert;
 	
 	public CheckoutPage(WebDriver driver) {
@@ -59,8 +64,7 @@ public class CheckoutPage {
 	}
 	
 	public void validateProductsAtCheckout() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-		wait.until(ExpectedConditions.visibilityOfAllElements(checkoutNames));
+		waitForVisibilityOfAll(15, checkoutNames);
 		
 		Set<String> expectedProducts = new TreeSet<>(Arrays.asList(ProductCatalog.products()));
 		List<WebElement> productList = new ArrayList<>(checkoutNames);
@@ -94,13 +98,12 @@ public class CheckoutPage {
 	
 	public void validateEmptyInvalidCode(String type) {
 		softAssert = new SoftAssert();
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		
 		switch (type) {
 		case "invalid":
 			promoField.sendKeys("invalid");
 			applyPromo.click();
-			wait.until(ExpectedConditions.visibilityOf(promoInfo));
+			waitForVisibilityOf(15, promoInfo);
 			softAssert.assertEquals(promoInfo.getText(), "Invalid code ..!");
 			softAssert.assertTrue(promoInfo.getDomAttribute("style").contains("red"));
 			break;
@@ -108,7 +111,7 @@ public class CheckoutPage {
 		case "empty":
 			promoField.clear();
 			applyPromo.click();
-			wait.until(ExpectedConditions.visibilityOf(promoInfo));
+			waitForVisibilityOf(15, promoInfo);
 			softAssert.assertEquals(promoInfo.getText(), "Empty code ..!");
 			softAssert.assertTrue(promoInfo.getDomAttribute("style").contains("red"));
 			break;
@@ -117,13 +120,12 @@ public class CheckoutPage {
 	
 	public void validateAfterDiscount(String discountCode) {
 		softAssert = new SoftAssert();
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		
 		driver.navigate().refresh();
 		promoField.sendKeys(discountCode);
 		applyPromo.click();
 		
-		wait.until(ExpectedConditions.visibilityOf(promoInfo));
+		waitForVisibilityOf(15, promoInfo);
 		softAssert.assertEquals(promoInfo.getText(), "Code applied ..!");
 		softAssert.assertTrue(promoInfo.getDomAttribute("style").contains("green"));
 		
@@ -136,6 +138,16 @@ public class CheckoutPage {
 
 		softAssert.assertEquals(totalAfterDisc, actualAfterDisc);
 		softAssert.assertAll();
+	}
+	
+	public void waitForVisibilityOf(int duration, WebElement element) {
+		wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
+		wait.until(ExpectedConditions.visibilityOf(element));
+	}
+	
+	public void waitForVisibilityOfAll(int duration, List<WebElement> element) {
+		wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
+		wait.until(ExpectedConditions.visibilityOfAllElements(element));
 	}
 	
 	public OrderSubmissionPage placeOrders() {

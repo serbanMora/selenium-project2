@@ -4,6 +4,8 @@ import java.time.Duration;
 import java.util.Iterator;
 import java.util.Set;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -18,7 +20,10 @@ import org.testng.asserts.SoftAssert;
 
 public class OrderSubmissionPage {
 
+	private static Logger log = LogManager.getLogger(OrderSubmissionPage.class.getName());
+	
 	WebDriver driver;
+	WebDriverWait wait;
 	SoftAssert softAssert;
 	
 	public OrderSubmissionPage(WebDriver driver) {
@@ -81,9 +86,8 @@ public class OrderSubmissionPage {
 	
 	public void validateErrorAlert() {
 		softAssert = new SoftAssert();
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		proceed.click();
-		wait.until(ExpectedConditions.visibilityOf(errorAlert));
+		waitForVisibilityOf(15, errorAlert);
 		softAssert.assertEquals(errorAlert.getText(), "Please accept Terms & Conditions - Required");
 		softAssert.assertTrue(errorAlert.getDomAttribute("style").contains("red"));
 		softAssert.assertAll();
@@ -99,6 +103,11 @@ public class OrderSubmissionPage {
 		Assert.assertEquals(termsNewTab.getText(), "Here the terms and condition page Click to geo back Home");
 		driver.close();
 		driver.switchTo().window(parentWindow);
+	}
+	
+	public void waitForVisibilityOf(int duration, WebElement element) {
+		wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
+		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 	
 	public void validateSubmitOrder() {

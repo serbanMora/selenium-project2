@@ -1,5 +1,6 @@
 package greenkart.config;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
@@ -11,7 +12,10 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+
+import io.qameta.allure.Allure;
 
 public class BaseTest {
 
@@ -54,6 +58,18 @@ public class BaseTest {
 	public void tearDown() {
 		if (driver != null) {
 			driver.quit();
+		}
+	}
+	
+	@AfterMethod
+	public void testRunLog() {
+		try {
+			File logFile = new File("logs/test-run.log");
+			if (logFile.exists()) {
+				Allure.addAttachment("Test Log", new FileInputStream(logFile));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 }

@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,8 +18,11 @@ import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
 public class ProductCatalog {
+	
+	private static Logger log = LogManager.getLogger(ProductCatalog.class.getName());
 
 	WebDriver driver;
+	WebDriverWait wait;
 	SoftAssert softAssert;
 	
 	public ProductCatalog(WebDriver driver) {
@@ -88,6 +93,7 @@ public class ProductCatalog {
 
 	public void addQuantity(String productName, int quantity) {
 		scrollTo(0, 0);
+		waitForVisibilityOfAll(3, productNames);
 		List<WebElement> name = new ArrayList<>(productNames);
 		productName = productName.toLowerCase();
 		for (int i = 0; i < name.size(); i++) {
@@ -99,6 +105,7 @@ public class ProductCatalog {
 				break;
 			}
 		}
+		log.info("For product: '" + productName + "', was added a quantity of " + quantity);
 	}
 	
 	public void validateCartContents() {
@@ -118,7 +125,15 @@ public class ProductCatalog {
 			if (!amount.isEmpty()) {
 				actualAmount = Integer.parseInt(amount);
 			}
-			softAssert.assertTrue(actualProductPrice * actualQuantity == actualAmount);
+		}
+		String logMessage = "Price of the product: " + actualProductPrice + ", multiplied with the quantity of product: " + actualQuantity + ", equals the amount: " + actualAmount;
+
+		try {
+			Assert.assertTrue(actualProductPrice * actualQuantity == actualAmount);
+			log.info(logMessage);
+		} catch (AssertionError e) {
+			log.error(logMessage);
+			throw e;
 		}
 		removeProduct.click();
 		softAssert.assertEquals(emptyCart.getText(), "You cart is empty!");
@@ -130,7 +145,7 @@ public class ProductCatalog {
 	public void addProductToCart() {
 		List<String> productList = Arrays.asList(products());
 		List<WebElement> addToCartButton = addToCart();
-		
+
 		int j = 0;
 
 		for (int i = 0; i < productNames.size(); i++) {
@@ -138,19 +153,29 @@ public class ProductCatalog {
 			String formattedName = name[0].trim();
 
 			if (productList.contains(formattedName)) {
+
 				addToCartButton.get(i).click();
+				log.info("'" + formattedName + "' was added to cart");
 				j++;
-			}
-			if (j == products().length) {
-				break;
+
+				if (j == products().length) {
+					break;
+				}
 			}
 		}
 	}
 	
 	public void validateItemsTotal() {
-		int itemsTotal = Integer.parseInt(itemsCount.getText());
-		int itemsExpected = products().length;
-		Assert.assertEquals(itemsTotal, itemsExpected);
+		try {
+			int itemsTotal = Integer.parseInt(itemsCount.getText());
+			int itemsExpected = products().length;
+
+			Assert.assertEquals(itemsTotal, itemsExpected);
+			log.info("Displayed item count: " + itemsTotal + ". Expected item count: " + itemsExpected);
+		} catch (AssertionError e) {
+			log.error("Mismatch in item count. Displayed: " + itemsCount.getText() + ", Expected: " + products().length);
+			throw e;
+		}
 	}
 	
 	public void validatePriceInCart() {
@@ -165,24 +190,41 @@ public class ProductCatalog {
 			}
 		}
 		int totalValue = Integer.parseInt(totalPrice.getText());
-		Assert.assertEquals(sum, totalValue);
+		log.debug("Sum of individual product prices: " + sum);
+		try {
+			Assert.assertEquals(sum, totalValue);
+			log.info("Displayed total price is: " + totalValue + ". Sum of individual prices: " + sum);
+		} catch (AssertionError e) {
+			log.error("Total price mismatch. Displayed: " + totalValue + ", Calculated: " + sum);
+			throw e;
+		}
 	}
 	
 	public void searchValidation(String keyword) throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-
 		searchField.sendKeys(keyword);
 		Thread.sleep(4000);
-
+		
 		if (productNames.isEmpty()) {
-			Assert.assertEquals(noSearchResults.getText(), "Sorry, no products matched your search!\n" + "Enter a different keyword and try.");
+			String expectedMessage = "Sorry, no products matched your search!\n" + "Enter a different keyword and try.";
+			try {
+				Assert.assertEquals(noSearchResults.getText(), expectedMessage);
+	        	log.info("No products found. Message displayed: '" + noSearchResults.getText() + "'");
+			} catch (AssertionError e) {
+				log.error("Incorrect message if no products are found: '"  + noSearchResults.getText() + "'. Expected: " + expectedMessage);
+			}
 		} else {
-			wait.until(ExpectedConditions.visibilityOfAllElements(productNames));
+			waitForVisibilityOfAll(5, productNames);
 			List<WebElement> products = productNames;
 			for (int i = 0; i < products.size(); i++) {
 				String[] name = products.get(i).getText().split("-");
 				String formattedName = name[0].trim().toLowerCase();
-				Assert.assertEquals(formattedName, keyword);
+				try {
+					Assert.assertEquals(formattedName, keyword);
+	            	log.info("Searched for product: " + keyword + ", found: '" + formattedName + "'");
+				} catch (AssertionError e) {
+					log.error("Mismatch on searched product: " + keyword + " , found: '" + formattedName + "'");
+					throw e;
+				}
 			}
 		}
 		searchField.clear();
@@ -192,6 +234,11 @@ public class ProductCatalog {
 	public void scrollTo(int index1, int index2) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollTo(" + index1 + ", " + index2 + ");");
+	}
+	
+	public void waitForVisibilityOfAll(int duration, List<WebElement> element) {
+		wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
+		wait.until(ExpectedConditions.visibilityOfAllElements(element));
 	}
 	
 	public CheckoutPage clickCheckout() {
