@@ -56,6 +56,7 @@ public class OrderSubmissionPage {
 	private WebElement homeButton;
 	
 	public void validateSelectedCountry(String country, String method) {
+		waitForVisibilityOf(5, selectCountry);
 		Select s = new Select(selectCountry);
 
 		switch (method) {
