@@ -1,157 +1,363 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="17" passed="17" failed="0" skipped="0">
+<testng-results ignored="0" total="18" passed="18" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-30T10:15:14 EEST" name="Suite" finished-at="2025-05-30T10:16:01 EEST" duration-ms="47222">
+  <suite started-at="2025-06-13T11:27:25 EEST" name="Default suite" finished-at="2025-06-13T11:28:13 EEST" duration-ms="47433">
     <groups>
     </groups>
-    <test started-at="2025-05-30T10:15:14 EEST" name="Test 1" finished-at="2025-05-30T10:16:01 EEST" duration-ms="47222">
+    <test started-at="2025-06-13T11:27:25 EEST" name="Default test" finished-at="2025-06-13T11:28:13 EEST" duration-ms="47433">
       <class name="greenkart.testCases.TestExecution">
-        <test-method is-config="true" signature="setUP()[pri:0, instance:greenkart.testCases.TestExecution@7d322cad]" started-at="2025-05-30T10:15:14 EEST" name="setUP" finished-at="2025-05-30T10:15:18 EEST" duration-ms="4070" status="PASS">
+        <test-method is-config="true" signature="setUP()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:27:25 EEST" name="setUP" finished-at="2025-06-13T11:27:26 EEST" duration-ms="990" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUP -->
-        <test-method signature="TC1()[pri:0, instance:greenkart.testCases.TestExecution@7d322cad]" started-at="2025-05-30T10:15:18 EEST" name="TC1" finished-at="2025-05-30T10:15:31 EEST" duration-ms="12910" status="PASS">
+        <test-method signature="TestStart()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:27:26 EEST" name="TestStart" finished-at="2025-06-13T11:27:29 EEST" duration-ms="2889" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestStart -->
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:27:29 EEST" name="afterTest" finished-at="2025-06-13T11:27:29 EEST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TestStart status=SUCCESS method=TestExecution.TestStart()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:27:29 EEST" name="testRunLog" finished-at="2025-06-13T11:27:29 EEST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRunLog -->
+        <test-method signature="TC1()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:27:29 EEST" name="TC1" finished-at="2025-06-13T11:27:39 EEST" depends-on-methods="greenkart.testCases.TestExecution.TestStart" duration-ms="9377" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC1 -->
-        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecution@7d322cad]" started-at="2025-05-30T10:15:31 EEST" name="testRunLog" finished-at="2025-05-30T10:15:31 EEST" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:27:39 EEST" name="afterTest" finished-at="2025-06-13T11:27:39 EEST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC1 status=SUCCESS method=TestExecution.TC1()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:27:39 EEST" name="testRunLog" finished-at="2025-06-13T11:27:39 EEST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRunLog -->
-        <test-method signature="TC2()[pri:0, instance:greenkart.testCases.TestExecution@7d322cad]" started-at="2025-05-30T10:15:31 EEST" name="TC2" finished-at="2025-05-30T10:15:33 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC1" duration-ms="2281" status="PASS">
+        <test-method signature="TC2()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:27:39 EEST" name="TC2" finished-at="2025-06-13T11:27:41 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC1" duration-ms="2555" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC2 -->
-        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecution@7d322cad]" started-at="2025-05-30T10:15:33 EEST" name="testRunLog" finished-at="2025-05-30T10:15:33 EEST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:27:41 EEST" name="afterTest" finished-at="2025-06-13T11:27:41 EEST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC2 status=SUCCESS method=TestExecution.TC2()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:27:41 EEST" name="testRunLog" finished-at="2025-06-13T11:27:41 EEST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRunLog -->
-        <test-method signature="TC3()[pri:0, instance:greenkart.testCases.TestExecution@7d322cad]" started-at="2025-05-30T10:15:33 EEST" name="TC3" finished-at="2025-05-30T10:15:37 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC2" duration-ms="3859" status="PASS">
+        <test-method signature="TC3()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:27:41 EEST" name="TC3" finished-at="2025-06-13T11:27:46 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC2" duration-ms="4481" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC3 -->
-        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecution@7d322cad]" started-at="2025-05-30T10:15:37 EEST" name="testRunLog" finished-at="2025-05-30T10:15:37 EEST" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:27:46 EEST" name="afterTest" finished-at="2025-06-13T11:27:46 EEST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC3 status=SUCCESS method=TestExecution.TC3()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:27:46 EEST" name="testRunLog" finished-at="2025-06-13T11:27:46 EEST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRunLog -->
-        <test-method signature="TC4()[pri:0, instance:greenkart.testCases.TestExecution@7d322cad]" started-at="2025-05-30T10:15:37 EEST" name="TC4" finished-at="2025-05-30T10:15:40 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC3" duration-ms="3138" status="PASS">
+        <test-method signature="TC4()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:27:46 EEST" name="TC4" finished-at="2025-06-13T11:27:48 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC3" duration-ms="2696" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC4 -->
-        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecution@7d322cad]" started-at="2025-05-30T10:15:40 EEST" name="testRunLog" finished-at="2025-05-30T10:15:40 EEST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testRunLog -->
-        <test-method signature="TC5()[pri:0, instance:greenkart.testCases.TestExecution@7d322cad]" started-at="2025-05-30T10:15:40 EEST" name="TC5" finished-at="2025-05-30T10:15:42 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC4" duration-ms="1642" status="PASS">
+        <test-method signature="TC5()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:27:48 EEST" name="TC5" finished-at="2025-06-13T11:27:50 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC4" duration-ms="1898" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC5 -->
-        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecution@7d322cad]" started-at="2025-05-30T10:15:42 EEST" name="testRunLog" finished-at="2025-05-30T10:15:42 EEST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:27:48 EEST" name="afterTest" finished-at="2025-06-13T11:27:48 EEST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC4 status=SUCCESS method=TestExecution.TC4()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:27:48 EEST" name="testRunLog" finished-at="2025-06-13T11:27:48 EEST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRunLog -->
-        <test-method signature="TC6()[pri:0, instance:greenkart.testCases.TestExecution@7d322cad]" started-at="2025-05-30T10:15:42 EEST" name="TC6" finished-at="2025-05-30T10:15:42 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC5" duration-ms="322" status="PASS">
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:27:50 EEST" name="afterTest" finished-at="2025-06-13T11:27:50 EEST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC5 status=SUCCESS method=TestExecution.TC5()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:27:50 EEST" name="testRunLog" finished-at="2025-06-13T11:27:50 EEST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRunLog -->
+        <test-method signature="TC6()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:27:50 EEST" name="TC6" finished-at="2025-06-13T11:27:51 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC5" duration-ms="297" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC6 -->
-        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecution@7d322cad]" started-at="2025-05-30T10:15:42 EEST" name="testRunLog" finished-at="2025-05-30T10:15:42 EEST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:27:51 EEST" name="afterTest" finished-at="2025-06-13T11:27:51 EEST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC6 status=SUCCESS method=TestExecution.TC6()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:27:51 EEST" name="testRunLog" finished-at="2025-06-13T11:27:51 EEST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRunLog -->
-        <test-method signature="TC7()[pri:0, instance:greenkart.testCases.TestExecution@7d322cad]" started-at="2025-05-30T10:15:42 EEST" name="TC7" finished-at="2025-05-30T10:15:48 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC6" duration-ms="5924" status="PASS">
+        <test-method signature="TC7()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:27:51 EEST" name="TC7" finished-at="2025-06-13T11:27:57 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC6" duration-ms="6589" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC7 -->
-        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecution@7d322cad]" started-at="2025-05-30T10:15:48 EEST" name="testRunLog" finished-at="2025-05-30T10:15:48 EEST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:27:57 EEST" name="afterTest" finished-at="2025-06-13T11:27:57 EEST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC7 status=SUCCESS method=TestExecution.TC7()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:27:57 EEST" name="testRunLog" finished-at="2025-06-13T11:27:57 EEST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRunLog -->
-        <test-method signature="TC8()[pri:0, instance:greenkart.testCases.TestExecution@7d322cad]" started-at="2025-05-30T10:15:48 EEST" name="TC8" finished-at="2025-05-30T10:15:54 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC7" duration-ms="5976" status="PASS">
+        <test-method signature="TC8()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:27:57 EEST" name="TC8" finished-at="2025-06-13T11:28:04 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC7" duration-ms="6796" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC8 -->
-        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecution@7d322cad]" started-at="2025-05-30T10:15:54 EEST" name="testRunLog" finished-at="2025-05-30T10:15:54 EEST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:28:04 EEST" name="afterTest" finished-at="2025-06-13T11:28:04 EEST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC8 status=SUCCESS method=TestExecution.TC8()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:28:04 EEST" name="testRunLog" finished-at="2025-06-13T11:28:04 EEST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRunLog -->
-        <test-method signature="TC9()[pri:0, instance:greenkart.testCases.TestExecution@7d322cad]" started-at="2025-05-30T10:15:54 EEST" name="TC9" finished-at="2025-05-30T10:15:54 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC8" duration-ms="210" status="PASS">
+        <test-method signature="TC9()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:28:04 EEST" name="TC9" finished-at="2025-06-13T11:28:05 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC8" duration-ms="679" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC9 -->
-        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecution@7d322cad]" started-at="2025-05-30T10:15:54 EEST" name="testRunLog" finished-at="2025-05-30T10:15:54 EEST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:28:05 EEST" name="afterTest" finished-at="2025-06-13T11:28:05 EEST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC9 status=SUCCESS method=TestExecution.TC9()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:28:05 EEST" name="testRunLog" finished-at="2025-06-13T11:28:05 EEST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRunLog -->
-        <test-method signature="TC10()[pri:0, instance:greenkart.testCases.TestExecution@7d322cad]" started-at="2025-05-30T10:15:54 EEST" name="TC10" finished-at="2025-05-30T10:15:54 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC9" duration-ms="127" status="PASS">
+        <test-method signature="TC10()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:28:05 EEST" name="TC10" finished-at="2025-06-13T11:28:05 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC9" duration-ms="155" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC10 -->
-        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecution@7d322cad]" started-at="2025-05-30T10:15:54 EEST" name="testRunLog" finished-at="2025-05-30T10:15:54 EEST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:28:05 EEST" name="afterTest" finished-at="2025-06-13T11:28:05 EEST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC10 status=SUCCESS method=TestExecution.TC10()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:28:05 EEST" name="testRunLog" finished-at="2025-06-13T11:28:05 EEST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRunLog -->
-        <test-method signature="TC11()[pri:0, instance:greenkart.testCases.TestExecution@7d322cad]" started-at="2025-05-30T10:15:54 EEST" name="TC11" finished-at="2025-05-30T10:15:55 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC10" duration-ms="309" status="PASS">
+        <test-method signature="TC11()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:28:05 EEST" name="TC11" finished-at="2025-06-13T11:28:05 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC10" duration-ms="255" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC11 -->
-        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecution@7d322cad]" started-at="2025-05-30T10:15:55 EEST" name="testRunLog" finished-at="2025-05-30T10:15:55 EEST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:28:05 EEST" name="afterTest" finished-at="2025-06-13T11:28:05 EEST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC11 status=SUCCESS method=TestExecution.TC11()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:28:05 EEST" name="testRunLog" finished-at="2025-06-13T11:28:05 EEST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRunLog -->
-        <test-method signature="TC12()[pri:0, instance:greenkart.testCases.TestExecution@7d322cad]" started-at="2025-05-30T10:15:55 EEST" name="TC12" finished-at="2025-05-30T10:15:55 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC11" duration-ms="306" status="PASS">
+        <test-method signature="TC12()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:28:05 EEST" name="TC12" finished-at="2025-06-13T11:28:05 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC11" duration-ms="305" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC12 -->
-        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecution@7d322cad]" started-at="2025-05-30T10:15:55 EEST" name="testRunLog" finished-at="2025-05-30T10:15:55 EEST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:28:05 EEST" name="afterTest" finished-at="2025-06-13T11:28:05 EEST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC12 status=SUCCESS method=TestExecution.TC12()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:28:05 EEST" name="testRunLog" finished-at="2025-06-13T11:28:05 EEST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRunLog -->
-        <test-method signature="TC13()[pri:0, instance:greenkart.testCases.TestExecution@7d322cad]" started-at="2025-05-30T10:15:55 EEST" name="TC13" finished-at="2025-05-30T10:15:56 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC12" duration-ms="697" status="PASS">
+        <test-method signature="TC13()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:28:05 EEST" name="TC13" finished-at="2025-06-13T11:28:06 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC12" duration-ms="707" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC13 -->
-        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecution@7d322cad]" started-at="2025-05-30T10:15:56 EEST" name="testRunLog" finished-at="2025-05-30T10:15:56 EEST" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:28:06 EEST" name="afterTest" finished-at="2025-06-13T11:28:06 EEST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC13 status=SUCCESS method=TestExecution.TC13()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:28:06 EEST" name="testRunLog" finished-at="2025-06-13T11:28:06 EEST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRunLog -->
-        <test-method signature="TC14()[pri:0, instance:greenkart.testCases.TestExecution@7d322cad]" started-at="2025-05-30T10:15:56 EEST" name="TC14" finished-at="2025-05-30T10:15:56 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC13" duration-ms="228" status="PASS">
+        <test-method signature="TC14()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:28:06 EEST" name="TC14" finished-at="2025-06-13T11:28:06 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC13" duration-ms="254" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC14 -->
-        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecution@7d322cad]" started-at="2025-05-30T10:15:56 EEST" name="testRunLog" finished-at="2025-05-30T10:15:56 EEST" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:28:06 EEST" name="afterTest" finished-at="2025-06-13T11:28:06 EEST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC14 status=SUCCESS method=TestExecution.TC14()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:28:06 EEST" name="testRunLog" finished-at="2025-06-13T11:28:06 EEST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRunLog -->
-        <test-method signature="TC15()[pri:0, instance:greenkart.testCases.TestExecution@7d322cad]" started-at="2025-05-30T10:15:56 EEST" name="TC15" finished-at="2025-05-30T10:15:56 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC14" duration-ms="494" status="PASS">
+        <test-method signature="TC15()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:28:06 EEST" name="TC15" finished-at="2025-06-13T11:28:07 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC14" duration-ms="474" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC15 -->
-        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecution@7d322cad]" started-at="2025-05-30T10:15:56 EEST" name="testRunLog" finished-at="2025-05-30T10:15:56 EEST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:28:07 EEST" name="afterTest" finished-at="2025-06-13T11:28:07 EEST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC15 status=SUCCESS method=TestExecution.TC15()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:28:07 EEST" name="testRunLog" finished-at="2025-06-13T11:28:07 EEST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRunLog -->
-        <test-method signature="TC16()[pri:0, instance:greenkart.testCases.TestExecution@7d322cad]" started-at="2025-05-30T10:15:56 EEST" name="TC16" finished-at="2025-05-30T10:15:57 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC15" duration-ms="571" status="PASS">
+        <test-method signature="TC16()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:28:07 EEST" name="TC16" finished-at="2025-06-13T11:28:08 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC15" duration-ms="657" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC16 -->
-        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecution@7d322cad]" started-at="2025-05-30T10:15:57 EEST" name="testRunLog" finished-at="2025-05-30T10:15:57 EEST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testRunLog -->
-        <test-method signature="TC17()[pri:0, instance:greenkart.testCases.TestExecution@7d322cad]" started-at="2025-05-30T10:15:57 EEST" name="TC17" finished-at="2025-05-30T10:16:01 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC16" duration-ms="3783" status="PASS">
+        <test-method signature="TC17()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:28:08 EEST" name="TC17" finished-at="2025-06-13T11:28:13 EEST" depends-on-methods="greenkart.testCases.TestExecution.TC16" duration-ms="4931" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC17 -->
-        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecution@7d322cad]" started-at="2025-05-30T10:16:01 EEST" name="testRunLog" finished-at="2025-05-30T10:16:01 EEST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:28:08 EEST" name="afterTest" finished-at="2025-06-13T11:28:08 EEST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC16 status=SUCCESS method=TestExecution.TC16()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:28:08 EEST" name="testRunLog" finished-at="2025-06-13T11:28:08 EEST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRunLog -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:greenkart.testCases.TestExecution@7d322cad]" started-at="2025-05-30T10:16:01 EEST" name="tearDown" finished-at="2025-05-30T10:16:01 EEST" duration-ms="185" status="PASS">
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:28:13 EEST" name="afterTest" finished-at="2025-06-13T11:28:13 EEST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC17 status=SUCCESS method=TestExecution.TC17()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:28:13 EEST" name="testRunLog" finished-at="2025-06-13T11:28:13 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRunLog -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:greenkart.testCases.TestExecution@fd8294b]" started-at="2025-06-13T11:28:13 EEST" name="tearDown" finished-at="2025-06-13T11:28:13 EEST" duration-ms="242" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- greenkart.testCases.TestExecution -->
-    </test> <!-- Test 1 -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

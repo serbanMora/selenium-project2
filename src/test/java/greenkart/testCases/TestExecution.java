@@ -14,13 +14,22 @@ import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
 public class TestExecution extends BaseTest {
+	
+	private static final String URL = "https://rahulshettyacademy.com/seleniumPractise";
 
 	ProductCatalog productCatalog;
 	CheckoutPage checkoutPage;
 	OrderSubmissionPage submissionPage;
 	TopDeals topDeals;
 	
-	@Test
+	@Test (priority = 0)
+	@Severity(SeverityLevel.CRITICAL)
+	public void TestStart() {
+		driver.get(URL);
+		logURL(URL);
+	}
+	
+	@Test (dependsOnMethods = "TestStart")
 	@Epic("Search Functionality")
 	@Feature("Product Catalog")
 	@Story("TC 1 - Search with valid and invalid product names")

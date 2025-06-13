@@ -15,7 +15,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -33,13 +35,12 @@ public class BaseTest {
 	public void setUP() throws IOException {
 		log.info("Test Execution Started");
 		Properties prop = new Properties();
-		FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/java/greenkart/config/data.properties");
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/java/greenkart/config/browser.properties");
 		prop.load(fis);
 		String browserName = prop.getProperty("browser");
-		String chromeDriverPath = prop.getProperty("chromeDriverPath");
-		String firefoxDriverPath = prop.getProperty("firefoxDriverPath");
-		String edgeDriverPath = prop.getProperty("edgeDriverPath");
-		String url = prop.getProperty("url");
+		String chromeDriverPath = System.getProperty("user.dir") + "/drivers/chromedriver.exe";
+		String firefoxDriverPath = System.getProperty("user.dir") + "/drivers/geckodriver.exe";
+		String edgeDriverPath = System.getProperty("user.dir") + "/drivers/msedgedriver.exe";
 
 		if (browserName.contains("chrome")) {
 			System.setProperty("webdriver.chrome.driver", chromeDriverPath);
@@ -51,14 +52,24 @@ public class BaseTest {
 			driver = new ChromeDriver(options);
 			log.info("Tests Running in Chrome browser");
 
-		} else if (browserName.equals("firefox")) {
+		} else if (browserName.contains("firefox")) {
 			System.setProperty("webdriver.gecko.driver", firefoxDriverPath);
-			driver = new FirefoxDriver();
+			FirefoxOptions options = new FirefoxOptions();
+			if (browserName.contains("headless")) {
+				options.addArguments("--headless");
+				log.info("Tests Running in headless Firefox");
+			}
+			driver = new FirefoxDriver(options);
 			log.info("Tests Running in Firefox browser");
 
-		} else if (browserName.equals("edge")) {
+		} else if (browserName.contains("edge")) {
 			System.setProperty("webdriver.ie.driver", edgeDriverPath);
-			driver = new EdgeDriver();
+			EdgeOptions options = new EdgeOptions();
+			if (browserName.contains("headless")) {
+				options.addArguments("--headless");
+				log.info("Tests Running in headless Edge");
+			}
+			driver = new EdgeDriver(options);
 			log.info("Tests Running in Edge browser");
 		}
 		driver.manage().window().maximize();
@@ -66,10 +77,12 @@ public class BaseTest {
 		driver.manage().deleteAllCookies();
 		log.info("Browser cookies deleted");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
-		driver.get(url);
-		log.info("Test object: " + url);
 	}
-
+	
+	public static void logURL(String URL) {
+		log.info("Navigated to test URL: " + URL);
+	}
+	
 	@AfterClass
 	public void tearDown() {
 		if (driver != null) {

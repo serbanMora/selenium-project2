@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test 1(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="greenkart.testCases.TestExecution">
         <methods>
+          <include name="testRunLog"/>
           <include name="setUP"/>
           <include name="TC5"/>
           <include name="TC12"/>
@@ -16,16 +17,18 @@
           <include name="TC9"/>
           <include name="TC11"/>
           <include name="TC8"/>
+          <include name="afterTest"/>
           <include name="TC7"/>
           <include name="TC1"/>
           <include name="TC4"/>
           <include name="tearDown"/>
-          <include name="TC3"/>
           <include name="TC10"/>
+          <include name="TC3"/>
           <include name="TC6"/>
+          <include name="TestStart"/>
           <include name="TC2"/>
         </methods>
       </class> <!-- greenkart.testCases.TestExecution -->
     </classes>
-  </test> <!-- Test 1(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
