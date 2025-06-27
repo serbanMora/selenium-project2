@@ -9,6 +9,7 @@ import java.util.Properties;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -37,16 +38,18 @@ public class BaseTest {
 		Properties prop = new Properties();
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/java/greenkart/config/browser.properties");
 		prop.load(fis);
-		String browserName = prop.getProperty("browser");
-		String chromeDriverPath = System.getProperty("user.dir") + "/drivers/chromedriver.exe";
-		String firefoxDriverPath = System.getProperty("user.dir") + "/drivers/geckodriver.exe";
-		String edgeDriverPath = System.getProperty("user.dir") + "/drivers/msedgedriver.exe";
+		String browserName = System.getenv("BROWSER") != null ? System.getenv("BROWSER") : prop.getProperty("browser");
+		String chromeDriverPath = System.getenv("CHROME_PATH") != null ? System.getenv("CHROME_PATH") : System.getProperty("user.dir") + "/drivers/chromedriver.exe";
+		String firefoxDriverPath = System.getenv("FIREFOX_PATH") != null ? System.getenv("FIREFOX_PATH") : System.getProperty("user.dir") + "/drivers/geckodriver.exe";
+		String edgeDriverPath = System.getenv("EDGE_PATH") != null ? System.getenv("EDGE_PATH") : System.getProperty("user.dir") + "/drivers/msedgedriver.exe";
 
 		if (browserName.contains("chrome")) {
 			System.setProperty("webdriver.chrome.driver", chromeDriverPath);
 			ChromeOptions options = new ChromeOptions();
 			if (browserName.contains("headless")) {
 				options.addArguments("--headless");
+				options.addArguments("--disable-gpu");
+				options.addArguments("--no-sandbox");
 				log.info("Tests Running in headless Chrome");
 			}
 			driver = new ChromeDriver(options);
@@ -57,6 +60,8 @@ public class BaseTest {
 			FirefoxOptions options = new FirefoxOptions();
 			if (browserName.contains("headless")) {
 				options.addArguments("--headless");
+				options.addArguments("--disable-gpu");
+				options.addArguments("--no-sandbox");
 				log.info("Tests Running in headless Firefox");
 			}
 			driver = new FirefoxDriver(options);
@@ -67,12 +72,18 @@ public class BaseTest {
 			EdgeOptions options = new EdgeOptions();
 			if (browserName.contains("headless")) {
 				options.addArguments("--headless");
+				options.addArguments("--disable-gpu");
+				options.addArguments("--no-sandbox");
 				log.info("Tests Running in headless Edge");
 			}
 			driver = new EdgeDriver(options);
 			log.info("Tests Running in Edge browser");
 		}
-		driver.manage().window().maximize();
+		if (browserName.contains("headless")) {
+			driver.manage().window().setSize(new Dimension(1920, 1080));
+		} else {
+			driver.manage().window().maximize();
+		}
 		log.info("Browser window maximized");
 		driver.manage().deleteAllCookies();
 		log.info("Browser cookies deleted");

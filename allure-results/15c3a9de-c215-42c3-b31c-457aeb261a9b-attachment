@@ -1,0 +1,5 @@
+2025-06-13 14:35:43,016 [main] INFO greenkart.config.BaseTest - Test Execution Started
+2025-06-13 14:35:43,983 [main] INFO greenkart.config.BaseTest - Tests Running in Chrome browser
+2025-06-13 14:35:44,020 [main] INFO greenkart.config.BaseTest - Browser window maximized
+2025-06-13 14:35:44,027 [main] INFO greenkart.config.BaseTest - Browser cookies deleted
+2025-06-13 14:35:46,970 [main] INFO greenkart.config.BaseTest - Navigated to test URL: https://rahulshettyacademy.com/seleniumPractise
