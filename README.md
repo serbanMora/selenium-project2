@@ -20,6 +20,41 @@ To run the tests, navigate to project directory and execute the following comman
 # Test Cases containing Test Case IDs, Epic, Story, Severity Level, Test Steps, Test Automation Data, Expected Results and Allure Report Status can be found here:
 * [Test Cases Spreadsheet Document](https://docs.google.com/spreadsheets/d/1W0hDRaHM6tZHKh8rP9q0Pqd5qYIOr4XIj5_PFjgjEz4/edit?gid=0#gid=0)
 
+
+## Technologies and Concepts Used
+
+- Selenium WebDriver — Browser automation tool for interacting with web elements
+- TestNG — Testing framework used for test execution and management
+- Page Object Model — Design pattern to create maintainable and reusable test code
+- Maven — Build and dependency management tool
+- Log4j2 — Logging framework to capture execution details
+- Allure Reports — Test reporting framework for reports
+
+
+## Project Structure
+
+The project follows Maven’s standard directory layout and is organized into configuration files, page objects, test cases, drivers, logs and resources.
+
+```
+├───src
+│   ├───main
+│   │   └───java
+│   │       └───greenkart
+│   │           ├───config (BaseTest.java, browser.properties)
+│   │           └───pageObject (CheckoutPage.java, OrderSubmissionPage.java, ProductCatalog.java, TopDeals.java)
+│   └───test
+│       └───java
+│           └───greenkart
+│               └───testCases (TestExecution.java)
+├───resources (log4j2.xml)
+├───drivers (chromedriver, geckodriver, msedgedriver)
+├───logs (test-run.log)
+README.md
+pom.xml
+testng.xml
+```
+
+
 ## \selenium-project2\src\main\java\greenkart\pageObject
 This directory contains the page object classes representing various pages of the application. These classes encapsulate the logic for interacting with page elements and provide methods to perform actions.
 
@@ -43,10 +78,16 @@ This directory contains the test case classes responsible for executing the test
 
 * ```TestExecution.java```: The main class that contains the execution logic for running the tests. It integrates the page objects and performs actions in sequence to test the application.
 
-## Allure Report
-Every test step is logged using Log4j, including whether a test passes or fails, and a screenshot is captured on failure, all of which are included in the Allure report.
-To generate and open the .html allure report, navigate to project directory and execute the following command:
-	```allure serve```
+## Logging and Reporting
+Logging is handled using Log4j, with log output saved in the resources folder as configured in ```log4j.properties```.
+The logs folder contains ```test-run.log```, which stores all execution logs generated during test runs.
+test reports are generated using Allure.
+
+To generate and open the Allure report: ```allure serve```
+
+To generate a standalone HTML report: ```allure generate --clean -o allure-report```, then open ```allure-report/index.html``` in a browser.
+
+Test execution logs are also displayed in Allure under ```testRunLog``` -> ```GreenKart - Test Log``` for each test. In case of failed tests, screenshots will be attached under ```afterTest``` -> ```Failed Test Screenshot```.
 
 ![Allure Reports Screenshot](assets/allure-1.png)
 ![Allure Reports Screenshot](assets/allure-2.png)
