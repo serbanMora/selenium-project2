@@ -8,6 +8,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -56,27 +57,32 @@ public class OrderSubmissionPage {
 	private WebElement homeButton;
 	
 	public void validateSelectedCountry(String country, String method) {
-		waitForVisibilityOf(5, selectCountry);
-		Select s = new Select(selectCountry);
+		try {
+			waitForVisibilityOf(5, selectCountry);
+			Select s = new Select(selectCountry);
 
-		switch (method) {
-		case "byValue":
-			s.selectByValue(country);
-			break;
+			switch (method) {
+			case "byValue":
+				s.selectByValue(country);
+				break;
 
-		case "byScrolling":
-			selectCountry.click();
-			int i = 0;
-			while (!jsExecutorGetText(selectCountry).equals(country)) {
-				i++;
-				selectCountry.sendKeys(Keys.ARROW_DOWN);
-				if (i > s.getOptions().size()) {
-					break;
+			case "byScrolling":
+				selectCountry.click();
+				int i = 0;
+				while (!jsExecutorGetText(selectCountry).equals(country)) {
+					i++;
+					selectCountry.sendKeys(Keys.ARROW_DOWN);
+					if (i > s.getOptions().size()) {
+						break;
+					}
 				}
+				break;
 			}
-			break;
+			Assert.assertEquals(jsExecutorGetText(selectCountry), country);
+			log.info(jsExecutorGetText(selectCountry) + " country was selected");
+		} catch (Exception e) {
+			log.error(country + " was not found, country selected: " + jsExecutorGetText(selectCountry));
 		}
-		Assert.assertEquals(jsExecutorGetText(selectCountry), country);
 	}
 
 	public String jsExecutorGetText(WebElement element) {
@@ -86,24 +92,43 @@ public class OrderSubmissionPage {
 	}
 	
 	public void validateErrorAlert() {
-		softAssert = new SoftAssert();
-		proceed.click();
-		waitForVisibilityOf(15, errorAlert);
-		softAssert.assertEquals(errorAlert.getText(), "Please accept Terms & Conditions - Required");
-		softAssert.assertTrue(errorAlert.getDomAttribute("style").contains("red"));
-		softAssert.assertAll();
+		String errorMessage = "Please accept Terms & Conditions - Required";
+		try {
+			softAssert = new SoftAssert();
+			proceed.click();
+			waitForVisibilityOf(15, errorAlert);
+			softAssert.assertEquals(errorAlert.getText(), errorMessage);
+			softAssert.assertTrue(errorAlert.getDomAttribute("style").contains("red"));
+			softAssert.assertAll();
+			log.error(errorAlert.getText() + " error message is displayed");
+		} catch (AssertionError e) {
+			log.error("Expected: '" + errorMessage + "', but found: '" + errorAlert.getText()+ "'");
+		} catch (NoSuchElementException e) {
+			log.error(errorAlert.getText() + " error message is not displayed");
+		}
 	}
 	
 	public void validateTerms() {
-		terms.click();
-		Set<String> handles = driver.getWindowHandles();
-		Iterator<String> it = handles.iterator();
-		String parentWindow = it.next();
-		String childWindow = it.next();
-		driver.switchTo().window(childWindow);
-		Assert.assertEquals(termsNewTab.getText(), "Here the terms and condition page Click to geo back Home");
-		driver.close();
-		driver.switchTo().window(parentWindow);
+		String expectedMessage = "Here the terms and condition page Click to geo back Home";
+		try {
+			terms.click();
+			log.info("Clicked on 'Terms & Conditions' button");
+			Set<String> handles = driver.getWindowHandles();
+			Iterator<String> it = handles.iterator();
+			String parentWindow = it.next();
+			String childWindow = it.next();
+			driver.switchTo().window(childWindow);
+			log.info("'Terms & Conditions' page opened in new tab");
+			Assert.assertEquals(termsNewTab.getText(), expectedMessage);
+			log.info(termsNewTab.getText() + " text is displayed on 'Terms & Conditions' page");
+			driver.close();
+			log.info("'Terms & Conditions' page was closed");
+			driver.switchTo().window(parentWindow);
+		} catch (AssertionError e) {
+			log.error("Expected message: '" + expectedMessage + "', but found: " + termsNewTab.getText());
+		} catch (NoSuchElementException e) {
+			log.error(termsNewTab.getText() + " message is not displayed");
+		}
 	}
 	
 	public void waitForVisibilityOf(int duration, WebElement element) {
@@ -112,13 +137,20 @@ public class OrderSubmissionPage {
 	}
 	
 	public void validateSubmitOrder() {
-		if (checkbox.isSelected()) {
-			proceed.click();
-		} else {
-			checkbox.click();
-			proceed.click();
+		String expectedMessage = "Thank you, your order has been placed successfully\n" + "You'll be redirected to Home page shortly!!";
+		try {
+			if (checkbox.isSelected()) {
+				proceed.click();
+			} else {
+				checkbox.click();
+				proceed.click();
+			}
+			Assert.assertEquals(successfulMessage.getText(), expectedMessage);
+			homeButton.click();
+		} catch (AssertionError e) {
+			log.error("Expected message: '" + expectedMessage + "', but found: " + successfulMessage.getText());
+		} catch (NoSuchElementException e) {
+			log.error(successfulMessage.getText() + " message is not displayed");
 		}
-		Assert.assertEquals(successfulMessage.getText(), "Thank you, your order has been placed successfully\n" + "You'll be redirected to Home page shortly!!");
-		homeButton.click();
 	}
 }

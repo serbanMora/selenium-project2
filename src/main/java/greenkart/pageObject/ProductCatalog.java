@@ -200,9 +200,10 @@ public class ProductCatalog {
 		}
 	}
 	
-	public void searchValidation(String keyword) throws InterruptedException {
+	public void searchValidation(String keyword, int wait) throws InterruptedException {
 		searchField.sendKeys(keyword);
-		Thread.sleep(4000);
+		log.info("Waiting " + wait + "ms after entering keyword: " + keyword);
+		Thread.sleep(wait);
 		
 		if (productNames.isEmpty()) {
 			String expectedMessage = "Sorry, no products matched your search!\n" + "Enter a different keyword and try.";

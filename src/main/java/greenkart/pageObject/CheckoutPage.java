@@ -116,6 +116,7 @@ public class CheckoutPage {
 			softAssert.assertTrue(promoInfo.getDomAttribute("style").contains("red"));
 			break;
 		}
+		softAssert.assertAll();
 	}
 	
 	public void validateAfterDiscount(String discountCode) {

@@ -1,0 +1,7 @@
+*.class
+allure-results
+logs/*.log
+
+target/maven-status
+target/surefire-reports
+target/surefire

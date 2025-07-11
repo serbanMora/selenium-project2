@@ -36,8 +36,8 @@ public class TestExecution extends BaseTest {
 	@Severity(SeverityLevel.NORMAL)
 	public void TC1() throws InterruptedException {
 		productCatalog = new ProductCatalog(driver);
-		productCatalog.searchValidation("apple");
-		productCatalog.searchValidation("wrong-word");
+		productCatalog.searchValidation("apple", 4000);
+		productCatalog.searchValidation("wrong-word", 4000);
 	}
 	
 	@Test (dependsOnMethods = "TC1")
