@@ -21,40 +21,40 @@ import org.testng.asserts.SoftAssert;
 public class OrderSubmissionPage {
 
 	private static Logger log = LogManager.getLogger(OrderSubmissionPage.class.getName());
-	
+
 	WebDriver driver;
 	WebDriverWait wait;
 	SoftAssert softAssert;
-	
+
 	public OrderSubmissionPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	
-	@FindBy (css = "select[style='width: 200px;']")
+
+	@FindBy(css = "select[style='width: 200px;']")
 	private WebElement selectCountry;
-	
-	@FindBy (xpath = "//input[@type='checkbox']")
+
+	@FindBy(xpath = "//input[@type='checkbox']")
 	private WebElement checkbox;
-	
-	@FindBy (xpath = "//button[text()='Proceed']")
+
+	@FindBy(xpath = "//button[text()='Proceed']")
 	private WebElement proceed;
-	
-	@FindBy (className = "errorAlert")
+
+	@FindBy(className = "errorAlert")
 	private WebElement errorAlert;
-	
-	@FindBy (css = "a[href*='policy']")
+
+	@FindBy(css = "a[href*='policy']")
 	private WebElement terms;
-	
-	@FindBy (className = "wrapperTwo")
+
+	@FindBy(className = "wrapperTwo")
 	private WebElement termsNewTab;
-	
-	@FindBy (css = "span[style='color:green;font-size:25px']")
+
+	@FindBy(css = "span[style='color:green;font-size:25px']")
 	private WebElement successfulMessage;
-	
-	@FindBy (linkText = "Home")
+
+	@FindBy(linkText = "Home")
 	private WebElement homeButton;
-	
+
 	public void validateSelectedCountry(String country, String method) {
 		try {
 			waitForVisibilityOf(5, selectCountry);
@@ -62,23 +62,23 @@ public class OrderSubmissionPage {
 
 			switch (method) {
 			case "byValue":
-                log.info("Selected country by value: " + country);
+				log.info("Selected country by value: " + country);
 				s.selectByValue(country);
 				break;
 
 			case "byScrolling":
 				selectCountry.click();
-                log.debug("Clicked selectCountry dropdown to start scrolling");
+				log.debug("Clicked selectCountry dropdown to start scrolling");
 				int i = 0;
 				while (!jsExecutorGetText(selectCountry).equals(country)) {
 					i++;
 					selectCountry.sendKeys(Keys.ARROW_DOWN);
 					if (i > s.getOptions().size()) {
-                        log.warn("Reached end of options while scrolling for: " + country);
+						log.warn("Reached end of options while scrolling for: " + country);
 						break;
 					}
 				}
-                log.info("Selected country by scrolling: " + jsExecutorGetText(selectCountry));
+				log.info("Selected country by scrolling: " + jsExecutorGetText(selectCountry));
 				break;
 			}
 			Assert.assertEquals(jsExecutorGetText(selectCountry), country);
@@ -93,25 +93,25 @@ public class OrderSubmissionPage {
 		String text = (String) js.executeScript("return arguments[0].value;", element);
 		return text;
 	}
-	
+
 	public void validateErrorAlert() {
 		String errorMessage = "Please accept Terms & Conditions - Required";
 		try {
 			softAssert = new SoftAssert();
 			proceed.click();
-	        log.info("Clicked Proceed button without accepting Terms & Conditions");
+			log.info("Clicked Proceed button without accepting Terms & Conditions");
 			waitForVisibilityOf(15, errorAlert);
 			softAssert.assertEquals(errorAlert.getText(), errorMessage);
 			softAssert.assertTrue(errorAlert.getDomAttribute("style").contains("red"));
 			softAssert.assertAll();
 			log.info(errorAlert.getText() + " error message is displayed");
 		} catch (AssertionError e) {
-			log.error("Expected: '" + errorMessage + "', but found: '" + errorAlert.getText()+ "'");
+			log.error("Expected: '" + errorMessage + "', but found: '" + errorAlert.getText() + "'");
 		} catch (NoSuchElementException e) {
 			log.error(errorAlert.getText() + " error message is not displayed");
 		}
 	}
-	
+
 	public void validateTerms() {
 		String expectedMessage = "Here the terms and condition page Click to geo back Home";
 		try {
@@ -139,14 +139,15 @@ public class OrderSubmissionPage {
 			log.error(termsNewTab.getText() + " message is not displayed");
 		}
 	}
-	
+
 	public void waitForVisibilityOf(int duration, WebElement element) {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
-	
+
 	public void validateSubmitOrder() {
-		String expectedMessage = "Thank you, your order has been placed successfully\n" + "You'll be redirected to Home page shortly!!";
+		String expectedMessage = "Thank you, your order has been placed successfully\n"
+				+ "You'll be redirected to Home page shortly!!";
 		try {
 			if (checkbox.isSelected()) {
 				log.debug("Checkbox is already selected");
