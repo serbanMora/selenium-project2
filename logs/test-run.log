@@ -1,52 +1,86 @@
-2025-07-11 15:36:07,261 [main] INFO greenkart.config.BaseTest - Test Execution Started
-2025-07-11 15:36:08,158 [main] INFO greenkart.config.BaseTest - Tests Running in Chrome browser
-2025-07-11 15:36:08,193 [main] INFO greenkart.config.BaseTest - Browser window maximized
-2025-07-11 15:36:08,204 [main] INFO greenkart.config.BaseTest - Browser cookies deleted
-2025-07-11 15:36:11,022 [main] INFO greenkart.config.BaseTest - Navigated to test URL: https://rahulshettyacademy.com/seleniumPractise
-2025-07-11 15:36:15,341 [main] INFO greenkart.pageObject.ProductCatalog - Waiting 4000ms after entering keyword: apple
-2025-07-11 15:36:15,458 [main] INFO greenkart.pageObject.ProductCatalog - Searched for product: apple, found: 'apple'
-2025-07-11 15:36:19,864 [main] INFO greenkart.pageObject.ProductCatalog - Waiting 4000ms after entering keyword: wrong-word
-2025-07-11 15:36:19,944 [main] INFO greenkart.pageObject.ProductCatalog - No products found. Message displayed: 'Sorry, no products matched your search!
+2025-07-22 17:00:07,115 [main] INFO BaseTest.setUP - Test Execution Started
+2025-07-22 17:00:07,960 [main] INFO BaseTest.setUP - Tests Running in Chrome browser
+2025-07-22 17:00:07,992 [main] INFO BaseTest.setUP - Browser window maximized
+2025-07-22 17:00:07,999 [main] INFO BaseTest.setUP - Browser cookies deleted
+2025-07-22 17:00:10,947 [main] INFO BaseTest.logURL - Navigated to test URL: https://rahulshettyacademy.com/seleniumPractise/#/
+2025-07-22 17:00:11,248 [main] INFO ProductCatalog.searchValidation - Entered search keyword: 'apple'. Waiting 4000ms
+2025-07-22 17:00:15,397 [main] INFO ProductCatalog.searchValidation - Searched for product: apple, found: 'apple'
+2025-07-22 17:00:15,467 [main] INFO ProductCatalog.searchValidation - Clearing search field and refreshing page
+2025-07-22 17:00:15,806 [main] INFO ProductCatalog.searchValidation - Entered search keyword: 'wrong-word'. Waiting 4000ms
+2025-07-22 17:00:19,898 [main] INFO ProductCatalog.searchValidation - No products found. Message displayed: 'Sorry, no products matched your search!
 Enter a different keyword and try.'
-2025-07-11 15:36:21,941 [main] INFO greenkart.pageObject.ProductCatalog - For product: 'walnuts', was added a quantity of 15
-2025-07-11 15:36:22,167 [main] INFO greenkart.pageObject.ProductCatalog - Price of the product: 170, multiplied with the quantity of product: 15, equals the amount: 2550
-2025-07-11 15:36:22,490 [main] INFO greenkart.pageObject.ProductCatalog - 'Brocolli' was added to cart
-2025-07-11 15:36:22,583 [main] INFO greenkart.pageObject.ProductCatalog - 'Cauliflower' was added to cart
-2025-07-11 15:36:22,740 [main] INFO greenkart.pageObject.ProductCatalog - 'Cucumber' was added to cart
-2025-07-11 15:36:22,892 [main] INFO greenkart.pageObject.ProductCatalog - 'Beetroot' was added to cart
-2025-07-11 15:36:23,022 [main] INFO greenkart.pageObject.ProductCatalog - 'Carrot' was added to cart
-2025-07-11 15:36:23,117 [main] INFO greenkart.pageObject.ProductCatalog - 'Tomato' was added to cart
-2025-07-11 15:36:23,210 [main] INFO greenkart.pageObject.ProductCatalog - 'Beans' was added to cart
-2025-07-11 15:36:23,322 [main] INFO greenkart.pageObject.ProductCatalog - 'Brinjal' was added to cart
-2025-07-11 15:36:23,458 [main] INFO greenkart.pageObject.ProductCatalog - 'Capsicum' was added to cart
-2025-07-11 15:36:23,592 [main] INFO greenkart.pageObject.ProductCatalog - 'Mushroom' was added to cart
-2025-07-11 15:36:23,711 [main] INFO greenkart.pageObject.ProductCatalog - 'Potato' was added to cart
-2025-07-11 15:36:23,823 [main] INFO greenkart.pageObject.ProductCatalog - 'Pumpkin' was added to cart
-2025-07-11 15:36:23,993 [main] INFO greenkart.pageObject.ProductCatalog - 'Corn' was added to cart
-2025-07-11 15:36:24,173 [main] INFO greenkart.pageObject.ProductCatalog - 'Onion' was added to cart
-2025-07-11 15:36:24,293 [main] INFO greenkart.pageObject.ProductCatalog - 'Apple' was added to cart
-2025-07-11 15:36:24,432 [main] INFO greenkart.pageObject.ProductCatalog - 'Banana' was added to cart
-2025-07-11 15:36:24,540 [main] INFO greenkart.pageObject.ProductCatalog - 'Grapes' was added to cart
-2025-07-11 15:36:24,690 [main] INFO greenkart.pageObject.ProductCatalog - 'Mango' was added to cart
-2025-07-11 15:36:24,815 [main] INFO greenkart.pageObject.ProductCatalog - 'Musk Melon' was added to cart
-2025-07-11 15:36:24,961 [main] INFO greenkart.pageObject.ProductCatalog - 'Orange' was added to cart
-2025-07-11 15:36:25,090 [main] INFO greenkart.pageObject.ProductCatalog - 'Pears' was added to cart
-2025-07-11 15:36:25,192 [main] INFO greenkart.pageObject.ProductCatalog - 'Pomegranate' was added to cart
-2025-07-11 15:36:25,340 [main] INFO greenkart.pageObject.ProductCatalog - 'Raspberry' was added to cart
-2025-07-11 15:36:25,477 [main] INFO greenkart.pageObject.ProductCatalog - 'Strawberry' was added to cart
-2025-07-11 15:36:25,621 [main] INFO greenkart.pageObject.ProductCatalog - 'Water Melon' was added to cart
-2025-07-11 15:36:25,723 [main] INFO greenkart.pageObject.ProductCatalog - 'Almonds' was added to cart
-2025-07-11 15:36:25,851 [main] INFO greenkart.pageObject.ProductCatalog - 'Pista' was added to cart
-2025-07-11 15:36:25,972 [main] INFO greenkart.pageObject.ProductCatalog - 'Nuts Mixture' was added to cart
-2025-07-11 15:36:26,096 [main] INFO greenkart.pageObject.ProductCatalog - 'Cashews' was added to cart
-2025-07-11 15:36:26,187 [main] INFO greenkart.pageObject.ProductCatalog - 'Walnuts' was added to cart
-2025-07-11 15:36:26,221 [main] INFO greenkart.pageObject.ProductCatalog - Displayed item count: 30. Expected item count: 30
-2025-07-11 15:36:28,639 [main] DEBUG greenkart.pageObject.ProductCatalog - Sum of individual product prices: 3800
-2025-07-11 15:36:28,639 [main] INFO greenkart.pageObject.ProductCatalog - Displayed total price is: 3800. Sum of individual prices: 3800
-2025-07-11 15:36:41,559 [main] INFO greenkart.pageObject.OrderSubmissionPage - Romania country was selected
-2025-07-11 15:36:41,689 [main] ERROR greenkart.pageObject.OrderSubmissionPage - Please accept Terms & Conditions - Required error message is displayed
-2025-07-11 15:36:41,795 [main] INFO greenkart.pageObject.OrderSubmissionPage - Clicked on 'Terms & Conditions' button
-2025-07-11 15:36:41,856 [main] INFO greenkart.pageObject.OrderSubmissionPage - 'Terms & Conditions' page opened in new tab
-2025-07-11 15:36:41,940 [main] INFO greenkart.pageObject.OrderSubmissionPage - Here the terms and condition page Click to geo back Home text is displayed on 'Terms & Conditions' page
-2025-07-11 15:36:41,957 [main] INFO greenkart.pageObject.OrderSubmissionPage - 'Terms & Conditions' page was closed
-2025-07-11 15:36:50,675 [main] INFO greenkart.config.BaseTest - Test finished, browser was closed
+2025-07-22 17:00:19,948 [main] INFO ProductCatalog.searchValidation - Clearing search field and refreshing page
+2025-07-22 17:00:20,200 [main] DEBUG ProductCatalog.scrollTo - Scrolling to coordinates: X=0, Y=0
+2025-07-22 17:00:21,084 [main] DEBUG ProductCatalog.addQuantity - Clicked 'Add to Cart' button for 'walnuts' at index: 29
+2025-07-22 17:00:21,188 [main] DEBUG ProductCatalog.addQuantity - Clicked 'Add to Cart' button for 'walnuts' at index: 29
+2025-07-22 17:00:21,277 [main] DEBUG ProductCatalog.addQuantity - Clicked 'Add to Cart' button for 'walnuts' at index: 29
+2025-07-22 17:00:21,383 [main] DEBUG ProductCatalog.addQuantity - Clicked 'Add to Cart' button for 'walnuts' at index: 29
+2025-07-22 17:00:21,475 [main] DEBUG ProductCatalog.addQuantity - Clicked 'Add to Cart' button for 'walnuts' at index: 29
+2025-07-22 17:00:21,559 [main] DEBUG ProductCatalog.addQuantity - Clicked 'Add to Cart' button for 'walnuts' at index: 29
+2025-07-22 17:00:21,626 [main] DEBUG ProductCatalog.addQuantity - Clicked 'Add to Cart' button for 'walnuts' at index: 29
+2025-07-22 17:00:21,684 [main] DEBUG ProductCatalog.addQuantity - Clicked 'Add to Cart' button for 'walnuts' at index: 29
+2025-07-22 17:00:21,735 [main] DEBUG ProductCatalog.addQuantity - Clicked 'Add to Cart' button for 'walnuts' at index: 29
+2025-07-22 17:00:21,790 [main] DEBUG ProductCatalog.addQuantity - Clicked 'Add to Cart' button for 'walnuts' at index: 29
+2025-07-22 17:00:21,855 [main] DEBUG ProductCatalog.addQuantity - Clicked 'Add to Cart' button for 'walnuts' at index: 29
+2025-07-22 17:00:21,916 [main] DEBUG ProductCatalog.addQuantity - Clicked 'Add to Cart' button for 'walnuts' at index: 29
+2025-07-22 17:00:21,966 [main] DEBUG ProductCatalog.addQuantity - Clicked 'Add to Cart' button for 'walnuts' at index: 29
+2025-07-22 17:00:22,047 [main] DEBUG ProductCatalog.addQuantity - Clicked 'Add to Cart' button for 'walnuts' at index: 29
+2025-07-22 17:00:22,110 [main] DEBUG ProductCatalog.addQuantity - Clicked 'Add to Cart' button for 'walnuts' at index: 29
+2025-07-22 17:00:22,114 [main] INFO ProductCatalog.addQuantity - For product: 'walnuts', was added a quantity of 15
+2025-07-22 17:00:22,115 [main] DEBUG ProductCatalog.scrollTo - Scrolling to coordinates: X=0, Y=0
+2025-07-22 17:00:22,124 [main] INFO ProductCatalog.validateCartContents - Clicking cart icon to view cart contents
+2025-07-22 17:00:22,406 [main] INFO ProductCatalog.validateCartContents - Price of the product: 170, multiplied with the quantity of product: 15, equals the amount: 2550
+2025-07-22 17:00:22,529 [main] INFO ProductCatalog.validateCartContents - Removed product from cart
+2025-07-22 17:00:22,565 [main] INFO ProductCatalog.validateCartContents - Clicking cart icon button
+2025-07-22 17:00:22,767 [main] INFO ProductCatalog.addProductToCart - 'Brocolli' was added to cart
+2025-07-22 17:00:22,859 [main] INFO ProductCatalog.addProductToCart - 'Cauliflower' was added to cart
+2025-07-22 17:00:22,964 [main] INFO ProductCatalog.addProductToCart - 'Cucumber' was added to cart
+2025-07-22 17:00:23,098 [main] INFO ProductCatalog.addProductToCart - 'Beetroot' was added to cart
+2025-07-22 17:00:23,210 [main] INFO ProductCatalog.addProductToCart - 'Carrot' was added to cart
+2025-07-22 17:00:23,326 [main] INFO ProductCatalog.addProductToCart - 'Tomato' was added to cart
+2025-07-22 17:00:23,447 [main] INFO ProductCatalog.addProductToCart - 'Beans' was added to cart
+2025-07-22 17:00:23,581 [main] INFO ProductCatalog.addProductToCart - 'Brinjal' was added to cart
+2025-07-22 17:00:23,661 [main] INFO ProductCatalog.addProductToCart - 'Capsicum' was added to cart
+2025-07-22 17:00:23,792 [main] INFO ProductCatalog.addProductToCart - 'Mushroom' was added to cart
+2025-07-22 17:00:23,938 [main] INFO ProductCatalog.addProductToCart - 'Potato' was added to cart
+2025-07-22 17:00:24,035 [main] INFO ProductCatalog.addProductToCart - 'Pumpkin' was added to cart
+2025-07-22 17:00:24,136 [main] INFO ProductCatalog.addProductToCart - 'Corn' was added to cart
+2025-07-22 17:00:24,262 [main] INFO ProductCatalog.addProductToCart - 'Onion' was added to cart
+2025-07-22 17:00:24,373 [main] INFO ProductCatalog.addProductToCart - 'Apple' was added to cart
+2025-07-22 17:00:24,468 [main] INFO ProductCatalog.addProductToCart - 'Banana' was added to cart
+2025-07-22 17:00:24,577 [main] INFO ProductCatalog.addProductToCart - 'Grapes' was added to cart
+2025-07-22 17:00:24,709 [main] INFO ProductCatalog.addProductToCart - 'Mango' was added to cart
+2025-07-22 17:00:24,816 [main] INFO ProductCatalog.addProductToCart - 'Musk Melon' was added to cart
+2025-07-22 17:00:24,931 [main] INFO ProductCatalog.addProductToCart - 'Orange' was added to cart
+2025-07-22 17:00:25,014 [main] INFO ProductCatalog.addProductToCart - 'Pears' was added to cart
+2025-07-22 17:00:25,160 [main] INFO ProductCatalog.addProductToCart - 'Pomegranate' was added to cart
+2025-07-22 17:00:25,297 [main] INFO ProductCatalog.addProductToCart - 'Raspberry' was added to cart
+2025-07-22 17:00:25,416 [main] INFO ProductCatalog.addProductToCart - 'Strawberry' was added to cart
+2025-07-22 17:00:25,514 [main] INFO ProductCatalog.addProductToCart - 'Water Melon' was added to cart
+2025-07-22 17:00:25,725 [main] INFO ProductCatalog.addProductToCart - 'Almonds' was added to cart
+2025-07-22 17:00:25,861 [main] INFO ProductCatalog.addProductToCart - 'Pista' was added to cart
+2025-07-22 17:00:25,965 [main] INFO ProductCatalog.addProductToCart - 'Nuts Mixture' was added to cart
+2025-07-22 17:00:26,096 [main] INFO ProductCatalog.addProductToCart - 'Cashews' was added to cart
+2025-07-22 17:00:26,268 [main] INFO ProductCatalog.addProductToCart - 'Walnuts' was added to cart
+2025-07-22 17:00:26,268 [main] INFO ProductCatalog.addProductToCart - Finished adding products to cart. Total added: 30
+2025-07-22 17:00:26,302 [main] INFO ProductCatalog.validateItemsTotal - Displayed item count: 30. Expected item count: 30
+2025-07-22 17:00:26,409 [main] INFO ProductCatalog.validatePriceInCart - Validating sum of individual product prices matches displayed total
+2025-07-22 17:00:28,705 [main] DEBUG ProductCatalog.validatePriceInCart - Sum of individual product prices: 3800
+2025-07-22 17:00:28,705 [main] INFO ProductCatalog.validatePriceInCart - Displayed total price is: 3800. Sum of individual prices: 3800
+2025-07-22 17:00:28,705 [main] INFO ProductCatalog.clickCheckout - Clicking Checkout button
+2025-07-22 17:00:43,497 [main] INFO OrderSubmissionPage.validateSelectedCountry - Selected country by value: Romania
+2025-07-22 17:00:43,612 [main] INFO OrderSubmissionPage.validateSelectedCountry - Romania country was selected
+2025-07-22 17:00:43,700 [main] INFO OrderSubmissionPage.validateErrorAlert - Clicked Proceed button without accepting Terms & Conditions
+2025-07-22 17:00:43,802 [main] INFO OrderSubmissionPage.validateErrorAlert - Please accept Terms & Conditions - Required error message is displayed
+2025-07-22 17:00:43,946 [main] INFO OrderSubmissionPage.validateTerms - Clicked on 'Terms & Conditions' button
+2025-07-22 17:00:44,025 [main] INFO OrderSubmissionPage.validateTerms - Switched to 'Terms & Conditions' new tab
+2025-07-22 17:00:44,089 [main] INFO OrderSubmissionPage.validateTerms - Verified text on 'Terms & Conditions' page: 'Here the terms and condition page Click to geo back Home'
+2025-07-22 17:00:44,108 [main] INFO OrderSubmissionPage.validateTerms - Closed 'Terms & Conditions' tab
+2025-07-22 17:00:44,112 [main] DEBUG OrderSubmissionPage.validateTerms - Switched back to main window
+2025-07-22 17:00:44,250 [main] INFO OrderSubmissionPage.validateSubmitOrder - Selected checkbox
+2025-07-22 17:00:44,314 [main] INFO OrderSubmissionPage.validateSubmitOrder - Clicked Proceed button
+2025-07-22 17:00:44,360 [main] INFO OrderSubmissionPage.validateSubmitOrder - Order success message validated: 'Thank you, your order has been placed successfully
+You'll be redirected to Home page shortly!!'
+2025-07-22 17:00:44,444 [main] INFO OrderSubmissionPage.validateSubmitOrder - Clicked Home button to return to main page
+2025-07-22 17:00:44,444 [main] INFO ProductCatalog.clickTopDeals - Clicking Top Deals button
+2025-07-22 17:00:52,547 [main] INFO BaseTest.tearDown - Test finished, browser was closed

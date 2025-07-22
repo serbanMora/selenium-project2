@@ -5,10 +5,10 @@
 
 	<Appenders>
 		<Console name="CONSOLE">
-			<PatternLayout pattern="%p - %m%n" />
+			<PatternLayout pattern="%d [%t] %p %C{1}.%M - %m%n" />
 		</Console>
 		<File name="MAIN" fileName="logs/test-run.log" append="false">
-			<PatternLayout pattern="%d [%t] %p %c - %m%n" />
+			<PatternLayout pattern="%d [%t] %p %C{1}.%M - %m%n" />
 		</File>
 	</Appenders>
 

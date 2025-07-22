@@ -101,6 +101,7 @@ public class ProductCatalog {
 			if (names.contains(productName)) {
 				for (int j = 0; j < quantity; j++) {
 					addToCart().get(i).click();
+	                log.debug("Clicked 'Add to Cart' button for '" + productName + "' at index: " + i);
 				}
 				break;
 			}
@@ -111,6 +112,7 @@ public class ProductCatalog {
 	public void validateCartContents() {
 		softAssert = new SoftAssert();
 		scrollTo(0, 0);
+	    log.info("Clicking cart icon to view cart contents");
 		cartIcon.click();
 
 		int actualProductPrice = Integer.parseInt(productPrice.get(0).getText());
@@ -136,9 +138,11 @@ public class ProductCatalog {
 			throw e;
 		}
 		removeProduct.click();
+	    log.info("Removed product from cart");
 		softAssert.assertEquals(emptyCart.getText(), "You cart is empty!");
 		softAssert.assertTrue(checkout.getDomAttribute("class").equals("disabled"));
 		softAssert.assertAll();
+	    log.info("Clicking cart icon button");
 		cartIcon.click();
 	}
 
@@ -163,6 +167,7 @@ public class ProductCatalog {
 				}
 			}
 		}
+	    log.info("Finished adding products to cart. Total added: " + j);
 	}
 	
 	public void validateItemsTotal() {
@@ -179,6 +184,7 @@ public class ProductCatalog {
 	}
 	
 	public void validatePriceInCart() {
+	    log.info("Validating sum of individual product prices matches displayed total");
 		List<WebElement> prices = pricesFromCart;
 
 		int sum = 0;
@@ -202,7 +208,7 @@ public class ProductCatalog {
 	
 	public void searchValidation(String keyword, int wait) throws InterruptedException {
 		searchField.sendKeys(keyword);
-		log.info("Waiting " + wait + "ms after entering keyword: " + keyword);
+	    log.info("Entered search keyword: '" + keyword + "'. Waiting " + wait + "ms");
 		Thread.sleep(wait);
 		
 		if (productNames.isEmpty()) {
@@ -229,6 +235,7 @@ public class ProductCatalog {
 			}
 		}
 		searchField.clear();
+	    log.info("Clearing search field and refreshing page");
 		driver.navigate().refresh();
 	}
 	
@@ -243,11 +250,13 @@ public class ProductCatalog {
 	}
 	
 	public CheckoutPage clickCheckout() {
+		log.info("Clicking Checkout button");
 		checkout.click();
 		return new CheckoutPage(driver);
 	}
 	
 	public TopDeals clickTopDeals() {
+		log.info("Clicking Top Deals button");
 		topDealsButton.click();
 		return new TopDeals(driver);
 	}

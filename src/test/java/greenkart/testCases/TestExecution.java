@@ -26,7 +26,7 @@ public class TestExecution extends BaseTest {
 	@Severity(SeverityLevel.CRITICAL)
 	public void TestStart() {
 		driver.get(URL);
-		logURL(URL);
+		logURL(driver.getCurrentUrl());
 	}
 	
 	@Test (dependsOnMethods = "TestStart")

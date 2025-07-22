@@ -1,7 +1,6 @@
 package greenkart.pageObject;
 
 import java.time.Duration;
-import java.util.Iterator;
 import java.util.Set;
 
 import org.apache.logging.log4j.LogManager;
@@ -63,19 +62,23 @@ public class OrderSubmissionPage {
 
 			switch (method) {
 			case "byValue":
+                log.info("Selected country by value: " + country);
 				s.selectByValue(country);
 				break;
 
 			case "byScrolling":
 				selectCountry.click();
+                log.debug("Clicked selectCountry dropdown to start scrolling");
 				int i = 0;
 				while (!jsExecutorGetText(selectCountry).equals(country)) {
 					i++;
 					selectCountry.sendKeys(Keys.ARROW_DOWN);
 					if (i > s.getOptions().size()) {
+                        log.warn("Reached end of options while scrolling for: " + country);
 						break;
 					}
 				}
+                log.info("Selected country by scrolling: " + jsExecutorGetText(selectCountry));
 				break;
 			}
 			Assert.assertEquals(jsExecutorGetText(selectCountry), country);
@@ -96,11 +99,12 @@ public class OrderSubmissionPage {
 		try {
 			softAssert = new SoftAssert();
 			proceed.click();
+	        log.info("Clicked Proceed button without accepting Terms & Conditions");
 			waitForVisibilityOf(15, errorAlert);
 			softAssert.assertEquals(errorAlert.getText(), errorMessage);
 			softAssert.assertTrue(errorAlert.getDomAttribute("style").contains("red"));
 			softAssert.assertAll();
-			log.error(errorAlert.getText() + " error message is displayed");
+			log.info(errorAlert.getText() + " error message is displayed");
 		} catch (AssertionError e) {
 			log.error("Expected: '" + errorMessage + "', but found: '" + errorAlert.getText()+ "'");
 		} catch (NoSuchElementException e) {
@@ -113,17 +117,22 @@ public class OrderSubmissionPage {
 		try {
 			terms.click();
 			log.info("Clicked on 'Terms & Conditions' button");
-			Set<String> handles = driver.getWindowHandles();
-			Iterator<String> it = handles.iterator();
-			String parentWindow = it.next();
-			String childWindow = it.next();
-			driver.switchTo().window(childWindow);
-			log.info("'Terms & Conditions' page opened in new tab");
+
+			String mainTab = driver.getWindowHandle();
+			Set<String> allTabs = driver.getWindowHandles();
+			for (String tab : allTabs) {
+				if (!tab.equals(mainTab)) {
+					driver.switchTo().window(tab);
+					log.info("Switched to 'Terms & Conditions' new tab");
+					break;
+				}
+			}
 			Assert.assertEquals(termsNewTab.getText(), expectedMessage);
-			log.info(termsNewTab.getText() + " text is displayed on 'Terms & Conditions' page");
+			log.info("Verified text on 'Terms & Conditions' page: '" + termsNewTab.getText() + "'");
 			driver.close();
-			log.info("'Terms & Conditions' page was closed");
-			driver.switchTo().window(parentWindow);
+			log.info("Closed 'Terms & Conditions' tab");
+			driver.switchTo().window(mainTab);
+			log.debug("Switched back to main window");
 		} catch (AssertionError e) {
 			log.error("Expected message: '" + expectedMessage + "', but found: " + termsNewTab.getText());
 		} catch (NoSuchElementException e) {
@@ -140,13 +149,19 @@ public class OrderSubmissionPage {
 		String expectedMessage = "Thank you, your order has been placed successfully\n" + "You'll be redirected to Home page shortly!!";
 		try {
 			if (checkbox.isSelected()) {
+				log.debug("Checkbox is already selected");
 				proceed.click();
+				log.info("Clicked Proceed button");
 			} else {
 				checkbox.click();
+				log.info("Selected checkbox");
 				proceed.click();
+				log.info("Clicked Proceed button");
 			}
 			Assert.assertEquals(successfulMessage.getText(), expectedMessage);
+			log.info("Order success message validated: '" + successfulMessage.getText() + "'");
 			homeButton.click();
+			log.info("Clicked Home button to return to main page");
 		} catch (AssertionError e) {
 			log.error("Expected message: '" + expectedMessage + "', but found: " + successfulMessage.getText());
 		} catch (NoSuchElementException e) {

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="44.267" tests="18" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="46.228" tests="18" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="webdriver.chrome.driver" value="C:\Users\lynxt\eclipse-workspace\selenium-project2/drivers/chromedriver.exe"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Users\lynxt\eclipse-workspace\selenium-project2\target\test-classes;C:\Users\lynxt\eclipse-workspace\selenium-project2\target\classes;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-java\4.34.0\selenium-java-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-api\4.34.0\selenium-api-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.34.0\selenium-chrome-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.34.0\selenium-chromium-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-json\4.34.0\selenium-json-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.34.0\selenium-manager-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v136\4.34.0\selenium-devtools-v136-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v137\4.34.0\selenium-devtools-v137-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v138\4.34.0\selenium-devtools-v138-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.34.0\selenium-edge-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.34.0\selenium-firefox-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-http\4.34.0\selenium-http-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.34.0\selenium-ie-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.34.0\selenium-remote-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\com\google\guava\guava\33.4.8-jre\guava-33.4.8-jre.jar;C:\Users\lynxt\.m2\repository\com\google\guava\failureaccess\1.0.3\failureaccess-1.0.3.jar;C:\Users\lynxt\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\lynxt\.m2\repository\com\google\errorprone\error_prone_annotations\2.36.0\error_prone_annotations-2.36.0.jar;C:\Users\lynxt\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-api\1.51.0\opentelemetry-api-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-context\1.51.0\opentelemetry-context-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.51.0\opentelemetry-exporter-logging-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.51.0\opentelemetry-sdk-common-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.51.0\opentelemetry-sdk-extension-autoconfigure-spi-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.51.0\opentelemetry-sdk-extension-autoconfigure-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.51.0\opentelemetry-sdk-trace-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.51.0\opentelemetry-sdk-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.51.0\opentelemetry-sdk-metrics-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.51.0\opentelemetry-sdk-logs-1.51.0.jar;C:\Users\lynxt\.m2\repository\net\bytebuddy\byte-buddy\1.17.6\byte-buddy-1.17.6.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-os\4.34.0\selenium-os-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\apache\commons\commons-exec\1.5.0\commons-exec-1.5.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.34.0\selenium-safari-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-support\4.34.0\selenium-support-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\testng\testng\7.11.0\testng-7.11.0.jar;C:\Users\lynxt\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\lynxt\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\lynxt\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\lynxt\.m2\repository\commons-io\commons-io\2.19.0\commons-io-2.19.0.jar;C:\Users\lynxt\.m2\repository\io\qameta\allure\allure-testng\2.29.1\allure-testng-2.29.1.jar;C:\Users\lynxt\.m2\repository\io\qameta\allure\allure-java-commons\2.29.1\allure-java-commons-2.29.1.jar;C:\Users\lynxt\.m2\repository\io\qameta\allure\allure-model\2.29.1\allure-model-2.29.1.jar;C:\Users\lynxt\.m2\repository\io\qameta\allure\allure-test-filter\2.29.1\allure-test-filter-2.29.1.jar;C:\Users\lynxt\.m2\repository\org\apache\logging\log4j\log4j-core\2.25.0\log4j-core-2.25.0.jar;C:\Users\lynxt\.m2\repository\org\apache\logging\log4j\log4j-api\2.25.0\log4j-api-2.25.0.jar;"/>
+    <property name="java.class.path" value="C:\Users\lynxt\eclipse-workspace\selenium-project2\target\test-classes;C:\Users\lynxt\eclipse-workspace\selenium-project2\target\classes;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-java\4.34.0\selenium-java-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-api\4.34.0\selenium-api-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.34.0\selenium-chrome-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.34.0\selenium-chromium-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-json\4.34.0\selenium-json-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.34.0\selenium-manager-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v136\4.34.0\selenium-devtools-v136-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v137\4.34.0\selenium-devtools-v137-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v138\4.34.0\selenium-devtools-v138-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.34.0\selenium-edge-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.34.0\selenium-firefox-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-http\4.34.0\selenium-http-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.34.0\selenium-ie-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.34.0\selenium-remote-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\com\google\guava\guava\33.4.8-jre\guava-33.4.8-jre.jar;C:\Users\lynxt\.m2\repository\com\google\guava\failureaccess\1.0.3\failureaccess-1.0.3.jar;C:\Users\lynxt\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\lynxt\.m2\repository\com\google\errorprone\error_prone_annotations\2.36.0\error_prone_annotations-2.36.0.jar;C:\Users\lynxt\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-api\1.51.0\opentelemetry-api-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-context\1.51.0\opentelemetry-context-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.51.0\opentelemetry-exporter-logging-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.51.0\opentelemetry-sdk-common-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.51.0\opentelemetry-sdk-extension-autoconfigure-spi-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.51.0\opentelemetry-sdk-extension-autoconfigure-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.51.0\opentelemetry-sdk-trace-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.51.0\opentelemetry-sdk-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.51.0\opentelemetry-sdk-metrics-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.51.0\opentelemetry-sdk-logs-1.51.0.jar;C:\Users\lynxt\.m2\repository\net\bytebuddy\byte-buddy\1.17.6\byte-buddy-1.17.6.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-os\4.34.0\selenium-os-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\apache\commons\commons-exec\1.5.0\commons-exec-1.5.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.34.0\selenium-safari-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-support\4.34.0\selenium-support-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\testng\testng\7.11.0\testng-7.11.0.jar;C:\Users\lynxt\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\lynxt\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\lynxt\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\lynxt\.m2\repository\commons-io\commons-io\2.20.0\commons-io-2.20.0.jar;C:\Users\lynxt\.m2\repository\io\qameta\allure\allure-testng\2.29.1\allure-testng-2.29.1.jar;C:\Users\lynxt\.m2\repository\io\qameta\allure\allure-java-commons\2.29.1\allure-java-commons-2.29.1.jar;C:\Users\lynxt\.m2\repository\io\qameta\allure\allure-model\2.29.1\allure-model-2.29.1.jar;C:\Users\lynxt\.m2\repository\io\qameta\allure\allure-test-filter\2.29.1\allure-test-filter-2.29.1.jar;C:\Users\lynxt\.m2\repository\org\apache\logging\log4j\log4j-core\2.25.1\log4j-core-2.25.1.jar;C:\Users\lynxt\.m2\repository\org\apache\logging\log4j\log4j-api\2.25.1\log4j-api-2.25.1.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -16,9 +16,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\lynxt\AppData\Local\Temp\surefire1623610239265957504\surefirebooter-20250711153606324_3.jar C:\Users\lynxt\AppData\Local\Temp\surefire1623610239265957504 2025-07-11T15-36-06_217-jvmRun1 surefire-20250711153606324_1tmp surefire_0-20250711153606324_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\lynxt\AppData\Local\Temp\surefire10673945392270056120\surefirebooter-20250722170006250_3.jar C:\Users\lynxt\AppData\Local\Temp\surefire10673945392270056120 2025-07-22T17-00-06_131-jvmRun1 surefire-20250722170006250_1tmp surefire_0-20250722170006250_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\lynxt\eclipse-workspace\selenium-project2\target\test-classes;C:\Users\lynxt\eclipse-workspace\selenium-project2\target\classes;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-java\4.34.0\selenium-java-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-api\4.34.0\selenium-api-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.34.0\selenium-chrome-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.34.0\selenium-chromium-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-json\4.34.0\selenium-json-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.34.0\selenium-manager-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v136\4.34.0\selenium-devtools-v136-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v137\4.34.0\selenium-devtools-v137-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v138\4.34.0\selenium-devtools-v138-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.34.0\selenium-edge-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.34.0\selenium-firefox-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-http\4.34.0\selenium-http-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.34.0\selenium-ie-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.34.0\selenium-remote-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\com\google\guava\guava\33.4.8-jre\guava-33.4.8-jre.jar;C:\Users\lynxt\.m2\repository\com\google\guava\failureaccess\1.0.3\failureaccess-1.0.3.jar;C:\Users\lynxt\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\lynxt\.m2\repository\com\google\errorprone\error_prone_annotations\2.36.0\error_prone_annotations-2.36.0.jar;C:\Users\lynxt\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-api\1.51.0\opentelemetry-api-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-context\1.51.0\opentelemetry-context-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.51.0\opentelemetry-exporter-logging-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.51.0\opentelemetry-sdk-common-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.51.0\opentelemetry-sdk-extension-autoconfigure-spi-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.51.0\opentelemetry-sdk-extension-autoconfigure-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.51.0\opentelemetry-sdk-trace-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.51.0\opentelemetry-sdk-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.51.0\opentelemetry-sdk-metrics-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.51.0\opentelemetry-sdk-logs-1.51.0.jar;C:\Users\lynxt\.m2\repository\net\bytebuddy\byte-buddy\1.17.6\byte-buddy-1.17.6.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-os\4.34.0\selenium-os-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\apache\commons\commons-exec\1.5.0\commons-exec-1.5.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.34.0\selenium-safari-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-support\4.34.0\selenium-support-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\testng\testng\7.11.0\testng-7.11.0.jar;C:\Users\lynxt\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\lynxt\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\lynxt\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\lynxt\.m2\repository\commons-io\commons-io\2.19.0\commons-io-2.19.0.jar;C:\Users\lynxt\.m2\repository\io\qameta\allure\allure-testng\2.29.1\allure-testng-2.29.1.jar;C:\Users\lynxt\.m2\repository\io\qameta\allure\allure-java-commons\2.29.1\allure-java-commons-2.29.1.jar;C:\Users\lynxt\.m2\repository\io\qameta\allure\allure-model\2.29.1\allure-model-2.29.1.jar;C:\Users\lynxt\.m2\repository\io\qameta\allure\allure-test-filter\2.29.1\allure-test-filter-2.29.1.jar;C:\Users\lynxt\.m2\repository\org\apache\logging\log4j\log4j-core\2.25.0\log4j-core-2.25.0.jar;C:\Users\lynxt\.m2\repository\org\apache\logging\log4j\log4j-api\2.25.0\log4j-api-2.25.0.jar;"/>
+    <property name="surefire.test.class.path" value="C:\Users\lynxt\eclipse-workspace\selenium-project2\target\test-classes;C:\Users\lynxt\eclipse-workspace\selenium-project2\target\classes;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-java\4.34.0\selenium-java-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-api\4.34.0\selenium-api-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.34.0\selenium-chrome-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.34.0\selenium-chromium-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-json\4.34.0\selenium-json-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.34.0\selenium-manager-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v136\4.34.0\selenium-devtools-v136-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v137\4.34.0\selenium-devtools-v137-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v138\4.34.0\selenium-devtools-v138-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.34.0\selenium-edge-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.34.0\selenium-firefox-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-http\4.34.0\selenium-http-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.34.0\selenium-ie-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.34.0\selenium-remote-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\com\google\guava\guava\33.4.8-jre\guava-33.4.8-jre.jar;C:\Users\lynxt\.m2\repository\com\google\guava\failureaccess\1.0.3\failureaccess-1.0.3.jar;C:\Users\lynxt\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\lynxt\.m2\repository\com\google\errorprone\error_prone_annotations\2.36.0\error_prone_annotations-2.36.0.jar;C:\Users\lynxt\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-api\1.51.0\opentelemetry-api-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-context\1.51.0\opentelemetry-context-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.51.0\opentelemetry-exporter-logging-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.51.0\opentelemetry-sdk-common-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.51.0\opentelemetry-sdk-extension-autoconfigure-spi-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.51.0\opentelemetry-sdk-extension-autoconfigure-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.51.0\opentelemetry-sdk-trace-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.51.0\opentelemetry-sdk-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.51.0\opentelemetry-sdk-metrics-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.51.0\opentelemetry-sdk-logs-1.51.0.jar;C:\Users\lynxt\.m2\repository\net\bytebuddy\byte-buddy\1.17.6\byte-buddy-1.17.6.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-os\4.34.0\selenium-os-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\apache\commons\commons-exec\1.5.0\commons-exec-1.5.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.34.0\selenium-safari-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-support\4.34.0\selenium-support-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\testng\testng\7.11.0\testng-7.11.0.jar;C:\Users\lynxt\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\lynxt\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\lynxt\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\lynxt\.m2\repository\commons-io\commons-io\2.20.0\commons-io-2.20.0.jar;C:\Users\lynxt\.m2\repository\io\qameta\allure\allure-testng\2.29.1\allure-testng-2.29.1.jar;C:\Users\lynxt\.m2\repository\io\qameta\allure\allure-java-commons\2.29.1\allure-java-commons-2.29.1.jar;C:\Users\lynxt\.m2\repository\io\qameta\allure\allure-model\2.29.1\allure-model-2.29.1.jar;C:\Users\lynxt\.m2\repository\io\qameta\allure\allure-test-filter\2.29.1\allure-test-filter-2.29.1.jar;C:\Users\lynxt\.m2\repository\org\apache\logging\log4j\log4j-core\2.25.1\log4j-core-2.25.1.jar;C:\Users\lynxt\.m2\repository\org\apache\logging\log4j\log4j-api\2.25.1\log4j-api-2.25.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\lynxt"/>
     <property name="user.language" value="en"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\lynxt\AppData\Local\Temp\surefire1623610239265957504\surefirebooter-20250711153606324_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\lynxt\AppData\Local\Temp\surefire10673945392270056120\surefirebooter-20250722170006250_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.2+8-86"/>
@@ -57,93 +57,129 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="TestStart" classname="greenkart.testCases.TestExecution" time="2.91">
-    <system-out><![CDATA[INFO - Test Execution Started
-INFO - Tests Running in Chrome browser
-INFO - Browser window maximized
-INFO - Browser cookies deleted
-INFO - Navigated to test URL: https://rahulshettyacademy.com/seleniumPractise
+  <testcase name="TestStart" classname="greenkart.testCases.TestExecution" time="3.039">
+    <system-out><![CDATA[2025-07-22 17:00:07,115 [main] INFO BaseTest.setUP - Test Execution Started
+2025-07-22 17:00:07,960 [main] INFO BaseTest.setUP - Tests Running in Chrome browser
+2025-07-22 17:00:07,992 [main] INFO BaseTest.setUP - Browser window maximized
+2025-07-22 17:00:07,999 [main] INFO BaseTest.setUP - Browser cookies deleted
+2025-07-22 17:00:10,947 [main] INFO BaseTest.logURL - Navigated to test URL: https://rahulshettyacademy.com/seleniumPractise/#/
 ]]></system-out>
     <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
 SLF4J(W): Defaulting to no-operation (NOP) logger implementation
 SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
 ]]></system-err>
   </testcase>
-  <testcase name="TC1" classname="greenkart.testCases.TestExecution" time="9.067">
-    <system-out><![CDATA[INFO - Waiting 4000ms after entering keyword: apple
-INFO - Searched for product: apple, found: 'apple'
-INFO - Waiting 4000ms after entering keyword: wrong-word
-INFO - No products found. Message displayed: 'Sorry, no products matched your search!
+  <testcase name="TC1" classname="greenkart.testCases.TestExecution" time="9.108">
+    <system-out><![CDATA[2025-07-22 17:00:11,248 [main] INFO ProductCatalog.searchValidation - Entered search keyword: 'apple'. Waiting 4000ms
+2025-07-22 17:00:15,397 [main] INFO ProductCatalog.searchValidation - Searched for product: apple, found: 'apple'
+2025-07-22 17:00:15,467 [main] INFO ProductCatalog.searchValidation - Clearing search field and refreshing page
+2025-07-22 17:00:15,806 [main] INFO ProductCatalog.searchValidation - Entered search keyword: 'wrong-word'. Waiting 4000ms
+2025-07-22 17:00:19,898 [main] INFO ProductCatalog.searchValidation - No products found. Message displayed: 'Sorry, no products matched your search!
 Enter a different keyword and try.'
+2025-07-22 17:00:19,948 [main] INFO ProductCatalog.searchValidation - Clearing search field and refreshing page
 ]]></system-out>
   </testcase>
-  <testcase name="TC2" classname="greenkart.testCases.TestExecution" time="2.106">
-    <system-out><![CDATA[INFO - For product: 'walnuts', was added a quantity of 15
-INFO - Price of the product: 170, multiplied with the quantity of product: 15, equals the amount: 2550
+  <testcase name="TC2" classname="greenkart.testCases.TestExecution" time="2.431">
+    <system-out><![CDATA[2025-07-22 17:00:20,200 [main] DEBUG ProductCatalog.scrollTo - Scrolling to coordinates: X=0, Y=0
+2025-07-22 17:00:21,084 [main] DEBUG ProductCatalog.addQuantity - Clicked 'Add to Cart' button for 'walnuts' at index: 29
+2025-07-22 17:00:21,188 [main] DEBUG ProductCatalog.addQuantity - Clicked 'Add to Cart' button for 'walnuts' at index: 29
+2025-07-22 17:00:21,277 [main] DEBUG ProductCatalog.addQuantity - Clicked 'Add to Cart' button for 'walnuts' at index: 29
+2025-07-22 17:00:21,383 [main] DEBUG ProductCatalog.addQuantity - Clicked 'Add to Cart' button for 'walnuts' at index: 29
+2025-07-22 17:00:21,475 [main] DEBUG ProductCatalog.addQuantity - Clicked 'Add to Cart' button for 'walnuts' at index: 29
+2025-07-22 17:00:21,559 [main] DEBUG ProductCatalog.addQuantity - Clicked 'Add to Cart' button for 'walnuts' at index: 29
+2025-07-22 17:00:21,626 [main] DEBUG ProductCatalog.addQuantity - Clicked 'Add to Cart' button for 'walnuts' at index: 29
+2025-07-22 17:00:21,684 [main] DEBUG ProductCatalog.addQuantity - Clicked 'Add to Cart' button for 'walnuts' at index: 29
+2025-07-22 17:00:21,735 [main] DEBUG ProductCatalog.addQuantity - Clicked 'Add to Cart' button for 'walnuts' at index: 29
+2025-07-22 17:00:21,790 [main] DEBUG ProductCatalog.addQuantity - Clicked 'Add to Cart' button for 'walnuts' at index: 29
+2025-07-22 17:00:21,855 [main] DEBUG ProductCatalog.addQuantity - Clicked 'Add to Cart' button for 'walnuts' at index: 29
+2025-07-22 17:00:21,916 [main] DEBUG ProductCatalog.addQuantity - Clicked 'Add to Cart' button for 'walnuts' at index: 29
+2025-07-22 17:00:21,966 [main] DEBUG ProductCatalog.addQuantity - Clicked 'Add to Cart' button for 'walnuts' at index: 29
+2025-07-22 17:00:22,047 [main] DEBUG ProductCatalog.addQuantity - Clicked 'Add to Cart' button for 'walnuts' at index: 29
+2025-07-22 17:00:22,110 [main] DEBUG ProductCatalog.addQuantity - Clicked 'Add to Cart' button for 'walnuts' at index: 29
+2025-07-22 17:00:22,114 [main] INFO ProductCatalog.addQuantity - For product: 'walnuts', was added a quantity of 15
+2025-07-22 17:00:22,115 [main] DEBUG ProductCatalog.scrollTo - Scrolling to coordinates: X=0, Y=0
+2025-07-22 17:00:22,124 [main] INFO ProductCatalog.validateCartContents - Clicking cart icon to view cart contents
+2025-07-22 17:00:22,406 [main] INFO ProductCatalog.validateCartContents - Price of the product: 170, multiplied with the quantity of product: 15, equals the amount: 2550
+2025-07-22 17:00:22,529 [main] INFO ProductCatalog.validateCartContents - Removed product from cart
+2025-07-22 17:00:22,565 [main] INFO ProductCatalog.validateCartContents - Clicking cart icon button
 ]]></system-out>
   </testcase>
-  <testcase name="TC3" classname="greenkart.testCases.TestExecution" time="3.872">
-    <system-out><![CDATA[INFO - 'Brocolli' was added to cart
-INFO - 'Cauliflower' was added to cart
-INFO - 'Cucumber' was added to cart
-INFO - 'Beetroot' was added to cart
-INFO - 'Carrot' was added to cart
-INFO - 'Tomato' was added to cart
-INFO - 'Beans' was added to cart
-INFO - 'Brinjal' was added to cart
-INFO - 'Capsicum' was added to cart
-INFO - 'Mushroom' was added to cart
-INFO - 'Potato' was added to cart
-INFO - 'Pumpkin' was added to cart
-INFO - 'Corn' was added to cart
-INFO - 'Onion' was added to cart
-INFO - 'Apple' was added to cart
-INFO - 'Banana' was added to cart
-INFO - 'Grapes' was added to cart
-INFO - 'Mango' was added to cart
-INFO - 'Musk Melon' was added to cart
-INFO - 'Orange' was added to cart
-INFO - 'Pears' was added to cart
-INFO - 'Pomegranate' was added to cart
-INFO - 'Raspberry' was added to cart
-INFO - 'Strawberry' was added to cart
-INFO - 'Water Melon' was added to cart
-INFO - 'Almonds' was added to cart
-INFO - 'Pista' was added to cart
-INFO - 'Nuts Mixture' was added to cart
-INFO - 'Cashews' was added to cart
-INFO - 'Walnuts' was added to cart
-INFO - Displayed item count: 30. Expected item count: 30
+  <testcase name="TC3" classname="greenkart.testCases.TestExecution" time="3.659">
+    <system-out><![CDATA[2025-07-22 17:00:22,767 [main] INFO ProductCatalog.addProductToCart - 'Brocolli' was added to cart
+2025-07-22 17:00:22,859 [main] INFO ProductCatalog.addProductToCart - 'Cauliflower' was added to cart
+2025-07-22 17:00:22,964 [main] INFO ProductCatalog.addProductToCart - 'Cucumber' was added to cart
+2025-07-22 17:00:23,098 [main] INFO ProductCatalog.addProductToCart - 'Beetroot' was added to cart
+2025-07-22 17:00:23,210 [main] INFO ProductCatalog.addProductToCart - 'Carrot' was added to cart
+2025-07-22 17:00:23,326 [main] INFO ProductCatalog.addProductToCart - 'Tomato' was added to cart
+2025-07-22 17:00:23,447 [main] INFO ProductCatalog.addProductToCart - 'Beans' was added to cart
+2025-07-22 17:00:23,581 [main] INFO ProductCatalog.addProductToCart - 'Brinjal' was added to cart
+2025-07-22 17:00:23,661 [main] INFO ProductCatalog.addProductToCart - 'Capsicum' was added to cart
+2025-07-22 17:00:23,792 [main] INFO ProductCatalog.addProductToCart - 'Mushroom' was added to cart
+2025-07-22 17:00:23,938 [main] INFO ProductCatalog.addProductToCart - 'Potato' was added to cart
+2025-07-22 17:00:24,035 [main] INFO ProductCatalog.addProductToCart - 'Pumpkin' was added to cart
+2025-07-22 17:00:24,136 [main] INFO ProductCatalog.addProductToCart - 'Corn' was added to cart
+2025-07-22 17:00:24,262 [main] INFO ProductCatalog.addProductToCart - 'Onion' was added to cart
+2025-07-22 17:00:24,373 [main] INFO ProductCatalog.addProductToCart - 'Apple' was added to cart
+2025-07-22 17:00:24,468 [main] INFO ProductCatalog.addProductToCart - 'Banana' was added to cart
+2025-07-22 17:00:24,577 [main] INFO ProductCatalog.addProductToCart - 'Grapes' was added to cart
+2025-07-22 17:00:24,709 [main] INFO ProductCatalog.addProductToCart - 'Mango' was added to cart
+2025-07-22 17:00:24,816 [main] INFO ProductCatalog.addProductToCart - 'Musk Melon' was added to cart
+2025-07-22 17:00:24,931 [main] INFO ProductCatalog.addProductToCart - 'Orange' was added to cart
+2025-07-22 17:00:25,014 [main] INFO ProductCatalog.addProductToCart - 'Pears' was added to cart
+2025-07-22 17:00:25,160 [main] INFO ProductCatalog.addProductToCart - 'Pomegranate' was added to cart
+2025-07-22 17:00:25,297 [main] INFO ProductCatalog.addProductToCart - 'Raspberry' was added to cart
+2025-07-22 17:00:25,416 [main] INFO ProductCatalog.addProductToCart - 'Strawberry' was added to cart
+2025-07-22 17:00:25,514 [main] INFO ProductCatalog.addProductToCart - 'Water Melon' was added to cart
+2025-07-22 17:00:25,725 [main] INFO ProductCatalog.addProductToCart - 'Almonds' was added to cart
+2025-07-22 17:00:25,861 [main] INFO ProductCatalog.addProductToCart - 'Pista' was added to cart
+2025-07-22 17:00:25,965 [main] INFO ProductCatalog.addProductToCart - 'Nuts Mixture' was added to cart
+2025-07-22 17:00:26,096 [main] INFO ProductCatalog.addProductToCart - 'Cashews' was added to cart
+2025-07-22 17:00:26,268 [main] INFO ProductCatalog.addProductToCart - 'Walnuts' was added to cart
+2025-07-22 17:00:26,268 [main] INFO ProductCatalog.addProductToCart - Finished adding products to cart. Total added: 30
+2025-07-22 17:00:26,302 [main] INFO ProductCatalog.validateItemsTotal - Displayed item count: 30. Expected item count: 30
 ]]></system-out>
   </testcase>
-  <testcase name="TC4" classname="greenkart.testCases.TestExecution" time="2.487">
-    <system-out><![CDATA[DEBUG - Sum of individual product prices: 3800
-INFO - Displayed total price is: 3800. Sum of individual prices: 3800
+  <testcase name="TC4" classname="greenkart.testCases.TestExecution" time="2.466">
+    <system-out><![CDATA[2025-07-22 17:00:26,409 [main] INFO ProductCatalog.validatePriceInCart - Validating sum of individual product prices matches displayed total
+2025-07-22 17:00:28,705 [main] DEBUG ProductCatalog.validatePriceInCart - Sum of individual product prices: 3800
+2025-07-22 17:00:28,705 [main] INFO ProductCatalog.validatePriceInCart - Displayed total price is: 3800. Sum of individual prices: 3800
+2025-07-22 17:00:28,705 [main] INFO ProductCatalog.clickCheckout - Clicking Checkout button
 ]]></system-out>
   </testcase>
-  <testcase name="TC5" classname="greenkart.testCases.TestExecution" time="1.103"/>
-  <testcase name="TC6" classname="greenkart.testCases.TestExecution" time="0.263"/>
-  <testcase name="TC7" classname="greenkart.testCases.TestExecution" time="5.524"/>
-  <testcase name="TC8" classname="greenkart.testCases.TestExecution" time="5.779"/>
-  <testcase name="TC9" classname="greenkart.testCases.TestExecution" time="0.13">
-    <system-out><![CDATA[INFO - Romania country was selected
+  <testcase name="TC5" classname="greenkart.testCases.TestExecution" time="1.144"/>
+  <testcase name="TC6" classname="greenkart.testCases.TestExecution" time="0.44"/>
+  <testcase name="TC7" classname="greenkart.testCases.TestExecution" time="6.386"/>
+  <testcase name="TC8" classname="greenkart.testCases.TestExecution" time="6.645"/>
+  <testcase name="TC9" classname="greenkart.testCases.TestExecution" time="0.197">
+    <system-out><![CDATA[2025-07-22 17:00:43,497 [main] INFO OrderSubmissionPage.validateSelectedCountry - Selected country by value: Romania
+2025-07-22 17:00:43,612 [main] INFO OrderSubmissionPage.validateSelectedCountry - Romania country was selected
 ]]></system-out>
   </testcase>
-  <testcase name="TC10" classname="greenkart.testCases.TestExecution" time="0.117">
-    <system-out><![CDATA[ERROR - Please accept Terms & Conditions - Required error message is displayed
+  <testcase name="TC10" classname="greenkart.testCases.TestExecution" time="0.172">
+    <system-out><![CDATA[2025-07-22 17:00:43,700 [main] INFO OrderSubmissionPage.validateErrorAlert - Clicked Proceed button without accepting Terms & Conditions
+2025-07-22 17:00:43,802 [main] INFO OrderSubmissionPage.validateErrorAlert - Please accept Terms & Conditions - Required error message is displayed
 ]]></system-out>
   </testcase>
-  <testcase name="TC11" classname="greenkart.testCases.TestExecution" time="0.276">
-    <system-out><![CDATA[INFO - Clicked on 'Terms & Conditions' button
-INFO - 'Terms & Conditions' page opened in new tab
-INFO - Here the terms and condition page Click to geo back Home text is displayed on 'Terms & Conditions' page
-INFO - 'Terms & Conditions' page was closed
+  <testcase name="TC11" classname="greenkart.testCases.TestExecution" time="0.303">
+    <system-out><![CDATA[2025-07-22 17:00:43,946 [main] INFO OrderSubmissionPage.validateTerms - Clicked on 'Terms & Conditions' button
+2025-07-22 17:00:44,025 [main] INFO OrderSubmissionPage.validateTerms - Switched to 'Terms & Conditions' new tab
+2025-07-22 17:00:44,089 [main] INFO OrderSubmissionPage.validateTerms - Verified text on 'Terms & Conditions' page: 'Here the terms and condition page Click to geo back Home'
+2025-07-22 17:00:44,108 [main] INFO OrderSubmissionPage.validateTerms - Closed 'Terms & Conditions' tab
+2025-07-22 17:00:44,112 [main] DEBUG OrderSubmissionPage.validateTerms - Switched back to main window
 ]]></system-out>
   </testcase>
-  <testcase name="TC12" classname="greenkart.testCases.TestExecution" time="0.397"/>
-  <testcase name="TC13" classname="greenkart.testCases.TestExecution" time="0.826"/>
-  <testcase name="TC14" classname="greenkart.testCases.TestExecution" time="0.458"/>
-  <testcase name="TC15" classname="greenkart.testCases.TestExecution" time="0.575"/>
-  <testcase name="TC16" classname="greenkart.testCases.TestExecution" time="0.658"/>
-  <testcase name="TC17" classname="greenkart.testCases.TestExecution" time="5.357"/>
+  <testcase name="TC12" classname="greenkart.testCases.TestExecution" time="0.474">
+    <system-out><![CDATA[2025-07-22 17:00:44,250 [main] INFO OrderSubmissionPage.validateSubmitOrder - Selected checkbox
+2025-07-22 17:00:44,314 [main] INFO OrderSubmissionPage.validateSubmitOrder - Clicked Proceed button
+2025-07-22 17:00:44,360 [main] INFO OrderSubmissionPage.validateSubmitOrder - Order success message validated: 'Thank you, your order has been placed successfully
+You'll be redirected to Home page shortly!!'
+2025-07-22 17:00:44,444 [main] INFO OrderSubmissionPage.validateSubmitOrder - Clicked Home button to return to main page
+2025-07-22 17:00:44,444 [main] INFO ProductCatalog.clickTopDeals - Clicking Top Deals button
+]]></system-out>
+  </testcase>
+  <testcase name="TC13" classname="greenkart.testCases.TestExecution" time="0.869"/>
+  <testcase name="TC14" classname="greenkart.testCases.TestExecution" time="0.398"/>
+  <testcase name="TC15" classname="greenkart.testCases.TestExecution" time="0.729"/>
+  <testcase name="TC16" classname="greenkart.testCases.TestExecution" time="0.63"/>
+  <testcase name="TC17" classname="greenkart.testCases.TestExecution" time="4.993"/>
 </testsuite>

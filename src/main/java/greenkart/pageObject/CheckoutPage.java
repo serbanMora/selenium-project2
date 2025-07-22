@@ -7,14 +7,18 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.function.Function;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
@@ -24,6 +28,7 @@ public class CheckoutPage {
 	private static Logger log = LogManager.getLogger(CheckoutPage.class.getName());
 	
 	WebDriver driver;
+	Wait<WebDriver> waits;
 	WebDriverWait wait;
 	SoftAssert softAssert;
 	
@@ -59,10 +64,6 @@ public class CheckoutPage {
 	@FindBy (xpath = "//button[text()='Place Order']")
 	private WebElement placeOrder;
 	
-	public List<WebElement> checkoutNames() {
-		return checkoutNames;
-	}
-	
 	public void validateProductsAtCheckout() {
 		waitForVisibilityOfAll(15, checkoutNames);
 		
@@ -84,6 +85,9 @@ public class CheckoutPage {
 	}
 	
 	public void validateTotalAmount() {
+		waitForVisibilityOf(5, totalAmount);
+		waitForVisibilityOfAll(15, totalColumn);
+
 		int expectedTotal = Integer.parseInt(totalAmount.getText());
 		int sum = 0;
 		List<WebElement> row = new ArrayList<>(totalColumn);
@@ -103,7 +107,7 @@ public class CheckoutPage {
 		case "invalid":
 			promoField.sendKeys("invalid");
 			applyPromo.click();
-			waitForVisibilityOf(15, promoInfo);
+			fluentWait(10, 2, promoInfo);
 			softAssert.assertEquals(promoInfo.getText(), "Invalid code ..!");
 			softAssert.assertTrue(promoInfo.getDomAttribute("style").contains("red"));
 			break;
@@ -111,7 +115,7 @@ public class CheckoutPage {
 		case "empty":
 			promoField.clear();
 			applyPromo.click();
-			waitForVisibilityOf(15, promoInfo);
+			fluentWait(10, 2, promoInfo);
 			softAssert.assertEquals(promoInfo.getText(), "Empty code ..!");
 			softAssert.assertTrue(promoInfo.getDomAttribute("style").contains("red"));
 			break;
@@ -126,7 +130,7 @@ public class CheckoutPage {
 		promoField.sendKeys(discountCode);
 		applyPromo.click();
 		
-		waitForVisibilityOf(15, promoInfo);
+		fluentWait(10, 2, promoInfo);
 		softAssert.assertEquals(promoInfo.getText(), "Code applied ..!");
 		softAssert.assertTrue(promoInfo.getDomAttribute("style").contains("green"));
 		
@@ -139,6 +143,23 @@ public class CheckoutPage {
 
 		softAssert.assertEquals(totalAfterDisc, actualAfterDisc);
 		softAssert.assertAll();
+	}
+	
+	public void fluentWait(int duration, int polling, WebElement element) {
+		waits = new FluentWait<WebDriver>(driver)
+					.withTimeout(Duration.ofSeconds(duration))
+					.pollingEvery(Duration.ofSeconds(polling))
+					.ignoring(NoSuchElementException.class);
+
+		waits.until(new Function<WebDriver, WebElement>() {
+			public WebElement apply(WebDriver driver) {
+				if (element.isDisplayed()) {
+					return element;
+				} else {
+					return null;
+				}
+			}
+		});
 	}
 	
 	public void waitForVisibilityOf(int duration, WebElement element) {
