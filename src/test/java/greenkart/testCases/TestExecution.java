@@ -14,22 +14,22 @@ import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
 public class TestExecution extends BaseTest {
-	
+
 	private static final String URL = "https://rahulshettyacademy.com/seleniumPractise";
 
 	ProductCatalog productCatalog;
 	CheckoutPage checkoutPage;
 	OrderSubmissionPage submissionPage;
 	TopDeals topDeals;
-	
-	@Test (priority = 0)
+
+	@Test(priority = 0)
 	@Severity(SeverityLevel.CRITICAL)
 	public void TestStart() {
 		driver.get(URL);
 		logURL(driver.getCurrentUrl());
 	}
-	
-	@Test (dependsOnMethods = "TestStart")
+
+	@Test(dependsOnMethods = "TestStart")
 	@Epic("Search Functionality")
 	@Feature("Product Catalog")
 	@Story("TC 1 - Search with valid and invalid product names")
@@ -39,8 +39,8 @@ public class TestExecution extends BaseTest {
 		productCatalog.searchValidation("apple", 4000);
 		productCatalog.searchValidation("wrong-word", 4000);
 	}
-	
-	@Test (dependsOnMethods = "TC1")
+
+	@Test(dependsOnMethods = "TC1")
 	@Epic("Add Quantity Functionality")
 	@Feature("Product Catalog")
 	@Story("TC 2 - Add quantity to product and validate cart contents")
@@ -49,8 +49,8 @@ public class TestExecution extends BaseTest {
 		productCatalog.addQuantity("walnuts", 15);
 		productCatalog.validateCartContents();
 	}
-	
-	@Test (dependsOnMethods = "TC2")
+
+	@Test(dependsOnMethods = "TC2")
 	@Epic("Add Product Functionality")
 	@Feature("Product Catalog")
 	@Story("TC 3 - Add products and validate items total")
@@ -59,8 +59,8 @@ public class TestExecution extends BaseTest {
 		productCatalog.addProductToCart();
 		productCatalog.validateItemsTotal();
 	}
-	
-	@Test (dependsOnMethods = "TC3")
+
+	@Test(dependsOnMethods = "TC3")
 	@Epic("Add Product Functionality")
 	@Feature("Product Catalog")
 	@Story("TC 4 - Add products and validate total price")
@@ -70,8 +70,8 @@ public class TestExecution extends BaseTest {
 		productCatalog.validatePriceInCart();
 		productCatalog.clickCheckout();
 	}
-	
-	@Test (dependsOnMethods = "TC4")
+
+	@Test(dependsOnMethods = "TC4")
 	@Epic("Checkout Functionality")
 	@Feature("Checkout Page")
 	@Story("TC 5 - Validate products at checkout")
@@ -80,8 +80,8 @@ public class TestExecution extends BaseTest {
 		checkoutPage = new CheckoutPage(driver);
 		checkoutPage.validateProductsAtCheckout();
 	}
-	
-	@Test (dependsOnMethods = "TC5")
+
+	@Test(dependsOnMethods = "TC5")
 	@Epic("Total Amount Functionality")
 	@Feature("Checkout Page")
 	@Story("TC 6 - Validate Total Amount")
@@ -89,8 +89,8 @@ public class TestExecution extends BaseTest {
 	public void TC6() {
 		checkoutPage.validateTotalAmount();
 	}
-	
-	@Test (dependsOnMethods = "TC6")
+
+	@Test(dependsOnMethods = "TC6")
 	@Epic("Promo Code Functionality")
 	@Feature("Checkout Page")
 	@Story("TC 7 - Validate empty and invalid promo code")
@@ -99,8 +99,8 @@ public class TestExecution extends BaseTest {
 		checkoutPage.validateEmptyInvalidCode("invalid");
 		checkoutPage.validateEmptyInvalidCode("empty");
 	}
-	
-	@Test (dependsOnMethods = "TC7")
+
+	@Test(dependsOnMethods = "TC7")
 	@Epic("Promo Code Functionality")
 	@Feature("Checkout Page")
 	@Story("TC 8 - Validate discount code")
@@ -109,8 +109,8 @@ public class TestExecution extends BaseTest {
 		checkoutPage.validateAfterDiscount("rahulshettyacademy");
 		checkoutPage.placeOrders();
 	}
-	
-	@Test (dependsOnMethods = "TC8")
+
+	@Test(dependsOnMethods = "TC8")
 	@Epic("Select Country Functionality")
 	@Feature("Submission Page")
 	@Story("TC 9 - Select country and validate selection")
@@ -119,8 +119,8 @@ public class TestExecution extends BaseTest {
 		submissionPage = new OrderSubmissionPage(driver);
 		submissionPage.validateSelectedCountry("Romania", "byValue");
 	}
-	
-	@Test (dependsOnMethods = "TC9")
+
+	@Test(dependsOnMethods = "TC9")
 	@Epic("Error Alert")
 	@Feature("Submission Page")
 	@Story("TC 10 - Validate T&C Required error alert")
@@ -128,8 +128,8 @@ public class TestExecution extends BaseTest {
 	public void TC10() {
 		submissionPage.validateErrorAlert();
 	}
-	
-	@Test (dependsOnMethods = "TC10")
+
+	@Test(dependsOnMethods = "TC10")
 	@Epic("Terms & Conditions")
 	@Feature("Submission Page")
 	@Story("TC 11 - Validate Terms & Conditions in new tab")
@@ -137,8 +137,8 @@ public class TestExecution extends BaseTest {
 	public void TC11() {
 		submissionPage.validateTerms();
 	}
-	
-	@Test (dependsOnMethods = "TC11")
+
+	@Test(dependsOnMethods = "TC11")
 	@Epic("Submit Order")
 	@Feature("Submission Page")
 	@Story("TC 12 - Validate submission text")
@@ -147,8 +147,8 @@ public class TestExecution extends BaseTest {
 		submissionPage.validateSubmitOrder();
 		productCatalog.clickTopDeals();
 	}
-	
-	@Test (dependsOnMethods = "TC12")
+
+	@Test(dependsOnMethods = "TC12")
 	@Epic("Search Functionality")
 	@Feature("Top Deals")
 	@Story("TC 13 - Search with valid and invalid product names")
@@ -159,8 +159,8 @@ public class TestExecution extends BaseTest {
 		topDeals.searchValidation("wrong-word");
 		topDeals.searchValidation("tomato");
 	}
-	
-	@Test (dependsOnMethods = "TC13")
+
+	@Test(dependsOnMethods = "TC13")
 	@Epic("Page Size")
 	@Feature("Top Deals")
 	@Story("TC 14 - Validate Page Size Option")
@@ -170,8 +170,8 @@ public class TestExecution extends BaseTest {
 		topDeals.validatePageSizeOption("10");
 		topDeals.validatePageSizeOption("20");
 	}
-	
-	@Test (dependsOnMethods = "TC14")
+
+	@Test(dependsOnMethods = "TC14")
 	@Epic("Items Order")
 	@Feature("Top Deals")
 	@Story("TC 15 - Validate Ascending Order for column items")
@@ -184,8 +184,8 @@ public class TestExecution extends BaseTest {
 		topDeals.clickColumnHeader("discount", 1);
 		topDeals.orderValidation(topDeals.tableContentList("discount"), "sort");
 	}
-	
-	@Test (dependsOnMethods = "TC15")
+
+	@Test(dependsOnMethods = "TC15")
 	@Epic("Items Order")
 	@Feature("Top Deals")
 	@Story("TC 16 - Validate Descending Order for column items")
@@ -198,8 +198,8 @@ public class TestExecution extends BaseTest {
 		topDeals.clickColumnHeader("discount", 2);
 		topDeals.orderValidation(topDeals.tableContentList("discount"), "reverse");
 	}
-	
-	@Test (dependsOnMethods = "TC16")
+
+	@Test(dependsOnMethods = "TC16")
 	@Epic("Delivery Date Calendar")
 	@Feature("Top Deals")
 	@Story("TC 17 - Validate Delivery Date Calendar functionality")

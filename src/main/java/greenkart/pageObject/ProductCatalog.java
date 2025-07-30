@@ -45,9 +45,6 @@ public class ProductCatalog {
 	@FindBy(css = "a[class='cart-icon']")
 	private WebElement cartIcon;
 
-	@FindBy(xpath = "//p[@class='product-name']")
-	private List<WebElement> productNamesFromCart;
-
 	@FindBy(xpath = "//button[text()='PROCEED TO CHECKOUT']")
 	private WebElement checkout;
 
@@ -102,7 +99,6 @@ public class ProductCatalog {
 			if (names.contains(productName)) {
 				for (int j = 0; j < quantity; j++) {
 					addToCart().get(i).click();
-					log.debug("Clicked 'Add to Cart' button for '" + productName + "' at index: " + i);
 				}
 				break;
 			}
@@ -181,8 +177,7 @@ public class ProductCatalog {
 			Assert.assertEquals(itemsTotal, itemsExpected);
 			log.info("Displayed item count: " + itemsTotal + ". Expected item count: " + itemsExpected);
 		} catch (AssertionError e) {
-			log.error(
-					"Mismatch in item count. Displayed: " + itemsCount.getText() + ", Expected: " + products().length);
+			log.error("Mismatch in item count. Displayed: " + itemsCount.getText() + ", Expected: " + products().length);
 			throw e;
 		}
 	}
@@ -221,8 +216,7 @@ public class ProductCatalog {
 				Assert.assertEquals(noSearchResults.getText(), expectedMessage);
 				log.info("No products found. Message displayed: '" + noSearchResults.getText() + "'");
 			} catch (AssertionError e) {
-				log.error("Incorrect message if no products are found: '" + noSearchResults.getText() + "'. Expected: "
-						+ expectedMessage);
+				log.error("Incorrect message if no products are found: '" + noSearchResults.getText() + "'. Expected: " + expectedMessage);
 			}
 		} else {
 			waitForVisibilityOfAll(5, productNames);
@@ -242,6 +236,7 @@ public class ProductCatalog {
 		searchField.clear();
 		log.info("Clearing search field and refreshing page");
 		driver.navigate().refresh();
+	    log.info("Refreshed page");
 	}
 
 	public void scrollTo(int index1, int index2) {

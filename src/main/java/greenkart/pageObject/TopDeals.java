@@ -11,6 +11,7 @@ import java.util.Set;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -20,175 +21,236 @@ import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
 public class TopDeals {
-	
+
 	private static Logger log = LogManager.getLogger(TopDeals.class.getName());
 
 	WebDriver driver;
 	SoftAssert softAssert;
-	
+
 	public TopDeals(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	
-	@FindBy (id = "page-menu")
+
+	@FindBy(id = "page-menu")
 	private WebElement pageMenu;
-	
-	@FindBy (css = "tr td:nth-child(1)")
+
+	@FindBy(css = "tr td:nth-child(1)")
 	private List<WebElement> namesList;
-	
-	@FindBy (css = "tr td:nth-child(2)")
+
+	@FindBy(css = "tr td:nth-child(2)")
 	private List<WebElement> pricesList;
-	
-	@FindBy (css = "tr td:nth-child(3)")
+
+	@FindBy(css = "tr td:nth-child(3)")
 	private List<WebElement> discountList;
-	
-	@FindBy (id = "search-field")
+
+	@FindBy(id = "search-field")
 	private WebElement searchField;
-	
-	@FindBy (css = "tr span")
+
+	@FindBy(css = "tr span")
 	private WebElement nameColumnHeader;
-	
-	@FindBy (css = "tr th:nth-child(2)")
+
+	@FindBy(css = "tr th:nth-child(2)")
 	private WebElement priceColumnHeader;
-	
-	@FindBy (css = "tr th:nth-child(3)")
+
+	@FindBy(css = "tr th:nth-child(3)")
 	private WebElement discountColumnHeader;
-	
-	@FindBy (css = "svg[class='react-date-picker__calendar-button__icon react-date-picker__button__icon']")
+
+	@FindBy(css = "svg[class='react-date-picker__calendar-button__icon react-date-picker__button__icon']")
 	private WebElement calendar;
-	
-	@FindBy (css = "input[name='date']")
+
+	@FindBy(css = "input[name='date']")
 	private WebElement calendarDate;
-	
-	@FindBy (css = "span[class='react-calendar__navigation__label__labelText react-calendar__navigation__label__labelText--from']")
+
+	@FindBy(css = "span[class='react-calendar__navigation__label__labelText react-calendar__navigation__label__labelText--from']")
 	private WebElement calendarLabel;
-	
-	@FindBy (css = "button[class='react-calendar__navigation__arrow react-calendar__navigation__next-button']")
+
+	@FindBy(css = "button[class='react-calendar__navigation__arrow react-calendar__navigation__next-button']")
 	private WebElement calendarNavigation;
-	
-	@FindBy (css = "div[class='react-calendar__month-view__days'] button[type='button']")
+
+	@FindBy(css = "div[class='react-calendar__month-view__days'] button[type='button']")
 	private List<WebElement> calendarDays;
-	
+
 	public List<WebElement> tableContentList(String type) {
-		if (type.equals("name")) {
-			return namesList;
-		}
-		if (type.equals("price")) {
-			return pricesList;
-		}
-		if (type.equals("discount")) {
-			return discountList;
-		}
-		return null;
-	}
-	
-	public void clickColumnHeader(String type, int index) {
-		for (int i = 0; i < index; i++) {
+		try {
 			switch (type) {
 			case "name":
-				nameColumnHeader.click();
-				break;
+				return namesList;
 			case "price":
-				priceColumnHeader.click();
-				break;
+				return pricesList;
 			case "discount":
-				discountColumnHeader.click();
-				break;
+				return discountList;
+			default:
+				log.error("Invalid table content type: " + type);
+				return null;
 			}
+		} catch (NoSuchElementException e) {
+			log.error("Table content list not found for type: " + type, e);
+			return null;
 		}
 	}
-	
+
+	public void clickColumnHeader(String type, int index) {
+		try {
+			for (int i = 0; i < index; i++) {
+				switch (type) {
+				case "name":
+					nameColumnHeader.click();
+					break;
+				case "price":
+					priceColumnHeader.click();
+					break;
+				case "discount":
+					discountColumnHeader.click();
+					break;
+				default:
+					log.error("Invalid column header type: " + type);
+				}
+			}
+			log.info("Clicked column header: " + type + " " + index + " times");
+		} catch (NoSuchElementException e) {
+			log.error("Column header not found: " + type, e);
+		}
+	}
+
 	public void switchTab(String window) {
-		Set<String> handles = driver.getWindowHandles();
-		Iterator<String> it = handles.iterator();
-		String parentWindow = it.next();
-		String childWindow = it.next();
-		if (window.equals("child")) {
-			driver.switchTo().window(childWindow);
-		} else if (window.equals("parent")) {
-			driver.switchTo().window(parentWindow);
-		}
-	}
-	
-	public void validatePageSizeOption(String value) {
-		Select s = new Select(pageMenu);
-		s.selectByValue(value);
-
-		int selectedValue = Integer.parseInt(value);
-		int namesSize = namesList.size();
-
-		if (value.equals("20")) {
-			Assert.assertTrue(selectedValue >= namesSize);
-		} else {
-			Assert.assertEquals(selectedValue, namesSize);
-		}
-	}
-	
-	public void searchValidation(String keyword) {
-		searchField.sendKeys(keyword);
-
-		if (namesList.get(0).getText().equals("No data")) {
-			Assert.assertTrue(true);
-		} else {
-			for (int i = 0; i < namesList.size(); i++) {
-				String names = namesList.get(i).getText().toLowerCase();
-				Assert.assertTrue(names.contains(keyword));
+		try {
+			Set<String> handles = driver.getWindowHandles();
+			Iterator<String> it = handles.iterator();
+			String parentWindow = it.next();
+			String childWindow = it.next();
+			if (window.equals("child")) {
+				driver.switchTo().window(childWindow);
+				log.info("Switched to child window");
+			} else if (window.equals("parent")) {
+				driver.switchTo().window(parentWindow);
+				log.info("Switched to parent window");
+			} else {
+				log.error("Invalid window type: " + window);
 			}
+		} catch (NoSuchElementException e) {
+			log.error("Window handle not found", e);
 		}
-		searchField.clear();
-		driver.navigate().refresh();
 	}
-	
+
+	public void validatePageSizeOption(String value) {
+		try {
+			Select s = new Select(pageMenu);
+			s.selectByValue(value);
+
+			int selectedValue = Integer.parseInt(value);
+			int namesSize = namesList.size();
+
+			if (value.equals("20")) {
+				Assert.assertTrue(selectedValue >= namesSize);
+			} else {
+				Assert.assertEquals(selectedValue, namesSize);
+			}
+			log.info("Validated page size option: " + value);
+		} catch (AssertionError e) {
+			log.error("Page size validation failed for value: " + value, e);
+			throw e;
+		} catch (NoSuchElementException e) {
+			log.error("Page size option element not found for value: " + value, e);
+		}
+	}
+
+	public void searchValidation(String keyword) {
+		try {
+			searchField.sendKeys(keyword);
+			log.info("Entered search keyword: " + keyword);
+
+			if (namesList.get(0).getText().equals("No data")) {
+				Assert.assertTrue(true);
+				log.info("No data found for keyword: " + keyword);
+			} else {
+				for (int i = 0; i < namesList.size(); i++) {
+					String names = namesList.get(i).getText().toLowerCase();
+					Assert.assertTrue(names.contains(keyword));
+				}
+				log.info("Search results validated for keyword: " + keyword);
+			}
+		} catch (AssertionError e) {
+			log.error("Search validation failed for keyword: " + keyword, e);
+			throw e;
+		} catch (NoSuchElementException e) {
+			log.error("Search field or results not found for keyword: " + keyword, e);
+		} finally {
+			searchField.clear();
+			driver.navigate().refresh();
+			log.info("Search field cleared and page refreshed");
+		}
+	}
+
 	public void orderValidation(List<WebElement> list, String ordering) {
-		List<WebElement> names = new ArrayList<>(list);
-		List<String> originalList = new ArrayList<>();
-		for (int i = 0; i < names.size(); i++) {
-			originalList.add(names.get(i).getText());
+		try {
+			List<String> originalList = new ArrayList<>();
+			for (WebElement name : list) {
+				originalList.add(name.getText());
+			}
+
+			List<String> copiedList = new ArrayList<>(originalList);
+
+			if (ordering.equals("sort")) {
+				Collections.sort(copiedList);
+			} else if (ordering.equals("reverse")) {
+				Collections.sort(copiedList, Collections.reverseOrder());
+			} else {
+				log.error("Invalid ordering type: " + ordering);
+			}
+
+			Assert.assertEquals(originalList, copiedList);
+			log.info("Order validation passed for ordering: " + ordering);
+		} catch (AssertionError e) {
+			log.error("Order validation failed for ordering: " + ordering, e);
+			throw e;
+		} catch (NoSuchElementException e) {
+			log.error("List element not found during order validation", e);
 		}
-		List<String> copiedList = new ArrayList<>();
-		for (int i = 0; i < originalList.size(); i++) {
-			copiedList.add(originalList.get(i));
-		}
-		if (ordering.equals("sort")) {
-			Collections.sort(copiedList);
-		} else if (ordering.equals("reverse")) {
-			Collections.sort(copiedList, Collections.reverseOrder());
-		}
-		Assert.assertEquals(originalList, copiedList);
 	}
-	
+
 	public void validateDate(String monthYEAR, String day) {
 		softAssert = new SoftAssert();
-		String displayedDate = calendarDate.getDomAttribute("value");
-		softAssert.assertEquals(displayedDate, getCurrentDate());
-		
-		calendar.click();
-		while (!calendarLabel.getText().equals(monthYEAR)){
-			calendarNavigation.click();
-		} 
+		try {
+			String displayedDate = calendarDate.getDomAttribute("value");
+			softAssert.assertEquals(displayedDate, getCurrentDate());
+			log.info("Current date validated: " + displayedDate);
 
-		for (int i = 0; i < calendarDays.size(); i++) {
-			String days = calendarDays.get(i).getText();
-			if (days.equals(day)) {
-				calendarDays.get(i).click();
+			calendar.click();
+			while (!calendarLabel.getText().equals(monthYEAR)) {
+				calendarNavigation.click();
 			}
+			log.info("Navigated to calendar month-year: " + monthYEAR);
+
+			for (WebElement d : calendarDays) {
+				if (d.getText().equals(day)) {
+					d.click();
+					break;
+				}
+			}
+			String formattedDay = day.length() == 1 ? "0" + day : day;
+			softAssert.assertEquals(calendarDate.getDomAttribute("value"), dateFormatConversion(monthYEAR) + "-" + formattedDay);
+			log.info("Calendar date validated: " + monthYEAR + "-" + formattedDay);
+		} catch (AssertionError e) {
+			log.error("Calendar date validation failed for: " + monthYEAR + " " + day, e);
+			throw e;
+		} catch (NoSuchElementException e) {
+			log.error("Calendar element not found", e);
+		} finally {
+			softAssert.assertAll();
 		}
-		String formattedDay = day.length() == 1 ? "0" + day : day;
-		softAssert.assertEquals(calendarDate.getDomAttribute("value"), dateFormatConversion(monthYEAR) + "-" + formattedDay);
-		softAssert.assertAll();
 	}
-	
+
 	public String getCurrentDate() {
 		LocalDate ld = LocalDate.now();
 		String date = ld.toString();
 		return date;
 	}
-	
+
 	public String dateFormatConversion(String monthYear) {
 		DateTimeFormatter monthYearFormatter = DateTimeFormatter.ofPattern("MMMM yyyy");
-        YearMonth yearMonth = YearMonth.parse(monthYear, monthYearFormatter);
-        String formattedDate = yearMonth.format(DateTimeFormatter.ofPattern("yyyy-MM"));
-        return formattedDate;
+		YearMonth yearMonth = YearMonth.parse(monthYear, monthYearFormatter);
+		String formattedDate = yearMonth.format(DateTimeFormatter.ofPattern("yyyy-MM"));
+		return formattedDate;
 	}
 }
