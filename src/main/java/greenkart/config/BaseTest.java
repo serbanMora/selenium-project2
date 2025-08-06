@@ -79,12 +79,14 @@ public class BaseTest {
 			driver = new EdgeDriver(options);
 			log.info("Tests Running in Edge browser");
 		}
+		
 		if (browserName.contains("headless")) {
 			driver.manage().window().setSize(new Dimension(1920, 1080));
+			log.info("Browser window was set to 1920x1080 in headless mode");
 		} else {
 			driver.manage().window().maximize();
+			log.info("Browser window maximized");
 		}
-		log.info("Browser window maximized");
 		driver.manage().deleteAllCookies();
 		log.info("Browser cookies deleted");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
@@ -94,13 +96,17 @@ public class BaseTest {
 		log.info("Navigated to test URL: " + URL);
 	}
 	
-	@AfterClass
+	@AfterClass(alwaysRun = true, enabled = true)
 	public void tearDown() {
-		if (driver != null) {
-			driver.quit();
-			log.info("Test finished, browser was closed");
-		} else {
-			log.error("Browser driver was null at teardown, browser was not closed.");
+		try {
+			if (driver != null) {
+				driver.quit();
+				log.info("Test finished, browser was closed");
+			} else {
+				log.warn("Browser driver is null at teardown. Browser may not have started properly");
+			}
+		} catch (Exception e) {
+			log.error("Exception occurred while closing the browser: " + e.getMessage(), e);
 		}
 	}
 	
@@ -120,7 +126,7 @@ public class BaseTest {
 				Allure.addAttachment("GreenKart - Test Log", new FileInputStream(logFile));
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
+			log.error("Failed to attach Test Log: " + e.getMessage(), e);
 		}
 	}
 	
@@ -129,7 +135,7 @@ public class BaseTest {
 	        byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
 	        Allure.addAttachment(name, new ByteArrayInputStream(screenshot));
 	    } catch (Exception e) {
-	        e.printStackTrace();
+	    	log.error("Failed to attach screenshot: " + e.getMessage(), e);
 	    }
 	}
 }
