@@ -106,4 +106,4 @@ Test execution logs are also displayed in Allure under ```testRunLog``` -> ```Gr
 ![Allure Reports Screenshot](assets/allure-3.png)
 ![Allure Reports Screenshot](assets/allure-4.png)
 ![Allure Reports Screenshot](assets/allure-5.png)
-![Allure Reports Screenshot](assets/allure-6.png)
+![Allure Reports Screenshot](assets/allure-7.png)
