@@ -11,21 +11,26 @@ import java.util.Set;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
-import org.testng.asserts.SoftAssert;
+
+import greenkart.config.Asserts;
+import greenkart.config.ElementActions;
+import greenkart.config.Waits;
 
 public class TopDeals {
 
 	private static Logger log = LogManager.getLogger(TopDeals.class.getName());
+	
+	private static final int SHORT_TIMEOUT = 5;
+	private static final int MEDIUM_TIMEOUT = 10;
 
 	WebDriver driver;
-	SoftAssert softAssert;
+	ElementActions e;
+	Waits wait;
+	Asserts a;
 
 	public TopDeals(WebDriver driver) {
 		this.driver = driver;
@@ -72,173 +77,153 @@ public class TopDeals {
 	private List<WebElement> calendarDays;
 
 	public List<WebElement> tableContentList(String type) {
-		try {
-			switch (type) {
-			case "name":
-				return namesList;
-			case "price":
-				return pricesList;
-			case "discount":
-				return discountList;
-			default:
-				log.error("Invalid table content type: " + type);
-				return null;
-			}
-		} catch (NoSuchElementException e) {
-			log.error("Table content list not found for type: " + type, e);
+		wait = new Waits(driver);
+		
+		switch (type) {
+		case "name":
+			wait.waitForVisibilityOfAll(MEDIUM_TIMEOUT, namesList, "Names List");
+			return namesList;
+		case "price":
+			wait.waitForVisibilityOfAll(MEDIUM_TIMEOUT, pricesList, "Prices List");
+			return pricesList;
+		case "discount":
+			wait.waitForVisibilityOfAll(MEDIUM_TIMEOUT, discountList, "Discount List");
+			return discountList;
+		default:
+			log.error("Invalid table content type: " + type);
 			return null;
 		}
 	}
 
 	public void clickColumnHeader(String type, int index) {
-		try {
-			for (int i = 0; i < index; i++) {
-				switch (type) {
-				case "name":
-					nameColumnHeader.click();
-					break;
-				case "price":
-					priceColumnHeader.click();
-					break;
-				case "discount":
-					discountColumnHeader.click();
-					break;
-				default:
-					log.error("Invalid column header type: " + type);
-				}
+		wait = new Waits(driver);
+
+		for (int i = 0; i < index; i++) {
+			switch (type) {
+			case "name":
+				wait.waitForVisibilityOf(MEDIUM_TIMEOUT, nameColumnHeader, "Column Header");
+				nameColumnHeader.click();
+				break;
+			case "price":
+				wait.waitForVisibilityOf(MEDIUM_TIMEOUT, priceColumnHeader, "Price Colummn Header");
+				priceColumnHeader.click();
+				break;
+			case "discount":
+				wait.waitForVisibilityOf(MEDIUM_TIMEOUT, discountColumnHeader, "Discount Column Header");
+				discountColumnHeader.click();
+				break;
+			default:
+				log.error("Invalid column header type: " + type);
 			}
-			log.info("Clicked column header: " + type + " " + index + " times");
-		} catch (NoSuchElementException e) {
-			log.error("Column header not found: " + type, e);
 		}
+		log.info("Clicked column header: " + type + " " + index + " times");
 	}
 
 	public void switchTab(String window) {
-		try {
-			Set<String> handles = driver.getWindowHandles();
-			Iterator<String> it = handles.iterator();
-			String parentWindow = it.next();
-			String childWindow = it.next();
-			if (window.equals("child")) {
-				driver.switchTo().window(childWindow);
-				log.info("Switched to child window");
-			} else if (window.equals("parent")) {
-				driver.switchTo().window(parentWindow);
-				log.info("Switched to parent window");
-			} else {
-				log.error("Invalid window type: " + window);
-			}
-		} catch (NoSuchElementException e) {
-			log.error("Window handle not found", e);
+		Set<String> handles = driver.getWindowHandles();
+		Iterator<String> it = handles.iterator();
+		String parentWindow = it.next();
+		String childWindow = it.next();
+		if (window.equals("child")) {
+			driver.switchTo().window(childWindow);
+			log.info("Switched to child window");
+		} else if (window.equals("parent")) {
+			driver.switchTo().window(parentWindow);
+			log.info("Switched to parent window");
+		} else {
+			log.error("Invalid window type: " + window);
 		}
 	}
 
 	public void validatePageSizeOption(String value) {
-		try {
-			Select s = new Select(pageMenu);
-			s.selectByValue(value);
+		wait = new Waits(driver);
+		a = new Asserts(driver);
+		e = new ElementActions(driver);
 
-			int selectedValue = Integer.parseInt(value);
-			int namesSize = namesList.size();
+		wait.waitForVisibilityOf(SHORT_TIMEOUT, pageMenu, "Page Menu");
+		e.selectBy("value", pageMenu, value);
 
-			if (value.equals("20")) {
-				Assert.assertTrue(selectedValue >= namesSize);
-			} else {
-				Assert.assertEquals(selectedValue, namesSize);
-			}
-			log.info("Validated page size option: " + value);
-		} catch (AssertionError e) {
-			log.error("Page size validation failed for value: " + value, e);
-			throw e;
-		} catch (NoSuchElementException e) {
-			log.error("Page size option element not found for value: " + value, e);
+		int selectedValue = Integer.parseInt(value);
+		wait.waitForVisibilityOfAll(MEDIUM_TIMEOUT, namesList, "Names List");
+		int namesSize = namesList.size();
+
+		log.info("Validating page size option: " + value);
+		if (value.equals("20")) {
+			a.assertTrue(selectedValue >= namesSize, "");
+		} else {
+			a.assertEquals(selectedValue, namesSize);
 		}
 	}
 
 	public void searchValidation(String keyword) {
-		try {
-			searchField.sendKeys(keyword);
-			log.info("Entered search keyword: " + keyword);
+		wait = new Waits(driver);
+		a = new Asserts(driver);
 
-			if (namesList.get(0).getText().equals("No data")) {
-				Assert.assertTrue(true);
-				log.info("No data found for keyword: " + keyword);
-			} else {
-				for (int i = 0; i < namesList.size(); i++) {
-					String names = namesList.get(i).getText().toLowerCase();
-					Assert.assertTrue(names.contains(keyword));
-				}
-				log.info("Search results validated for keyword: " + keyword);
+		wait.waitForVisibilityOf(SHORT_TIMEOUT, searchField, "Search Field");
+		searchField.sendKeys(keyword);
+		log.info("Entered search keyword: " + keyword);
+
+		wait.waitForVisibilityOfAll(MEDIUM_TIMEOUT, namesList, "Names List");
+		if (namesList.get(0).getText().equals("No data")) {
+			log.info("No data found for keyword: " + keyword);
+		} else {
+			log.info("Validating search results for keyword: " + keyword);
+			for (int i = 0; i < namesList.size(); i++) {
+				String names = namesList.get(i).getText().toLowerCase();
+				a.assertTrue(names.contains(keyword), "");
 			}
-		} catch (AssertionError e) {
-			log.error("Search validation failed for keyword: " + keyword, e);
-			throw e;
-		} catch (NoSuchElementException e) {
-			log.error("Search field or results not found for keyword: " + keyword, e);
-		} finally {
-			searchField.clear();
-			driver.navigate().refresh();
-			log.info("Search field cleared and page refreshed");
 		}
+		wait.waitForVisibilityOf(SHORT_TIMEOUT, searchField, "Search Field");
+		searchField.clear();
+		driver.navigate().refresh();
+		log.info("Search field cleared and page refreshed");
 	}
 
 	public void orderValidation(List<WebElement> list, String ordering) {
-		try {
-			List<String> originalList = new ArrayList<>();
-			for (WebElement name : list) {
-				originalList.add(name.getText());
-			}
+		wait = new Waits(driver);
+		a = new Asserts(driver);
 
-			List<String> copiedList = new ArrayList<>(originalList);
-
-			if (ordering.equals("sort")) {
-				Collections.sort(copiedList);
-			} else if (ordering.equals("reverse")) {
-				Collections.sort(copiedList, Collections.reverseOrder());
-			} else {
-				log.error("Invalid ordering type: " + ordering);
-			}
-
-			Assert.assertEquals(originalList, copiedList);
-			log.info("Order validation passed for ordering: " + ordering);
-		} catch (AssertionError e) {
-			log.error("Order validation failed for ordering: " + ordering, e);
-			throw e;
-		} catch (NoSuchElementException e) {
-			log.error("List element not found during order validation", e);
+		List<String> originalList = new ArrayList<>();
+		for (WebElement name : list) {
+			originalList.add(name.getText());
 		}
+
+		List<String> copiedList = new ArrayList<>(originalList);
+		if (ordering.equals("sort")) {
+			Collections.sort(copiedList);
+		} else if (ordering.equals("reverse")) {
+			Collections.sort(copiedList, Collections.reverseOrder());
+		} else {
+			log.error("Invalid ordering type: " + ordering);
+		}
+		a.assertEquals(originalList, copiedList);
 	}
 
 	public void validateDate(String monthYEAR, String day) {
-		softAssert = new SoftAssert();
-		try {
-			String displayedDate = calendarDate.getDomAttribute("value");
-			softAssert.assertEquals(displayedDate, getCurrentDate());
-			log.info("Current date validated: " + displayedDate);
+		wait = new Waits(driver);
+		a = new Asserts(driver);
 
-			calendar.click();
-			while (!calendarLabel.getText().equals(monthYEAR)) {
-				calendarNavigation.click();
-			}
-			log.info("Navigated to calendar month-year: " + monthYEAR);
+		String displayedDate = calendarDate.getDomAttribute("value");
+		log.info("Validating current date: " + displayedDate);
+		a.assertEquals(displayedDate, getCurrentDate());
 
-			for (WebElement d : calendarDays) {
-				if (d.getText().equals(day)) {
-					d.click();
-					break;
-				}
-			}
-			String formattedDay = day.length() == 1 ? "0" + day : day;
-			softAssert.assertEquals(calendarDate.getDomAttribute("value"), dateFormatConversion(monthYEAR) + "-" + formattedDay);
-			log.info("Calendar date validated: " + monthYEAR + "-" + formattedDay);
-		} catch (AssertionError e) {
-			log.error("Calendar date validation failed for: " + monthYEAR + " " + day, e);
-			throw e;
-		} catch (NoSuchElementException e) {
-			log.error("Calendar element not found", e);
-		} finally {
-			softAssert.assertAll();
+		wait.waitForVisibilityOf(SHORT_TIMEOUT, calendar, "Calendar");
+		calendar.click();
+		while (!calendarLabel.getText().equals(monthYEAR)) {
+			calendarNavigation.click();
 		}
+		log.info("Navigated to calendar month-year: " + monthYEAR);
+
+		wait.waitForVisibilityOfAll(SHORT_TIMEOUT, calendarDays, "Calendar Days");
+		for (WebElement d : calendarDays) {
+			if (d.getText().equals(day)) {
+				d.click();
+				break;
+			}
+		}
+		String formattedDay = day.length() == 1 ? "0" + day : day;
+		log.info("Validating calendar date: " + monthYEAR + "-" + formattedDay);
+		a.assertEquals(calendarDate.getDomAttribute("value"), dateFormatConversion(monthYEAR) + "-" + formattedDay);
 	}
 
 	public String getCurrentDate() {

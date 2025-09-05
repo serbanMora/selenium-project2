@@ -1,29 +1,31 @@
 package greenkart.pageObject;
 
-import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.testng.asserts.SoftAssert;
+
+import greenkart.config.Asserts;
+import greenkart.config.ElementActions;
+import greenkart.config.Waits;
 
 public class ProductCatalog {
 
 	private static Logger log = LogManager.getLogger(ProductCatalog.class.getName());
+	
+	private static final int SHORT_TIMEOUT = 5;
+	private static final int MEDIUM_TIMEOUT = 10;
 
 	WebDriver driver;
-	WebDriverWait wait;
-	SoftAssert softAssert;
+	ElementActions e;
+	Waits wait;
+	Asserts a;
 
 	public ProductCatalog(WebDriver driver) {
 		this.driver = driver;
@@ -90,8 +92,10 @@ public class ProductCatalog {
 	}
 
 	public void addQuantity(String productName, int quantity) {
-		scrollTo(0, 0);
-		waitForVisibilityOfAll(3, productNames);
+		wait = new Waits(driver);
+		e = new ElementActions(driver);
+		
+		e.scrollTo(0, 0);
 		List<WebElement> name = new ArrayList<>(productNames);
 		productName = productName.toLowerCase();
 		for (int i = 0; i < name.size(); i++) {
@@ -107,13 +111,18 @@ public class ProductCatalog {
 	}
 
 	public void validateCartContents() {
-		softAssert = new SoftAssert();
-		scrollTo(0, 0);
+		wait = new Waits(driver);
+		a = new Asserts(driver);
+		e = new ElementActions(driver);
+
+		e.scrollTo(0, 0);
+		wait.waitForVisibilityOf(SHORT_TIMEOUT, cartIcon, "Cart Icon");
 		log.info("Clicking cart icon to view cart contents");
 		cartIcon.click();
 
 		int actualProductPrice = Integer.parseInt(productPrice.get(0).getText());
 
+		wait.waitForVisibilityOf(SHORT_TIMEOUT, quantityInCart, "Quantity In Cart");
 		String[] name = quantityInCart.getText().split(" ");
 		String formattedName = name[0].trim();
 		int actualQuantity = Integer.parseInt(formattedName);
@@ -125,32 +134,36 @@ public class ProductCatalog {
 				actualAmount = Integer.parseInt(amount);
 			}
 		}
-		String logMessage = "Price of the product: " + actualProductPrice
+		log.info("Checking if the price of the product: " + actualProductPrice
 				+ ", multiplied with the quantity of product: " + actualQuantity + ", equals the amount: "
-				+ actualAmount;
+				+ actualAmount);
+		a.assertTrue(actualProductPrice * actualQuantity == actualAmount, "");
 
-		try {
-			Assert.assertTrue(actualProductPrice * actualQuantity == actualAmount);
-			log.info(logMessage);
-		} catch (AssertionError e) {
-			log.error(logMessage);
-			throw e;
-		}
+		wait.waitForVisibilityOf(SHORT_TIMEOUT, removeProduct, "Remove Product");
 		removeProduct.click();
 		log.info("Removed product from cart");
-		softAssert.assertEquals(emptyCart.getText(), "You cart is empty!");
-		softAssert.assertTrue(checkout.getDomAttribute("class").equals("disabled"));
-		softAssert.assertAll();
+
+		log.info("Checking if cart is empty");
+		wait.waitForVisibilityOf(SHORT_TIMEOUT, emptyCart, "Empty Cart");
+		a.assertEquals(emptyCart.getText(), "You cart is empty!");
+		
+		wait.waitForVisibilityOf(SHORT_TIMEOUT, checkout, "Checkout");
+		a.assertTrue(checkout.getDomAttribute("class").equals("disabled"), "");
+		
+		wait.waitForVisibilityOf(SHORT_TIMEOUT, cartIcon, "Cart Icon");
 		log.info("Clicking cart icon button");
 		cartIcon.click();
 	}
 
 	public void addProductToCart() {
+		wait = new Waits(driver);
+		
 		List<String> productList = Arrays.asList(products());
 		List<WebElement> addToCartButton = addToCart();
 
 		int j = 0;
 
+		wait.waitForVisibilityOfAll(MEDIUM_TIMEOUT, productNames, "Product Names");
 		for (int i = 0; i < productNames.size(); i++) {
 			String[] name = productNames.get(i).getText().split("-");
 			String formattedName = name[0].trim();
@@ -170,22 +183,23 @@ public class ProductCatalog {
 	}
 
 	public void validateItemsTotal() {
-		try {
-			int itemsTotal = Integer.parseInt(itemsCount.getText());
-			int itemsExpected = products().length;
+		wait = new Waits(driver);
+		a = new Asserts(driver);
 
-			Assert.assertEquals(itemsTotal, itemsExpected);
-			log.info("Displayed item count: " + itemsTotal + ". Expected item count: " + itemsExpected);
-		} catch (AssertionError e) {
-			log.error("Mismatch in item count. Displayed: " + itemsCount.getText() + ", Expected: " + products().length);
-			throw e;
-		}
+		wait.waitForVisibilityOf(MEDIUM_TIMEOUT, itemsCount, "Items Count");
+		int itemsTotal = Integer.parseInt(itemsCount.getText());
+		int itemsExpected = products().length;
+
+		log.info("Displayed item count matches expected item count");
+		a.assertEquals(itemsTotal, itemsExpected);
 	}
 
 	public void validatePriceInCart() {
+		wait = new Waits(driver);
+		a = new Asserts(driver);
+
 		log.info("Validating sum of individual product prices matches displayed total");
 		List<WebElement> prices = pricesFromCart;
-
 		int sum = 0;
 		for (int i = 0; i < prices.size(); i++) {
 			String amount = prices.get(i).getText();
@@ -196,67 +210,55 @@ public class ProductCatalog {
 		}
 		int totalValue = Integer.parseInt(totalPrice.getText());
 		log.debug("Sum of individual product prices: " + sum);
-		try {
-			Assert.assertEquals(sum, totalValue);
-			log.info("Displayed total price is: " + totalValue + ". Sum of individual prices: " + sum);
-		} catch (AssertionError e) {
-			log.error("Total price mismatch. Displayed: " + totalValue + ", Calculated: " + sum);
-			throw e;
-		}
+		log.info("Checking if displayed total price matches the sum of individual prices");
+		a.assertEquals(sum, totalValue);
 	}
 
-	public void searchValidation(String keyword, int wait) throws InterruptedException {
+	public void searchValidation(String keyword, int timeout) throws InterruptedException {
+		wait = new Waits(driver);
+		a = new Asserts(driver);
+
+		String expectedMessage = "Sorry, no products matched your search!\n" + "Enter a different keyword and try.";
+
+		wait.waitForVisibilityOf(SHORT_TIMEOUT, searchField, "Search Field");
 		searchField.sendKeys(keyword);
-		log.info("Entered search keyword: '" + keyword + "'. Waiting " + wait + "ms");
-		Thread.sleep(wait);
+		log.info("Entered search keyword: '" + keyword + "'. Waiting " + timeout + "ms");
+		Thread.sleep(timeout);
 
 		if (productNames.isEmpty()) {
-			String expectedMessage = "Sorry, no products matched your search!\n" + "Enter a different keyword and try.";
-			try {
-				Assert.assertEquals(noSearchResults.getText(), expectedMessage);
-				log.info("No products found. Message displayed: '" + noSearchResults.getText() + "'");
-			} catch (AssertionError e) {
-				log.error("Incorrect message if no products are found: '" + noSearchResults.getText() + "'. Expected: " + expectedMessage);
-			}
+			log.info("No products found, checking if not products found message is displayed");
+			wait.waitForVisibilityOf(SHORT_TIMEOUT, noSearchResults, "No Search Results");
+			a.assertEquals(noSearchResults.getText(), expectedMessage);
 		} else {
-			waitForVisibilityOfAll(5, productNames);
+			wait.waitForVisibilityOfAll(SHORT_TIMEOUT, productNames, "Product Names");
 			List<WebElement> products = productNames;
 			for (int i = 0; i < products.size(); i++) {
 				String[] name = products.get(i).getText().split("-");
 				String formattedName = name[0].trim().toLowerCase();
-				try {
-					Assert.assertEquals(formattedName, keyword);
-					log.info("Searched for product: " + keyword + ", found: '" + formattedName + "'");
-				} catch (AssertionError e) {
-					log.error("Mismatch on searched product: " + keyword + " , found: '" + formattedName + "'");
-					throw e;
-				}
+				log.info("Searching for product: " + keyword + ", checking if matching product is found");
+				a.assertEquals(formattedName, keyword);
+
 			}
 		}
+		wait.waitForVisibilityOf(SHORT_TIMEOUT, searchField, "Search Field");
 		searchField.clear();
 		log.info("Clearing search field and refreshing page");
 		driver.navigate().refresh();
-	    log.info("Refreshed page");
-	}
-
-	public void scrollTo(int index1, int index2) {
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollTo(" + index1 + ", " + index2 + ");");
-	}
-
-	public void waitForVisibilityOfAll(int duration, List<WebElement> element) {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
-		wait.until(ExpectedConditions.visibilityOfAllElements(element));
+		log.info("Refreshed page");
 	}
 
 	public CheckoutPage clickCheckout() {
+		wait = new Waits(driver);
 		log.info("Clicking Checkout button");
+		wait.waitForVisibilityOf(MEDIUM_TIMEOUT, checkout, "Checkout Button");
 		checkout.click();
 		return new CheckoutPage(driver);
 	}
 
 	public TopDeals clickTopDeals() {
+		wait = new Waits(driver);
 		log.info("Clicking Top Deals button");
+		wait.waitForVisibilityOf(MEDIUM_TIMEOUT, topDealsButton, "Top Deals Button");
 		topDealsButton.click();
 		return new TopDeals(driver);
 	}

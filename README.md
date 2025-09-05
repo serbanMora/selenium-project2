@@ -40,7 +40,7 @@ The project follows Maven’s standard directory layout and is organized into co
 │   ├───main
 │   │   └───java
 │   │       └───greenkart
-│   │           ├───config (BaseTest.java, browser.properties)
+│   │           ├───config (BaseTest.java, UserData.java, Waits.java, Asserts.java, ElementActions.java, browser.properties, production.properties, staging.properties)
 │   │           └───pageObject (CheckoutPage.java, OrderSubmissionPage.java, ProductCatalog.java, TopDeals.java)
 │   └───test
 │       └───java
@@ -71,7 +71,19 @@ This directory contains configuration files and base test classes needed for set
 
 * ```BaseTest.java```: A base test class that initializes the WebDriver and provides common test setup and teardown methods.
 	
+* ```UserData.java```: Loads environment-specific configuration properties (such as staging or production) from the staging.properties or production.properties files during initialization. It provides access to these properties, such as retrieving the configured URL, while logging the process for traceability and error handling.
+
+* ```Asserts.java```: Wraps TestNG assertions with Log4j logging for clearer test result reporting. It supports multiple data types and custom messages for better debugging.
+
+* ```Waits.java```: Wait methods using Selenium’s WebDriverWait and FluentWait to handle dynamic web elements during test execution. It logs wait outcomes and handles exceptions for improved test stability and easier debugging.
+
+* ```ElementActions.java```: Provides utility methods for interacting with web elements using standard Selenium actions and JavascriptExecutor. It includes dropdown selection, scrolling and retrieving element text with logging and error handling.
+
 * ```browser.properties```: A properties file where you can select the browser in which the test cases will run (chrome, firefox or edge). Test execution can also be set to run headless, to run in headless mode, append ```headless``` to chrome, firefox or edge.
+
+* ```staging.properties```: A properties file where you can select the staging URL.
+
+* ```production.properties```: A properties file where you can select the production URL.
 
 ## \selenium-project2\src\test\java\greenkart\testCases
 This directory contains the test case classes responsible for executing the test logic. Each class corresponds to specific scenarios and uses the page objects to carry out the tests.

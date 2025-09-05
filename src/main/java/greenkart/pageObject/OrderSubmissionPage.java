@@ -1,30 +1,29 @@
 package greenkart.pageObject;
 
-import java.time.Duration;
 import java.util.Set;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.testng.asserts.SoftAssert;
+
+import greenkart.config.Asserts;
+import greenkart.config.ElementActions;
+import greenkart.config.Waits;
 
 public class OrderSubmissionPage {
 
 	private static Logger log = LogManager.getLogger(OrderSubmissionPage.class.getName());
+	
+	private static final int SHORT_TIMEOUT = 5;
+	private static final int MEDIUM_TIMEOUT = 10;
 
 	WebDriver driver;
-	WebDriverWait wait;
-	SoftAssert softAssert;
+	ElementActions e;
+	Waits wait;
+	Asserts a;
 
 	public OrderSubmissionPage(WebDriver driver) {
 		this.driver = driver;
@@ -55,118 +54,81 @@ public class OrderSubmissionPage {
 	@FindBy(linkText = "Home")
 	private WebElement homeButton;
 
-	public void validateSelectedCountry(String country, String method) {
-		try {
-			waitForVisibilityOf(5, selectCountry);
-			Select s = new Select(selectCountry);
+	public void validateSelectedCountry(String country) {
+		wait = new Waits(driver);
+		a = new Asserts(driver);
+		e = new ElementActions(driver);
 
-			switch (method) {
-			case "byValue":
-				log.info("Selected country by value: " + country);
-				s.selectByValue(country);
-				break;
-
-			case "byScrolling":
-				selectCountry.click();
-				log.debug("Clicked selectCountry dropdown to start scrolling");
-				int i = 0;
-				while (!jsExecutorGetText(selectCountry).equals(country)) {
-					i++;
-					selectCountry.sendKeys(Keys.ARROW_DOWN);
-					if (i > s.getOptions().size()) {
-						log.warn("Reached end of options while scrolling for: " + country);
-						break;
-					}
-				}
-				log.info("Selected country by scrolling: " + jsExecutorGetText(selectCountry));
-				break;
-			}
-			Assert.assertEquals(jsExecutorGetText(selectCountry), country);
-			log.info(jsExecutorGetText(selectCountry) + " country was selected");
-		} catch (Exception e) {
-			log.error(country + " was not found, country selected: " + jsExecutorGetText(selectCountry));
-		}
-	}
-
-	public String jsExecutorGetText(WebElement element) {
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		String text = (String) js.executeScript("return arguments[0].value;", element);
-		return text;
+		wait.waitForVisibilityOf(SHORT_TIMEOUT, selectCountry, "Select Country");
+		e.selectBy("value", selectCountry, country);
+		log.info("Checking if country: " + country + " is selected");
+		a.assertEquals(e.jsExecutorGetText(selectCountry), country);
 	}
 
 	public void validateErrorAlert() {
+		wait = new Waits(driver);
+		a = new Asserts(driver);
 		String errorMessage = "Please accept Terms & Conditions - Required";
-		try {
-			softAssert = new SoftAssert();
-			proceed.click();
-			log.info("Clicked Proceed button without accepting Terms & Conditions");
-			waitForVisibilityOf(15, errorAlert);
-			softAssert.assertEquals(errorAlert.getText(), errorMessage);
-			softAssert.assertTrue(errorAlert.getDomAttribute("style").contains("red"));
-			softAssert.assertAll();
-			log.info(errorAlert.getText() + " error message is displayed");
-		} catch (AssertionError e) {
-			log.error("Expected: '" + errorMessage + "', but found: '" + errorAlert.getText() + "'");
-		} catch (NoSuchElementException e) {
-			log.error(errorAlert.getText() + " error message is not displayed");
-		}
+		
+		wait.waitForVisibilityOf(SHORT_TIMEOUT, proceed, "Proceed");
+		proceed.click();
+		log.info("Clicked Proceed button without accepting Terms & Conditions");
+		wait.waitForVisibilityOf(MEDIUM_TIMEOUT, errorAlert, "Error Alert");
+		log.info("Checking if error message is displayed in red color");
+		a.assertEquals(errorAlert.getText(), errorMessage);
+		a.assertTrue(errorAlert.getDomAttribute("style").contains("red"), "Error message is displayed in red color", "Error message is not displayed in red color");
 	}
 
 	public void validateTerms() {
+		wait = new Waits(driver);
+		a = new Asserts(driver);
+
 		String expectedMessage = "Here the terms and condition page Click to geo back Home";
-		try {
-			terms.click();
-			log.info("Clicked on 'Terms & Conditions' button");
+		wait.waitForVisibilityOf(SHORT_TIMEOUT, terms, "Terms & Conditions");
+		terms.click();
+		log.info("Clicked on 'Terms & Conditions' button");
 
-			String mainTab = driver.getWindowHandle();
-			Set<String> allTabs = driver.getWindowHandles();
-			for (String tab : allTabs) {
-				if (!tab.equals(mainTab)) {
-					driver.switchTo().window(tab);
-					log.info("Switched to 'Terms & Conditions' new tab");
-					break;
-				}
+		String mainTab = driver.getWindowHandle();
+		Set<String> allTabs = driver.getWindowHandles();
+		for (String tab : allTabs) {
+			if (!tab.equals(mainTab)) {
+				driver.switchTo().window(tab);
+				log.info("Switched to 'Terms & Conditions' new tab");
+				break;
 			}
-			Assert.assertEquals(termsNewTab.getText(), expectedMessage);
-			log.info("Verified text on 'Terms & Conditions' page: '" + termsNewTab.getText() + "'");
-			driver.close();
-			log.info("Closed 'Terms & Conditions' tab");
-			driver.switchTo().window(mainTab);
-			log.debug("Switched back to main window");
-		} catch (AssertionError e) {
-			log.error("Expected message: '" + expectedMessage + "', but found: " + termsNewTab.getText());
-		} catch (NoSuchElementException e) {
-			log.error(termsNewTab.getText() + " message is not displayed");
 		}
-	}
-
-	public void waitForVisibilityOf(int duration, WebElement element) {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
-		wait.until(ExpectedConditions.visibilityOf(element));
+		log.info("Checking if 'Terms & Conditions' new tab text is correct");
+		wait.waitForVisibilityOf(SHORT_TIMEOUT, termsNewTab, "Terms from New Tab");
+		a.assertEquals(termsNewTab.getText(), expectedMessage);
+		driver.close();
+		log.info("Closed 'Terms & Conditions' tab");
+		driver.switchTo().window(mainTab);
+		log.debug("Switched back to main window");
 	}
 
 	public void validateSubmitOrder() {
+		wait = new Waits(driver);
+		a = new Asserts(driver);
+
 		String expectedMessage = "Thank you, your order has been placed successfully\n"
 				+ "You'll be redirected to Home page shortly!!";
-		try {
-			if (checkbox.isSelected()) {
-				log.debug("Checkbox is already selected");
-				proceed.click();
-				log.info("Clicked Proceed button");
-			} else {
-				checkbox.click();
-				log.info("Selected checkbox");
-				proceed.click();
-				log.info("Clicked Proceed button");
-			}
-			Assert.assertEquals(successfulMessage.getText(), expectedMessage);
-			log.info("Order success message validated: '" + successfulMessage.getText() + "'");
-			homeButton.click();
-			log.info("Clicked Home button to return to main page");
-		} catch (AssertionError e) {
-			log.error("Expected message: '" + expectedMessage + "', but found: " + successfulMessage.getText());
-		} catch (NoSuchElementException e) {
-			log.error(successfulMessage.getText() + " message is not displayed");
+		wait.waitForVisibilityOf(SHORT_TIMEOUT, checkbox, "Checkbox");
+		wait.waitForVisibilityOf(SHORT_TIMEOUT, proceed, "Proceed");
+		if (checkbox.isSelected()) {
+			log.debug("Checkbox is already selected");
+			proceed.click();
+			log.info("Clicked Proceed button");
+		} else {
+			checkbox.click();
+			log.info("Selected checkbox");
+			proceed.click();
+			log.info("Clicked Proceed button");
 		}
+		wait.waitForVisibilityOf(SHORT_TIMEOUT, successfulMessage, "Successful Message");
+		log.info("Checking if the order success message is correct");
+		a.assertEquals(successfulMessage.getText(), expectedMessage);
+		wait.waitForVisibilityOf(SHORT_TIMEOUT, homeButton, "Home Button");
+		homeButton.click();
+		log.info("Clicked Home button to return to main page");
 	}
 }

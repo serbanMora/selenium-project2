@@ -4,7 +4,6 @@ import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.time.Duration;
 import java.util.Properties;
 
 import org.apache.logging.log4j.LogManager;
@@ -36,8 +35,13 @@ public class BaseTest {
 	public void setUP() throws IOException {
 		log.info("Test Execution Started");
 		Properties prop = new Properties();
-		FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/java/greenkart/config/browser.properties");
-		prop.load(fis);
+		try (FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/java/greenkart/config/browser.properties")) {
+			prop.load(fis);
+			log.info("Successfully loaded browser configuration: " + prop.getProperty("browser"));
+		} catch (IOException e) {
+			log.fatal("Failed to load browser configuration file", e);
+		}
+		
 		String browserName = System.getenv("BROWSER") != null ? System.getenv("BROWSER") : prop.getProperty("browser");
 		String chromeDriverPath = System.getenv("CHROME_PATH") != null ? System.getenv("CHROME_PATH") : System.getProperty("user.dir") + "/drivers/chromedriver.exe";
 		String firefoxDriverPath = System.getenv("FIREFOX_PATH") != null ? System.getenv("FIREFOX_PATH") : System.getProperty("user.dir") + "/drivers/geckodriver.exe";
@@ -82,14 +86,13 @@ public class BaseTest {
 		
 		if (browserName.contains("headless")) {
 			driver.manage().window().setSize(new Dimension(1920, 1080));
-			log.info("Browser window was set to 1920x1080 in headless mode");
+			log.info("Browser window was set to 1920x1080 resolution in headless mode");
 		} else {
 			driver.manage().window().maximize();
 			log.info("Browser window maximized");
 		}
 		driver.manage().deleteAllCookies();
 		log.info("Browser cookies deleted");
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
 	}
 	
 	public static void logURL(String URL) {

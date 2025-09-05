@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="43.455" tests="18" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="62.153" tests="18" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="webdriver.chrome.driver" value="C:\Users\lynxt\eclipse-workspace\selenium-project2/drivers/chromedriver.exe"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Users\lynxt\eclipse-workspace\selenium-project2\target\test-classes;C:\Users\lynxt\eclipse-workspace\selenium-project2\target\classes;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-java\4.34.0\selenium-java-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-api\4.34.0\selenium-api-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.34.0\selenium-chrome-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.34.0\selenium-chromium-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-json\4.34.0\selenium-json-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.34.0\selenium-manager-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v136\4.34.0\selenium-devtools-v136-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v137\4.34.0\selenium-devtools-v137-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v138\4.34.0\selenium-devtools-v138-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.34.0\selenium-edge-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.34.0\selenium-firefox-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-http\4.34.0\selenium-http-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.34.0\selenium-ie-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.34.0\selenium-remote-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\com\google\guava\guava\33.4.8-jre\guava-33.4.8-jre.jar;C:\Users\lynxt\.m2\repository\com\google\guava\failureaccess\1.0.3\failureaccess-1.0.3.jar;C:\Users\lynxt\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\lynxt\.m2\repository\com\google\errorprone\error_prone_annotations\2.36.0\error_prone_annotations-2.36.0.jar;C:\Users\lynxt\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-api\1.51.0\opentelemetry-api-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-context\1.51.0\opentelemetry-context-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.51.0\opentelemetry-exporter-logging-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.51.0\opentelemetry-sdk-common-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.51.0\opentelemetry-sdk-extension-autoconfigure-spi-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.51.0\opentelemetry-sdk-extension-autoconfigure-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.51.0\opentelemetry-sdk-trace-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.51.0\opentelemetry-sdk-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.51.0\opentelemetry-sdk-metrics-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.51.0\opentelemetry-sdk-logs-1.51.0.jar;C:\Users\lynxt\.m2\repository\net\bytebuddy\byte-buddy\1.17.6\byte-buddy-1.17.6.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-os\4.34.0\selenium-os-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\apache\commons\commons-exec\1.5.0\commons-exec-1.5.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.34.0\selenium-safari-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-support\4.34.0\selenium-support-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\testng\testng\7.11.0\testng-7.11.0.jar;C:\Users\lynxt\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\lynxt\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\lynxt\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\lynxt\.m2\repository\commons-io\commons-io\2.20.0\commons-io-2.20.0.jar;C:\Users\lynxt\.m2\repository\io\qameta\allure\allure-testng\2.29.1\allure-testng-2.29.1.jar;C:\Users\lynxt\.m2\repository\io\qameta\allure\allure-java-commons\2.29.1\allure-java-commons-2.29.1.jar;C:\Users\lynxt\.m2\repository\io\qameta\allure\allure-model\2.29.1\allure-model-2.29.1.jar;C:\Users\lynxt\.m2\repository\io\qameta\allure\allure-test-filter\2.29.1\allure-test-filter-2.29.1.jar;C:\Users\lynxt\.m2\repository\org\apache\logging\log4j\log4j-core\2.25.1\log4j-core-2.25.1.jar;C:\Users\lynxt\.m2\repository\org\apache\logging\log4j\log4j-api\2.25.1\log4j-api-2.25.1.jar;"/>
+    <property name="java.class.path" value="C:\Users\lynxt\eclipse-workspace\selenium-project2\target\test-classes;C:\Users\lynxt\eclipse-workspace\selenium-project2\target\classes;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-java\4.35.0\selenium-java-4.35.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-api\4.35.0\selenium-api-4.35.0.jar;C:\Users\lynxt\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.35.0\selenium-chrome-driver-4.35.0.jar;C:\Users\lynxt\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.35.0\selenium-chromium-driver-4.35.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-json\4.35.0\selenium-json-4.35.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.35.0\selenium-manager-4.35.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v137\4.35.0\selenium-devtools-v137-4.35.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v138\4.35.0\selenium-devtools-v138-4.35.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v139\4.35.0\selenium-devtools-v139-4.35.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.35.0\selenium-edge-driver-4.35.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.35.0\selenium-firefox-driver-4.35.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-http\4.35.0\selenium-http-4.35.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.35.0\selenium-ie-driver-4.35.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.35.0\selenium-remote-driver-4.35.0.jar;C:\Users\lynxt\.m2\repository\com\google\guava\guava\33.4.8-jre\guava-33.4.8-jre.jar;C:\Users\lynxt\.m2\repository\com\google\guava\failureaccess\1.0.3\failureaccess-1.0.3.jar;C:\Users\lynxt\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\lynxt\.m2\repository\com\google\errorprone\error_prone_annotations\2.36.0\error_prone_annotations-2.36.0.jar;C:\Users\lynxt\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-api\1.53.0\opentelemetry-api-1.53.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-context\1.53.0\opentelemetry-context-1.53.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-common\1.53.0\opentelemetry-common-1.53.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.53.0\opentelemetry-exporter-logging-1.53.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.53.0\opentelemetry-sdk-common-1.53.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.53.0\opentelemetry-sdk-extension-autoconfigure-spi-1.53.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.53.0\opentelemetry-sdk-extension-autoconfigure-1.53.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.53.0\opentelemetry-sdk-trace-1.53.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.53.0\opentelemetry-sdk-1.53.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.53.0\opentelemetry-sdk-metrics-1.53.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.53.0\opentelemetry-sdk-logs-1.53.0.jar;C:\Users\lynxt\.m2\repository\net\bytebuddy\byte-buddy\1.17.6\byte-buddy-1.17.6.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-os\4.35.0\selenium-os-4.35.0.jar;C:\Users\lynxt\.m2\repository\org\apache\commons\commons-exec\1.5.0\commons-exec-1.5.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.35.0\selenium-safari-driver-4.35.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-support\4.35.0\selenium-support-4.35.0.jar;C:\Users\lynxt\.m2\repository\org\testng\testng\7.11.0\testng-7.11.0.jar;C:\Users\lynxt\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\lynxt\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\lynxt\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\lynxt\.m2\repository\commons-io\commons-io\2.20.0\commons-io-2.20.0.jar;C:\Users\lynxt\.m2\repository\io\qameta\allure\allure-testng\2.29.1\allure-testng-2.29.1.jar;C:\Users\lynxt\.m2\repository\io\qameta\allure\allure-java-commons\2.29.1\allure-java-commons-2.29.1.jar;C:\Users\lynxt\.m2\repository\io\qameta\allure\allure-model\2.29.1\allure-model-2.29.1.jar;C:\Users\lynxt\.m2\repository\io\qameta\allure\allure-test-filter\2.29.1\allure-test-filter-2.29.1.jar;C:\Users\lynxt\.m2\repository\org\apache\logging\log4j\log4j-core\2.25.1\log4j-core-2.25.1.jar;C:\Users\lynxt\.m2\repository\org\apache\logging\log4j\log4j-api\2.25.1\log4j-api-2.25.1.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -16,9 +16,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\lynxt\AppData\Local\Temp\surefire59423963993124287\surefirebooter-20250730165912948_3.jar C:\Users\lynxt\AppData\Local\Temp\surefire59423963993124287 2025-07-30T16-59-12_839-jvmRun1 surefire-20250730165912948_1tmp surefire_0-20250730165912948_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\lynxt\AppData\Local\Temp\surefire11770680349680841874\surefirebooter-20250905165856865_3.jar C:\Users\lynxt\AppData\Local\Temp\surefire11770680349680841874 2025-09-05T16-58-56_739-jvmRun1 surefire-20250905165856865_1tmp surefire_0-20250905165856865_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\lynxt\eclipse-workspace\selenium-project2\target\test-classes;C:\Users\lynxt\eclipse-workspace\selenium-project2\target\classes;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-java\4.34.0\selenium-java-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-api\4.34.0\selenium-api-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.34.0\selenium-chrome-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.34.0\selenium-chromium-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-json\4.34.0\selenium-json-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.34.0\selenium-manager-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v136\4.34.0\selenium-devtools-v136-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v137\4.34.0\selenium-devtools-v137-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v138\4.34.0\selenium-devtools-v138-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.34.0\selenium-edge-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.34.0\selenium-firefox-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-http\4.34.0\selenium-http-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.34.0\selenium-ie-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.34.0\selenium-remote-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\com\google\guava\guava\33.4.8-jre\guava-33.4.8-jre.jar;C:\Users\lynxt\.m2\repository\com\google\guava\failureaccess\1.0.3\failureaccess-1.0.3.jar;C:\Users\lynxt\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\lynxt\.m2\repository\com\google\errorprone\error_prone_annotations\2.36.0\error_prone_annotations-2.36.0.jar;C:\Users\lynxt\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-api\1.51.0\opentelemetry-api-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-context\1.51.0\opentelemetry-context-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.51.0\opentelemetry-exporter-logging-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.51.0\opentelemetry-sdk-common-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.51.0\opentelemetry-sdk-extension-autoconfigure-spi-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.51.0\opentelemetry-sdk-extension-autoconfigure-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.51.0\opentelemetry-sdk-trace-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.51.0\opentelemetry-sdk-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.51.0\opentelemetry-sdk-metrics-1.51.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.51.0\opentelemetry-sdk-logs-1.51.0.jar;C:\Users\lynxt\.m2\repository\net\bytebuddy\byte-buddy\1.17.6\byte-buddy-1.17.6.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-os\4.34.0\selenium-os-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\apache\commons\commons-exec\1.5.0\commons-exec-1.5.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.34.0\selenium-safari-driver-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-support\4.34.0\selenium-support-4.34.0.jar;C:\Users\lynxt\.m2\repository\org\testng\testng\7.11.0\testng-7.11.0.jar;C:\Users\lynxt\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\lynxt\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\lynxt\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\lynxt\.m2\repository\commons-io\commons-io\2.20.0\commons-io-2.20.0.jar;C:\Users\lynxt\.m2\repository\io\qameta\allure\allure-testng\2.29.1\allure-testng-2.29.1.jar;C:\Users\lynxt\.m2\repository\io\qameta\allure\allure-java-commons\2.29.1\allure-java-commons-2.29.1.jar;C:\Users\lynxt\.m2\repository\io\qameta\allure\allure-model\2.29.1\allure-model-2.29.1.jar;C:\Users\lynxt\.m2\repository\io\qameta\allure\allure-test-filter\2.29.1\allure-test-filter-2.29.1.jar;C:\Users\lynxt\.m2\repository\org\apache\logging\log4j\log4j-core\2.25.1\log4j-core-2.25.1.jar;C:\Users\lynxt\.m2\repository\org\apache\logging\log4j\log4j-api\2.25.1\log4j-api-2.25.1.jar;"/>
+    <property name="surefire.test.class.path" value="C:\Users\lynxt\eclipse-workspace\selenium-project2\target\test-classes;C:\Users\lynxt\eclipse-workspace\selenium-project2\target\classes;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-java\4.35.0\selenium-java-4.35.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-api\4.35.0\selenium-api-4.35.0.jar;C:\Users\lynxt\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.35.0\selenium-chrome-driver-4.35.0.jar;C:\Users\lynxt\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.35.0\selenium-chromium-driver-4.35.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-json\4.35.0\selenium-json-4.35.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.35.0\selenium-manager-4.35.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v137\4.35.0\selenium-devtools-v137-4.35.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v138\4.35.0\selenium-devtools-v138-4.35.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v139\4.35.0\selenium-devtools-v139-4.35.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.35.0\selenium-edge-driver-4.35.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.35.0\selenium-firefox-driver-4.35.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-http\4.35.0\selenium-http-4.35.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.35.0\selenium-ie-driver-4.35.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.35.0\selenium-remote-driver-4.35.0.jar;C:\Users\lynxt\.m2\repository\com\google\guava\guava\33.4.8-jre\guava-33.4.8-jre.jar;C:\Users\lynxt\.m2\repository\com\google\guava\failureaccess\1.0.3\failureaccess-1.0.3.jar;C:\Users\lynxt\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\lynxt\.m2\repository\com\google\errorprone\error_prone_annotations\2.36.0\error_prone_annotations-2.36.0.jar;C:\Users\lynxt\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-api\1.53.0\opentelemetry-api-1.53.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-context\1.53.0\opentelemetry-context-1.53.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-common\1.53.0\opentelemetry-common-1.53.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.53.0\opentelemetry-exporter-logging-1.53.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.53.0\opentelemetry-sdk-common-1.53.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.53.0\opentelemetry-sdk-extension-autoconfigure-spi-1.53.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.53.0\opentelemetry-sdk-extension-autoconfigure-1.53.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.53.0\opentelemetry-sdk-trace-1.53.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.53.0\opentelemetry-sdk-1.53.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.53.0\opentelemetry-sdk-metrics-1.53.0.jar;C:\Users\lynxt\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.53.0\opentelemetry-sdk-logs-1.53.0.jar;C:\Users\lynxt\.m2\repository\net\bytebuddy\byte-buddy\1.17.6\byte-buddy-1.17.6.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-os\4.35.0\selenium-os-4.35.0.jar;C:\Users\lynxt\.m2\repository\org\apache\commons\commons-exec\1.5.0\commons-exec-1.5.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.35.0\selenium-safari-driver-4.35.0.jar;C:\Users\lynxt\.m2\repository\org\seleniumhq\selenium\selenium-support\4.35.0\selenium-support-4.35.0.jar;C:\Users\lynxt\.m2\repository\org\testng\testng\7.11.0\testng-7.11.0.jar;C:\Users\lynxt\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\lynxt\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\lynxt\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\lynxt\.m2\repository\commons-io\commons-io\2.20.0\commons-io-2.20.0.jar;C:\Users\lynxt\.m2\repository\io\qameta\allure\allure-testng\2.29.1\allure-testng-2.29.1.jar;C:\Users\lynxt\.m2\repository\io\qameta\allure\allure-java-commons\2.29.1\allure-java-commons-2.29.1.jar;C:\Users\lynxt\.m2\repository\io\qameta\allure\allure-model\2.29.1\allure-model-2.29.1.jar;C:\Users\lynxt\.m2\repository\io\qameta\allure\allure-test-filter\2.29.1\allure-test-filter-2.29.1.jar;C:\Users\lynxt\.m2\repository\org\apache\logging\log4j\log4j-core\2.25.1\log4j-core-2.25.1.jar;C:\Users\lynxt\.m2\repository\org\apache\logging\log4j\log4j-api\2.25.1\log4j-api-2.25.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\lynxt"/>
     <property name="user.language" value="en"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\lynxt\AppData\Local\Temp\surefire59423963993124287\surefirebooter-20250730165912948_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\lynxt\AppData\Local\Temp\surefire11770680349680841874\surefirebooter-20250905165856865_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.2+8-86"/>
@@ -57,236 +57,273 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="TestStart" classname="greenkart.testCases.TestExecution" time="2.942">
-    <system-out><![CDATA[2025-07-30 16:59:13,846 [main] INFO BaseTest.setUP - Test Execution Started
-2025-07-30 16:59:14,744 [main] INFO BaseTest.setUP - Tests Running in Chrome browser
-2025-07-30 16:59:14,783 [main] INFO BaseTest.setUP - Browser window maximized
-2025-07-30 16:59:14,792 [main] INFO BaseTest.setUP - Browser cookies deleted
-2025-07-30 16:59:17,646 [main] INFO BaseTest.logURL - Navigated to test URL: https://rahulshettyacademy.com/seleniumPractise/#/
+  <testcase name="TestStart" classname="greenkart.testCases.TestExecution" time="3.208">
+    <system-out><![CDATA[2025-09-05 16:58:57,774 [main] INFO BaseTest.setUP - Test Execution Started
+2025-09-05 16:58:57,774 [main] INFO BaseTest.setUP - Successfully loaded browser configuration: chrome
+2025-09-05 16:58:58,628 [main] INFO BaseTest.setUP - Tests Running in Chrome browser
+2025-09-05 16:58:58,661 [main] INFO BaseTest.setUP - Browser window maximized
+2025-09-05 16:58:58,666 [main] INFO BaseTest.setUP - Browser cookies deleted
+2025-09-05 16:58:58,693 [main] INFO UserData.<init> - Initializing UserData with staging environment...
+2025-09-05 16:58:58,693 [main] INFO UserData.<init> - Successfully loaded properties for staging environment
+2025-09-05 16:59:01,778 [main] INFO BaseTest.logURL - Navigated to test URL: https://rahulshettyacademy.com/seleniumPractise/#/
 ]]></system-out>
     <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
 SLF4J(W): Defaulting to no-operation (NOP) logger implementation
 SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+Sep 05, 2025 4:58:58 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 140, returning the closest version; found: 139; Please update to a Selenium version that supports CDP version 140
 ]]></system-err>
   </testcase>
-  <testcase name="TC1" classname="greenkart.testCases.TestExecution" time="9.065">
-    <system-out><![CDATA[2025-07-30 16:59:17,931 [main] INFO ProductCatalog.searchValidation - Entered search keyword: 'apple'. Waiting 4000ms
-2025-07-30 16:59:22,061 [main] INFO ProductCatalog.searchValidation - Searched for product: apple, found: 'apple'
-2025-07-30 16:59:22,108 [main] INFO ProductCatalog.searchValidation - Clearing search field and refreshing page
-2025-07-30 16:59:22,344 [main] INFO ProductCatalog.searchValidation - Refreshed page
-2025-07-30 16:59:22,449 [main] INFO ProductCatalog.searchValidation - Entered search keyword: 'wrong-word'. Waiting 4000ms
-2025-07-30 16:59:26,561 [main] INFO ProductCatalog.searchValidation - No products found. Message displayed: 'Sorry, no products matched your search!
+  <testcase name="TC1" classname="greenkart.testCases.TestExecution" time="9.299">
+    <system-out><![CDATA[2025-09-05 16:59:02,116 [main] INFO ProductCatalog.searchValidation - Entered search keyword: 'apple'. Waiting 4000ms
+2025-09-05 16:59:06,225 [main] INFO ProductCatalog.searchValidation - Searching for product: apple, checking if matching product is found
+2025-09-05 16:59:06,235 [main] INFO Asserts.assertEquals - Assertion Passed: Expected 'apple', found 'apple'
+2025-09-05 16:59:06,361 [main] INFO ProductCatalog.searchValidation - Clearing search field and refreshing page
+2025-09-05 16:59:06,626 [main] INFO ProductCatalog.searchValidation - Refreshed page
+2025-09-05 16:59:06,796 [main] INFO ProductCatalog.searchValidation - Entered search keyword: 'wrong-word'. Waiting 4000ms
+2025-09-05 16:59:10,823 [main] INFO ProductCatalog.searchValidation - No products found, checking if not products found message is displayed
+2025-09-05 16:59:10,874 [main] INFO Asserts.assertEquals - Assertion Passed: Expected 'Sorry, no products matched your search!
+Enter a different keyword and try.', found 'Sorry, no products matched your search!
 Enter a different keyword and try.'
-2025-07-30 16:59:26,612 [main] INFO ProductCatalog.searchValidation - Clearing search field and refreshing page
-2025-07-30 16:59:26,842 [main] INFO ProductCatalog.searchValidation - Refreshed page
+2025-09-05 16:59:10,958 [main] INFO ProductCatalog.searchValidation - Clearing search field and refreshing page
+2025-09-05 16:59:11,204 [main] INFO ProductCatalog.searchValidation - Refreshed page
 ]]></system-out>
   </testcase>
-  <testcase name="TC2" classname="greenkart.testCases.TestExecution" time="2.207">
-    <system-out><![CDATA[2025-07-30 16:59:28,692 [main] INFO ProductCatalog.addQuantity - For product: 'walnuts', was added a quantity of 15
-2025-07-30 16:59:28,700 [main] INFO ProductCatalog.validateCartContents - Clicking cart icon to view cart contents
-2025-07-30 16:59:28,905 [main] INFO ProductCatalog.validateCartContents - Price of the product: 170, multiplied with the quantity of product: 15, equals the amount: 2550
-2025-07-30 16:59:28,967 [main] INFO ProductCatalog.validateCartContents - Removed product from cart
-2025-07-30 16:59:29,011 [main] INFO ProductCatalog.validateCartContents - Clicking cart icon button
+  <testcase name="TC2" classname="greenkart.testCases.TestExecution" time="2.288">
+    <system-out><![CDATA[2025-09-05 16:59:12,748 [main] INFO ProductCatalog.addQuantity - For product: 'walnuts', was added a quantity of 15
+2025-09-05 16:59:12,817 [main] INFO ProductCatalog.validateCartContents - Clicking cart icon to view cart contents
+2025-09-05 16:59:13,158 [main] INFO ProductCatalog.validateCartContents - Checking if the price of the product: 170, multiplied with the quantity of product: 15, equals the amount: 2550
+2025-09-05 16:59:13,158 [main] INFO Asserts.assertTrue - Assertion Passed: 
+2025-09-05 16:59:13,258 [main] INFO ProductCatalog.validateCartContents - Removed product from cart
+2025-09-05 16:59:13,259 [main] INFO ProductCatalog.validateCartContents - Checking if cart is empty
+2025-09-05 16:59:13,307 [main] INFO Asserts.assertEquals - Assertion Passed: Expected 'You cart is empty!', found 'You cart is empty!'
+2025-09-05 16:59:13,403 [main] INFO Asserts.assertTrue - Assertion Passed: 
+2025-09-05 16:59:13,424 [main] INFO ProductCatalog.validateCartContents - Clicking cart icon button
 ]]></system-out>
   </testcase>
-  <testcase name="TC3" classname="greenkart.testCases.TestExecution" time="3.461">
-    <system-out><![CDATA[2025-07-30 16:59:29,218 [main] INFO ProductCatalog.addProductToCart - 'Brocolli' was added to cart
-2025-07-30 16:59:29,327 [main] INFO ProductCatalog.addProductToCart - 'Cauliflower' was added to cart
-2025-07-30 16:59:29,416 [main] INFO ProductCatalog.addProductToCart - 'Cucumber' was added to cart
-2025-07-30 16:59:29,503 [main] INFO ProductCatalog.addProductToCart - 'Beetroot' was added to cart
-2025-07-30 16:59:29,603 [main] INFO ProductCatalog.addProductToCart - 'Carrot' was added to cart
-2025-07-30 16:59:29,728 [main] INFO ProductCatalog.addProductToCart - 'Tomato' was added to cart
-2025-07-30 16:59:29,841 [main] INFO ProductCatalog.addProductToCart - 'Beans' was added to cart
-2025-07-30 16:59:29,948 [main] INFO ProductCatalog.addProductToCart - 'Brinjal' was added to cart
-2025-07-30 16:59:30,033 [main] INFO ProductCatalog.addProductToCart - 'Capsicum' was added to cart
-2025-07-30 16:59:30,173 [main] INFO ProductCatalog.addProductToCart - 'Mushroom' was added to cart
-2025-07-30 16:59:30,285 [main] INFO ProductCatalog.addProductToCart - 'Potato' was added to cart
-2025-07-30 16:59:30,453 [main] INFO ProductCatalog.addProductToCart - 'Pumpkin' was added to cart
-2025-07-30 16:59:30,559 [main] INFO ProductCatalog.addProductToCart - 'Corn' was added to cart
-2025-07-30 16:59:30,661 [main] INFO ProductCatalog.addProductToCart - 'Onion' was added to cart
-2025-07-30 16:59:30,760 [main] INFO ProductCatalog.addProductToCart - 'Apple' was added to cart
-2025-07-30 16:59:30,860 [main] INFO ProductCatalog.addProductToCart - 'Banana' was added to cart
-2025-07-30 16:59:30,977 [main] INFO ProductCatalog.addProductToCart - 'Grapes' was added to cart
-2025-07-30 16:59:31,074 [main] INFO ProductCatalog.addProductToCart - 'Mango' was added to cart
-2025-07-30 16:59:31,160 [main] INFO ProductCatalog.addProductToCart - 'Musk Melon' was added to cart
-2025-07-30 16:59:31,284 [main] INFO ProductCatalog.addProductToCart - 'Orange' was added to cart
-2025-07-30 16:59:31,404 [main] INFO ProductCatalog.addProductToCart - 'Pears' was added to cart
-2025-07-30 16:59:31,527 [main] INFO ProductCatalog.addProductToCart - 'Pomegranate' was added to cart
-2025-07-30 16:59:31,644 [main] INFO ProductCatalog.addProductToCart - 'Raspberry' was added to cart
-2025-07-30 16:59:31,769 [main] INFO ProductCatalog.addProductToCart - 'Strawberry' was added to cart
-2025-07-30 16:59:31,877 [main] INFO ProductCatalog.addProductToCart - 'Water Melon' was added to cart
-2025-07-30 16:59:31,992 [main] INFO ProductCatalog.addProductToCart - 'Almonds' was added to cart
-2025-07-30 16:59:32,127 [main] INFO ProductCatalog.addProductToCart - 'Pista' was added to cart
-2025-07-30 16:59:32,262 [main] INFO ProductCatalog.addProductToCart - 'Nuts Mixture' was added to cart
-2025-07-30 16:59:32,398 [main] INFO ProductCatalog.addProductToCart - 'Cashews' was added to cart
-2025-07-30 16:59:32,500 [main] INFO ProductCatalog.addProductToCart - 'Walnuts' was added to cart
-2025-07-30 16:59:32,500 [main] INFO ProductCatalog.addProductToCart - Finished adding products to cart. Total added: 30
-2025-07-30 16:59:32,535 [main] INFO ProductCatalog.validateItemsTotal - Displayed item count: 30. Expected item count: 30
+  <testcase name="TC3" classname="greenkart.testCases.TestExecution" time="3.949">
+    <system-out><![CDATA[2025-09-05 16:59:13,953 [main] INFO ProductCatalog.addProductToCart - 'Brocolli' was added to cart
+2025-09-05 16:59:14,049 [main] INFO ProductCatalog.addProductToCart - 'Cauliflower' was added to cart
+2025-09-05 16:59:14,220 [main] INFO ProductCatalog.addProductToCart - 'Cucumber' was added to cart
+2025-09-05 16:59:14,347 [main] INFO ProductCatalog.addProductToCart - 'Beetroot' was added to cart
+2025-09-05 16:59:14,460 [main] INFO ProductCatalog.addProductToCart - 'Carrot' was added to cart
+2025-09-05 16:59:14,568 [main] INFO ProductCatalog.addProductToCart - 'Tomato' was added to cart
+2025-09-05 16:59:14,658 [main] INFO ProductCatalog.addProductToCart - 'Beans' was added to cart
+2025-09-05 16:59:14,738 [main] INFO ProductCatalog.addProductToCart - 'Brinjal' was added to cart
+2025-09-05 16:59:14,813 [main] INFO ProductCatalog.addProductToCart - 'Capsicum' was added to cart
+2025-09-05 16:59:14,924 [main] INFO ProductCatalog.addProductToCart - 'Mushroom' was added to cart
+2025-09-05 16:59:15,057 [main] INFO ProductCatalog.addProductToCart - 'Potato' was added to cart
+2025-09-05 16:59:15,189 [main] INFO ProductCatalog.addProductToCart - 'Pumpkin' was added to cart
+2025-09-05 16:59:15,308 [main] INFO ProductCatalog.addProductToCart - 'Corn' was added to cart
+2025-09-05 16:59:15,424 [main] INFO ProductCatalog.addProductToCart - 'Onion' was added to cart
+2025-09-05 16:59:15,525 [main] INFO ProductCatalog.addProductToCart - 'Apple' was added to cart
+2025-09-05 16:59:15,640 [main] INFO ProductCatalog.addProductToCart - 'Banana' was added to cart
+2025-09-05 16:59:15,783 [main] INFO ProductCatalog.addProductToCart - 'Grapes' was added to cart
+2025-09-05 16:59:15,906 [main] INFO ProductCatalog.addProductToCart - 'Mango' was added to cart
+2025-09-05 16:59:16,010 [main] INFO ProductCatalog.addProductToCart - 'Musk Melon' was added to cart
+2025-09-05 16:59:16,144 [main] INFO ProductCatalog.addProductToCart - 'Orange' was added to cart
+2025-09-05 16:59:16,246 [main] INFO ProductCatalog.addProductToCart - 'Pears' was added to cart
+2025-09-05 16:59:16,357 [main] INFO ProductCatalog.addProductToCart - 'Pomegranate' was added to cart
+2025-09-05 16:59:16,493 [main] INFO ProductCatalog.addProductToCart - 'Raspberry' was added to cart
+2025-09-05 16:59:16,590 [main] INFO ProductCatalog.addProductToCart - 'Strawberry' was added to cart
+2025-09-05 16:59:16,722 [main] INFO ProductCatalog.addProductToCart - 'Water Melon' was added to cart
+2025-09-05 16:59:16,864 [main] INFO ProductCatalog.addProductToCart - 'Almonds' was added to cart
+2025-09-05 16:59:16,980 [main] INFO ProductCatalog.addProductToCart - 'Pista' was added to cart
+2025-09-05 16:59:17,116 [main] INFO ProductCatalog.addProductToCart - 'Nuts Mixture' was added to cart
+2025-09-05 16:59:17,295 [main] INFO ProductCatalog.addProductToCart - 'Cashews' was added to cart
+2025-09-05 16:59:17,415 [main] INFO ProductCatalog.addProductToCart - 'Walnuts' was added to cart
+2025-09-05 16:59:17,415 [main] INFO ProductCatalog.addProductToCart - Finished adding products to cart. Total added: 30
+2025-09-05 16:59:17,474 [main] INFO ProductCatalog.validateItemsTotal - Displayed item count matches expected item count
+2025-09-05 16:59:17,474 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '30', found '30'
 ]]></system-out>
   </testcase>
-  <testcase name="TC4" classname="greenkart.testCases.TestExecution" time="2.079">
-    <system-out><![CDATA[2025-07-30 16:59:32,656 [main] INFO ProductCatalog.validatePriceInCart - Validating sum of individual product prices matches displayed total
-2025-07-30 16:59:34,580 [main] DEBUG ProductCatalog.validatePriceInCart - Sum of individual product prices: 3800
-2025-07-30 16:59:34,580 [main] INFO ProductCatalog.validatePriceInCart - Displayed total price is: 3800. Sum of individual prices: 3800
-2025-07-30 16:59:34,580 [main] INFO ProductCatalog.clickCheckout - Clicking Checkout button
+  <testcase name="TC4" classname="greenkart.testCases.TestExecution" time="2.466">
+    <system-out><![CDATA[2025-09-05 16:59:17,619 [main] INFO ProductCatalog.validatePriceInCart - Validating sum of individual product prices matches displayed total
+2025-09-05 16:59:19,881 [main] DEBUG ProductCatalog.validatePriceInCart - Sum of individual product prices: 3800
+2025-09-05 16:59:19,881 [main] INFO ProductCatalog.validatePriceInCart - Checking if displayed total price matches the sum of individual prices
+2025-09-05 16:59:19,881 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '3800', found '3800'
+2025-09-05 16:59:19,881 [main] INFO ProductCatalog.clickCheckout - Clicking Checkout button
 ]]></system-out>
   </testcase>
-  <testcase name="TC5" classname="greenkart.testCases.TestExecution" time="1.153">
-    <system-out><![CDATA[2025-07-30 16:59:35,532 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Brocolli
-2025-07-30 16:59:35,543 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Cauliflower
-2025-07-30 16:59:35,550 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Cucumber
-2025-07-30 16:59:35,559 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Beetroot
-2025-07-30 16:59:35,569 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Carrot
-2025-07-30 16:59:35,581 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Tomato
-2025-07-30 16:59:35,594 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Beans
-2025-07-30 16:59:35,597 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Brinjal
-2025-07-30 16:59:35,611 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Capsicum
-2025-07-30 16:59:35,615 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Mushroom
-2025-07-30 16:59:35,629 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Potato
-2025-07-30 16:59:35,635 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Pumpkin
-2025-07-30 16:59:35,655 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Corn
-2025-07-30 16:59:35,668 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Onion
-2025-07-30 16:59:35,679 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Apple
-2025-07-30 16:59:35,689 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Banana
-2025-07-30 16:59:35,693 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Grapes
-2025-07-30 16:59:35,710 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Mango
-2025-07-30 16:59:35,720 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Musk Melon
-2025-07-30 16:59:35,729 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Orange
-2025-07-30 16:59:35,738 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Pears
-2025-07-30 16:59:35,749 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Pomegranate
-2025-07-30 16:59:35,756 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Raspberry
-2025-07-30 16:59:35,762 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Strawberry
-2025-07-30 16:59:35,768 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Water Melon
-2025-07-30 16:59:35,768 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Almonds
-2025-07-30 16:59:35,784 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Pista
-2025-07-30 16:59:35,784 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Nuts Mixture
-2025-07-30 16:59:35,790 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Cashews
-2025-07-30 16:59:35,796 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Walnuts
-2025-07-30 16:59:35,796 [main] INFO CheckoutPage.validateProductsAtCheckout - Actual products at checkout: [Almonds, Apple, Banana, Beans, Beetroot, Brinjal, Brocolli, Capsicum, Carrot, Cashews, Cauliflower, Corn, Cucumber, Grapes, Mango, Mushroom, Musk Melon, Nuts Mixture, Onion, Orange, Pears, Pista, Pomegranate, Potato, Pumpkin, Raspberry, Strawberry, Tomato, Walnuts, Water Melon]
-2025-07-30 16:59:35,796 [main] INFO CheckoutPage.validateProductsAtCheckout - Product names at checkout match expected product catalog
+  <testcase name="TC5" classname="greenkart.testCases.TestExecution" time="1.256">
+    <system-out><![CDATA[2025-09-05 16:59:20,928 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Brocolli
+2025-09-05 16:59:20,966 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Cauliflower
+2025-09-05 16:59:20,976 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Cucumber
+2025-09-05 16:59:20,985 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Beetroot
+2025-09-05 16:59:20,991 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Carrot
+2025-09-05 16:59:20,998 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Tomato
+2025-09-05 16:59:21,007 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Beans
+2025-09-05 16:59:21,013 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Brinjal
+2025-09-05 16:59:21,029 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Capsicum
+2025-09-05 16:59:21,042 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Mushroom
+2025-09-05 16:59:21,042 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Potato
+2025-09-05 16:59:21,057 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Pumpkin
+2025-09-05 16:59:21,066 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Corn
+2025-09-05 16:59:21,082 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Onion
+2025-09-05 16:59:21,090 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Apple
+2025-09-05 16:59:21,107 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Banana
+2025-09-05 16:59:21,124 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Grapes
+2025-09-05 16:59:21,134 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Mango
+2025-09-05 16:59:21,136 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Musk Melon
+2025-09-05 16:59:21,155 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Orange
+2025-09-05 16:59:21,163 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Pears
+2025-09-05 16:59:21,172 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Pomegranate
+2025-09-05 16:59:21,173 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Raspberry
+2025-09-05 16:59:21,173 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Strawberry
+2025-09-05 16:59:21,193 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Water Melon
+2025-09-05 16:59:21,200 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Almonds
+2025-09-05 16:59:21,201 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Pista
+2025-09-05 16:59:21,216 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Nuts Mixture
+2025-09-05 16:59:21,222 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Cashews
+2025-09-05 16:59:21,228 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Walnuts
+2025-09-05 16:59:21,229 [main] INFO CheckoutPage.validateProductsAtCheckout - Actual products at checkout: [Almonds, Apple, Banana, Beans, Beetroot, Brinjal, Brocolli, Capsicum, Carrot, Cashews, Cauliflower, Corn, Cucumber, Grapes, Mango, Mushroom, Musk Melon, Nuts Mixture, Onion, Orange, Pears, Pista, Pomegranate, Potato, Pumpkin, Raspberry, Strawberry, Tomato, Walnuts, Water Melon]
+2025-09-05 16:59:21,229 [main] INFO CheckoutPage.validateProductsAtCheckout - Checking if product names at checkout match expected product catalog
+2025-09-05 16:59:21,229 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '[Almonds, Apple, Banana, Beans, Beetroot, Brinjal, Brocolli, Capsicum, Carrot, Cashews, Cauliflower, Corn, Cucumber, Grapes, Mango, Mushroom, Musk Melon, Nuts Mixture, Onion, Orange, Pears, Pista, Pomegranate, Potato, Pumpkin, Raspberry, Strawberry, Tomato, Walnuts, Water Melon]', found '[Almonds, Apple, Banana, Beans, Beetroot, Brinjal, Brocolli, Capsicum, Carrot, Cashews, Cauliflower, Corn, Cucumber, Grapes, Mango, Mushroom, Musk Melon, Nuts Mixture, Onion, Orange, Pears, Pista, Pomegranate, Potato, Pumpkin, Raspberry, Strawberry, Tomato, Walnuts, Water Melon]'
 ]]></system-out>
   </testcase>
-  <testcase name="TC6" classname="greenkart.testCases.TestExecution" time="0.481">
-    <system-out><![CDATA[2025-07-30 16:59:36,088 [main] INFO CheckoutPage.validateTotalAmount - Expected total amount displayed: 3800
-2025-07-30 16:59:36,103 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 120, running sum: 120
-2025-07-30 16:59:36,119 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 60, running sum: 180
-2025-07-30 16:59:36,125 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 48, running sum: 228
-2025-07-30 16:59:36,130 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 32, running sum: 260
-2025-07-30 16:59:36,136 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 56, running sum: 316
-2025-07-30 16:59:36,142 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 16, running sum: 332
-2025-07-30 16:59:36,148 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 82, running sum: 414
-2025-07-30 16:59:36,154 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 35, running sum: 449
-2025-07-30 16:59:36,160 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 60, running sum: 509
-2025-07-30 16:59:36,167 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 75, running sum: 584
-2025-07-30 16:59:36,174 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 22, running sum: 606
-2025-07-30 16:59:36,181 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 48, running sum: 654
-2025-07-30 16:59:36,189 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 75, running sum: 729
-2025-07-30 16:59:36,195 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 16, running sum: 745
-2025-07-30 16:59:36,201 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 72, running sum: 817
-2025-07-30 16:59:36,207 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 45, running sum: 862
-2025-07-30 16:59:36,213 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 60, running sum: 922
-2025-07-30 16:59:36,219 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 75, running sum: 997
-2025-07-30 16:59:36,224 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 36, running sum: 1033
-2025-07-30 16:59:36,230 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 75, running sum: 1108
-2025-07-30 16:59:36,235 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 69, running sum: 1177
-2025-07-30 16:59:36,242 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 95, running sum: 1272
-2025-07-30 16:59:36,248 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 160, running sum: 1432
-2025-07-30 16:59:36,254 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 180, running sum: 1612
-2025-07-30 16:59:36,260 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 28, running sum: 1640
-2025-07-30 16:59:36,265 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 200, running sum: 1840
-2025-07-30 16:59:36,271 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 190, running sum: 2030
-2025-07-30 16:59:36,281 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 950, running sum: 2980
-2025-07-30 16:59:36,287 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 650, running sum: 3630
-2025-07-30 16:59:36,293 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 170, running sum: 3800
-2025-07-30 16:59:36,293 [main] INFO CheckoutPage.validateTotalAmount - Verified total amount: sum of individual items matches displayed total
+  <testcase name="TC6" classname="greenkart.testCases.TestExecution" time="0.716">
+    <system-out><![CDATA[2025-09-05 16:59:21,290 [main] INFO CheckoutPage.validateTotalAmount - Expected total amount displayed: 3800
+2025-09-05 16:59:21,572 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 120, running sum: 120
+2025-09-05 16:59:21,574 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 60, running sum: 180
+2025-09-05 16:59:21,581 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 48, running sum: 228
+2025-09-05 16:59:21,590 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 32, running sum: 260
+2025-09-05 16:59:21,590 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 56, running sum: 316
+2025-09-05 16:59:21,607 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 16, running sum: 332
+2025-09-05 16:59:21,613 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 82, running sum: 414
+2025-09-05 16:59:21,626 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 35, running sum: 449
+2025-09-05 16:59:21,629 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 60, running sum: 509
+2025-09-05 16:59:21,641 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 75, running sum: 584
+2025-09-05 16:59:21,673 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 22, running sum: 606
+2025-09-05 16:59:21,690 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 48, running sum: 654
+2025-09-05 16:59:21,707 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 75, running sum: 729
+2025-09-05 16:59:21,722 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 16, running sum: 745
+2025-09-05 16:59:21,730 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 72, running sum: 817
+2025-09-05 16:59:21,741 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 45, running sum: 862
+2025-09-05 16:59:21,763 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 60, running sum: 922
+2025-09-05 16:59:21,778 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 75, running sum: 997
+2025-09-05 16:59:21,790 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 36, running sum: 1033
+2025-09-05 16:59:21,805 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 75, running sum: 1108
+2025-09-05 16:59:21,819 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 69, running sum: 1177
+2025-09-05 16:59:21,841 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 95, running sum: 1272
+2025-09-05 16:59:21,857 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 160, running sum: 1432
+2025-09-05 16:59:21,873 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 180, running sum: 1612
+2025-09-05 16:59:21,890 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 28, running sum: 1640
+2025-09-05 16:59:21,906 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 200, running sum: 1840
+2025-09-05 16:59:21,907 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 190, running sum: 2030
+2025-09-05 16:59:21,930 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 950, running sum: 2980
+2025-09-05 16:59:21,939 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 650, running sum: 3630
+2025-09-05 16:59:21,956 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 170, running sum: 3800
+2025-09-05 16:59:21,956 [main] INFO CheckoutPage.validateTotalAmount - Checking if sum of individual items matches displayed total
+2025-09-05 16:59:21,956 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '3800', found '3800'
 ]]></system-out>
   </testcase>
-  <testcase name="TC7" classname="greenkart.testCases.TestExecution" time="6.36">
-    <system-out><![CDATA[2025-07-30 16:59:36,362 [main] INFO CheckoutPage.validateEmptyInvalidCode - Entered invalid promo code
-2025-07-30 16:59:36,428 [main] INFO CheckoutPage.validateEmptyInvalidCode - Clicked Apply Promo button
-2025-07-30 16:59:42,552 [main] INFO CheckoutPage.validateEmptyInvalidCode - Invalid promo code message: 'Invalid code ..!' is displayed in red color
-2025-07-30 16:59:42,612 [main] INFO CheckoutPage.validateEmptyInvalidCode - Clicked Apply Promo button
-2025-07-30 16:59:42,651 [main] INFO CheckoutPage.validateEmptyInvalidCode - Empty promo code message: 'Empty code ..!' is displayed in red color
+  <testcase name="TC7" classname="greenkart.testCases.TestExecution" time="6.002">
+    <system-out><![CDATA[2025-09-05 16:59:22,140 [main] INFO CheckoutPage.validateEmptyCode - Clicked Apply Promo button
+2025-09-05 16:59:22,174 [main] INFO CheckoutPage.validateEmptyCode - Checking if promo code message: 'Empty code ..!' is displayed in red color
+2025-09-05 16:59:22,224 [main] INFO Asserts.assertEquals - Assertion Passed: Expected 'Empty code ..!', found 'Empty code ..!'
+2025-09-05 16:59:22,242 [main] INFO Asserts.assertTrue - Assertion Passed: Empty code ..! is displayed in red color
+2025-09-05 16:59:22,350 [main] INFO CheckoutPage.validateInvalidCode - Entered invalid promo code
+2025-09-05 16:59:22,425 [main] INFO CheckoutPage.validateInvalidCode - Clicked Apply Promo button
+2025-09-05 16:59:22,444 [main] INFO CheckoutPage.validateInvalidCode - Checking if promo code message: 'Invalid code ..!' is displayed in red color
+2025-09-05 16:59:27,940 [main] INFO Asserts.assertEquals - Assertion Passed: Expected 'Invalid code ..!', found 'Invalid code ..!'
+2025-09-05 16:59:27,974 [main] INFO Asserts.assertTrue - Assertion Passed: Invalid code ..! is displayed in red color
 ]]></system-out>
   </testcase>
-  <testcase name="TC8" classname="greenkart.testCases.TestExecution" time="6.594">
-    <system-out><![CDATA[2025-07-30 16:59:42,886 [main] INFO CheckoutPage.validateAfterDiscount - Refreshed page for fresh discount test
-2025-07-30 16:59:42,938 [main] INFO CheckoutPage.validateAfterDiscount - Entered discount code: rahulshettyacademy
-2025-07-30 16:59:43,009 [main] INFO CheckoutPage.validateAfterDiscount - Clicked Apply Promo button
-2025-07-30 16:59:49,150 [main] INFO CheckoutPage.validateAfterDiscount - Discount code applied successfully message displayed
-2025-07-30 16:59:49,189 [main] DEBUG CheckoutPage.validateAfterDiscount - Original total: 3800
-2025-07-30 16:59:49,190 [main] DEBUG CheckoutPage.validateAfterDiscount - Discount percentage: 10%
-2025-07-30 16:59:49,190 [main] DEBUG CheckoutPage.validateAfterDiscount - Displayed total after discount: 3420.0
-2025-07-30 16:59:49,190 [main] DEBUG CheckoutPage.validateAfterDiscount - Expected total after discount calculation: 3420.0
-2025-07-30 16:59:49,190 [main] INFO CheckoutPage.validateAfterDiscount - Total after discount verified successfully
-2025-07-30 16:59:49,190 [main] INFO CheckoutPage.placeOrders - Clicking Place Order button
+  <testcase name="TC8" classname="greenkart.testCases.TestExecution" time="21.097">
+    <system-out><![CDATA[2025-09-05 16:59:28,273 [main] INFO CheckoutPage.validateAfterDiscount - Refreshed page for fresh discount test
+2025-09-05 16:59:28,441 [main] INFO CheckoutPage.validateAfterDiscount - Entered discount code: rahulshettyacademy
+2025-09-05 16:59:28,622 [main] INFO CheckoutPage.validateAfterDiscount - Clicked Apply Promo button
+2025-09-05 16:59:38,688 [main] INFO CheckoutPage.validateAfterDiscount - Checking if discount code message: 'Code applied ..!' is displayed in green color
+2025-09-05 16:59:48,929 [main] INFO Asserts.assertEquals - Assertion Passed: Expected 'Code applied ..!', found 'Code applied ..!'
+2025-09-05 16:59:48,936 [main] INFO Asserts.assertTrue - Assertion Passed: Code applied ..! is displayed in green color
+2025-09-05 16:59:49,033 [main] DEBUG CheckoutPage.validateAfterDiscount - Original total: 3800
+2025-09-05 16:59:49,033 [main] DEBUG CheckoutPage.validateAfterDiscount - Discount percentage: 10%
+2025-09-05 16:59:49,033 [main] DEBUG CheckoutPage.validateAfterDiscount - Displayed total after discount: 3420.0
+2025-09-05 16:59:49,033 [main] DEBUG CheckoutPage.validateAfterDiscount - Expected total after discount calculation: 3420.0
+2025-09-05 16:59:49,033 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '3420.0', found '3420.0'
+2025-09-05 16:59:49,033 [main] INFO CheckoutPage.placeOrders - Clicking Place Order button
 ]]></system-out>
   </testcase>
-  <testcase name="TC9" classname="greenkart.testCases.TestExecution" time="0.17">
-    <system-out><![CDATA[2025-07-30 16:59:49,342 [main] INFO OrderSubmissionPage.validateSelectedCountry - Selected country by value: Romania
-2025-07-30 16:59:49,443 [main] INFO OrderSubmissionPage.validateSelectedCountry - Romania country was selected
+  <testcase name="TC9" classname="greenkart.testCases.TestExecution" time="0.185">
+    <system-out><![CDATA[2025-09-05 16:59:49,275 [main] INFO ElementActions.selectBy - Selected option by value: 'Romania'
+2025-09-05 16:59:49,275 [main] INFO OrderSubmissionPage.validateSelectedCountry - Checking if country: Romania is selected
+2025-09-05 16:59:49,292 [main] INFO Asserts.assertEquals - Assertion Passed: Expected 'Romania', found 'Romania'
 ]]></system-out>
   </testcase>
-  <testcase name="TC10" classname="greenkart.testCases.TestExecution" time="0.126">
-    <system-out><![CDATA[2025-07-30 16:59:49,506 [main] INFO OrderSubmissionPage.validateErrorAlert - Clicked Proceed button without accepting Terms & Conditions
-2025-07-30 16:59:49,569 [main] INFO OrderSubmissionPage.validateErrorAlert - Please accept Terms & Conditions - Required error message is displayed
+  <testcase name="TC10" classname="greenkart.testCases.TestExecution" time="0.167">
+    <system-out><![CDATA[2025-09-05 16:59:49,404 [main] INFO OrderSubmissionPage.validateErrorAlert - Clicked Proceed button without accepting Terms & Conditions
+2025-09-05 16:59:49,421 [main] INFO OrderSubmissionPage.validateErrorAlert - Checking if error message is displayed in red color
+2025-09-05 16:59:49,454 [main] INFO Asserts.assertEquals - Assertion Passed: Expected 'Please accept Terms & Conditions - Required', found 'Please accept Terms & Conditions - Required'
+2025-09-05 16:59:49,469 [main] INFO Asserts.assertTrue - Assertion Passed: Error message is displayed in red color
 ]]></system-out>
   </testcase>
-  <testcase name="TC11" classname="greenkart.testCases.TestExecution" time="0.291">
-    <system-out><![CDATA[2025-07-30 16:59:49,690 [main] INFO OrderSubmissionPage.validateTerms - Clicked on 'Terms & Conditions' button
-2025-07-30 16:59:49,758 [main] INFO OrderSubmissionPage.validateTerms - Switched to 'Terms & Conditions' new tab
-2025-07-30 16:59:49,830 [main] INFO OrderSubmissionPage.validateTerms - Verified text on 'Terms & Conditions' page: 'Here the terms and condition page Click to geo back Home'
-2025-07-30 16:59:49,859 [main] INFO OrderSubmissionPage.validateTerms - Closed 'Terms & Conditions' tab
-2025-07-30 16:59:49,864 [main] DEBUG OrderSubmissionPage.validateTerms - Switched back to main window
+  <testcase name="TC11" classname="greenkart.testCases.TestExecution" time="0.283">
+    <system-out><![CDATA[2025-09-05 16:59:49,607 [main] INFO OrderSubmissionPage.validateTerms - Clicked on 'Terms & Conditions' button
+2025-09-05 16:59:49,664 [main] INFO OrderSubmissionPage.validateTerms - Switched to 'Terms & Conditions' new tab
+2025-09-05 16:59:49,664 [main] INFO OrderSubmissionPage.validateTerms - Checking if 'Terms & Conditions' new tab text is correct
+2025-09-05 16:59:49,740 [main] INFO Asserts.assertEquals - Assertion Passed: Expected 'Here the terms and condition page Click to geo back Home', found 'Here the terms and condition page Click to geo back Home'
+2025-09-05 16:59:49,759 [main] INFO OrderSubmissionPage.validateTerms - Closed 'Terms & Conditions' tab
+2025-09-05 16:59:49,760 [main] DEBUG OrderSubmissionPage.validateTerms - Switched back to main window
 ]]></system-out>
   </testcase>
-  <testcase name="TC12" classname="greenkart.testCases.TestExecution" time="0.393">
-    <system-out><![CDATA[2025-07-30 16:59:49,990 [main] INFO OrderSubmissionPage.validateSubmitOrder - Selected checkbox
-2025-07-30 16:59:50,035 [main] INFO OrderSubmissionPage.validateSubmitOrder - Clicked Proceed button
-2025-07-30 16:59:50,068 [main] INFO OrderSubmissionPage.validateSubmitOrder - Order success message validated: 'Thank you, your order has been placed successfully
+  <testcase name="TC12" classname="greenkart.testCases.TestExecution" time="0.479">
+    <system-out><![CDATA[2025-09-05 16:59:49,920 [main] INFO OrderSubmissionPage.validateSubmitOrder - Selected checkbox
+2025-09-05 16:59:49,988 [main] INFO OrderSubmissionPage.validateSubmitOrder - Clicked Proceed button
+2025-09-05 16:59:50,019 [main] INFO OrderSubmissionPage.validateSubmitOrder - Checking if the order success message is correct
+2025-09-05 16:59:50,043 [main] INFO Asserts.assertEquals - Assertion Passed: Expected 'Thank you, your order has been placed successfully
+You'll be redirected to Home page shortly!!', found 'Thank you, your order has been placed successfully
 You'll be redirected to Home page shortly!!'
-2025-07-30 16:59:50,124 [main] INFO OrderSubmissionPage.validateSubmitOrder - Clicked Home button to return to main page
-2025-07-30 16:59:50,124 [main] INFO ProductCatalog.clickTopDeals - Clicking Top Deals button
+2025-09-05 16:59:50,115 [main] INFO OrderSubmissionPage.validateSubmitOrder - Clicked Home button to return to main page
+2025-09-05 16:59:50,115 [main] INFO ProductCatalog.clickTopDeals - Clicking Top Deals button
 ]]></system-out>
   </testcase>
-  <testcase name="TC13" classname="greenkart.testCases.TestExecution" time="0.86">
-    <system-out><![CDATA[2025-07-30 16:59:50,354 [main] INFO TopDeals.switchTab - Switched to child window
-2025-07-30 16:59:50,485 [main] INFO TopDeals.searchValidation - Entered search keyword: wrong-word
-2025-07-30 16:59:50,527 [main] INFO TopDeals.searchValidation - No data found for keyword: wrong-word
-2025-07-30 16:59:50,808 [main] INFO TopDeals.searchValidation - Search field cleared and page refreshed
-2025-07-30 16:59:50,855 [main] INFO TopDeals.searchValidation - Entered search keyword: tomato
-2025-07-30 16:59:50,904 [main] INFO TopDeals.searchValidation - Search results validated for keyword: tomato
-2025-07-30 16:59:51,142 [main] INFO TopDeals.searchValidation - Search field cleared and page refreshed
+  <testcase name="TC13" classname="greenkart.testCases.TestExecution" time="1.106">
+    <system-out><![CDATA[2025-09-05 16:59:50,340 [main] INFO TopDeals.switchTab - Switched to child window
+2025-09-05 16:59:50,491 [main] INFO TopDeals.searchValidation - Entered search keyword: wrong-word
+2025-09-05 16:59:50,557 [main] INFO TopDeals.searchValidation - No data found for keyword: wrong-word
+2025-09-05 16:59:50,826 [main] INFO TopDeals.searchValidation - Search field cleared and page refreshed
+2025-09-05 16:59:51,000 [main] INFO TopDeals.searchValidation - Entered search keyword: tomato
+2025-09-05 16:59:51,087 [main] INFO TopDeals.searchValidation - Validating search results for keyword: tomato
+2025-09-05 16:59:51,104 [main] INFO Asserts.assertTrue - Assertion Passed: 
+2025-09-05 16:59:51,390 [main] INFO TopDeals.searchValidation - Search field cleared and page refreshed
 ]]></system-out>
   </testcase>
-  <testcase name="TC14" classname="greenkart.testCases.TestExecution" time="0.385">
-    <system-out><![CDATA[2025-07-30 16:59:51,292 [main] INFO TopDeals.validatePageSizeOption - Validated page size option: 5
-2025-07-30 16:59:51,428 [main] INFO TopDeals.validatePageSizeOption - Validated page size option: 10
-2025-07-30 16:59:51,525 [main] INFO TopDeals.validatePageSizeOption - Validated page size option: 20
+  <testcase name="TC14" classname="greenkart.testCases.TestExecution" time="0.732">
+    <system-out><![CDATA[2025-09-05 16:59:51,554 [main] INFO ElementActions.selectBy - Selected option by value: '5'
+2025-09-05 16:59:51,622 [main] INFO TopDeals.validatePageSizeOption - Validating page size option: 5
+2025-09-05 16:59:51,622 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '5', found '5'
+2025-09-05 16:59:51,730 [main] INFO ElementActions.selectBy - Selected option by value: '10'
+2025-09-05 16:59:51,840 [main] INFO TopDeals.validatePageSizeOption - Validating page size option: 10
+2025-09-05 16:59:51,840 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '10', found '10'
+2025-09-05 16:59:51,972 [main] INFO ElementActions.selectBy - Selected option by value: '20'
+2025-09-05 16:59:52,133 [main] INFO TopDeals.validatePageSizeOption - Validating page size option: 20
+2025-09-05 16:59:52,133 [main] INFO Asserts.assertTrue - Assertion Passed: 
 ]]></system-out>
   </testcase>
-  <testcase name="TC15" classname="greenkart.testCases.TestExecution" time="0.634">
-    <system-out><![CDATA[2025-07-30 16:59:51,630 [main] INFO TopDeals.clickColumnHeader - Clicked column header: name 1 times
-2025-07-30 16:59:51,812 [main] INFO TopDeals.orderValidation - Order validation passed for ordering: sort
-2025-07-30 16:59:51,859 [main] INFO TopDeals.clickColumnHeader - Clicked column header: price 1 times
-2025-07-30 16:59:51,983 [main] INFO TopDeals.orderValidation - Order validation passed for ordering: sort
-2025-07-30 16:59:52,030 [main] INFO TopDeals.clickColumnHeader - Clicked column header: discount 1 times
-2025-07-30 16:59:52,166 [main] INFO TopDeals.orderValidation - Order validation passed for ordering: sort
+  <testcase name="TC15" classname="greenkart.testCases.TestExecution" time="1.21">
+    <system-out><![CDATA[2025-09-05 16:59:52,222 [main] INFO TopDeals.clickColumnHeader - Clicked column header: name 1 times
+2025-09-05 16:59:52,623 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '[Almond, Apple, Banana, Beans, Brinjal, Carrot, Cheese, Cherry, Chocolate, Dragon fruit, Guava, Mango, Orange, Pineapple, Potato, Rice, Strawberry, Tomato, Wheat]', found '[Almond, Apple, Banana, Beans, Brinjal, Carrot, Cheese, Cherry, Chocolate, Dragon fruit, Guava, Mango, Orange, Pineapple, Potato, Rice, Strawberry, Tomato, Wheat]'
+2025-09-05 16:59:52,692 [main] INFO TopDeals.clickColumnHeader - Clicked column header: price 1 times
+2025-09-05 16:59:52,999 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '[23, 34, 34, 34, 37, 37, 37, 38, 42, 44, 56, 58, 64, 67, 67, 87, 88, 93, 93]', found '[23, 34, 34, 34, 37, 37, 37, 38, 42, 44, 56, 58, 64, 67, 67, 87, 88, 93, 93]'
+2025-09-05 16:59:53,059 [main] INFO TopDeals.clickColumnHeader - Clicked column header: discount 1 times
+2025-09-05 16:59:53,345 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '[12, 12, 15, 20, 22, 23, 26, 27, 28, 34, 36, 40, 41, 44, 46, 53, 60, 77, 88]', found '[12, 12, 15, 20, 22, 23, 26, 27, 28, 34, 36, 40, 41, 44, 46, 53, 60, 77, 88]'
 ]]></system-out>
   </testcase>
-  <testcase name="TC16" classname="greenkart.testCases.TestExecution" time="0.616">
-    <system-out><![CDATA[2025-07-30 16:59:52,266 [main] INFO TopDeals.clickColumnHeader - Clicked column header: name 2 times
-2025-07-30 16:59:52,397 [main] INFO TopDeals.orderValidation - Order validation passed for ordering: reverse
-2025-07-30 16:59:52,468 [main] INFO TopDeals.clickColumnHeader - Clicked column header: price 2 times
-2025-07-30 16:59:52,605 [main] INFO TopDeals.orderValidation - Order validation passed for ordering: reverse
-2025-07-30 16:59:52,677 [main] INFO TopDeals.clickColumnHeader - Clicked column header: discount 2 times
-2025-07-30 16:59:52,797 [main] INFO TopDeals.orderValidation - Order validation passed for ordering: reverse
+  <testcase name="TC16" classname="greenkart.testCases.TestExecution" time="1.327">
+    <system-out><![CDATA[2025-09-05 16:59:53,489 [main] INFO TopDeals.clickColumnHeader - Clicked column header: name 2 times
+2025-09-05 16:59:53,828 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '[Wheat, Tomato, Strawberry, Rice, Potato, Pineapple, Orange, Mango, Guava, Dragon fruit, Chocolate, Cherry, Cheese, Carrot, Brinjal, Beans, Banana, Apple, Almond]', found '[Wheat, Tomato, Strawberry, Rice, Potato, Pineapple, Orange, Mango, Guava, Dragon fruit, Chocolate, Cherry, Cheese, Carrot, Brinjal, Beans, Banana, Apple, Almond]'
+2025-09-05 16:59:53,936 [main] INFO TopDeals.clickColumnHeader - Clicked column header: price 2 times
+2025-09-05 16:59:54,226 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '[93, 93, 88, 87, 67, 67, 64, 58, 56, 44, 42, 38, 37, 37, 37, 34, 34, 34, 23]', found '[93, 93, 88, 87, 67, 67, 64, 58, 56, 44, 42, 38, 37, 37, 37, 34, 34, 34, 23]'
+2025-09-05 16:59:54,337 [main] INFO TopDeals.clickColumnHeader - Clicked column header: discount 2 times
+2025-09-05 16:59:54,681 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '[88, 77, 60, 53, 46, 44, 41, 40, 36, 34, 28, 27, 26, 23, 22, 20, 15, 12, 12]', found '[88, 77, 60, 53, 46, 44, 41, 40, 36, 34, 28, 27, 26, 23, 22, 20, 15, 12, 12]'
 ]]></system-out>
   </testcase>
-  <testcase name="TC17" classname="greenkart.testCases.TestExecution" time="3.352">
-    <system-out><![CDATA[2025-07-30 16:59:52,823 [main] INFO TopDeals.validateDate - Current date validated: 2025-07-30
-2025-07-30 16:59:56,053 [main] INFO TopDeals.validateDate - Navigated to calendar month-year: August 2030
-2025-07-30 16:59:56,154 [main] INFO TopDeals.validateDate - Calendar date validated: August 2030-01
+  <testcase name="TC17" classname="greenkart.testCases.TestExecution" time="4.159">
+    <system-out><![CDATA[2025-09-05 16:59:54,711 [main] INFO TopDeals.validateDate - Validating current date: 2025-09-05
+2025-09-05 16:59:54,711 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '2025-09-05', found '2025-09-05'
+2025-09-05 16:59:58,453 [main] INFO TopDeals.validateDate - Navigated to calendar month-year: August 2030
+2025-09-05 16:59:58,820 [main] INFO TopDeals.validateDate - Validating calendar date: August 2030-01
+2025-09-05 16:59:58,847 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '2030-08-01', found '2030-08-01'
 ]]></system-out>
   </testcase>
 </testsuite>
