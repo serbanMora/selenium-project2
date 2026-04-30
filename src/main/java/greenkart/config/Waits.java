@@ -19,7 +19,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class Waits {
 	
 	private static Logger log = LogManager.getLogger(Waits.class.getName());
-
+	
 	WebDriver driver;
 	WebDriverWait wait;
 	Wait<WebDriver> waits;
@@ -31,11 +31,14 @@ public class Waits {
 	
 	public void fluentWait(int duration, int polling, WebElement element, String elementName) {
 		try {
+			log.info("Waiting for up to " + duration + " seconds for '" + elementName + "' element to be visible");
+			
 			waits = new FluentWait<WebDriver>(driver)
 					.withTimeout(Duration.ofSeconds(duration))
 					.pollingEvery(Duration.ofSeconds(polling))
 					.ignoring(NoSuchElementException.class);
-
+			
+			long start = System.currentTimeMillis();
 			waits.until(new Function<WebDriver, WebElement>() {
 			public WebElement apply(WebDriver driver) {
 				if (element.isDisplayed()) {
@@ -45,11 +48,32 @@ public class Waits {
 				}
 			}
 		});
+			double elapsed = (System.currentTimeMillis() - start) / 1000.0;
+			
+			log.info(elementName + " element is visible after waiting " + elapsed + " seconds");
 		} catch (TimeoutException e) {
 			log.error(elementName + " element was not visible after waiting " + duration + " seconds - test execution stopped");
 			throw e;
 		} catch (NoSuchElementException e) {
 			log.error(elementName + " element was not found - test execution stopped");
+			throw e;
+		}
+	}
+	
+	public void waitForConditionToBeTrue(int duration, Function<WebDriver, Boolean> condition, String conditionName) {
+		try {
+			log.info("Waiting for up to " + duration + " seconds for condition: " + conditionName);
+
+			wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
+			long start = System.currentTimeMillis();
+
+			wait.until(driver -> Boolean.TRUE.equals(condition.apply(driver)));
+
+			double elapsed = (System.currentTimeMillis() - start) / 1000.0;
+			log.info("Condition '" + conditionName + "' became true after waiting " + elapsed + " seconds");
+
+		} catch (TimeoutException e) {
+			log.error("Condition '" + conditionName + "' did not become true after waiting " + duration + " seconds - test execution stopped");
 			throw e;
 		}
 	}
@@ -67,8 +91,14 @@ public class Waits {
 	
 	public void waitForVisibilityOfAll(int duration, List<WebElement> element, String elementName) {
 		try {
+			log.info("Waiting for up to " + duration + " seconds for '" + elementName + "' elements to be visible");
+
 			wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
+			long start = System.currentTimeMillis();
 			wait.until(ExpectedConditions.visibilityOfAllElements(element));
+			double elapsed = (System.currentTimeMillis() - start) / 1000.0;
+
+			log.info(elementName + " elements are visible after waiting " + elapsed + " seconds");
 		} catch (TimeoutException e) {
 			log.error(elementName + " elements were not visible after waiting " + duration + " seconds - test execution stopped");
 			throw e;
@@ -80,8 +110,14 @@ public class Waits {
 	
 	public void waitForVisibilityOf(int duration, WebElement element, String elementName) {
 		try {
+			log.info("Waiting for up to " + duration + " seconds for '" + elementName + "' element to be visible");
+			
 			wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
-			wait.until(ExpectedConditions.visibilityOf(element));
+			long start = System.currentTimeMillis();
+	        wait.until(ExpectedConditions.visibilityOf(element));
+	        double elapsed = (System.currentTimeMillis() - start) / 1000.0;
+	        
+			log.info(elementName + " element is visible after waiting " + elapsed + " seconds");
 		} catch (TimeoutException e) {
 			log.error(elementName + " element was not visible after waiting " + duration + " seconds - test execution stopped");
 			throw e;
@@ -91,21 +127,16 @@ public class Waits {
 		}
 	}
 	
-	public void waitForVisibilityOfWithoutThrow(int duration, WebElement element, String elementName) {
-		try {
-			wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
-			wait.until(ExpectedConditions.visibilityOf(element));
-		} catch (TimeoutException e) {
-			log.error(elementName + " element was not visible after waiting " + duration + " seconds");
-		} catch (NoSuchElementException e) {
-			log.error(elementName + " element was not found");
-		}
-	}
-	
 	public void waitForInvisibilityOf(int duration, WebElement element, String elementName) {
 		try {
+			log.info("Waiting for up to " + duration + " seconds for '" + elementName + "' element to be invisible");
+			
 			wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
+			long start = System.currentTimeMillis();
 			wait.until(ExpectedConditions.invisibilityOf(element));
+			double elapsed = (System.currentTimeMillis() - start) / 1000.0;
+			
+			log.info(elementName + " element is invisible after waiting " + elapsed + " seconds");
 		} catch (TimeoutException e) {
 			log.error(elementName + " element was still visible after waiting " + duration + " seconds - test execution stopped");
 			throw e;
@@ -117,8 +148,14 @@ public class Waits {
 	
 	public void waitForElementToBeClickable(int duration, WebElement element, String elementName) {
 		try {
+			log.info("Waiting for up to " + duration + " seconds for '" + elementName + "' element to be clickable");
+			
 			wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
+			long start = System.currentTimeMillis();
 			wait.until(ExpectedConditions.elementToBeClickable(element));
+			double elapsed = (System.currentTimeMillis() - start) / 1000.0;
+			
+			log.info(elementName + " element is clickable after waiting " + elapsed + " seconds");
 		} catch (TimeoutException e) {
 			log.error(elementName + " element was not clickable after waiting " + duration + " seconds - test execution stopped");
 			throw e;
@@ -135,5 +172,25 @@ public class Waits {
 		} catch (TimeoutException e) {
 		} catch (NoSuchElementException e) {
 		}
+	}
+	
+	public void waitForTitleToChange(int duration, String text) {
+	    try {
+	        wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
+	        wait.until(driver -> driver.getTitle().equals(text));
+	    } catch (TimeoutException e) {
+	        log.error(driver.getTitle() + " page title did not change to '" + text + "', after waiting " + duration + " seconds - test execution stopped");
+	        throw e;
+	    }
+	}
+	
+	public void waitForURLChange(int duration, String text) {
+	    try {
+	        wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
+	        wait.until(driver -> driver.getCurrentUrl().contains(text));
+	    } catch (TimeoutException e) {
+	        log.error(driver.getCurrentUrl() + " URL does not contain the '" + text + "', after waiting " + duration + " seconds - test execution stopped");
+	        throw e;
+	    }
 	}
 }

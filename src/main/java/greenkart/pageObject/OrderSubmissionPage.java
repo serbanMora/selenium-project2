@@ -28,6 +28,10 @@ public class OrderSubmissionPage {
 	public OrderSubmissionPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
+
+		wait = new Waits(driver);
+		e = new ElementActions(driver);
+		a = new Asserts(driver);
 	}
 
 	@FindBy(css = "select[style='width: 200px;']")
@@ -55,10 +59,6 @@ public class OrderSubmissionPage {
 	private WebElement homeButton;
 
 	public void validateSelectedCountry(String country) {
-		wait = new Waits(driver);
-		a = new Asserts(driver);
-		e = new ElementActions(driver);
-
 		wait.waitForVisibilityOf(SHORT_TIMEOUT, selectCountry, "Select Country");
 		e.selectBy("value", selectCountry, country);
 		log.info("Checking if country: " + country + " is selected");
@@ -66,8 +66,6 @@ public class OrderSubmissionPage {
 	}
 
 	public void validateErrorAlert() {
-		wait = new Waits(driver);
-		a = new Asserts(driver);
 		String errorMessage = "Please accept Terms & Conditions - Required";
 		
 		wait.waitForVisibilityOf(SHORT_TIMEOUT, proceed, "Proceed");
@@ -80,9 +78,6 @@ public class OrderSubmissionPage {
 	}
 
 	public void validateTerms() {
-		wait = new Waits(driver);
-		a = new Asserts(driver);
-
 		String expectedMessage = "Here the terms and condition page Click to geo back Home";
 		wait.waitForVisibilityOf(SHORT_TIMEOUT, terms, "Terms & Conditions");
 		terms.click();
@@ -107,9 +102,6 @@ public class OrderSubmissionPage {
 	}
 
 	public void validateSubmitOrder() {
-		wait = new Waits(driver);
-		a = new Asserts(driver);
-
 		String expectedMessage = "Thank you, your order has been placed successfully\n"
 				+ "You'll be redirected to Home page shortly!!";
 		wait.waitForVisibilityOf(SHORT_TIMEOUT, checkbox, "Checkbox");

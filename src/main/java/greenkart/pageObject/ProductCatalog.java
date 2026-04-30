@@ -1,15 +1,16 @@
 package greenkart.pageObject;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import greenkart.config.Asserts;
 import greenkart.config.ElementActions;
@@ -26,10 +27,16 @@ public class ProductCatalog {
 	ElementActions e;
 	Waits wait;
 	Asserts a;
+	Actions actions;
 
 	public ProductCatalog(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
+
+		wait = new Waits(driver);
+		e = new ElementActions(driver);
+		a = new Asserts(driver);
+		actions = new Actions(driver);
 	}
 
 	@FindBy(css = "h4[class='product-name']")
@@ -50,7 +57,7 @@ public class ProductCatalog {
 	@FindBy(xpath = "//button[text()='PROCEED TO CHECKOUT']")
 	private WebElement checkout;
 
-	@FindBy(css = "button[type='button']")
+	@FindBy(xpath = "//button[normalize-space()='ADD TO CART' or contains(normalize-space(), 'ADDED')]")
 	private List<WebElement> addToCart;
 
 	@FindBy(className = "search-keyword")
@@ -62,9 +69,12 @@ public class ProductCatalog {
 	@FindBy(className = "product-price")
 	private List<WebElement> productPrice;
 
-	@FindBy(className = "quantity")
-	private WebElement quantityInCart;
+	@FindBy(xpath = "//input[@type='number']")
+	private List<WebElement> quantity;
 
+	@FindBy(css = "p[class='quantity']")
+	private WebElement quantityInCart;
+	
 	@FindBy(className = "product-remove")
 	private WebElement removeProduct;
 
@@ -74,49 +84,52 @@ public class ProductCatalog {
 	@FindBy(linkText = "Top Deals")
 	private WebElement topDealsButton;
 
-	public static String[] products() {
-		return new String[] { "Brocolli", "Cauliflower", "Beetroot", "Cucumber", "Carrot", "Tomato", "Beans", "Brinjal",
-				"Capsicum", "Mushroom", "Potato", "Pumpkin", "Corn", "Onion", "Apple", "Banana", "Grapes", "Mango",
-				"Musk Melon", "Orange", "Pears", "Pomegranate", "Raspberry", "Strawberry", "Water Melon", "Almonds",
-				"Pista", "Nuts Mixture", "Cashews", "Walnuts" };
+	public void clickCartIcon() {
+		String name = "Cart Icon Button";
+		wait.waitForVisibilityOf(SHORT_TIMEOUT, cartIcon, name);
+		log.info("Clicking the " + name);
+		cartIcon.click();
 	}
 
-	public List<WebElement> addToCart() {
-		List<WebElement> adds = new ArrayList<>(addToCart);
-		adds.remove(0);
-		return adds;
-	}
-
-	public WebElement cartIcon() {
-		return cartIcon;
-	}
-
-	public void addQuantity(String productName, int quantity) {
-		wait = new Waits(driver);
-		e = new ElementActions(driver);
-		
-		e.scrollTo(0, 0);
-		List<WebElement> name = new ArrayList<>(productNames);
+	public void addProductToCart(String productName, String quantityValue) {
+		boolean isFound = false;
 		productName = productName.toLowerCase();
-		for (int i = 0; i < name.size(); i++) {
-			String names = name.get(i).getText().toLowerCase();
-			if (names.contains(productName)) {
-				for (int j = 0; j < quantity; j++) {
-					addToCart().get(i).click();
-				}
+		wait.waitForVisibilityOfAll(SHORT_TIMEOUT, productNames, "Product Names");
+		for (int i = 0; i < productNames.size(); i++) {
+			String[] name = productNames.get(i).getText().split("-");
+			String formattedName = name[0].trim().toLowerCase();
+			if (formattedName.contains(productName)) {
+				isFound = true;
+				e.scrollIntoView(addToCart.get(i));
+				addQuantity(i, quantityValue);
+				addToCart.get(i).click();
+				log.info("Added " + productName + " to cart");
 				break;
 			}
 		}
-		log.info("For product: '" + productName + "', was added a quantity of " + quantity);
+		if (!isFound) {
+			String error = productName + " was not found - stopping test execution";
+			log.error(error);
+			Assert.fail(error);
+		}
+	}
+	
+	public void addProductsToCart(String[] productNames, String quantityValue) {
+		for (String productName : productNames) {
+			addProductToCart(productName, quantityValue);
+		}
+	}
+	
+	public void addQuantity(int index, String quantityValue) {
+		wait.waitForVisibilityOf(SHORT_TIMEOUT, quantity.get(index), "Quantity input field at index: " + index);
+		actions.moveToElement(quantity.get(index)).keyDown(Keys.LEFT_CONTROL).sendKeys("A").build().perform();;
+		log.info("Adding quantity: " + quantityValue);
+		quantity.get(index).sendKeys(quantityValue);
 	}
 
 	public void validateCartContents() {
-		wait = new Waits(driver);
-		a = new Asserts(driver);
-		e = new ElementActions(driver);
-
-		e.scrollTo(0, 0);
 		wait.waitForVisibilityOf(SHORT_TIMEOUT, cartIcon, "Cart Icon");
+		e.scrollIntoView(cartIcon);
 		log.info("Clicking cart icon to view cart contents");
 		cartIcon.click();
 
@@ -155,49 +168,16 @@ public class ProductCatalog {
 		cartIcon.click();
 	}
 
-	public void addProductToCart() {
-		wait = new Waits(driver);
-		
-		List<String> productList = Arrays.asList(products());
-		List<WebElement> addToCartButton = addToCart();
-
-		int j = 0;
-
-		wait.waitForVisibilityOfAll(MEDIUM_TIMEOUT, productNames, "Product Names");
-		for (int i = 0; i < productNames.size(); i++) {
-			String[] name = productNames.get(i).getText().split("-");
-			String formattedName = name[0].trim();
-
-			if (productList.contains(formattedName)) {
-
-				addToCartButton.get(i).click();
-				log.info("'" + formattedName + "' was added to cart");
-				j++;
-
-				if (j == products().length) {
-					break;
-				}
-			}
-		}
-		log.info("Finished adding products to cart. Total added: " + j);
-	}
-
-	public void validateItemsTotal() {
-		wait = new Waits(driver);
-		a = new Asserts(driver);
-
+	public void validateItemsTotal(String[] products) {
 		wait.waitForVisibilityOf(MEDIUM_TIMEOUT, itemsCount, "Items Count");
 		int itemsTotal = Integer.parseInt(itemsCount.getText());
-		int itemsExpected = products().length;
+		int itemsExpected = products.length;
 
 		log.info("Displayed item count matches expected item count");
 		a.assertEquals(itemsTotal, itemsExpected);
 	}
 
 	public void validatePriceInCart() {
-		wait = new Waits(driver);
-		a = new Asserts(driver);
-
 		log.info("Validating sum of individual product prices matches displayed total");
 		List<WebElement> prices = pricesFromCart;
 		int sum = 0;
@@ -214,14 +194,11 @@ public class ProductCatalog {
 		a.assertEquals(sum, totalValue);
 	}
 
-	public void searchValidation(String keyword, int timeout) throws InterruptedException {
-		wait = new Waits(driver);
-		a = new Asserts(driver);
-
+	public void searchValidation(String keyword) throws InterruptedException {
 		String expectedMessage = "Sorry, no products matched your search!\n" + "Enter a different keyword and try.";
-
 		wait.waitForVisibilityOf(SHORT_TIMEOUT, searchField, "Search Field");
 		searchField.sendKeys(keyword);
+		int timeout = SHORT_TIMEOUT * 1000;
 		log.info("Entered search keyword: '" + keyword + "'. Waiting " + timeout + "ms");
 		Thread.sleep(timeout);
 
@@ -248,17 +225,17 @@ public class ProductCatalog {
 	}
 
 	public CheckoutPage clickCheckout() {
-		wait = new Waits(driver);
-		log.info("Clicking Checkout button");
-		wait.waitForVisibilityOf(MEDIUM_TIMEOUT, checkout, "Checkout Button");
+		String name = "Checkout Button";
+		wait.waitForVisibilityOf(MEDIUM_TIMEOUT, checkout, name);
+		log.info("Clicking the " + name);
 		checkout.click();
 		return new CheckoutPage(driver);
 	}
 
 	public TopDeals clickTopDeals() {
-		wait = new Waits(driver);
-		log.info("Clicking Top Deals button");
-		wait.waitForVisibilityOf(MEDIUM_TIMEOUT, topDealsButton, "Top Deals Button");
+		String name = "Top Deals Button";
+		wait.waitForVisibilityOf(MEDIUM_TIMEOUT, topDealsButton, name);
+		log.info("Clicking the " + name);
 		topDealsButton.click();
 		return new TopDeals(driver);
 	}

@@ -31,6 +31,9 @@ public class CheckoutPage {
 	public CheckoutPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
+
+		wait = new Waits(driver);
+		a = new Asserts(driver);
 	}
 
 	@FindBy(className = "product-name")
@@ -60,12 +63,9 @@ public class CheckoutPage {
 	@FindBy(xpath = "//button[text()='Place Order']")
 	private WebElement placeOrder;
 
-	public void validateProductsAtCheckout() {
-		wait = new Waits(driver);
-		a = new Asserts(driver);
-		
+	public void validateProductsAtCheckout(String[] products) {
 		wait.waitForVisibilityOfAll(MEDIUM_TIMEOUT, checkoutNames, "Product Names at Checkout");
-		Set<String> expectedProducts = new TreeSet<>(Arrays.asList(ProductCatalog.products()));
+		Set<String> expectedProducts = new TreeSet<>(Arrays.asList(products));
 		List<WebElement> productList = new ArrayList<>(checkoutNames);
 
 		List<String> copiedList = new ArrayList<>();
@@ -85,9 +85,6 @@ public class CheckoutPage {
 	}
 
 	public void validateTotalAmount() {
-		wait = new Waits(driver);
-		a = new Asserts(driver);
-		
 		wait.waitForVisibilityOf(SHORT_TIMEOUT, totalAmount, "Total Amount");
 
 		int expectedTotal = Integer.parseInt(totalAmount.getText());
@@ -108,9 +105,6 @@ public class CheckoutPage {
 	}
 
 	public void validateEmptyCode() {
-		wait = new Waits(driver);
-		a = new Asserts(driver);
-
 		String emptyCodeMessage = "Empty code ..!";
 
 		wait.waitForVisibilityOf(SHORT_TIMEOUT, promoField, "Promo Input Field");
@@ -125,9 +119,6 @@ public class CheckoutPage {
 	}
 	
 	public void validateInvalidCode() {
-		wait = new Waits(driver);
-		a = new Asserts(driver);
-
 		String invalidCodeMessage = "Invalid code ..!";
 		
 		wait.waitForVisibilityOf(SHORT_TIMEOUT, promoField, "Promo Input Field");
@@ -145,9 +136,6 @@ public class CheckoutPage {
 	}
 	
 	public void validateAfterDiscount(String discountCode) {
-		wait = new Waits(driver);
-		a = new Asserts(driver);
-		
 		String appliedCodeMessage = "Code applied ..!";
 		
 		driver.navigate().refresh();
@@ -187,9 +175,9 @@ public class CheckoutPage {
 	}
 
 	public OrderSubmissionPage placeOrders() {
-		wait = new Waits(driver);
-		log.info("Clicking Place Order button");
-		wait.waitForVisibilityOf(MEDIUM_TIMEOUT, placeOrder, "Place Order Button");
+		String name = "Place Order Button";
+		wait.waitForVisibilityOf(MEDIUM_TIMEOUT, placeOrder, name);
+		log.info("Clicking the " + name);
 		placeOrder.click();
 		return new OrderSubmissionPage(driver);
 	}

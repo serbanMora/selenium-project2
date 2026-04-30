@@ -3,32 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="greenkart.testCases.TestExecution">
+      <class name="greenkart.testCases.TestExecutionStaging">
         <methods>
           <include name="testRunLog"/>
           <include name="setUP"/>
-          <include name="TC5"/>
-          <include name="TC12"/>
-          <include name="TC15"/>
-          <include name="TC13"/>
-          <include name="TC16"/>
-          <include name="TC14"/>
-          <include name="TC17"/>
-          <include name="TC9"/>
-          <include name="TC11"/>
-          <include name="TC8"/>
+          <include name="TestStart"/>
           <include name="afterTest"/>
           <include name="TC7"/>
-          <include name="TC1"/>
-          <include name="TC4"/>
           <include name="tearDown"/>
-          <include name="TC10"/>
-          <include name="TC3"/>
-          <include name="TC6"/>
-          <include name="TestStart"/>
-          <include name="TC2"/>
         </methods>
-      </class> <!-- greenkart.testCases.TestExecution -->
+      </class> <!-- greenkart.testCases.TestExecutionStaging -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

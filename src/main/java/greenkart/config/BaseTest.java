@@ -1,13 +1,22 @@
 package greenkart.config;
 
+import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.StandardOpenOption;
+import java.util.List;
 import java.util.Properties;
+import java.util.stream.Collectors;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -18,6 +27,8 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -42,51 +53,58 @@ public class BaseTest {
 			log.fatal("Failed to load browser configuration file", e);
 		}
 		
-		String browserName = System.getenv("BROWSER") != null ? System.getenv("BROWSER") : prop.getProperty("browser");
-		String chromeDriverPath = System.getenv("CHROME_PATH") != null ? System.getenv("CHROME_PATH") : System.getProperty("user.dir") + "/drivers/chromedriver.exe";
-		String firefoxDriverPath = System.getenv("FIREFOX_PATH") != null ? System.getenv("FIREFOX_PATH") : System.getProperty("user.dir") + "/drivers/geckodriver.exe";
-		String edgeDriverPath = System.getenv("EDGE_PATH") != null ? System.getenv("EDGE_PATH") : System.getProperty("user.dir") + "/drivers/msedgedriver.exe";
+		String os = System.getProperty("os.name").toLowerCase();
 
+		String chromeDriverPath = System.getenv("CHROME_PATH") != null ? System.getenv("CHROME_PATH")
+				: System.getProperty("user.dir") + "/drivers/" + (os.contains("win") ? "chromedriver.exe" : "chromedriver");
+
+		String firefoxDriverPath = System.getenv("FIREFOX_PATH") != null ? System.getenv("FIREFOX_PATH")
+				: System.getProperty("user.dir") + "/drivers/" + (os.contains("win") ? "geckodriver.exe" : "geckodriver");
+
+		String edgeDriverPath = System.getenv("EDGE_PATH") != null ? System.getenv("EDGE_PATH")
+				: System.getProperty("user.dir") + "/drivers/" + (os.contains("win") ? "msedgedriver.exe" : "msedgedriver");
+
+		String browserName = System.getenv("BROWSER") != null ? System.getenv("BROWSER") : prop.getProperty("browser");
+		boolean isHeadless = browserName.contains("headless");
+		
 		if (browserName.contains("chrome")) {
 			System.setProperty("webdriver.chrome.driver", chromeDriverPath);
 			ChromeOptions options = new ChromeOptions();
-			if (browserName.contains("headless")) {
-				options.addArguments("--headless");
-				options.addArguments("--disable-gpu");
-				options.addArguments("--no-sandbox");
-				log.info("Tests Running in headless Chrome");
+			if (isHeadless) {
+				options.addArguments("--headless", "--disable-gpu", "--no-sandbox");
 			}
 			driver = new ChromeDriver(options);
-			log.info("Tests Running in Chrome browser");
-
+			
 		} else if (browserName.contains("firefox")) {
 			System.setProperty("webdriver.gecko.driver", firefoxDriverPath);
 			FirefoxOptions options = new FirefoxOptions();
-			if (browserName.contains("headless")) {
-				options.addArguments("--headless");
-				options.addArguments("--disable-gpu");
-				options.addArguments("--no-sandbox");
-				log.info("Tests Running in headless Firefox");
+			if (isHeadless) {
+				options.addArguments("--headless", "--disable-gpu", "--no-sandbox");
 			}
 			driver = new FirefoxDriver(options);
-			log.info("Tests Running in Firefox browser");
 
 		} else if (browserName.contains("edge")) {
 			System.setProperty("webdriver.ie.driver", edgeDriverPath);
 			EdgeOptions options = new EdgeOptions();
-			if (browserName.contains("headless")) {
-				options.addArguments("--headless");
-				options.addArguments("--disable-gpu");
-				options.addArguments("--no-sandbox");
-				log.info("Tests Running in headless Edge");
+			if (isHeadless) {
+				options.addArguments("--headless", "--disable-gpu", "--no-sandbox");
 			}
 			driver = new EdgeDriver(options);
-			log.info("Tests Running in Edge browser");
+		} else {
+			String headlessInfo = isHeadless ? " in headless mode" : "";
+		    String errorMsg = "Unsupported browser: '" + browserName + "'" + headlessInfo + ". Please use one of: chrome, firefox or edge.";
+		    log.error(errorMsg);
+		    Assert.fail(errorMsg);
 		}
 		
-		if (browserName.contains("headless")) {
+		Capabilities capabilities = ((RemoteWebDriver) driver).getCapabilities();
+		log.info("Tests Running in " + capabilities.getBrowserName() + " browser. Version: " + capabilities.getBrowserVersion() + ". Driver Version: " + getDriverVersion(browserName) + ". OS: " + System.getProperty("os.name"));
+		
+		addEnvironment(capabilities.getBrowserName(), isHeadless, capabilities.getBrowserVersion(), getDriverVersion(browserName), System.getProperty("os.name"));
+
+		if (isHeadless) {
 			driver.manage().window().setSize(new Dimension(1920, 1080));
-			log.info("Browser window was set to 1920x1080 resolution in headless mode");
+			log.info("Tests Running in headless mode, browser window was set to 1920x1080 resolution");
 		} else {
 			driver.manage().window().maximize();
 			log.info("Browser window maximized");
@@ -101,15 +119,15 @@ public class BaseTest {
 	
 	@AfterClass(alwaysRun = true, enabled = true)
 	public void tearDown() {
+		if (driver == null) {
+			log.warn("Driver was null during teardown");
+			return;
+		}
 		try {
-			if (driver != null) {
-				driver.quit();
-				log.info("Test finished, browser was closed");
-			} else {
-				log.warn("Browser driver is null at teardown. Browser may not have started properly");
-			}
+			driver.quit();
+			log.info("Browser session closed successfully");
 		} catch (Exception e) {
-			log.error("Exception occurred while closing the browser: " + e.getMessage(), e);
+			log.error("Failed to close browser session", e);
 		}
 	}
 	
@@ -127,6 +145,7 @@ public class BaseTest {
 			File logFile = new File("logs/test-run.log");
 			if (logFile.exists()) {
 				Allure.addAttachment("GreenKart - Test Log", new FileInputStream(logFile));
+				attachErrorSummary();
 			}
 		} catch (Exception e) {
 			log.error("Failed to attach Test Log: " + e.getMessage(), e);
@@ -140,5 +159,58 @@ public class BaseTest {
 	    } catch (Exception e) {
 	    	log.error("Failed to attach screenshot: " + e.getMessage(), e);
 	    }
+	}
+	
+	public void addEnvironment(String browser, boolean headless, String version, String driverVersion, String os) {
+	    try (FileWriter writer = new FileWriter("allure-results/environment.properties")) {
+	        writer.write("Browser=" + browser + "\n");
+	        writer.write("Headless=" + headless + "\n");
+	        writer.write("Version=" + version + "\n");
+	        writer.write("DriverVersion=" + driverVersion + "\n"); 
+	        writer.write("OS=" + os + "\n");
+	    } catch (IOException e) {
+	    	log.error("Failed to add environment: " + e.getMessage(), e);
+	    }
+	}
+	
+	public String getDriverVersion(String browserName) throws IOException {
+		String driverPath = null;
+
+		if (browserName.contains("chrome")) {
+			driverPath = System.getProperty("webdriver.chrome.driver");
+		}
+		if (browserName.contains("firefox")) {
+			driverPath = System.getProperty("webdriver.gecko.driver");
+		}
+		if (browserName.contains("edge")) {
+			driverPath = System.getProperty("webdriver.ie.driver");
+		}
+		Process process = new ProcessBuilder(driverPath, "--version").start();
+		BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+		String versionLine = reader.readLine();
+		if (versionLine != null) {
+			versionLine = versionLine.split("\\(")[0].trim();
+		}
+		return versionLine;
+	}
+	
+	public void attachErrorSummary() {
+		try {
+			File logFile = new File("logs/error-summary.log");
+			if (logFile.exists()) {
+				List<String> lines = Files.readAllLines(logFile.toPath(), StandardCharsets.ISO_8859_1);
+				String errors = lines.stream().filter(line -> line.contains("ERROR")).collect(Collectors.joining("\n"));
+				String allureLog = "GreenKart - Errors Log";
+				if (!errors.isEmpty()) {
+					Allure.addAttachment(allureLog, "text/plain", errors);
+				} else {
+					String message = "No errors logged";
+					Files.writeString(logFile.toPath(), message, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
+					Allure.addAttachment(allureLog, "text/plain", message);
+				}
+			}
+		} catch (Exception e) {
+			log.error("Failed to attach error summary: " + e.getMessage(), e);
+		}
 	}
 }

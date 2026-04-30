@@ -1,13 +1,8 @@
 package greenkart.pageObject;
 
-import java.time.LocalDate;
-import java.time.YearMonth;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Set;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -35,6 +30,10 @@ public class TopDeals {
 	public TopDeals(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
+		
+		wait = new Waits(driver);
+		e = new ElementActions(driver);
+		a = new Asserts(driver);
 	}
 
 	@FindBy(id = "page-menu")
@@ -77,8 +76,6 @@ public class TopDeals {
 	private List<WebElement> calendarDays;
 
 	public List<WebElement> tableContentList(String type) {
-		wait = new Waits(driver);
-		
 		switch (type) {
 		case "name":
 			wait.waitForVisibilityOfAll(MEDIUM_TIMEOUT, namesList, "Names List");
@@ -96,8 +93,6 @@ public class TopDeals {
 	}
 
 	public void clickColumnHeader(String type, int index) {
-		wait = new Waits(driver);
-
 		for (int i = 0; i < index; i++) {
 			switch (type) {
 			case "name":
@@ -119,27 +114,7 @@ public class TopDeals {
 		log.info("Clicked column header: " + type + " " + index + " times");
 	}
 
-	public void switchTab(String window) {
-		Set<String> handles = driver.getWindowHandles();
-		Iterator<String> it = handles.iterator();
-		String parentWindow = it.next();
-		String childWindow = it.next();
-		if (window.equals("child")) {
-			driver.switchTo().window(childWindow);
-			log.info("Switched to child window");
-		} else if (window.equals("parent")) {
-			driver.switchTo().window(parentWindow);
-			log.info("Switched to parent window");
-		} else {
-			log.error("Invalid window type: " + window);
-		}
-	}
-
 	public void validatePageSizeOption(String value) {
-		wait = new Waits(driver);
-		a = new Asserts(driver);
-		e = new ElementActions(driver);
-
 		wait.waitForVisibilityOf(SHORT_TIMEOUT, pageMenu, "Page Menu");
 		e.selectBy("value", pageMenu, value);
 
@@ -156,9 +131,6 @@ public class TopDeals {
 	}
 
 	public void searchValidation(String keyword) {
-		wait = new Waits(driver);
-		a = new Asserts(driver);
-
 		wait.waitForVisibilityOf(SHORT_TIMEOUT, searchField, "Search Field");
 		searchField.sendKeys(keyword);
 		log.info("Entered search keyword: " + keyword);
@@ -180,9 +152,6 @@ public class TopDeals {
 	}
 
 	public void orderValidation(List<WebElement> list, String ordering) {
-		wait = new Waits(driver);
-		a = new Asserts(driver);
-
 		List<String> originalList = new ArrayList<>();
 		for (WebElement name : list) {
 			originalList.add(name.getText());
@@ -200,12 +169,9 @@ public class TopDeals {
 	}
 
 	public void validateDate(String monthYEAR, String day) {
-		wait = new Waits(driver);
-		a = new Asserts(driver);
-
 		String displayedDate = calendarDate.getDomAttribute("value");
 		log.info("Validating current date: " + displayedDate);
-		a.assertEquals(displayedDate, getCurrentDate());
+		a.assertEquals(displayedDate, e.getCurrentDate());
 
 		wait.waitForVisibilityOf(SHORT_TIMEOUT, calendar, "Calendar");
 		calendar.click();
@@ -223,19 +189,6 @@ public class TopDeals {
 		}
 		String formattedDay = day.length() == 1 ? "0" + day : day;
 		log.info("Validating calendar date: " + monthYEAR + "-" + formattedDay);
-		a.assertEquals(calendarDate.getDomAttribute("value"), dateFormatConversion(monthYEAR) + "-" + formattedDay);
-	}
-
-	public String getCurrentDate() {
-		LocalDate ld = LocalDate.now();
-		String date = ld.toString();
-		return date;
-	}
-
-	public String dateFormatConversion(String monthYear) {
-		DateTimeFormatter monthYearFormatter = DateTimeFormatter.ofPattern("MMMM yyyy");
-		YearMonth yearMonth = YearMonth.parse(monthYear, monthYearFormatter);
-		String formattedDate = yearMonth.format(DateTimeFormatter.ofPattern("yyyy-MM"));
-		return formattedDate;
+		a.assertEquals(calendarDate.getDomAttribute("value"), e.dateFormatConversion(monthYEAR) + "-" + formattedDay);
 	}
 }
