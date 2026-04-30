@@ -47,77 +47,77 @@ public class TestExecutionStaging extends BaseTest {
 	    logURL(driver.getCurrentUrl());
 	}
 	
-	@Test(retryAnalyzer = Retry.class, enabled = false)
+	@Test(retryAnalyzer = Retry.class, enabled = true)
 	@Epic("Search Functionality")
 	@Feature("Product Catalog")
-	@Story("TC 1 - Search with valid and invalid product names")
-	@Severity(SeverityLevel.BLOCKER)
-	public void TC1() throws InterruptedException {
+	@Story("TC1 - Search with valid and invalid product names")
+	@Severity(SeverityLevel.NORMAL)
+	public void searchWithValidAndInvalidProductNames() throws InterruptedException {
 		productCatalog.searchValidation(test.getProduct());
 		productCatalog.searchValidation(test.getKeyword());
 	}
 
-	@Test(retryAnalyzer = Retry.class, enabled = false)
+	@Test(retryAnalyzer = Retry.class, enabled = true)
 	@Epic("Add Quantity Functionality")
 	@Feature("Product Catalog")
 	@Story("TC 2 - Add quantity to product and validate cart contents")
-	@Severity(SeverityLevel.BLOCKER)
-	public void TC2() {
+	@Severity(SeverityLevel.NORMAL)
+	public void addProductWithQuantityAndValidateCart() {
 		productCatalog.addProductToCart(test.getProduct(), test.getQuantity());
 		productCatalog.validateCartContents();
 	}
 
-	@Test(retryAnalyzer = Retry.class, enabled = false)
+	@Test(retryAnalyzer = Retry.class, enabled = true)
 	@Epic("Add Product Functionality")
 	@Feature("Product Catalog")
 	@Story("TC 3 - Add products and validate items total")
-	@Severity(SeverityLevel.BLOCKER)
-	public void TC3() {
+	@Severity(SeverityLevel.NORMAL)
+	public void addMultipleProductsAndValidateItemsTotal() {
 		productCatalog.addProductsToCart(test.getProducts(), test.getQuantity());
 		productCatalog.validateItemsTotal(test.getProducts());
 	}
 
-	@Test(retryAnalyzer = Retry.class, enabled = false)
+	@Test(retryAnalyzer = Retry.class, enabled = true)
 	@Epic("Add Product Functionality")
 	@Feature("Product Catalog")
 	@Story("TC 4 - Add products and validate total price")
-	@Severity(SeverityLevel.BLOCKER)
-	public void TC4() {
+	@Severity(SeverityLevel.NORMAL)
+	public void addProductsAndValidateTotalPriceInCart() {
 		productCatalog.addProductsToCart(test.getProducts(), "1");
 		productCatalog.clickCartIcon();
 		productCatalog.validatePriceInCart();
 	}
 
-	@Test(retryAnalyzer = Retry.class, enabled = false)
+	@Test(retryAnalyzer = Retry.class, enabled = true)
 	@Epic("Checkout Functionality")
 	@Feature("Checkout Page")
 	@Story("TC 5 - Validate products at checkout")
-	@Severity(SeverityLevel.BLOCKER)
-	public void TC5() {
+	@Severity(SeverityLevel.NORMAL)
+	public void validateProductsAtCheckout() {
 		productCatalog.addProductsToCart(test.getProducts(), "1");
 		productCatalog.clickCartIcon();
 		productCatalog.clickCheckout();
 		checkoutPage.validateProductsAtCheckout(test.getProducts());
 	}
 
-	@Test(retryAnalyzer = Retry.class, enabled = false)
+	@Test(retryAnalyzer = Retry.class, enabled = true)
 	@Epic("Total Amount Functionality")
 	@Feature("Checkout Page")
-	@Story("TC 6 - Validate Total Amount")
-	@Severity(SeverityLevel.BLOCKER)
-	public void TC6() {
+	@Story("TC 6 - Validate total amount at checkout")
+	@Severity(SeverityLevel.CRITICAL)
+	public void validateTotalAmountAtCheckout() {
 		productCatalog.addProductsToCart(test.getProducts(), "1");
 		productCatalog.clickCartIcon();
 		productCatalog.clickCheckout();
 		checkoutPage.validateTotalAmount();
 	}
 
-	@Test(retryAnalyzer = Retry.class, enabled = false)
+	@Test(retryAnalyzer = Retry.class, enabled = true)
 	@Epic("Promo Code Functionality")
 	@Feature("Checkout Page")
-	@Story("TC 7 - Validate empty and invalid promo code")
+	@Story("TC 7 - Validate promo code scenarios at checkout")
 	@Severity(SeverityLevel.BLOCKER)
-	public void TC7() {
+	public void validatePromoCodeScenariosAtCheckout() {
 		productCatalog.addProductsToCart(test.getProducts(), "1");
 		productCatalog.clickCartIcon();
 		productCatalog.clickCheckout();
@@ -126,12 +126,12 @@ public class TestExecutionStaging extends BaseTest {
 		checkoutPage.validateAfterDiscount(test.getDiscountCode());
 	}
 
-	@Test(retryAnalyzer = Retry.class, enabled = false)
-	@Epic("Promo Code Functionality")
-	@Feature("Checkout Page")
-	@Story("TC 8 - Validate discount code")
+	@Test(retryAnalyzer = Retry.class, enabled = true)
+	@Epic("Submit Order")
+	@Feature("Submission Page")
+	@Story("TC 8 - Complete order placement and submission validation")
 	@Severity(SeverityLevel.BLOCKER)
-	public void TC8() {
+	public void placeOrderAndValidateSubmissionPage() {
 		productCatalog.addProductsToCart(test.getProducts(), "1");
 		productCatalog.clickCartIcon();
 		productCatalog.clickCheckout();
@@ -142,26 +142,25 @@ public class TestExecutionStaging extends BaseTest {
 		submissionPage.validateSubmitOrder();
 	}
 	
-	@Test(retryAnalyzer = Retry.class, enabled = false)
+	@Test(retryAnalyzer = Retry.class, enabled = true)
 	@Epic("Search Functionality")
 	@Feature("Top Deals")
-	@Story("TC 13 - Search with valid and invalid product names")
-	@Severity(SeverityLevel.BLOCKER)
-	public void TC13() {
+	@Story("TC 9 - Search with valid and invalid product names")
+	@Severity(SeverityLevel.NORMAL)
+	public void searchTopDealsWithValidAndInvalidProducts() {
 		productCatalog.clickTopDeals();
 		e.switchTab("child");
 		topDeals.searchValidation(test.getKeyword());
 		topDeals.searchValidation(test.getProduct());
 		e.closeTabContainingSlug("offers");
 	}
-	
 
-	@Test(retryAnalyzer = Retry.class, enabled = false)
+	@Test(retryAnalyzer = Retry.class, enabled = true)
 	@Epic("Page Size")
 	@Feature("Top Deals")
-	@Story("TC 14 - Validate Page Size Option")
-	@Severity(SeverityLevel.BLOCKER)
-	public void TC14() {
+	@Story("TC 10 - Validate page size option")
+	@Severity(SeverityLevel.NORMAL)
+	public void validatePageSizeOptionInTopDeals() {
 		productCatalog.clickTopDeals();
 		e.switchTab("child");
 		topDeals.validatePageSizeOption(test.getPageSize());
@@ -171,9 +170,9 @@ public class TestExecutionStaging extends BaseTest {
 	@Test(retryAnalyzer = Retry.class, enabled = true)
 	@Epic("Items Order")
 	@Feature("Top Deals")
-	@Story("TC 15 - Validate Ascending Order for column items")
-	@Severity(SeverityLevel.BLOCKER)
-	public void TC15() {
+	@Story("TC 11 - Validate Ascending Order for column items")
+	@Severity(SeverityLevel.MINOR)
+	public void validateAscendingOrderForTopDealsColumns() {
 		productCatalog.clickTopDeals();
 		e.switchTab("child");
 		topDeals.clickColumnHeader("name", 1);
@@ -188,9 +187,9 @@ public class TestExecutionStaging extends BaseTest {
 	@Test(retryAnalyzer = Retry.class, enabled = true)
 	@Epic("Items Order")
 	@Feature("Top Deals")
-	@Story("TC 16 - Validate Descending Order for column items")
-	@Severity(SeverityLevel.BLOCKER)
-	public void TC16() {
+	@Story("TC 12 - Validate Descending Order for column items")
+	@Severity(SeverityLevel.MINOR)
+	public void validateDescendingOrderForTopDealsColumns() {
 		productCatalog.clickTopDeals();
 		e.switchTab("child");
 		topDeals.clickColumnHeader("name", 2);
@@ -205,9 +204,9 @@ public class TestExecutionStaging extends BaseTest {
 	@Test(retryAnalyzer = Retry.class, enabled = true)
 	@Epic("Delivery Date Calendar")
 	@Feature("Top Deals")
-	@Story("TC 17 - Validate Delivery Date Calendar functionality")
-	@Severity(SeverityLevel.BLOCKER)
-	public void TC17() {
+	@Story("TC 13 - Validate delivery date calendar functionality")
+	@Severity(SeverityLevel.TRIVIAL)
+	public void validateDeliveryDateCalendarInTopDeals() {
 		productCatalog.clickTopDeals();
 		e.switchTab("child");
 		topDeals.validateDate(test.getMonthYear(), test.getDay());

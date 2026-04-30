@@ -5,11 +5,11 @@
     <classes>
       <class name="greenkart.testCases.TestExecutionStaging">
         <methods>
-          <include name="setUP"/>
           <include name="testRunLog"/>
+          <include name="placeOrderAndValidateSubmissionPage"/>
+          <include name="setUP"/>
           <include name="TestStart"/>
           <include name="afterTest"/>
-          <include name="TC14"/>
           <include name="startFromHome"/>
           <include name="tearDown"/>
         </methods>

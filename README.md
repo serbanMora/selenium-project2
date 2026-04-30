@@ -1,6 +1,6 @@
 # Selenium Project Overview
 
-This personal project, written in Java, automates 17 key test cases for the GreenKart demo e-commerce website, utilizing Selenium WebDriver for robust browser automation, TestNG for efficient sequential test management and Allure Report for clear and comprehensive reporting. The framework follows the Page Object Model (POM) design pattern, ensuring clean, scalable, and maintainable test scripts. Managed through Maven (pom.xml), the project simplifies dependency handling and build automation. Additionally, it integrates Log4j for detailed logging and enhances Allure Report with automatic screenshot capture on test failures.
+This personal project, written in Java, automates 13 key **independent test cases** for the GreenKart demo e-commerce website, utilizing Selenium WebDriver for robust browser automation, TestNG for efficient sequential test management and Allure Report for clear and comprehensive reporting. The framework follows the Page Object Model (POM) design pattern, ensuring clean, scalable, and maintainable test scripts. Managed through Maven (pom.xml), the project simplifies dependency handling and build automation. Additionally, it integrates Log4j for detailed logging and enhances Allure Report with automatic screenshot capture on test failures.
 
 Tests cover critical functionalities like searching for products, adding quantities, validating cart contents and checking the total item count, offering a complete automated validation of the user experience.
 
@@ -24,7 +24,7 @@ The browser in which the test cases will run (chrome, firefox or edge) can be se
 To run in headless mode, append ```headless``` to chrome, firefox or edge.
 
 * Test Cases execution demo in Chrome:
-[![automation run in chrome](assets/demo.png)](https://www.youtube.com/watch?v=iBN7jS_tjLo)
+[![automation run in chrome](assets/demo.png)](https://youtu.be/gDUpJ_CB6DU)
 
 ## Automation Coverage Table
 
@@ -117,6 +117,8 @@ Supported Properties in staging.properties / production.properties: url, product
 
 * ```ElementActions.java```: Provides utility methods for interacting with web elements using standard Selenium actions and JavascriptExecutor. It includes dropdown selection, scrolling and retrieving element text with logging and error handling.
 
+* ```Retry.java```: Implements TestNG's retry mechanism by re-running failed tests a limited number of times. It logs each retry attempt and stops execution after the maximum retry count is reached.
+
 * ```browser.properties```: A properties file where you can select the browser in which the test cases will run (chrome, firefox or edge). Test execution can also be set to run headless, to run in headless mode, append ```headless``` to chrome, firefox or edge.
 
 ## \selenium-project2\src\test\java\greenkart\testCases
@@ -136,9 +138,9 @@ To generate a standalone HTML report: ```allure generate --clean -o allure-repor
 
 Test execution logs are also displayed in Allure under ```testRunLog``` -> ```GreenKart - Test Log``` for each test. In case of failed tests, screenshots will be attached under ```afterTest``` -> ```Failed Test Screenshot```.
 
-![Allure Reports Screenshot](assets/allure-1.png)
-![Allure Reports Screenshot](assets/allure-2.png)
-![Allure Reports Screenshot](assets/allure-3.png)
-![Allure Reports Screenshot](assets/allure-4.png)
-![Allure Reports Screenshot](assets/allure-5.png)
-![Allure Reports Screenshot](assets/allure-7.png)
+![Allure Reports Screenshot](assets/allure-a.png)
+![Allure Reports Screenshot](assets/allure-b.png)
+![Allure Reports Screenshot](assets/allure-c.png)
+![Allure Reports Screenshot](assets/allure-d.png)
+![Allure Reports Screenshot](assets/allure-e.png)
+![Allure Reports Screenshot](assets/allure-f.png)

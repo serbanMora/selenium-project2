@@ -1,7 +1,5 @@
 package greenkart.pageObject;
 
-import java.util.Set;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -79,31 +77,21 @@ public class OrderSubmissionPage {
 
 	public void validateTerms() {
 		String expectedMessage = "Here the terms and condition page Click to geo back Home";
+		
 		wait.waitForVisibilityOf(SHORT_TIMEOUT, terms, "Terms & Conditions");
 		terms.click();
 		log.info("Clicked on 'Terms & Conditions' button");
-
-		String mainTab = driver.getWindowHandle();
-		Set<String> allTabs = driver.getWindowHandles();
-		for (String tab : allTabs) {
-			if (!tab.equals(mainTab)) {
-				driver.switchTo().window(tab);
-				log.info("Switched to 'Terms & Conditions' new tab");
-				break;
-			}
-		}
+		e.switchTab("child");
 		log.info("Checking if 'Terms & Conditions' new tab text is correct");
 		wait.waitForVisibilityOf(SHORT_TIMEOUT, termsNewTab, "Terms from New Tab");
 		a.assertEquals(termsNewTab.getText(), expectedMessage);
-		driver.close();
-		log.info("Closed 'Terms & Conditions' tab");
-		driver.switchTo().window(mainTab);
-		log.debug("Switched back to main window");
+		e.closeTabContainingSlug("policy");
 	}
 
 	public void validateSubmitOrder() {
 		String expectedMessage = "Thank you, your order has been placed successfully\n"
 				+ "You'll be redirected to Home page shortly!!";
+		
 		wait.waitForVisibilityOf(SHORT_TIMEOUT, checkbox, "Checkbox");
 		wait.waitForVisibilityOf(SHORT_TIMEOUT, proceed, "Proceed");
 		if (checkbox.isSelected()) {

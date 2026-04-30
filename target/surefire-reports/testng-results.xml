@@ -1,90 +1,320 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="10" total="13" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="13" passed="13" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-30T13:47:55 EEST" name="Surefire suite" finished-at="2026-04-30T13:48:09 EEST" duration-ms="13803">
+  <suite started-at="2026-04-30T17:58:14 EEST" name="Surefire suite" finished-at="2026-04-30T18:01:56 EEST" duration-ms="222695">
     <groups>
     </groups>
-    <test started-at="2026-04-30T13:47:55 EEST" name="Surefire test" finished-at="2026-04-30T13:48:09 EEST" duration-ms="13803">
+    <test started-at="2026-04-30T17:58:14 EEST" name="Surefire test" finished-at="2026-04-30T18:01:56 EEST" duration-ms="222695">
       <class name="greenkart.testCases.TestExecutionStaging">
-        <test-method is-config="true" signature="setUP()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T13:47:55 EEST" name="setUP" finished-at="2026-04-30T13:47:57 EEST" duration-ms="1186" status="PASS">
+        <test-method is-config="true" signature="setUP()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T17:58:14 EEST" name="setUP" finished-at="2026-04-30T17:58:15 EEST" duration-ms="1241" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUP -->
-        <test-method is-config="true" signature="TestStart()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T13:47:57 EEST" name="TestStart" finished-at="2026-04-30T13:47:57 EEST" duration-ms="22" status="PASS">
+        <test-method is-config="true" signature="TestStart()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T17:58:15 EEST" name="TestStart" finished-at="2026-04-30T17:58:15 EEST" duration-ms="38" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestStart -->
-        <test-method is-config="true" signature="startFromHome()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T13:47:57 EEST" name="startFromHome" finished-at="2026-04-30T13:48:00 EEST" duration-ms="3138" status="PASS">
+        <test-method is-config="true" signature="startFromHome()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T17:58:15 EEST" name="startFromHome" finished-at="2026-04-30T17:58:18 EEST" duration-ms="2922" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startFromHome -->
-        <test-method signature="TC15()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T13:48:00 EEST" name="TC15" finished-at="2026-04-30T13:48:02 EEST" duration-ms="1911" status="PASS">
+        <test-method signature="addMultipleProductsAndValidateItemsTotal()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T17:58:18 EEST" name="addMultipleProductsAndValidateItemsTotal" finished-at="2026-04-30T17:58:50 EEST" duration-ms="32303" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC15 -->
-        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T13:48:02 EEST" name="afterTest" finished-at="2026-04-30T13:48:02 EEST" duration-ms="0" status="PASS">
+        </test-method> <!-- addMultipleProductsAndValidateItemsTotal -->
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T17:58:50 EEST" name="afterTest" finished-at="2026-04-30T17:58:50 EEST" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC15 status=SUCCESS method=TestExecutionStaging.TC15()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd] output={null}]]]>
+                <![CDATA[[TestResult name=addMultipleProductsAndValidateItemsTotal status=SUCCESS method=TestExecutionStaging.addMultipleProductsAndValidateItemsTotal()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T13:48:02 EEST" name="testRunLog" finished-at="2026-04-30T13:48:02 EEST" duration-ms="14" status="PASS">
+        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T17:58:50 EEST" name="testRunLog" finished-at="2026-04-30T17:58:50 EEST" duration-ms="13" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRunLog -->
-        <test-method is-config="true" signature="startFromHome()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T13:48:02 EEST" name="startFromHome" finished-at="2026-04-30T13:48:02 EEST" duration-ms="601" status="PASS">
+        <test-method is-config="true" signature="startFromHome()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T17:58:50 EEST" name="startFromHome" finished-at="2026-04-30T17:58:51 EEST" duration-ms="626" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startFromHome -->
-        <test-method signature="TC16()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T13:48:02 EEST" name="TC16" finished-at="2026-04-30T13:48:04 EEST" duration-ms="1366" status="PASS">
+        <test-method signature="addProductWithQuantityAndValidateCart()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T17:58:51 EEST" name="addProductWithQuantityAndValidateCart" finished-at="2026-04-30T17:58:53 EEST" duration-ms="2074" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC16 -->
-        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T13:48:04 EEST" name="testRunLog" finished-at="2026-04-30T13:48:04 EEST" duration-ms="17" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testRunLog -->
-        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T13:48:04 EEST" name="afterTest" finished-at="2026-04-30T13:48:04 EEST" duration-ms="0" status="PASS">
+        </test-method> <!-- addProductWithQuantityAndValidateCart -->
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T17:58:53 EEST" name="afterTest" finished-at="2026-04-30T17:58:53 EEST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC16 status=SUCCESS method=TestExecutionStaging.TC16()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd] output={null}]]]>
+                <![CDATA[[TestResult name=addProductWithQuantityAndValidateCart status=SUCCESS method=TestExecutionStaging.addProductWithQuantityAndValidateCart()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="startFromHome()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T13:48:04 EEST" name="startFromHome" finished-at="2026-04-30T13:48:04 EEST" duration-ms="586" status="PASS">
+        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T17:58:53 EEST" name="testRunLog" finished-at="2026-04-30T17:58:53 EEST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRunLog -->
+        <test-method is-config="true" signature="startFromHome()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T17:58:53 EEST" name="startFromHome" finished-at="2026-04-30T17:58:54 EEST" duration-ms="670" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startFromHome -->
-        <test-method signature="TC17()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T13:48:04 EEST" name="TC17" finished-at="2026-04-30T13:48:09 EEST" duration-ms="4678" status="PASS">
+        <test-method signature="addProductsAndValidateTotalPriceInCart()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T17:58:54 EEST" name="addProductsAndValidateTotalPriceInCart" finished-at="2026-04-30T17:59:18 EEST" duration-ms="24422" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC17 -->
-        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T13:48:09 EEST" name="afterTest" finished-at="2026-04-30T13:48:09 EEST" duration-ms="14" status="PASS">
+        </test-method> <!-- addProductsAndValidateTotalPriceInCart -->
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T17:59:18 EEST" name="afterTest" finished-at="2026-04-30T17:59:18 EEST" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC17 status=SUCCESS method=TestExecutionStaging.TC17()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd] output={null}]]]>
+                <![CDATA[[TestResult name=addProductsAndValidateTotalPriceInCart status=SUCCESS method=TestExecutionStaging.addProductsAndValidateTotalPriceInCart()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T13:48:09 EEST" name="testRunLog" finished-at="2026-04-30T13:48:09 EEST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T17:59:18 EEST" name="testRunLog" finished-at="2026-04-30T17:59:18 EEST" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRunLog -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T13:48:09 EEST" name="tearDown" finished-at="2026-04-30T13:48:09 EEST" duration-ms="153" status="PASS">
+        <test-method is-config="true" signature="startFromHome()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T17:59:18 EEST" name="startFromHome" finished-at="2026-04-30T17:59:19 EEST" duration-ms="541" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startFromHome -->
+        <test-method signature="placeOrderAndValidateSubmissionPage()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T17:59:19 EEST" name="placeOrderAndValidateSubmissionPage" finished-at="2026-04-30T17:59:44 EEST" duration-ms="25790" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- placeOrderAndValidateSubmissionPage -->
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T17:59:44 EEST" name="afterTest" finished-at="2026-04-30T17:59:44 EEST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=placeOrderAndValidateSubmissionPage status=SUCCESS method=TestExecutionStaging.placeOrderAndValidateSubmissionPage()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T17:59:44 EEST" name="testRunLog" finished-at="2026-04-30T17:59:44 EEST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRunLog -->
+        <test-method is-config="true" signature="startFromHome()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T17:59:44 EEST" name="startFromHome" finished-at="2026-04-30T17:59:45 EEST" duration-ms="689" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startFromHome -->
+        <test-method signature="searchTopDealsWithValidAndInvalidProducts()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T17:59:45 EEST" name="searchTopDealsWithValidAndInvalidProducts" finished-at="2026-04-30T17:59:47 EEST" duration-ms="1740" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchTopDealsWithValidAndInvalidProducts -->
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T17:59:47 EEST" name="afterTest" finished-at="2026-04-30T17:59:47 EEST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=searchTopDealsWithValidAndInvalidProducts status=SUCCESS method=TestExecutionStaging.searchTopDealsWithValidAndInvalidProducts()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T17:59:47 EEST" name="testRunLog" finished-at="2026-04-30T17:59:47 EEST" duration-ms="10" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRunLog -->
+        <test-method is-config="true" signature="startFromHome()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T17:59:47 EEST" name="startFromHome" finished-at="2026-04-30T17:59:48 EEST" duration-ms="695" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startFromHome -->
+        <test-method signature="searchWithValidAndInvalidProductNames()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T17:59:48 EEST" name="searchWithValidAndInvalidProductNames" finished-at="2026-04-30T17:59:59 EEST" duration-ms="11198" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchWithValidAndInvalidProductNames -->
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T17:59:59 EEST" name="afterTest" finished-at="2026-04-30T17:59:59 EEST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=searchWithValidAndInvalidProductNames status=SUCCESS method=TestExecutionStaging.searchWithValidAndInvalidProductNames()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T17:59:59 EEST" name="testRunLog" finished-at="2026-04-30T17:59:59 EEST" duration-ms="13" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRunLog -->
+        <test-method is-config="true" signature="startFromHome()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T17:59:59 EEST" name="startFromHome" finished-at="2026-04-30T18:00:00 EEST" duration-ms="802" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startFromHome -->
+        <test-method signature="validateAscendingOrderForTopDealsColumns()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T18:00:00 EEST" name="validateAscendingOrderForTopDealsColumns" finished-at="2026-04-30T18:00:01 EEST" duration-ms="1550" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateAscendingOrderForTopDealsColumns -->
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T18:00:01 EEST" name="afterTest" finished-at="2026-04-30T18:00:01 EEST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validateAscendingOrderForTopDealsColumns status=SUCCESS method=TestExecutionStaging.validateAscendingOrderForTopDealsColumns()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T18:00:01 EEST" name="testRunLog" finished-at="2026-04-30T18:00:01 EEST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRunLog -->
+        <test-method is-config="true" signature="startFromHome()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T18:00:01 EEST" name="startFromHome" finished-at="2026-04-30T18:00:02 EEST" duration-ms="536" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startFromHome -->
+        <test-method signature="validateDeliveryDateCalendarInTopDeals()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T18:00:02 EEST" name="validateDeliveryDateCalendarInTopDeals" finished-at="2026-04-30T18:00:07 EEST" duration-ms="5224" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateDeliveryDateCalendarInTopDeals -->
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T18:00:07 EEST" name="afterTest" finished-at="2026-04-30T18:00:07 EEST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validateDeliveryDateCalendarInTopDeals status=SUCCESS method=TestExecutionStaging.validateDeliveryDateCalendarInTopDeals()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T18:00:07 EEST" name="testRunLog" finished-at="2026-04-30T18:00:07 EEST" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRunLog -->
+        <test-method is-config="true" signature="startFromHome()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T18:00:07 EEST" name="startFromHome" finished-at="2026-04-30T18:00:08 EEST" duration-ms="593" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startFromHome -->
+        <test-method signature="validateDescendingOrderForTopDealsColumns()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T18:00:08 EEST" name="validateDescendingOrderForTopDealsColumns" finished-at="2026-04-30T18:00:09 EEST" duration-ms="1929" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateDescendingOrderForTopDealsColumns -->
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T18:00:09 EEST" name="afterTest" finished-at="2026-04-30T18:00:09 EEST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validateDescendingOrderForTopDealsColumns status=SUCCESS method=TestExecutionStaging.validateDescendingOrderForTopDealsColumns()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T18:00:09 EEST" name="testRunLog" finished-at="2026-04-30T18:00:09 EEST" duration-ms="12" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRunLog -->
+        <test-method is-config="true" signature="startFromHome()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T18:00:09 EEST" name="startFromHome" finished-at="2026-04-30T18:00:10 EEST" duration-ms="549" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startFromHome -->
+        <test-method signature="validatePageSizeOptionInTopDeals()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T18:00:10 EEST" name="validatePageSizeOptionInTopDeals" finished-at="2026-04-30T18:00:11 EEST" duration-ms="1071" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatePageSizeOptionInTopDeals -->
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T18:00:11 EEST" name="afterTest" finished-at="2026-04-30T18:00:11 EEST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validatePageSizeOptionInTopDeals status=SUCCESS method=TestExecutionStaging.validatePageSizeOptionInTopDeals()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T18:00:11 EEST" name="testRunLog" finished-at="2026-04-30T18:00:11 EEST" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRunLog -->
+        <test-method is-config="true" signature="startFromHome()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T18:00:11 EEST" name="startFromHome" finished-at="2026-04-30T18:00:12 EEST" duration-ms="627" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startFromHome -->
+        <test-method signature="validateProductsAtCheckout()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T18:00:12 EEST" name="validateProductsAtCheckout" finished-at="2026-04-30T18:00:40 EEST" duration-ms="28460" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateProductsAtCheckout -->
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T18:00:40 EEST" name="afterTest" finished-at="2026-04-30T18:00:40 EEST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validateProductsAtCheckout status=SUCCESS method=TestExecutionStaging.validateProductsAtCheckout()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T18:00:40 EEST" name="testRunLog" finished-at="2026-04-30T18:00:40 EEST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRunLog -->
+        <test-method is-config="true" signature="startFromHome()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T18:00:40 EEST" name="startFromHome" finished-at="2026-04-30T18:00:41 EEST" duration-ms="631" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startFromHome -->
+        <test-method signature="validatePromoCodeScenariosAtCheckout()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T18:00:41 EEST" name="validatePromoCodeScenariosAtCheckout" finished-at="2026-04-30T18:01:33 EEST" duration-ms="52015" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatePromoCodeScenariosAtCheckout -->
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T18:01:33 EEST" name="afterTest" finished-at="2026-04-30T18:01:33 EEST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validatePromoCodeScenariosAtCheckout status=SUCCESS method=TestExecutionStaging.validatePromoCodeScenariosAtCheckout()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T18:01:33 EEST" name="testRunLog" finished-at="2026-04-30T18:01:33 EEST" duration-ms="24" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRunLog -->
+        <test-method is-config="true" signature="startFromHome()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T18:01:33 EEST" name="startFromHome" finished-at="2026-04-30T18:01:33 EEST" duration-ms="543" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startFromHome -->
+        <test-method signature="validateTotalAmountAtCheckout()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T18:01:33 EEST" name="validateTotalAmountAtCheckout" finished-at="2026-04-30T18:01:56 EEST" duration-ms="22467" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateTotalAmountAtCheckout -->
+        <test-method is-config="true" signature="afterTest(org.testng.ITestResult)[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T18:01:56 EEST" name="afterTest" finished-at="2026-04-30T18:01:56 EEST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validateTotalAmountAtCheckout status=SUCCESS method=TestExecutionStaging.validateTotalAmountAtCheckout()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="testRunLog()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T18:01:56 EEST" name="testRunLog" finished-at="2026-04-30T18:01:56 EEST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRunLog -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:greenkart.testCases.TestExecutionStaging@793138bd]" started-at="2026-04-30T18:01:56 EEST" name="tearDown" finished-at="2026-04-30T18:01:56 EEST" duration-ms="356" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

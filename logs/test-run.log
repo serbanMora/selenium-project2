@@ -1,77 +1,913 @@
-2026-04-30 13:47:56,007 [main] INFO BaseTest.setUP - Test Execution Started
-2026-04-30 13:47:56,009 [main] INFO BaseTest.setUP - Successfully loaded browser configuration: chrome
-2026-04-30 13:47:57,058 [main] INFO BaseTest.setUP - Tests Running in chrome browser. Version: 147.0.7727.138. Driver Version: ChromeDriver 147.0.7727.137. OS: Windows 11
-2026-04-30 13:47:57,170 [main] INFO BaseTest.setUP - Browser window maximized
-2026-04-30 13:47:57,179 [main] INFO BaseTest.setUP - Browser cookies deleted
-2026-04-30 13:47:57,182 [main] INFO TestData.<init> - Initializing TestData with staging environment...
-2026-04-30 13:47:57,182 [main] INFO TestData.<init> - Successfully loaded TestData for staging environment
-2026-04-30 13:48:00,340 [main] INFO BaseTest.logURL - Navigated to test URL: https://rahulshettyacademy.com/seleniumPractise/#/
-2026-04-30 13:48:00,344 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 10 seconds for 'Top Deals Button' element to be visible
-2026-04-30 13:48:00,389 [main] INFO Waits.waitForVisibilityOf - Top Deals Button element is visible after waiting 0.044 seconds
-2026-04-30 13:48:00,389 [main] INFO ProductCatalog.clickTopDeals - Clicking the Top Deals Button
-2026-04-30 13:48:00,520 [main] INFO ElementActions.switchTab - Switched to child window
-2026-04-30 13:48:00,520 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 10 seconds for 'Column Header' element to be visible
-2026-04-30 13:48:01,294 [main] INFO Waits.waitForVisibilityOf - Column Header element is visible after waiting 0.774 seconds
-2026-04-30 13:48:01,375 [main] INFO TopDeals.clickColumnHeader - Clicked column header: name 1 times
-2026-04-30 13:48:01,375 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 10 seconds for 'Names List' elements to be visible
-2026-04-30 13:48:01,506 [main] INFO Waits.waitForVisibilityOfAll - Names List elements are visible after waiting 0.131 seconds
-2026-04-30 13:48:01,567 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '[Almond, Apple, Banana, Beans, Brinjal]', found '[Almond, Apple, Banana, Beans, Brinjal]'
-2026-04-30 13:48:01,567 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 10 seconds for 'Price Colummn Header' element to be visible
-2026-04-30 13:48:01,610 [main] INFO Waits.waitForVisibilityOf - Price Colummn Header element is visible after waiting 0.043 seconds
-2026-04-30 13:48:01,651 [main] INFO TopDeals.clickColumnHeader - Clicked column header: price 1 times
-2026-04-30 13:48:01,651 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 10 seconds for 'Prices List' elements to be visible
-2026-04-30 13:48:01,808 [main] INFO Waits.waitForVisibilityOfAll - Prices List elements are visible after waiting 0.156 seconds
-2026-04-30 13:48:01,872 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '[23, 34, 34, 34, 37]', found '[23, 34, 34, 34, 37]'
-2026-04-30 13:48:01,872 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 10 seconds for 'Discount Column Header' element to be visible
-2026-04-30 13:48:01,889 [main] INFO Waits.waitForVisibilityOf - Discount Column Header element is visible after waiting 0.017 seconds
-2026-04-30 13:48:01,922 [main] INFO TopDeals.clickColumnHeader - Clicked column header: discount 1 times
-2026-04-30 13:48:01,922 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 10 seconds for 'Discount List' elements to be visible
-2026-04-30 13:48:02,045 [main] INFO Waits.waitForVisibilityOfAll - Discount List elements are visible after waiting 0.123 seconds
-2026-04-30 13:48:02,122 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '[12, 12, 15, 20, 22]', found '[12, 12, 15, 20, 22]'
-2026-04-30 13:48:02,177 [main] INFO ElementActions.closeTabsExceptSlug - Closing tab: https://rahulshettyacademy.com/seleniumPractise/#/offers
-2026-04-30 13:48:02,876 [main] INFO BaseTest.logURL - Navigated to test URL: https://rahulshettyacademy.com/seleniumPractise/#/
-2026-04-30 13:48:02,876 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 10 seconds for 'Top Deals Button' element to be visible
-2026-04-30 13:48:02,905 [main] INFO Waits.waitForVisibilityOf - Top Deals Button element is visible after waiting 0.028 seconds
-2026-04-30 13:48:02,905 [main] INFO ProductCatalog.clickTopDeals - Clicking the Top Deals Button
-2026-04-30 13:48:03,066 [main] INFO ElementActions.switchTab - Switched to child window
-2026-04-30 13:48:03,066 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 10 seconds for 'Column Header' element to be visible
-2026-04-30 13:48:03,164 [main] INFO Waits.waitForVisibilityOf - Column Header element is visible after waiting 0.098 seconds
-2026-04-30 13:48:03,231 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 10 seconds for 'Column Header' element to be visible
-2026-04-30 13:48:03,256 [main] INFO Waits.waitForVisibilityOf - Column Header element is visible after waiting 0.025 seconds
-2026-04-30 13:48:03,319 [main] INFO TopDeals.clickColumnHeader - Clicked column header: name 2 times
-2026-04-30 13:48:03,319 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 10 seconds for 'Names List' elements to be visible
-2026-04-30 13:48:03,522 [main] INFO Waits.waitForVisibilityOfAll - Names List elements are visible after waiting 0.203 seconds
-2026-04-30 13:48:03,573 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '[Wheat, Tomato, Strawberry, Rice, Potato]', found '[Wheat, Tomato, Strawberry, Rice, Potato]'
-2026-04-30 13:48:03,573 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 10 seconds for 'Price Colummn Header' element to be visible
-2026-04-30 13:48:03,605 [main] INFO Waits.waitForVisibilityOf - Price Colummn Header element is visible after waiting 0.032 seconds
-2026-04-30 13:48:03,638 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 10 seconds for 'Price Colummn Header' element to be visible
-2026-04-30 13:48:03,662 [main] INFO Waits.waitForVisibilityOf - Price Colummn Header element is visible after waiting 0.024 seconds
-2026-04-30 13:48:03,688 [main] INFO TopDeals.clickColumnHeader - Clicked column header: price 2 times
-2026-04-30 13:48:03,688 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 10 seconds for 'Prices List' elements to be visible
-2026-04-30 13:48:03,806 [main] INFO Waits.waitForVisibilityOfAll - Prices List elements are visible after waiting 0.118 seconds
-2026-04-30 13:48:03,842 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '[93, 93, 88, 87, 67]', found '[93, 93, 88, 87, 67]'
-2026-04-30 13:48:03,842 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 10 seconds for 'Discount Column Header' element to be visible
-2026-04-30 13:48:03,858 [main] INFO Waits.waitForVisibilityOf - Discount Column Header element is visible after waiting 0.016 seconds
-2026-04-30 13:48:03,888 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 10 seconds for 'Discount Column Header' element to be visible
-2026-04-30 13:48:03,911 [main] INFO Waits.waitForVisibilityOf - Discount Column Header element is visible after waiting 0.023 seconds
-2026-04-30 13:48:03,939 [main] INFO TopDeals.clickColumnHeader - Clicked column header: discount 2 times
-2026-04-30 13:48:03,939 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 10 seconds for 'Discount List' elements to be visible
-2026-04-30 13:48:04,063 [main] INFO Waits.waitForVisibilityOfAll - Discount List elements are visible after waiting 0.124 seconds
-2026-04-30 13:48:04,105 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '[88, 77, 60, 53, 46]', found '[88, 77, 60, 53, 46]'
-2026-04-30 13:48:04,156 [main] INFO ElementActions.closeTabsExceptSlug - Closing tab: https://rahulshettyacademy.com/seleniumPractise/#/offers
-2026-04-30 13:48:04,845 [main] INFO BaseTest.logURL - Navigated to test URL: https://rahulshettyacademy.com/seleniumPractise/#/
-2026-04-30 13:48:04,845 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 10 seconds for 'Top Deals Button' element to be visible
-2026-04-30 13:48:04,862 [main] INFO Waits.waitForVisibilityOf - Top Deals Button element is visible after waiting 0.017 seconds
-2026-04-30 13:48:04,862 [main] INFO ProductCatalog.clickTopDeals - Clicking the Top Deals Button
-2026-04-30 13:48:05,053 [main] INFO ElementActions.switchTab - Switched to child window
-2026-04-30 13:48:05,155 [main] INFO TopDeals.validateDate - Validating current date: 2026-04-30
-2026-04-30 13:48:05,155 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '2026-04-30', found '2026-04-30'
-2026-04-30 13:48:05,155 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Calendar' element to be visible
-2026-04-30 13:48:05,184 [main] INFO Waits.waitForVisibilityOf - Calendar element is visible after waiting 0.029 seconds
-2026-04-30 13:48:08,590 [main] INFO TopDeals.validateDate - Navigated to calendar month-year: August 2030
-2026-04-30 13:48:08,590 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Calendar Days' elements to be visible
-2026-04-30 13:48:09,304 [main] INFO Waits.waitForVisibilityOfAll - Calendar Days elements are visible after waiting 0.714 seconds
-2026-04-30 13:48:09,374 [main] INFO TopDeals.validateDate - Validating calendar date: August 2030-01
-2026-04-30 13:48:09,406 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '2030-08-01', found '2030-08-01'
-2026-04-30 13:48:09,460 [main] INFO ElementActions.closeTabsExceptSlug - Closing tab: https://rahulshettyacademy.com/seleniumPractise/#/offers
-2026-04-30 13:48:09,692 [main] INFO BaseTest.tearDown - Browser session closed successfully
+2026-04-30 17:58:14,080 [main] INFO BaseTest.setUP - Test Execution Started
+2026-04-30 17:58:14,082 [main] INFO BaseTest.setUP - Successfully loaded browser configuration: chrome
+2026-04-30 17:58:15,191 [main] INFO BaseTest.setUP - Tests Running in chrome browser. Version: 147.0.7727.138. Driver Version: ChromeDriver 147.0.7727.137. OS: Windows 11
+2026-04-30 17:58:15,290 [main] INFO BaseTest.setUP - Browser window maximized
+2026-04-30 17:58:15,305 [main] INFO BaseTest.setUP - Browser cookies deleted
+2026-04-30 17:58:15,311 [main] INFO TestData.<init> - Initializing TestData with staging environment...
+2026-04-30 17:58:15,312 [main] INFO TestData.<init> - Successfully loaded TestData for staging environment
+2026-04-30 17:58:18,276 [main] INFO BaseTest.logURL - Navigated to test URL: https://rahulshettyacademy.com/seleniumPractise/#/
+2026-04-30 17:58:18,458 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:58:19,719 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 1.254 seconds
+2026-04-30 17:58:19,813 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 0' element to be visible
+2026-04-30 17:58:19,835 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 0 element is visible after waiting 0.022 seconds
+2026-04-30 17:58:20,000 [main] INFO ProductCatalog.addQuantity - Adding quantity: 15
+2026-04-30 17:58:20,188 [main] INFO ProductCatalog.addProductToCart - Added brocolli to cart
+2026-04-30 17:58:20,189 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:58:21,397 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 1.208 seconds
+2026-04-30 17:58:21,534 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 1' element to be visible
+2026-04-30 17:58:21,549 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 1 element is visible after waiting 0.014 seconds
+2026-04-30 17:58:21,707 [main] INFO ProductCatalog.addQuantity - Adding quantity: 15
+2026-04-30 17:58:21,934 [main] INFO ProductCatalog.addProductToCart - Added cauliflower to cart
+2026-04-30 17:58:21,934 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:58:23,335 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 1.401 seconds
+2026-04-30 17:58:23,669 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 3' element to be visible
+2026-04-30 17:58:23,685 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 3 element is visible after waiting 0.016 seconds
+2026-04-30 17:58:23,856 [main] INFO ProductCatalog.addQuantity - Adding quantity: 15
+2026-04-30 17:58:24,053 [main] INFO ProductCatalog.addProductToCart - Added beetroot to cart
+2026-04-30 17:58:24,054 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:58:25,846 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 1.792 seconds
+2026-04-30 17:58:26,069 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 2' element to be visible
+2026-04-30 17:58:26,088 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 2 element is visible after waiting 0.019 seconds
+2026-04-30 17:58:26,265 [main] INFO ProductCatalog.addQuantity - Adding quantity: 15
+2026-04-30 17:58:26,442 [main] INFO ProductCatalog.addProductToCart - Added cucumber to cart
+2026-04-30 17:58:26,442 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:58:27,670 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 1.228 seconds
+2026-04-30 17:58:27,892 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 4' element to be visible
+2026-04-30 17:58:27,904 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 4 element is visible after waiting 0.011 seconds
+2026-04-30 17:58:28,051 [main] INFO ProductCatalog.addQuantity - Adding quantity: 15
+2026-04-30 17:58:28,249 [main] INFO ProductCatalog.addProductToCart - Added carrot to cart
+2026-04-30 17:58:28,249 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:58:29,384 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 1.133 seconds
+2026-04-30 17:58:29,615 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 5' element to be visible
+2026-04-30 17:58:29,624 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 5 element is visible after waiting 0.009 seconds
+2026-04-30 17:58:29,785 [main] INFO ProductCatalog.addQuantity - Adding quantity: 15
+2026-04-30 17:58:29,949 [main] INFO ProductCatalog.addProductToCart - Added tomato to cart
+2026-04-30 17:58:29,949 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:58:31,278 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 1.328 seconds
+2026-04-30 17:58:31,587 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 6' element to be visible
+2026-04-30 17:58:31,598 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 6 element is visible after waiting 0.011 seconds
+2026-04-30 17:58:31,740 [main] INFO ProductCatalog.addQuantity - Adding quantity: 15
+2026-04-30 17:58:31,904 [main] INFO ProductCatalog.addProductToCart - Added beans to cart
+2026-04-30 17:58:31,905 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:58:33,006 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 1.101 seconds
+2026-04-30 17:58:33,253 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 7' element to be visible
+2026-04-30 17:58:33,261 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 7 element is visible after waiting 0.008 seconds
+2026-04-30 17:58:33,419 [main] INFO ProductCatalog.addQuantity - Adding quantity: 15
+2026-04-30 17:58:33,595 [main] INFO ProductCatalog.addProductToCart - Added brinjal to cart
+2026-04-30 17:58:33,596 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:58:34,553 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.957 seconds
+2026-04-30 17:58:34,861 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 8' element to be visible
+2026-04-30 17:58:34,871 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 8 element is visible after waiting 0.009 seconds
+2026-04-30 17:58:35,035 [main] INFO ProductCatalog.addQuantity - Adding quantity: 15
+2026-04-30 17:58:35,197 [main] INFO ProductCatalog.addProductToCart - Added capsicum to cart
+2026-04-30 17:58:35,198 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:58:36,522 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 1.324 seconds
+2026-04-30 17:58:37,311 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 23' element to be visible
+2026-04-30 17:58:37,324 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 23 element is visible after waiting 0.011 seconds
+2026-04-30 17:58:37,497 [main] INFO ProductCatalog.addQuantity - Adding quantity: 15
+2026-04-30 17:58:37,690 [main] INFO ProductCatalog.addProductToCart - Added strawberry to cart
+2026-04-30 17:58:37,691 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:58:38,867 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 1.176 seconds
+2026-04-30 17:58:39,772 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 24' element to be visible
+2026-04-30 17:58:39,785 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 24 element is visible after waiting 0.013 seconds
+2026-04-30 17:58:39,938 [main] INFO ProductCatalog.addQuantity - Adding quantity: 15
+2026-04-30 17:58:40,128 [main] INFO ProductCatalog.addProductToCart - Added water melon to cart
+2026-04-30 17:58:40,128 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:58:41,186 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 1.056 seconds
+2026-04-30 17:58:42,008 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 25' element to be visible
+2026-04-30 17:58:42,021 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 25 element is visible after waiting 0.013 seconds
+2026-04-30 17:58:42,169 [main] INFO ProductCatalog.addQuantity - Adding quantity: 15
+2026-04-30 17:58:42,317 [main] INFO ProductCatalog.addProductToCart - Added almonds to cart
+2026-04-30 17:58:42,318 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:58:43,308 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.99 seconds
+2026-04-30 17:58:44,216 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 26' element to be visible
+2026-04-30 17:58:44,225 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 26 element is visible after waiting 0.009 seconds
+2026-04-30 17:58:44,367 [main] INFO ProductCatalog.addQuantity - Adding quantity: 15
+2026-04-30 17:58:44,555 [main] INFO ProductCatalog.addProductToCart - Added pista to cart
+2026-04-30 17:58:44,555 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:58:45,489 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.933 seconds
+2026-04-30 17:58:46,355 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 27' element to be visible
+2026-04-30 17:58:46,365 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 27 element is visible after waiting 0.01 seconds
+2026-04-30 17:58:46,506 [main] INFO ProductCatalog.addQuantity - Adding quantity: 15
+2026-04-30 17:58:46,650 [main] INFO ProductCatalog.addProductToCart - Added nuts mixture to cart
+2026-04-30 17:58:46,650 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:58:47,568 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.918 seconds
+2026-04-30 17:58:48,538 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 28' element to be visible
+2026-04-30 17:58:48,551 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 28 element is visible after waiting 0.013 seconds
+2026-04-30 17:58:48,692 [main] INFO ProductCatalog.addQuantity - Adding quantity: 15
+2026-04-30 17:58:48,809 [main] INFO ProductCatalog.addProductToCart - Added cashews to cart
+2026-04-30 17:58:48,810 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:58:49,616 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.806 seconds
+2026-04-30 17:58:50,387 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 29' element to be visible
+2026-04-30 17:58:50,397 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 29 element is visible after waiting 0.009 seconds
+2026-04-30 17:58:50,548 [main] INFO ProductCatalog.addQuantity - Adding quantity: 15
+2026-04-30 17:58:50,666 [main] INFO ProductCatalog.addProductToCart - Added walnuts to cart
+2026-04-30 17:58:50,666 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 10 seconds for 'Items Count' element to be visible
+2026-04-30 17:58:50,688 [main] INFO Waits.waitForVisibilityOf - Items Count element is visible after waiting 0.022 seconds
+2026-04-30 17:58:50,707 [main] INFO ProductCatalog.validateItemsTotal - Displayed item count matches expected item count
+2026-04-30 17:58:50,710 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '16', found '16'
+2026-04-30 17:58:51,364 [main] INFO BaseTest.logURL - Navigated to test URL: https://rahulshettyacademy.com/seleniumPractise/#/
+2026-04-30 17:58:51,368 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:58:52,172 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.804 seconds
+2026-04-30 17:58:52,635 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 14' element to be visible
+2026-04-30 17:58:52,649 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 14 element is visible after waiting 0.013 seconds
+2026-04-30 17:58:52,785 [main] INFO ProductCatalog.addQuantity - Adding quantity: 15
+2026-04-30 17:58:52,910 [main] INFO ProductCatalog.addProductToCart - Added apple to cart
+2026-04-30 17:58:52,910 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Cart Icon' element to be visible
+2026-04-30 17:58:52,933 [main] INFO Waits.waitForVisibilityOf - Cart Icon element is visible after waiting 0.021 seconds
+2026-04-30 17:58:52,950 [main] INFO ProductCatalog.validateCartContents - Clicking cart icon to view cart contents
+2026-04-30 17:58:53,055 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity In Cart' element to be visible
+2026-04-30 17:58:53,080 [main] INFO Waits.waitForVisibilityOf - Quantity In Cart element is visible after waiting 0.025 seconds
+2026-04-30 17:58:53,170 [main] INFO ProductCatalog.validateCartContents - Checking if the price of the product: 72, multiplied with the quantity of product: 1, equals the amount: 72
+2026-04-30 17:58:53,170 [main] INFO Asserts.assertTrue - Assertion Passed: 
+2026-04-30 17:58:53,170 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Remove Product' element to be visible
+2026-04-30 17:58:53,195 [main] INFO Waits.waitForVisibilityOf - Remove Product element is visible after waiting 0.025 seconds
+2026-04-30 17:58:53,284 [main] INFO ProductCatalog.validateCartContents - Removed product from cart
+2026-04-30 17:58:53,284 [main] INFO ProductCatalog.validateCartContents - Checking if cart is empty
+2026-04-30 17:58:53,284 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Empty Cart' element to be visible
+2026-04-30 17:58:53,305 [main] INFO Waits.waitForVisibilityOf - Empty Cart element is visible after waiting 0.02 seconds
+2026-04-30 17:58:53,323 [main] INFO Asserts.assertEquals - Assertion Passed: Expected 'You cart is empty!', found 'You cart is empty!'
+2026-04-30 17:58:53,323 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Checkout' element to be visible
+2026-04-30 17:58:53,346 [main] INFO Waits.waitForVisibilityOf - Checkout element is visible after waiting 0.023 seconds
+2026-04-30 17:58:53,359 [main] INFO Asserts.assertTrue - Assertion Passed: 
+2026-04-30 17:58:53,359 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Cart Icon' element to be visible
+2026-04-30 17:58:53,375 [main] INFO Waits.waitForVisibilityOf - Cart Icon element is visible after waiting 0.013 seconds
+2026-04-30 17:58:53,375 [main] INFO ProductCatalog.validateCartContents - Clicking cart icon button
+2026-04-30 17:58:54,125 [main] INFO BaseTest.logURL - Navigated to test URL: https://rahulshettyacademy.com/seleniumPractise/#/
+2026-04-30 17:58:54,131 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:58:54,910 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.779 seconds
+2026-04-30 17:58:54,955 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 0' element to be visible
+2026-04-30 17:58:54,964 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 0 element is visible after waiting 0.008 seconds
+2026-04-30 17:58:55,105 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 17:58:55,233 [main] INFO ProductCatalog.addProductToCart - Added brocolli to cart
+2026-04-30 17:58:55,234 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:58:56,155 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.921 seconds
+2026-04-30 17:58:56,231 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 1' element to be visible
+2026-04-30 17:58:56,238 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 1 element is visible after waiting 0.005 seconds
+2026-04-30 17:58:56,380 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 17:58:56,488 [main] INFO ProductCatalog.addProductToCart - Added cauliflower to cart
+2026-04-30 17:58:56,490 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:58:57,247 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.757 seconds
+2026-04-30 17:58:57,372 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 3' element to be visible
+2026-04-30 17:58:57,382 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 3 element is visible after waiting 0.009 seconds
+2026-04-30 17:58:57,517 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 17:58:57,658 [main] INFO ProductCatalog.addProductToCart - Added beetroot to cart
+2026-04-30 17:58:57,658 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:58:58,456 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.798 seconds
+2026-04-30 17:58:58,568 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 2' element to be visible
+2026-04-30 17:58:58,575 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 2 element is visible after waiting 0.007 seconds
+2026-04-30 17:58:58,732 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 17:58:58,852 [main] INFO ProductCatalog.addProductToCart - Added cucumber to cart
+2026-04-30 17:58:58,852 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:58:59,648 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.796 seconds
+2026-04-30 17:58:59,793 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 4' element to be visible
+2026-04-30 17:58:59,800 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 4 element is visible after waiting 0.007 seconds
+2026-04-30 17:58:59,948 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 17:59:00,121 [main] INFO ProductCatalog.addProductToCart - Added carrot to cart
+2026-04-30 17:59:00,122 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:59:01,116 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.994 seconds
+2026-04-30 17:59:01,304 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 5' element to be visible
+2026-04-30 17:59:01,313 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 5 element is visible after waiting 0.009 seconds
+2026-04-30 17:59:01,462 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 17:59:01,578 [main] INFO ProductCatalog.addProductToCart - Added tomato to cart
+2026-04-30 17:59:01,578 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:59:02,364 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.786 seconds
+2026-04-30 17:59:02,553 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 6' element to be visible
+2026-04-30 17:59:02,562 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 6 element is visible after waiting 0.009 seconds
+2026-04-30 17:59:02,714 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 17:59:02,836 [main] INFO ProductCatalog.addProductToCart - Added beans to cart
+2026-04-30 17:59:02,836 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:59:03,600 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.764 seconds
+2026-04-30 17:59:03,860 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 7' element to be visible
+2026-04-30 17:59:03,866 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 7 element is visible after waiting 0.006 seconds
+2026-04-30 17:59:04,002 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 17:59:04,133 [main] INFO ProductCatalog.addProductToCart - Added brinjal to cart
+2026-04-30 17:59:04,133 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:59:04,940 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.807 seconds
+2026-04-30 17:59:05,190 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 8' element to be visible
+2026-04-30 17:59:05,198 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 8 element is visible after waiting 0.008 seconds
+2026-04-30 17:59:05,332 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 17:59:05,455 [main] INFO ProductCatalog.addProductToCart - Added capsicum to cart
+2026-04-30 17:59:05,455 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:59:06,218 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.762 seconds
+2026-04-30 17:59:06,799 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 23' element to be visible
+2026-04-30 17:59:06,808 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 23 element is visible after waiting 0.007 seconds
+2026-04-30 17:59:06,956 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 17:59:07,068 [main] INFO ProductCatalog.addProductToCart - Added strawberry to cart
+2026-04-30 17:59:07,068 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:59:07,842 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.774 seconds
+2026-04-30 17:59:08,437 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 24' element to be visible
+2026-04-30 17:59:08,448 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 24 element is visible after waiting 0.011 seconds
+2026-04-30 17:59:08,597 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 17:59:08,719 [main] INFO ProductCatalog.addProductToCart - Added water melon to cart
+2026-04-30 17:59:08,719 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:59:09,472 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.753 seconds
+2026-04-30 17:59:10,148 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 25' element to be visible
+2026-04-30 17:59:10,164 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 25 element is visible after waiting 0.015 seconds
+2026-04-30 17:59:10,315 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 17:59:10,430 [main] INFO ProductCatalog.addProductToCart - Added almonds to cart
+2026-04-30 17:59:10,430 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:59:11,179 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.749 seconds
+2026-04-30 17:59:11,856 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 26' element to be visible
+2026-04-30 17:59:11,865 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 26 element is visible after waiting 0.009 seconds
+2026-04-30 17:59:11,998 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 17:59:12,142 [main] INFO ProductCatalog.addProductToCart - Added pista to cart
+2026-04-30 17:59:12,142 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:59:12,959 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.817 seconds
+2026-04-30 17:59:13,655 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 27' element to be visible
+2026-04-30 17:59:13,663 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 27 element is visible after waiting 0.008 seconds
+2026-04-30 17:59:13,811 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 17:59:13,924 [main] INFO ProductCatalog.addProductToCart - Added nuts mixture to cart
+2026-04-30 17:59:13,924 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:59:14,682 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.758 seconds
+2026-04-30 17:59:15,424 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 28' element to be visible
+2026-04-30 17:59:15,432 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 28 element is visible after waiting 0.007 seconds
+2026-04-30 17:59:15,565 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 17:59:15,687 [main] INFO ProductCatalog.addProductToCart - Added cashews to cart
+2026-04-30 17:59:15,687 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:59:16,534 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.847 seconds
+2026-04-30 17:59:17,287 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 29' element to be visible
+2026-04-30 17:59:17,293 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 29 element is visible after waiting 0.006 seconds
+2026-04-30 17:59:17,428 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 17:59:17,542 [main] INFO ProductCatalog.addProductToCart - Added walnuts to cart
+2026-04-30 17:59:17,543 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Cart Icon Button' element to be visible
+2026-04-30 17:59:17,560 [main] INFO Waits.waitForVisibilityOf - Cart Icon Button element is visible after waiting 0.016 seconds
+2026-04-30 17:59:17,560 [main] INFO ProductCatalog.clickCartIcon - Clicking the Cart Icon Button
+2026-04-30 17:59:17,634 [main] INFO ProductCatalog.validatePriceInCart - Validating sum of individual product prices matches displayed total
+2026-04-30 17:59:18,550 [main] DEBUG ProductCatalog.validatePriceInCart - Sum of individual product prices: 2877
+2026-04-30 17:59:18,550 [main] INFO ProductCatalog.validatePriceInCart - Checking if displayed total price matches the sum of individual prices
+2026-04-30 17:59:18,550 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '2877', found '2877'
+2026-04-30 17:59:19,107 [main] INFO BaseTest.logURL - Navigated to test URL: https://rahulshettyacademy.com/seleniumPractise/#/
+2026-04-30 17:59:19,114 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:59:19,851 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.737 seconds
+2026-04-30 17:59:19,900 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 0' element to be visible
+2026-04-30 17:59:19,907 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 0 element is visible after waiting 0.007 seconds
+2026-04-30 17:59:20,048 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 17:59:20,179 [main] INFO ProductCatalog.addProductToCart - Added brocolli to cart
+2026-04-30 17:59:20,180 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:59:20,961 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.781 seconds
+2026-04-30 17:59:21,035 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 1' element to be visible
+2026-04-30 17:59:21,045 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 1 element is visible after waiting 0.01 seconds
+2026-04-30 17:59:21,186 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 17:59:21,301 [main] INFO ProductCatalog.addProductToCart - Added cauliflower to cart
+2026-04-30 17:59:21,301 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:59:22,048 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.747 seconds
+2026-04-30 17:59:22,157 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 3' element to be visible
+2026-04-30 17:59:22,165 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 3 element is visible after waiting 0.008 seconds
+2026-04-30 17:59:22,316 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 17:59:22,434 [main] INFO ProductCatalog.addProductToCart - Added beetroot to cart
+2026-04-30 17:59:22,434 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:59:23,249 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.815 seconds
+2026-04-30 17:59:23,368 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 2' element to be visible
+2026-04-30 17:59:23,376 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 2 element is visible after waiting 0.008 seconds
+2026-04-30 17:59:23,524 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 17:59:23,638 [main] INFO ProductCatalog.addProductToCart - Added cucumber to cart
+2026-04-30 17:59:23,638 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:59:24,434 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.796 seconds
+2026-04-30 17:59:24,590 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 4' element to be visible
+2026-04-30 17:59:24,598 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 4 element is visible after waiting 0.008 seconds
+2026-04-30 17:59:24,761 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 17:59:24,878 [main] INFO ProductCatalog.addProductToCart - Added carrot to cart
+2026-04-30 17:59:24,878 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:59:25,708 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.83 seconds
+2026-04-30 17:59:25,912 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 5' element to be visible
+2026-04-30 17:59:25,918 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 5 element is visible after waiting 0.006 seconds
+2026-04-30 17:59:26,058 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 17:59:26,198 [main] INFO ProductCatalog.addProductToCart - Added tomato to cart
+2026-04-30 17:59:26,198 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:59:27,017 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.819 seconds
+2026-04-30 17:59:27,252 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 6' element to be visible
+2026-04-30 17:59:27,260 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 6 element is visible after waiting 0.008 seconds
+2026-04-30 17:59:27,412 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 17:59:27,584 [main] INFO ProductCatalog.addProductToCart - Added beans to cart
+2026-04-30 17:59:27,584 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:59:28,440 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.856 seconds
+2026-04-30 17:59:28,679 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 7' element to be visible
+2026-04-30 17:59:28,687 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 7 element is visible after waiting 0.008 seconds
+2026-04-30 17:59:28,841 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 17:59:28,953 [main] INFO ProductCatalog.addProductToCart - Added brinjal to cart
+2026-04-30 17:59:28,954 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:59:29,755 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.801 seconds
+2026-04-30 17:59:30,011 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 8' element to be visible
+2026-04-30 17:59:30,020 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 8 element is visible after waiting 0.009 seconds
+2026-04-30 17:59:30,167 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 17:59:30,283 [main] INFO ProductCatalog.addProductToCart - Added capsicum to cart
+2026-04-30 17:59:30,283 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:59:31,041 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.756 seconds
+2026-04-30 17:59:31,630 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 23' element to be visible
+2026-04-30 17:59:31,639 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 23 element is visible after waiting 0.009 seconds
+2026-04-30 17:59:31,792 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 17:59:31,908 [main] INFO ProductCatalog.addProductToCart - Added strawberry to cart
+2026-04-30 17:59:31,908 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:59:32,659 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.751 seconds
+2026-04-30 17:59:33,278 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 24' element to be visible
+2026-04-30 17:59:33,285 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 24 element is visible after waiting 0.006 seconds
+2026-04-30 17:59:33,412 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 17:59:33,538 [main] INFO ProductCatalog.addProductToCart - Added water melon to cart
+2026-04-30 17:59:33,538 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:59:34,405 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.866 seconds
+2026-04-30 17:59:35,066 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 25' element to be visible
+2026-04-30 17:59:35,082 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 25 element is visible after waiting 0.016 seconds
+2026-04-30 17:59:35,228 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 17:59:35,393 [main] INFO ProductCatalog.addProductToCart - Added almonds to cart
+2026-04-30 17:59:35,393 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:59:36,190 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.797 seconds
+2026-04-30 17:59:36,865 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 26' element to be visible
+2026-04-30 17:59:36,875 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 26 element is visible after waiting 0.01 seconds
+2026-04-30 17:59:37,023 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 17:59:37,138 [main] INFO ProductCatalog.addProductToCart - Added pista to cart
+2026-04-30 17:59:37,138 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:59:37,948 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.81 seconds
+2026-04-30 17:59:38,624 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 27' element to be visible
+2026-04-30 17:59:38,632 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 27 element is visible after waiting 0.007 seconds
+2026-04-30 17:59:38,766 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 17:59:38,876 [main] INFO ProductCatalog.addProductToCart - Added nuts mixture to cart
+2026-04-30 17:59:38,876 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:59:39,594 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.717 seconds
+2026-04-30 17:59:40,251 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 28' element to be visible
+2026-04-30 17:59:40,257 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 28 element is visible after waiting 0.006 seconds
+2026-04-30 17:59:40,405 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 17:59:40,519 [main] INFO ProductCatalog.addProductToCart - Added cashews to cart
+2026-04-30 17:59:40,519 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:59:41,328 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.808 seconds
+2026-04-30 17:59:42,028 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 29' element to be visible
+2026-04-30 17:59:42,035 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 29 element is visible after waiting 0.007 seconds
+2026-04-30 17:59:42,168 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 17:59:42,282 [main] INFO ProductCatalog.addProductToCart - Added walnuts to cart
+2026-04-30 17:59:42,283 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Cart Icon Button' element to be visible
+2026-04-30 17:59:42,298 [main] INFO Waits.waitForVisibilityOf - Cart Icon Button element is visible after waiting 0.014 seconds
+2026-04-30 17:59:42,298 [main] INFO ProductCatalog.clickCartIcon - Clicking the Cart Icon Button
+2026-04-30 17:59:42,374 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 10 seconds for 'Checkout Button' element to be visible
+2026-04-30 17:59:42,391 [main] INFO Waits.waitForVisibilityOf - Checkout Button element is visible after waiting 0.017 seconds
+2026-04-30 17:59:42,391 [main] INFO ProductCatalog.clickCheckout - Clicking the Checkout Button
+2026-04-30 17:59:42,465 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 10 seconds for 'Place Order Button' element to be visible
+2026-04-30 17:59:43,036 [main] INFO Waits.waitForVisibilityOf - Place Order Button element is visible after waiting 0.571 seconds
+2026-04-30 17:59:43,036 [main] INFO CheckoutPage.placeOrders - Clicking the Place Order Button
+2026-04-30 17:59:43,107 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Select Country' element to be visible
+2026-04-30 17:59:43,647 [main] INFO Waits.waitForVisibilityOf - Select Country element is visible after waiting 0.54 seconds
+2026-04-30 17:59:43,765 [main] INFO ElementActions.selectBy - Selected option by value: 'Romania'
+2026-04-30 17:59:43,765 [main] INFO OrderSubmissionPage.validateSelectedCountry - Checking if country: Romania is selected
+2026-04-30 17:59:43,783 [main] INFO Asserts.assertEquals - Assertion Passed: Expected 'Romania', found 'Romania'
+2026-04-30 17:59:43,784 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Proceed' element to be visible
+2026-04-30 17:59:43,808 [main] INFO Waits.waitForVisibilityOf - Proceed element is visible after waiting 0.024 seconds
+2026-04-30 17:59:43,887 [main] INFO OrderSubmissionPage.validateErrorAlert - Clicked Proceed button without accepting Terms & Conditions
+2026-04-30 17:59:43,887 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 10 seconds for 'Error Alert' element to be visible
+2026-04-30 17:59:43,905 [main] INFO Waits.waitForVisibilityOf - Error Alert element is visible after waiting 0.018 seconds
+2026-04-30 17:59:43,906 [main] INFO OrderSubmissionPage.validateErrorAlert - Checking if error message is displayed in red color
+2026-04-30 17:59:43,925 [main] INFO Asserts.assertEquals - Assertion Passed: Expected 'Please accept Terms & Conditions - Required', found 'Please accept Terms & Conditions - Required'
+2026-04-30 17:59:43,939 [main] INFO Asserts.assertTrue - Assertion Passed: Error message is displayed in red color
+2026-04-30 17:59:43,941 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Terms & Conditions' element to be visible
+2026-04-30 17:59:43,961 [main] INFO Waits.waitForVisibilityOf - Terms & Conditions element is visible after waiting 0.02 seconds
+2026-04-30 17:59:44,058 [main] INFO OrderSubmissionPage.validateTerms - Clicked on 'Terms & Conditions' button
+2026-04-30 17:59:44,238 [main] INFO ElementActions.switchTab - Switched to child window
+2026-04-30 17:59:44,240 [main] INFO OrderSubmissionPage.validateTerms - Checking if 'Terms & Conditions' new tab text is correct
+2026-04-30 17:59:44,240 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Terms from New Tab' element to be visible
+2026-04-30 17:59:44,386 [main] INFO Waits.waitForVisibilityOf - Terms from New Tab element is visible after waiting 0.146 seconds
+2026-04-30 17:59:44,418 [main] INFO Asserts.assertEquals - Assertion Passed: Expected 'Here the terms and condition page Click to geo back Home', found 'Here the terms and condition page Click to geo back Home'
+2026-04-30 17:59:44,506 [main] INFO ElementActions.closeTabContainingSlug - Closing tab: https://rahulshettyacademy.com/seleniumPractise/#/policy
+2026-04-30 17:59:44,577 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Checkbox' element to be visible
+2026-04-30 17:59:44,600 [main] INFO Waits.waitForVisibilityOf - Checkbox element is visible after waiting 0.023 seconds
+2026-04-30 17:59:44,601 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Proceed' element to be visible
+2026-04-30 17:59:44,621 [main] INFO Waits.waitForVisibilityOf - Proceed element is visible after waiting 0.02 seconds
+2026-04-30 17:59:44,704 [main] INFO OrderSubmissionPage.validateSubmitOrder - Selected checkbox
+2026-04-30 17:59:44,758 [main] INFO OrderSubmissionPage.validateSubmitOrder - Clicked Proceed button
+2026-04-30 17:59:44,758 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Successful Message' element to be visible
+2026-04-30 17:59:44,778 [main] INFO Waits.waitForVisibilityOf - Successful Message element is visible after waiting 0.02 seconds
+2026-04-30 17:59:44,778 [main] INFO OrderSubmissionPage.validateSubmitOrder - Checking if the order success message is correct
+2026-04-30 17:59:44,796 [main] INFO Asserts.assertEquals - Assertion Passed: Expected 'Thank you, your order has been placed successfully
+You'll be redirected to Home page shortly!!', found 'Thank you, your order has been placed successfully
+You'll be redirected to Home page shortly!!'
+2026-04-30 17:59:44,797 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Home Button' element to be visible
+2026-04-30 17:59:44,821 [main] INFO Waits.waitForVisibilityOf - Home Button element is visible after waiting 0.023 seconds
+2026-04-30 17:59:44,899 [main] INFO OrderSubmissionPage.validateSubmitOrder - Clicked Home button to return to main page
+2026-04-30 17:59:45,601 [main] INFO BaseTest.logURL - Navigated to test URL: https://rahulshettyacademy.com/seleniumPractise/#/
+2026-04-30 17:59:45,604 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 10 seconds for 'Top Deals Button' element to be visible
+2026-04-30 17:59:45,626 [main] INFO Waits.waitForVisibilityOf - Top Deals Button element is visible after waiting 0.022 seconds
+2026-04-30 17:59:45,626 [main] INFO ProductCatalog.clickTopDeals - Clicking the Top Deals Button
+2026-04-30 17:59:45,830 [main] INFO ElementActions.switchTab - Switched to child window
+2026-04-30 17:59:45,830 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Search Field' element to be visible
+2026-04-30 17:59:45,985 [main] INFO Waits.waitForVisibilityOf - Search Field element is visible after waiting 0.155 seconds
+2026-04-30 17:59:46,090 [main] INFO TopDeals.searchValidation - Entered search keyword: test
+2026-04-30 17:59:46,090 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 10 seconds for 'Names List' elements to be visible
+2026-04-30 17:59:46,144 [main] INFO Waits.waitForVisibilityOfAll - Names List elements are visible after waiting 0.054 seconds
+2026-04-30 17:59:46,171 [main] INFO TopDeals.searchValidation - No data found for keyword: test
+2026-04-30 17:59:46,171 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Search Field' element to be visible
+2026-04-30 17:59:46,190 [main] INFO Waits.waitForVisibilityOf - Search Field element is visible after waiting 0.019 seconds
+2026-04-30 17:59:46,516 [main] INFO TopDeals.searchValidation - Search field cleared and page refreshed
+2026-04-30 17:59:46,517 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Search Field' element to be visible
+2026-04-30 17:59:46,547 [main] INFO Waits.waitForVisibilityOf - Search Field element is visible after waiting 0.03 seconds
+2026-04-30 17:59:46,601 [main] INFO TopDeals.searchValidation - Entered search keyword: apple
+2026-04-30 17:59:46,602 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 10 seconds for 'Names List' elements to be visible
+2026-04-30 17:59:46,684 [main] INFO Waits.waitForVisibilityOfAll - Names List elements are visible after waiting 0.082 seconds
+2026-04-30 17:59:46,705 [main] INFO TopDeals.searchValidation - Validating search results for keyword: apple
+2026-04-30 17:59:46,738 [main] INFO Asserts.assertTrue - Assertion Passed: 
+2026-04-30 17:59:46,773 [main] INFO Asserts.assertTrue - Assertion Passed: 
+2026-04-30 17:59:46,784 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Search Field' element to be visible
+2026-04-30 17:59:46,810 [main] INFO Waits.waitForVisibilityOf - Search Field element is visible after waiting 0.026 seconds
+2026-04-30 17:59:47,149 [main] INFO TopDeals.searchValidation - Search field cleared and page refreshed
+2026-04-30 17:59:47,256 [main] INFO ElementActions.closeTabContainingSlug - Closing tab: https://rahulshettyacademy.com/seleniumPractise/#/offers
+2026-04-30 17:59:48,053 [main] INFO BaseTest.logURL - Navigated to test URL: https://rahulshettyacademy.com/seleniumPractise/#/
+2026-04-30 17:59:48,057 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Search Field' element to be visible
+2026-04-30 17:59:48,081 [main] INFO Waits.waitForVisibilityOf - Search Field element is visible after waiting 0.024 seconds
+2026-04-30 17:59:48,188 [main] INFO ProductCatalog.searchValidation - Entered search keyword: 'apple'. Waiting 5000ms
+2026-04-30 17:59:53,204 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 17:59:53,238 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.034 seconds
+2026-04-30 17:59:53,258 [main] INFO ProductCatalog.searchValidation - Searching for product: apple, checking if matching product is found
+2026-04-30 17:59:53,258 [main] INFO Asserts.assertEquals - Assertion Passed: Expected 'apple', found 'apple'
+2026-04-30 17:59:53,265 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Search Field' element to be visible
+2026-04-30 17:59:53,280 [main] INFO Waits.waitForVisibilityOf - Search Field element is visible after waiting 0.015 seconds
+2026-04-30 17:59:53,332 [main] INFO ProductCatalog.searchValidation - Clearing search field and refreshing page
+2026-04-30 17:59:53,689 [main] INFO ProductCatalog.searchValidation - Refreshed page
+2026-04-30 17:59:53,689 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Search Field' element to be visible
+2026-04-30 17:59:53,733 [main] INFO Waits.waitForVisibilityOf - Search Field element is visible after waiting 0.044 seconds
+2026-04-30 17:59:53,864 [main] INFO ProductCatalog.searchValidation - Entered search keyword: 'test'. Waiting 5000ms
+2026-04-30 17:59:58,881 [main] INFO ProductCatalog.searchValidation - No products found, checking if not products found message is displayed
+2026-04-30 17:59:58,881 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'No Search Results' element to be visible
+2026-04-30 17:59:58,899 [main] INFO Waits.waitForVisibilityOf - No Search Results element is visible after waiting 0.018 seconds
+2026-04-30 17:59:58,915 [main] INFO Asserts.assertEquals - Assertion Passed: Expected 'Sorry, no products matched your search!
+Enter a different keyword and try.', found 'Sorry, no products matched your search!
+Enter a different keyword and try.'
+2026-04-30 17:59:58,915 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Search Field' element to be visible
+2026-04-30 17:59:58,927 [main] INFO Waits.waitForVisibilityOf - Search Field element is visible after waiting 0.012 seconds
+2026-04-30 17:59:58,970 [main] INFO ProductCatalog.searchValidation - Clearing search field and refreshing page
+2026-04-30 17:59:59,253 [main] INFO ProductCatalog.searchValidation - Refreshed page
+2026-04-30 18:00:00,075 [main] INFO BaseTest.logURL - Navigated to test URL: https://rahulshettyacademy.com/seleniumPractise/#/
+2026-04-30 18:00:00,081 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 10 seconds for 'Top Deals Button' element to be visible
+2026-04-30 18:00:00,105 [main] INFO Waits.waitForVisibilityOf - Top Deals Button element is visible after waiting 0.024 seconds
+2026-04-30 18:00:00,105 [main] INFO ProductCatalog.clickTopDeals - Clicking the Top Deals Button
+2026-04-30 18:00:00,346 [main] INFO ElementActions.switchTab - Switched to child window
+2026-04-30 18:00:00,346 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 10 seconds for 'Column Header' element to be visible
+2026-04-30 18:00:00,555 [main] INFO Waits.waitForVisibilityOf - Column Header element is visible after waiting 0.208 seconds
+2026-04-30 18:00:00,684 [main] INFO TopDeals.clickColumnHeader - Clicked column header: name 1 times
+2026-04-30 18:00:00,684 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 10 seconds for 'Names List' elements to be visible
+2026-04-30 18:00:00,902 [main] INFO Waits.waitForVisibilityOfAll - Names List elements are visible after waiting 0.218 seconds
+2026-04-30 18:00:00,965 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '[Almond, Apple, Banana, Beans, Brinjal]', found '[Almond, Apple, Banana, Beans, Brinjal]'
+2026-04-30 18:00:00,965 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 10 seconds for 'Price Colummn Header' element to be visible
+2026-04-30 18:00:00,984 [main] INFO Waits.waitForVisibilityOf - Price Colummn Header element is visible after waiting 0.019 seconds
+2026-04-30 18:00:01,036 [main] INFO TopDeals.clickColumnHeader - Clicked column header: price 1 times
+2026-04-30 18:00:01,036 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 10 seconds for 'Prices List' elements to be visible
+2026-04-30 18:00:01,175 [main] INFO Waits.waitForVisibilityOfAll - Prices List elements are visible after waiting 0.138 seconds
+2026-04-30 18:00:01,234 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '[23, 34, 34, 34, 37]', found '[23, 34, 34, 34, 37]'
+2026-04-30 18:00:01,234 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 10 seconds for 'Discount Column Header' element to be visible
+2026-04-30 18:00:01,255 [main] INFO Waits.waitForVisibilityOf - Discount Column Header element is visible after waiting 0.021 seconds
+2026-04-30 18:00:01,309 [main] INFO TopDeals.clickColumnHeader - Clicked column header: discount 1 times
+2026-04-30 18:00:01,310 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 10 seconds for 'Discount List' elements to be visible
+2026-04-30 18:00:01,439 [main] INFO Waits.waitForVisibilityOfAll - Discount List elements are visible after waiting 0.129 seconds
+2026-04-30 18:00:01,487 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '[12, 12, 15, 20, 22]', found '[12, 12, 15, 20, 22]'
+2026-04-30 18:00:01,544 [main] INFO ElementActions.closeTabContainingSlug - Closing tab: https://rahulshettyacademy.com/seleniumPractise/#/offers
+2026-04-30 18:00:02,175 [main] INFO BaseTest.logURL - Navigated to test URL: https://rahulshettyacademy.com/seleniumPractise/#/
+2026-04-30 18:00:02,179 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 10 seconds for 'Top Deals Button' element to be visible
+2026-04-30 18:00:02,205 [main] INFO Waits.waitForVisibilityOf - Top Deals Button element is visible after waiting 0.026 seconds
+2026-04-30 18:00:02,205 [main] INFO ProductCatalog.clickTopDeals - Clicking the Top Deals Button
+2026-04-30 18:00:02,425 [main] INFO ElementActions.switchTab - Switched to child window
+2026-04-30 18:00:02,575 [main] INFO TopDeals.validateDate - Validating current date: 2026-04-30
+2026-04-30 18:00:02,575 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '2026-04-30', found '2026-04-30'
+2026-04-30 18:00:02,575 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Calendar' element to be visible
+2026-04-30 18:00:02,620 [main] INFO Waits.waitForVisibilityOf - Calendar element is visible after waiting 0.045 seconds
+2026-04-30 18:00:06,208 [main] INFO TopDeals.validateDate - Navigated to calendar month-year: August 2030
+2026-04-30 18:00:06,208 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Calendar Days' elements to be visible
+2026-04-30 18:00:07,146 [main] INFO Waits.waitForVisibilityOfAll - Calendar Days elements are visible after waiting 0.938 seconds
+2026-04-30 18:00:07,231 [main] INFO TopDeals.validateDate - Validating calendar date: August 2030-01
+2026-04-30 18:00:07,251 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '2030-08-01', found '2030-08-01'
+2026-04-30 18:00:07,319 [main] INFO ElementActions.closeTabContainingSlug - Closing tab: https://rahulshettyacademy.com/seleniumPractise/#/offers
+2026-04-30 18:00:08,008 [main] INFO BaseTest.logURL - Navigated to test URL: https://rahulshettyacademy.com/seleniumPractise/#/
+2026-04-30 18:00:08,015 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 10 seconds for 'Top Deals Button' element to be visible
+2026-04-30 18:00:08,034 [main] INFO Waits.waitForVisibilityOf - Top Deals Button element is visible after waiting 0.018 seconds
+2026-04-30 18:00:08,034 [main] INFO ProductCatalog.clickTopDeals - Clicking the Top Deals Button
+2026-04-30 18:00:08,343 [main] INFO ElementActions.switchTab - Switched to child window
+2026-04-30 18:00:08,344 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 10 seconds for 'Column Header' element to be visible
+2026-04-30 18:00:08,587 [main] INFO Waits.waitForVisibilityOf - Column Header element is visible after waiting 0.243 seconds
+2026-04-30 18:00:08,721 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 10 seconds for 'Column Header' element to be visible
+2026-04-30 18:00:08,753 [main] INFO Waits.waitForVisibilityOf - Column Header element is visible after waiting 0.032 seconds
+2026-04-30 18:00:08,857 [main] INFO TopDeals.clickColumnHeader - Clicked column header: name 2 times
+2026-04-30 18:00:08,857 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 10 seconds for 'Names List' elements to be visible
+2026-04-30 18:00:09,066 [main] INFO Waits.waitForVisibilityOfAll - Names List elements are visible after waiting 0.209 seconds
+2026-04-30 18:00:09,128 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '[Wheat, Tomato, Strawberry, Rice, Potato]', found '[Wheat, Tomato, Strawberry, Rice, Potato]'
+2026-04-30 18:00:09,128 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 10 seconds for 'Price Colummn Header' element to be visible
+2026-04-30 18:00:09,153 [main] INFO Waits.waitForVisibilityOf - Price Colummn Header element is visible after waiting 0.025 seconds
+2026-04-30 18:00:09,217 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 10 seconds for 'Price Colummn Header' element to be visible
+2026-04-30 18:00:09,236 [main] INFO Waits.waitForVisibilityOf - Price Colummn Header element is visible after waiting 0.019 seconds
+2026-04-30 18:00:09,284 [main] INFO TopDeals.clickColumnHeader - Clicked column header: price 2 times
+2026-04-30 18:00:09,284 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 10 seconds for 'Prices List' elements to be visible
+2026-04-30 18:00:09,406 [main] INFO Waits.waitForVisibilityOfAll - Prices List elements are visible after waiting 0.121 seconds
+2026-04-30 18:00:09,455 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '[93, 93, 88, 87, 67]', found '[93, 93, 88, 87, 67]'
+2026-04-30 18:00:09,455 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 10 seconds for 'Discount Column Header' element to be visible
+2026-04-30 18:00:09,481 [main] INFO Waits.waitForVisibilityOf - Discount Column Header element is visible after waiting 0.026 seconds
+2026-04-30 18:00:09,572 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 10 seconds for 'Discount Column Header' element to be visible
+2026-04-30 18:00:09,586 [main] INFO Waits.waitForVisibilityOf - Discount Column Header element is visible after waiting 0.014 seconds
+2026-04-30 18:00:09,632 [main] INFO TopDeals.clickColumnHeader - Clicked column header: discount 2 times
+2026-04-30 18:00:09,632 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 10 seconds for 'Discount List' elements to be visible
+2026-04-30 18:00:09,755 [main] INFO Waits.waitForVisibilityOfAll - Discount List elements are visible after waiting 0.123 seconds
+2026-04-30 18:00:09,799 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '[88, 77, 60, 53, 46]', found '[88, 77, 60, 53, 46]'
+2026-04-30 18:00:09,865 [main] INFO ElementActions.closeTabContainingSlug - Closing tab: https://rahulshettyacademy.com/seleniumPractise/#/offers
+2026-04-30 18:00:10,504 [main] INFO BaseTest.logURL - Navigated to test URL: https://rahulshettyacademy.com/seleniumPractise/#/
+2026-04-30 18:00:10,506 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 10 seconds for 'Top Deals Button' element to be visible
+2026-04-30 18:00:10,527 [main] INFO Waits.waitForVisibilityOf - Top Deals Button element is visible after waiting 0.02 seconds
+2026-04-30 18:00:10,527 [main] INFO ProductCatalog.clickTopDeals - Clicking the Top Deals Button
+2026-04-30 18:00:10,738 [main] INFO ElementActions.switchTab - Switched to child window
+2026-04-30 18:00:10,738 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Page Menu' element to be visible
+2026-04-30 18:00:10,903 [main] INFO Waits.waitForVisibilityOf - Page Menu element is visible after waiting 0.165 seconds
+2026-04-30 18:00:11,057 [main] INFO ElementActions.selectBy - Selected option by value: '10'
+2026-04-30 18:00:11,057 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 10 seconds for 'Names List' elements to be visible
+2026-04-30 18:00:11,388 [main] INFO Waits.waitForVisibilityOfAll - Names List elements are visible after waiting 0.331 seconds
+2026-04-30 18:00:11,398 [main] INFO TopDeals.validatePageSizeOption - Validating page size option: 10
+2026-04-30 18:00:11,399 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '10', found '10'
+2026-04-30 18:00:11,493 [main] INFO ElementActions.closeTabContainingSlug - Closing tab: https://rahulshettyacademy.com/seleniumPractise/#/offers
+2026-04-30 18:00:12,216 [main] INFO BaseTest.logURL - Navigated to test URL: https://rahulshettyacademy.com/seleniumPractise/#/
+2026-04-30 18:00:12,220 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:00:12,952 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.732 seconds
+2026-04-30 18:00:12,996 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 0' element to be visible
+2026-04-30 18:00:13,004 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 0 element is visible after waiting 0.007 seconds
+2026-04-30 18:00:13,144 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:00:13,276 [main] INFO ProductCatalog.addProductToCart - Added brocolli to cart
+2026-04-30 18:00:13,276 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:00:14,143 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.867 seconds
+2026-04-30 18:00:14,211 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 1' element to be visible
+2026-04-30 18:00:14,218 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 1 element is visible after waiting 0.007 seconds
+2026-04-30 18:00:14,358 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:00:14,475 [main] INFO ProductCatalog.addProductToCart - Added cauliflower to cart
+2026-04-30 18:00:14,475 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:00:15,272 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.797 seconds
+2026-04-30 18:00:15,377 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 3' element to be visible
+2026-04-30 18:00:15,385 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 3 element is visible after waiting 0.007 seconds
+2026-04-30 18:00:15,530 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:00:15,639 [main] INFO ProductCatalog.addProductToCart - Added beetroot to cart
+2026-04-30 18:00:15,639 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:00:16,330 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.691 seconds
+2026-04-30 18:00:16,419 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 2' element to be visible
+2026-04-30 18:00:16,425 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 2 element is visible after waiting 0.006 seconds
+2026-04-30 18:00:16,557 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:00:16,680 [main] INFO ProductCatalog.addProductToCart - Added cucumber to cart
+2026-04-30 18:00:16,680 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:00:17,457 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.776 seconds
+2026-04-30 18:00:17,613 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 4' element to be visible
+2026-04-30 18:00:17,619 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 4 element is visible after waiting 0.006 seconds
+2026-04-30 18:00:17,758 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:00:17,877 [main] INFO ProductCatalog.addProductToCart - Added carrot to cart
+2026-04-30 18:00:17,877 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:00:18,710 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.833 seconds
+2026-04-30 18:00:18,908 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 5' element to be visible
+2026-04-30 18:00:18,918 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 5 element is visible after waiting 0.01 seconds
+2026-04-30 18:00:19,062 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:00:19,204 [main] INFO ProductCatalog.addProductToCart - Added tomato to cart
+2026-04-30 18:00:19,204 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:00:19,969 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.765 seconds
+2026-04-30 18:00:20,173 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 6' element to be visible
+2026-04-30 18:00:20,184 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 6 element is visible after waiting 0.011 seconds
+2026-04-30 18:00:20,335 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:00:20,446 [main] INFO ProductCatalog.addProductToCart - Added beans to cart
+2026-04-30 18:00:20,446 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:00:21,164 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.718 seconds
+2026-04-30 18:00:21,366 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 7' element to be visible
+2026-04-30 18:00:21,373 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 7 element is visible after waiting 0.007 seconds
+2026-04-30 18:00:21,519 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:00:21,640 [main] INFO ProductCatalog.addProductToCart - Added brinjal to cart
+2026-04-30 18:00:21,640 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:00:22,347 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.707 seconds
+2026-04-30 18:00:22,570 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 8' element to be visible
+2026-04-30 18:00:22,577 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 8 element is visible after waiting 0.007 seconds
+2026-04-30 18:00:22,719 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:00:22,849 [main] INFO ProductCatalog.addProductToCart - Added capsicum to cart
+2026-04-30 18:00:22,849 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:00:23,758 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.909 seconds
+2026-04-30 18:00:24,457 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 23' element to be visible
+2026-04-30 18:00:24,466 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 23 element is visible after waiting 0.009 seconds
+2026-04-30 18:00:24,618 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:00:24,751 [main] INFO ProductCatalog.addProductToCart - Added strawberry to cart
+2026-04-30 18:00:24,751 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:00:25,681 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.93 seconds
+2026-04-30 18:00:26,422 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 24' element to be visible
+2026-04-30 18:00:26,433 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 24 element is visible after waiting 0.011 seconds
+2026-04-30 18:00:26,588 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:00:26,806 [main] INFO ProductCatalog.addProductToCart - Added water melon to cart
+2026-04-30 18:00:26,806 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:00:27,743 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.937 seconds
+2026-04-30 18:00:28,525 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 25' element to be visible
+2026-04-30 18:00:28,534 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 25 element is visible after waiting 0.009 seconds
+2026-04-30 18:00:28,678 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:00:28,836 [main] INFO ProductCatalog.addProductToCart - Added almonds to cart
+2026-04-30 18:00:28,836 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:00:29,854 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 1.018 seconds
+2026-04-30 18:00:30,772 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 26' element to be visible
+2026-04-30 18:00:30,785 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 26 element is visible after waiting 0.013 seconds
+2026-04-30 18:00:30,923 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:00:31,078 [main] INFO ProductCatalog.addProductToCart - Added pista to cart
+2026-04-30 18:00:31,078 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:00:32,206 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 1.127 seconds
+2026-04-30 18:00:33,149 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 27' element to be visible
+2026-04-30 18:00:33,158 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 27 element is visible after waiting 0.009 seconds
+2026-04-30 18:00:33,325 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:00:33,480 [main] INFO ProductCatalog.addProductToCart - Added nuts mixture to cart
+2026-04-30 18:00:33,480 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:00:34,602 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 1.122 seconds
+2026-04-30 18:00:35,590 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 28' element to be visible
+2026-04-30 18:00:35,599 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 28 element is visible after waiting 0.009 seconds
+2026-04-30 18:00:35,757 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:00:35,948 [main] INFO ProductCatalog.addProductToCart - Added cashews to cart
+2026-04-30 18:00:35,948 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:00:37,287 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 1.338 seconds
+2026-04-30 18:00:38,403 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 29' element to be visible
+2026-04-30 18:00:38,415 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 29 element is visible after waiting 0.012 seconds
+2026-04-30 18:00:38,569 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:00:38,721 [main] INFO ProductCatalog.addProductToCart - Added walnuts to cart
+2026-04-30 18:00:38,721 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Cart Icon Button' element to be visible
+2026-04-30 18:00:38,742 [main] INFO Waits.waitForVisibilityOf - Cart Icon Button element is visible after waiting 0.021 seconds
+2026-04-30 18:00:38,742 [main] INFO ProductCatalog.clickCartIcon - Clicking the Cart Icon Button
+2026-04-30 18:00:38,845 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 10 seconds for 'Checkout Button' element to be visible
+2026-04-30 18:00:38,879 [main] INFO Waits.waitForVisibilityOf - Checkout Button element is visible after waiting 0.034 seconds
+2026-04-30 18:00:38,879 [main] INFO ProductCatalog.clickCheckout - Clicking the Checkout Button
+2026-04-30 18:00:39,039 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 10 seconds for 'Product Names at Checkout' elements to be visible
+2026-04-30 18:00:40,516 [main] INFO Waits.waitForVisibilityOfAll - Product Names at Checkout elements are visible after waiting 1.476 seconds
+2026-04-30 18:00:40,534 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Brocolli
+2026-04-30 18:00:40,548 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Cauliflower
+2026-04-30 18:00:40,557 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Beetroot
+2026-04-30 18:00:40,568 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Cucumber
+2026-04-30 18:00:40,576 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Carrot
+2026-04-30 18:00:40,586 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Tomato
+2026-04-30 18:00:40,594 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Beans
+2026-04-30 18:00:40,603 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Brinjal
+2026-04-30 18:00:40,613 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Capsicum
+2026-04-30 18:00:40,619 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Strawberry
+2026-04-30 18:00:40,625 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Water Melon
+2026-04-30 18:00:40,634 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Almonds
+2026-04-30 18:00:40,642 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Pista
+2026-04-30 18:00:40,650 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Nuts Mixture
+2026-04-30 18:00:40,663 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Cashews
+2026-04-30 18:00:40,678 [main] INFO CheckoutPage.validateProductsAtCheckout - Product found at checkout: Walnuts
+2026-04-30 18:00:40,678 [main] INFO CheckoutPage.validateProductsAtCheckout - Actual products at checkout: [Almonds, Beans, Beetroot, Brinjal, Brocolli, Capsicum, Carrot, Cashews, Cauliflower, Cucumber, Nuts Mixture, Pista, Strawberry, Tomato, Walnuts, Water Melon]
+2026-04-30 18:00:40,678 [main] INFO CheckoutPage.validateProductsAtCheckout - Checking if product names at checkout match expected product catalog
+2026-04-30 18:00:40,678 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '[Almonds, Beans, Beetroot, Brinjal, Brocolli, Capsicum, Carrot, Cashews, Cauliflower, Cucumber, Nuts Mixture, Pista, Strawberry, Tomato, Walnuts, Water Melon]', found '[Almonds, Beans, Beetroot, Brinjal, Brocolli, Capsicum, Carrot, Cashews, Cauliflower, Cucumber, Nuts Mixture, Pista, Strawberry, Tomato, Walnuts, Water Melon]'
+2026-04-30 18:00:41,320 [main] INFO BaseTest.logURL - Navigated to test URL: https://rahulshettyacademy.com/seleniumPractise/#/
+2026-04-30 18:00:41,324 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:00:42,535 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 1.211 seconds
+2026-04-30 18:00:42,585 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 0' element to be visible
+2026-04-30 18:00:42,592 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 0 element is visible after waiting 0.007 seconds
+2026-04-30 18:00:42,756 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:00:42,931 [main] INFO ProductCatalog.addProductToCart - Added brocolli to cart
+2026-04-30 18:00:42,931 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:00:43,915 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.983 seconds
+2026-04-30 18:00:44,008 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 1' element to be visible
+2026-04-30 18:00:44,017 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 1 element is visible after waiting 0.009 seconds
+2026-04-30 18:00:44,157 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:00:44,299 [main] INFO ProductCatalog.addProductToCart - Added cauliflower to cart
+2026-04-30 18:00:44,299 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:00:45,123 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.824 seconds
+2026-04-30 18:00:45,243 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 3' element to be visible
+2026-04-30 18:00:45,250 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 3 element is visible after waiting 0.007 seconds
+2026-04-30 18:00:45,388 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:00:45,538 [main] INFO ProductCatalog.addProductToCart - Added beetroot to cart
+2026-04-30 18:00:45,538 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:00:46,371 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.833 seconds
+2026-04-30 18:00:46,473 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 2' element to be visible
+2026-04-30 18:00:46,483 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 2 element is visible after waiting 0.01 seconds
+2026-04-30 18:00:46,633 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:00:46,784 [main] INFO ProductCatalog.addProductToCart - Added cucumber to cart
+2026-04-30 18:00:46,784 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:00:47,619 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.835 seconds
+2026-04-30 18:00:47,779 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 4' element to be visible
+2026-04-30 18:00:47,786 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 4 element is visible after waiting 0.007 seconds
+2026-04-30 18:00:47,926 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:00:48,088 [main] INFO ProductCatalog.addProductToCart - Added carrot to cart
+2026-04-30 18:00:48,089 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:00:48,971 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.881 seconds
+2026-04-30 18:00:49,165 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 5' element to be visible
+2026-04-30 18:00:49,172 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 5 element is visible after waiting 0.007 seconds
+2026-04-30 18:00:49,318 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:00:49,448 [main] INFO ProductCatalog.addProductToCart - Added tomato to cart
+2026-04-30 18:00:49,448 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:00:50,302 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.853 seconds
+2026-04-30 18:00:50,506 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 6' element to be visible
+2026-04-30 18:00:50,516 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 6 element is visible after waiting 0.01 seconds
+2026-04-30 18:00:50,657 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:00:50,784 [main] INFO ProductCatalog.addProductToCart - Added beans to cart
+2026-04-30 18:00:50,784 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:00:51,519 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.735 seconds
+2026-04-30 18:00:51,769 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 7' element to be visible
+2026-04-30 18:00:51,786 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 7 element is visible after waiting 0.017 seconds
+2026-04-30 18:00:51,941 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:00:52,067 [main] INFO ProductCatalog.addProductToCart - Added brinjal to cart
+2026-04-30 18:00:52,067 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:00:52,958 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.891 seconds
+2026-04-30 18:00:53,347 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 8' element to be visible
+2026-04-30 18:00:53,355 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 8 element is visible after waiting 0.008 seconds
+2026-04-30 18:00:53,505 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:00:53,628 [main] INFO ProductCatalog.addProductToCart - Added capsicum to cart
+2026-04-30 18:00:53,629 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:00:54,416 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.787 seconds
+2026-04-30 18:00:55,045 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 23' element to be visible
+2026-04-30 18:00:55,052 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 23 element is visible after waiting 0.006 seconds
+2026-04-30 18:00:55,198 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:00:55,348 [main] INFO ProductCatalog.addProductToCart - Added strawberry to cart
+2026-04-30 18:00:55,348 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:00:56,102 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.754 seconds
+2026-04-30 18:00:56,668 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 24' element to be visible
+2026-04-30 18:00:56,673 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 24 element is visible after waiting 0.005 seconds
+2026-04-30 18:00:56,824 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:00:56,970 [main] INFO ProductCatalog.addProductToCart - Added water melon to cart
+2026-04-30 18:00:56,970 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:00:57,772 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.801 seconds
+2026-04-30 18:00:58,387 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 25' element to be visible
+2026-04-30 18:00:58,395 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 25 element is visible after waiting 0.008 seconds
+2026-04-30 18:00:58,542 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:00:58,663 [main] INFO ProductCatalog.addProductToCart - Added almonds to cart
+2026-04-30 18:00:58,664 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:00:59,602 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.937 seconds
+2026-04-30 18:01:00,304 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 26' element to be visible
+2026-04-30 18:01:00,313 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 26 element is visible after waiting 0.008 seconds
+2026-04-30 18:01:00,466 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:01:00,599 [main] INFO ProductCatalog.addProductToCart - Added pista to cart
+2026-04-30 18:01:00,599 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:01:01,404 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.805 seconds
+2026-04-30 18:01:02,072 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 27' element to be visible
+2026-04-30 18:01:02,079 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 27 element is visible after waiting 0.007 seconds
+2026-04-30 18:01:02,230 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:01:02,354 [main] INFO ProductCatalog.addProductToCart - Added nuts mixture to cart
+2026-04-30 18:01:02,354 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:01:03,127 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.773 seconds
+2026-04-30 18:01:03,813 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 28' element to be visible
+2026-04-30 18:01:03,821 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 28 element is visible after waiting 0.008 seconds
+2026-04-30 18:01:03,952 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:01:04,092 [main] INFO ProductCatalog.addProductToCart - Added cashews to cart
+2026-04-30 18:01:04,092 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:01:04,890 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.798 seconds
+2026-04-30 18:01:05,598 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 29' element to be visible
+2026-04-30 18:01:05,603 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 29 element is visible after waiting 0.005 seconds
+2026-04-30 18:01:05,737 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:01:05,873 [main] INFO ProductCatalog.addProductToCart - Added walnuts to cart
+2026-04-30 18:01:05,873 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Cart Icon Button' element to be visible
+2026-04-30 18:01:05,893 [main] INFO Waits.waitForVisibilityOf - Cart Icon Button element is visible after waiting 0.02 seconds
+2026-04-30 18:01:05,893 [main] INFO ProductCatalog.clickCartIcon - Clicking the Cart Icon Button
+2026-04-30 18:01:05,966 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 10 seconds for 'Checkout Button' element to be visible
+2026-04-30 18:01:05,981 [main] INFO Waits.waitForVisibilityOf - Checkout Button element is visible after waiting 0.015 seconds
+2026-04-30 18:01:05,981 [main] INFO ProductCatalog.clickCheckout - Clicking the Checkout Button
+2026-04-30 18:01:06,048 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Promo Input Field' element to be visible
+2026-04-30 18:01:06,587 [main] INFO Waits.waitForVisibilityOf - Promo Input Field element is visible after waiting 0.538 seconds
+2026-04-30 18:01:06,620 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Apply Promo Button' element to be visible
+2026-04-30 18:01:06,638 [main] INFO Waits.waitForVisibilityOf - Apply Promo Button element is visible after waiting 0.018 seconds
+2026-04-30 18:01:06,688 [main] INFO CheckoutPage.validateEmptyCode - Clicked Apply Promo button
+2026-04-30 18:01:06,688 [main] INFO Waits.fluentWait - Waiting for up to 2 seconds for 'Promo Info Message' element to be visible
+2026-04-30 18:01:06,706 [main] INFO Waits.fluentWait - Promo Info Message element is visible after waiting 0.018 seconds
+2026-04-30 18:01:06,706 [main] INFO CheckoutPage.validateEmptyCode - Checking if promo code message: 'Empty code ..!' is displayed in red color
+2026-04-30 18:01:06,720 [main] INFO Asserts.assertEquals - Assertion Passed: Expected 'Empty code ..!', found 'Empty code ..!'
+2026-04-30 18:01:06,733 [main] INFO Asserts.assertTrue - Assertion Passed: Empty code ..! is displayed in red color
+2026-04-30 18:01:06,733 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Promo Input Field' element to be visible
+2026-04-30 18:01:06,747 [main] INFO Waits.waitForVisibilityOf - Promo Input Field element is visible after waiting 0.014 seconds
+2026-04-30 18:01:06,784 [main] INFO CheckoutPage.validateInvalidCode - Entered invalid promo code
+2026-04-30 18:01:06,784 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Apply Promo Button' element to be visible
+2026-04-30 18:01:06,799 [main] INFO Waits.waitForVisibilityOf - Apply Promo Button element is visible after waiting 0.015 seconds
+2026-04-30 18:01:06,849 [main] INFO CheckoutPage.validateInvalidCode - Clicked Apply Promo button
+2026-04-30 18:01:06,849 [main] INFO Waits.fluentWait - Waiting for up to 2 seconds for 'Promo Info Message' element to be visible
+2026-04-30 18:01:06,865 [main] INFO Waits.fluentWait - Promo Info Message element is visible after waiting 0.016 seconds
+2026-04-30 18:01:06,865 [main] INFO CheckoutPage.validateInvalidCode - Checking if promo code message: 'Invalid code ..!' is displayed in red color
+2026-04-30 18:01:12,292 [main] INFO Asserts.assertEquals - Assertion Passed: Expected 'Invalid code ..!', found 'Invalid code ..!'
+2026-04-30 18:01:12,302 [main] INFO Asserts.assertTrue - Assertion Passed: Invalid code ..! is displayed in red color
+2026-04-30 18:01:12,964 [main] INFO CheckoutPage.validateAfterDiscount - Refreshed page for fresh discount test
+2026-04-30 18:01:12,964 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Promo Input Field' element to be visible
+2026-04-30 18:01:13,000 [main] INFO Waits.waitForVisibilityOf - Promo Input Field element is visible after waiting 0.036 seconds
+2026-04-30 18:01:13,050 [main] INFO CheckoutPage.validateAfterDiscount - Entered discount code: rahulshettyacademy
+2026-04-30 18:01:13,050 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Apply Promo Button' element to be visible
+2026-04-30 18:01:13,068 [main] INFO Waits.waitForVisibilityOf - Apply Promo Button element is visible after waiting 0.018 seconds
+2026-04-30 18:01:13,136 [main] INFO CheckoutPage.validateAfterDiscount - Clicked Apply Promo button
+2026-04-30 18:01:13,136 [main] INFO Waits.fluentWait - Waiting for up to 2 seconds for 'Promo Info Message' element to be visible
+2026-04-30 18:01:23,175 [main] INFO Waits.fluentWait - Promo Info Message element is visible after waiting 10.039 seconds
+2026-04-30 18:01:23,175 [main] INFO CheckoutPage.validateAfterDiscount - Checking if discount code message: 'Code applied ..!' is displayed in green color
+2026-04-30 18:01:33,230 [main] INFO Asserts.assertEquals - Assertion Passed: Expected 'Code applied ..!', found 'Code applied ..!'
+2026-04-30 18:01:33,242 [main] INFO Asserts.assertTrue - Assertion Passed: Code applied ..! is displayed in green color
+2026-04-30 18:01:33,242 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Total Amount' element to be visible
+2026-04-30 18:01:33,258 [main] INFO Waits.waitForVisibilityOf - Total Amount element is visible after waiting 0.016 seconds
+2026-04-30 18:01:33,273 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Discount Percentage' element to be visible
+2026-04-30 18:01:33,288 [main] INFO Waits.waitForVisibilityOf - Discount Percentage element is visible after waiting 0.015 seconds
+2026-04-30 18:01:33,300 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Discount Amount' element to be visible
+2026-04-30 18:01:33,319 [main] INFO Waits.waitForVisibilityOf - Discount Amount element is visible after waiting 0.019 seconds
+2026-04-30 18:01:33,335 [main] DEBUG CheckoutPage.validateAfterDiscount - Original total: 2877
+2026-04-30 18:01:33,335 [main] DEBUG CheckoutPage.validateAfterDiscount - Discount percentage: 10%
+2026-04-30 18:01:33,335 [main] DEBUG CheckoutPage.validateAfterDiscount - Displayed total after discount: 2589.3
+2026-04-30 18:01:33,335 [main] DEBUG CheckoutPage.validateAfterDiscount - Expected total after discount calculation: 2589.3
+2026-04-30 18:01:33,336 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '2589.3', found '2589.3'
+2026-04-30 18:01:33,906 [main] INFO BaseTest.logURL - Navigated to test URL: https://rahulshettyacademy.com/seleniumPractise/#/
+2026-04-30 18:01:33,911 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:01:34,739 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.828 seconds
+2026-04-30 18:01:34,784 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 0' element to be visible
+2026-04-30 18:01:34,791 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 0 element is visible after waiting 0.006 seconds
+2026-04-30 18:01:34,935 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:01:35,069 [main] INFO ProductCatalog.addProductToCart - Added brocolli to cart
+2026-04-30 18:01:35,069 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:01:35,861 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.792 seconds
+2026-04-30 18:01:35,925 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 1' element to be visible
+2026-04-30 18:01:35,931 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 1 element is visible after waiting 0.006 seconds
+2026-04-30 18:01:36,077 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:01:36,187 [main] INFO ProductCatalog.addProductToCart - Added cauliflower to cart
+2026-04-30 18:01:36,187 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:01:36,960 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.773 seconds
+2026-04-30 18:01:37,081 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 3' element to be visible
+2026-04-30 18:01:37,089 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 3 element is visible after waiting 0.007 seconds
+2026-04-30 18:01:37,225 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:01:37,330 [main] INFO ProductCatalog.addProductToCart - Added beetroot to cart
+2026-04-30 18:01:37,330 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:01:38,076 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.746 seconds
+2026-04-30 18:01:38,168 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 2' element to be visible
+2026-04-30 18:01:38,175 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 2 element is visible after waiting 0.006 seconds
+2026-04-30 18:01:38,315 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:01:38,430 [main] INFO ProductCatalog.addProductToCart - Added cucumber to cart
+2026-04-30 18:01:38,430 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:01:39,214 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.784 seconds
+2026-04-30 18:01:39,352 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 4' element to be visible
+2026-04-30 18:01:39,359 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 4 element is visible after waiting 0.007 seconds
+2026-04-30 18:01:39,498 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:01:39,613 [main] INFO ProductCatalog.addProductToCart - Added carrot to cart
+2026-04-30 18:01:39,613 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:01:40,379 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.766 seconds
+2026-04-30 18:01:40,534 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 5' element to be visible
+2026-04-30 18:01:40,541 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 5 element is visible after waiting 0.007 seconds
+2026-04-30 18:01:40,692 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:01:40,798 [main] INFO ProductCatalog.addProductToCart - Added tomato to cart
+2026-04-30 18:01:40,798 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:01:41,589 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.791 seconds
+2026-04-30 18:01:41,764 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 6' element to be visible
+2026-04-30 18:01:41,772 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 6 element is visible after waiting 0.008 seconds
+2026-04-30 18:01:41,926 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:01:42,029 [main] INFO ProductCatalog.addProductToCart - Added beans to cart
+2026-04-30 18:01:42,029 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:01:42,690 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.66 seconds
+2026-04-30 18:01:42,875 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 7' element to be visible
+2026-04-30 18:01:42,882 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 7 element is visible after waiting 0.007 seconds
+2026-04-30 18:01:43,020 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:01:43,147 [main] INFO ProductCatalog.addProductToCart - Added brinjal to cart
+2026-04-30 18:01:43,147 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:01:43,822 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.675 seconds
+2026-04-30 18:01:44,021 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 8' element to be visible
+2026-04-30 18:01:44,029 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 8 element is visible after waiting 0.006 seconds
+2026-04-30 18:01:44,172 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:01:44,281 [main] INFO ProductCatalog.addProductToCart - Added capsicum to cart
+2026-04-30 18:01:44,282 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:01:44,914 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.632 seconds
+2026-04-30 18:01:45,405 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 23' element to be visible
+2026-04-30 18:01:45,410 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 23 element is visible after waiting 0.005 seconds
+2026-04-30 18:01:45,541 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:01:45,642 [main] INFO ProductCatalog.addProductToCart - Added strawberry to cart
+2026-04-30 18:01:45,642 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:01:46,299 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.657 seconds
+2026-04-30 18:01:46,959 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 24' element to be visible
+2026-04-30 18:01:46,965 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 24 element is visible after waiting 0.006 seconds
+2026-04-30 18:01:47,124 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:01:47,238 [main] INFO ProductCatalog.addProductToCart - Added water melon to cart
+2026-04-30 18:01:47,238 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:01:47,921 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.683 seconds
+2026-04-30 18:01:48,509 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 25' element to be visible
+2026-04-30 18:01:48,515 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 25 element is visible after waiting 0.006 seconds
+2026-04-30 18:01:48,648 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:01:48,760 [main] INFO ProductCatalog.addProductToCart - Added almonds to cart
+2026-04-30 18:01:48,760 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:01:49,426 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.666 seconds
+2026-04-30 18:01:50,097 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 26' element to be visible
+2026-04-30 18:01:50,103 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 26 element is visible after waiting 0.006 seconds
+2026-04-30 18:01:50,227 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:01:50,327 [main] INFO ProductCatalog.addProductToCart - Added pista to cart
+2026-04-30 18:01:50,327 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:01:51,020 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.692 seconds
+2026-04-30 18:01:51,598 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 27' element to be visible
+2026-04-30 18:01:51,605 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 27 element is visible after waiting 0.006 seconds
+2026-04-30 18:01:51,758 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:01:51,860 [main] INFO ProductCatalog.addProductToCart - Added nuts mixture to cart
+2026-04-30 18:01:51,860 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:01:52,546 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.686 seconds
+2026-04-30 18:01:53,246 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 28' element to be visible
+2026-04-30 18:01:53,253 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 28 element is visible after waiting 0.007 seconds
+2026-04-30 18:01:53,401 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:01:53,509 [main] INFO ProductCatalog.addProductToCart - Added cashews to cart
+2026-04-30 18:01:53,509 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 5 seconds for 'Product Names' elements to be visible
+2026-04-30 18:01:54,216 [main] INFO Waits.waitForVisibilityOfAll - Product Names elements are visible after waiting 0.707 seconds
+2026-04-30 18:01:54,855 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Quantity input field at index: 29' element to be visible
+2026-04-30 18:01:54,862 [main] INFO Waits.waitForVisibilityOf - Quantity input field at index: 29 element is visible after waiting 0.007 seconds
+2026-04-30 18:01:55,004 [main] INFO ProductCatalog.addQuantity - Adding quantity: 1
+2026-04-30 18:01:55,133 [main] INFO ProductCatalog.addProductToCart - Added walnuts to cart
+2026-04-30 18:01:55,134 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Cart Icon Button' element to be visible
+2026-04-30 18:01:55,155 [main] INFO Waits.waitForVisibilityOf - Cart Icon Button element is visible after waiting 0.021 seconds
+2026-04-30 18:01:55,155 [main] INFO ProductCatalog.clickCartIcon - Clicking the Cart Icon Button
+2026-04-30 18:01:55,220 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 10 seconds for 'Checkout Button' element to be visible
+2026-04-30 18:01:55,238 [main] INFO Waits.waitForVisibilityOf - Checkout Button element is visible after waiting 0.018 seconds
+2026-04-30 18:01:55,238 [main] INFO ProductCatalog.clickCheckout - Clicking the Checkout Button
+2026-04-30 18:01:55,296 [main] INFO Waits.waitForVisibilityOf - Waiting for up to 5 seconds for 'Total Amount' element to be visible
+2026-04-30 18:01:55,836 [main] INFO Waits.waitForVisibilityOf - Total Amount element is visible after waiting 0.54 seconds
+2026-04-30 18:01:55,851 [main] INFO CheckoutPage.validateTotalAmount - Expected total amount displayed: 2877
+2026-04-30 18:01:55,851 [main] INFO Waits.waitForVisibilityOfAll - Waiting for up to 10 seconds for 'Total Column' elements to be visible
+2026-04-30 18:01:56,239 [main] INFO Waits.waitForVisibilityOfAll - Total Column elements are visible after waiting 0.386 seconds
+2026-04-30 18:01:56,254 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 120, running sum: 120
+2026-04-30 18:01:56,261 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 60, running sum: 180
+2026-04-30 18:01:56,270 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 32, running sum: 212
+2026-04-30 18:01:56,277 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 48, running sum: 260
+2026-04-30 18:01:56,285 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 56, running sum: 316
+2026-04-30 18:01:56,294 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 16, running sum: 332
+2026-04-30 18:01:56,302 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 82, running sum: 414
+2026-04-30 18:01:56,311 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 35, running sum: 449
+2026-04-30 18:01:56,320 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 60, running sum: 509
+2026-04-30 18:01:56,328 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 180, running sum: 689
+2026-04-30 18:01:56,336 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 28, running sum: 717
+2026-04-30 18:01:56,342 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 200, running sum: 917
+2026-04-30 18:01:56,352 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 190, running sum: 1107
+2026-04-30 18:01:56,359 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 950, running sum: 2057
+2026-04-30 18:01:56,365 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 650, running sum: 2707
+2026-04-30 18:01:56,374 [main] INFO CheckoutPage.validateTotalAmount - Added item amount: 170, running sum: 2877
+2026-04-30 18:01:56,374 [main] INFO CheckoutPage.validateTotalAmount - Checking if sum of individual items matches displayed total
+2026-04-30 18:01:56,375 [main] INFO Asserts.assertEquals - Assertion Passed: Expected '2877', found '2877'
+2026-04-30 18:01:56,741 [main] INFO BaseTest.tearDown - Browser session closed successfully
